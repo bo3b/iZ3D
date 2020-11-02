@@ -1,0 +1,1 @@
+@start ../../lib/python27/pythonw.exe ZLOgui.pyw %*

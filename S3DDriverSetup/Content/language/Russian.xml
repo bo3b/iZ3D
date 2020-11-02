@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="Russian">
+	<ControlCenter>
+		<WindowTitle>iZ3D Control Center</WindowTitle>
+		<btnApply>Применить</btnApply>
+		<btnSimple>Простой</btnSimple>
+		<btnAdvanced>Расширенный</btnAdvanced>
+
+		<msgDiscardChanges>Все изменения будут отменены. Продолжить?</msgDiscardChanges>
+		<msgServiceError>Произошла ошибка сервиса:</msgServiceError>
+
+		<DirectX>
+			<lblCaption>Статусы и методы</lblCaption>
+			<sbStereoStatus>Статус стерео</sbStereoStatus>
+			<rbEnableStereo>Включить драйвер</rbEnableStereo>
+			<rbEnableStereoByHK>Включать стерео при запуске приложения</rbEnableStereoByHK>
+			<rbDisableStereo>Выключить драйвер</rbDisableStereo>
+			<sbOutput>Вывод</sbOutput>
+
+			<NoSuchOutput>Нет такого аутпута</NoSuchOutput>
+			<UnexpectedErrorCantFindSelectedOutput>Непредвиденная ошибка: немогу найти выбранный выход</UnexpectedErrorCantFindSelectedOutput>
+
+			<S3DOutput>Монитор iZ3D</S3DOutput>
+			<S3DMarkedOutput>Монитор iZ3D 27&quot;</S3DMarkedOutput>
+			<AnaglyphOutput>Ананглиф (бесплатный)</AnaglyphOutput>
+			<LenovoOutput>Lenovo 3D Ананглиф</LenovoOutput>
+			<ColorCodeOutput>ColorCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>Dual Projectors (trial)</DualProjectionOutput>
+			<SideBySideOutput>Side by Side (trial)</SideBySideOutput>
+			<DLP3DOutput>3D DLP (trial)</DLP3DOutput>
+			<InterlacedOutput>Черезстрочный (trial)</InterlacedOutput>
+			<ZalmanOutput>Монитор Zalman</ZalmanOutput>
+			<S3DShutterOutput>S3D Shutter (trial, beta)</S3DShutterOutput>
+			<iZShutterOutput>iZ3D Shutter (trial)</iZShutterOutput>
+			<Viewsonic_G2>Viewsonic (gen 2)</Viewsonic_G2>
+			<MSI>MSI</MSI>
+			<ASUS>ASUS</ASUS>
+			<Dell>Dell</Dell>
+			<S3D120HzProjectorsOutput>120Гц 3D устройства (trial)</S3D120HzProjectorsOutput>
+			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a) (trial)</AMDHD3DOutput>
+			<ShutterOutput>Shutter (trial, beta)</ShutterOutput>
+			<StereoMirrorOutput>StereoMirror (trial)</StereoMirrorOutput>
+			<VR920Output>VR920 API (trial)</VR920Output>
+			<Z800Output>Z800 API (trial, beta)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP (бесплатный для пользователей ATI Radeon&#x2122;)</ATIDLP3DOutput>
+
+			<Auto>22&quot; Glasses 2009 [CFL] (по умолчанию)</Auto>
+			<CFL>22&quot; Glasses 2007 [CFL]</CFL>
+			<CF>17&quot; Glasses 2007 [CF]</CF>
+			<TableCFL>22&quot; Glasses 2009 [CFL]</TableCFL>
+			<Table>17&quot; Glasses 2009 [CF]</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>BW Табличный CFL</BWTableCFL>
+			<LRCFL>L&amp;R CFL</LRCFL>
+			<ExtTable>Расш. табличный</ExtTable>
+			<Interlaced>Черезстрочный</Interlaced>
+			<Checkerboard>Шахматная доска</Checkerboard>
+			<RedCyan>Red/Cyan</RedCyan>
+			<OptimizedRedCyan>Оптим. (Red/Cyan)</OptimizedRedCyan>
+			<BlackWhite>Black &amp; White</BlackWhite>
+			<YellowBlue>Yellow/Blue</YellowBlue>
+			<Custom>Настраиваемые цвета</Custom>
+			<Voltage120>Напряжение 120</Voltage120>
+			<Voltage110>Напряжение 110</Voltage110>
+			<Voltage100>Напряжение 100</Voltage100>
+			<Force120Hz>Частота 120 Hz</Force120Hz>
+			<Force110Hz>Частота 110 Hz</Force110Hz>
+			<Force100Hz>Частота 100 Hz</Force100Hz>
+			<Normal>Обычный</Normal>
+			<Special>Специальный</Special>
+			<Default>По умолчанию</Default>
+			<LeftRight>Left/Right</LeftRight>
+			<OverUnder>Over/Under</OverUnder>
+			<Crosseyed>Crosseyed</Crosseyed>
+			<HorizontalOptimized>Горизонтальный (оптим.)</HorizontalOptimized>
+			<VerticalOptimized>Вертикальный (оптим.)</VerticalOptimized>
+			<Horizontal>Горизонтальный</Horizontal>
+			<Vertical>Вертикальный</Vertical>
+			<InterlacedOptimized>Черезстрочный (оптим.)</InterlacedOptimized>
+			<InterlacedNotOptimized>Черезстрочный (не оптим.)</InterlacedNotOptimized>
+			<Marked>Маркируемый</Marked>
+			<Simple>Простой</Simple>
+			<BlueLineCoded>Blue line coded</BlueLineCoded>
+			<WhiteLineCoded>White line coded</WhiteLineCoded>
+			<HorizontalFlip>Гориз-ое отражение второго монитора</HorizontalFlip>
+			<VerticalFlip>Вертик-ое отражение второго монитора</VerticalFlip>
+			<HorizontalAndVerticalFlip>Гориз-ое и вертик-ое отражение</HorizontalAndVerticalFlip>
+			<VerticalAndHorizontalFlip>Вертик-ое и гориз-ое отражение</VerticalAndHorizontalFlip>
+			<DoubleHorizontalFlip>Гориз-ое отражение</DoubleHorizontalFlip>
+			<DoubleVerticalFlip>Вертик-ое отражение</DoubleVerticalFlip>
+			<WOFlush>Без Flush</WOFlush>
+
+			<btnApply>Применить</btnApply>
+		</DirectX>
+
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>Статус стерео</sbStereoStatus>
+			<rbDisableStereo>Выключить стерео</rbDisableStereo>
+			<rbEnableStereo>Включить стерео</rbEnableStereo>
+			<sbDriverOptions>Настройки драйвера</sbDriverOptions>
+			<cbEmulateQB>Эмулировать Quad Buffer</cbEmulateQB>
+		</OpenGL>
+
+		<AppExceptions>
+			<EnterValidNameOfApplication>Введите правильное имя приложения</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>Вы должны выбрать сначала файл!</YouMustChooseAFileFirst>
+			<BtnAdd>Добавить</BtnAdd>
+			<BtnRemove>Удалить</BtnRemove>
+		</AppExceptions>
+
+		<Application>
+			<UnexeptedErrorOccured>Возникла неожинная ошибка!
+			Программа будет завершена!</UnexeptedErrorOccured>
+		</Application>
+
+		<Book>
+			<CantReplacePanel>немогу заменить панель</CantReplacePanel>
+			<DefaultProfile>Профиль по-умолчанию</DefaultProfile>
+		</Book>
+
+		<Config>
+			<CantFindResource>Немогу найти ресурс</CantFindResource>
+		</Config>
+
+		<Profiles>
+			<lblCaption>Профайлы</lblCaption>
+
+			<defaultProfileName>Профиль по умолчанию</defaultProfileName>
+
+			<Game>
+				<lblCaption>Игра</lblCaption>
+				<lblShowFPS>Показывать FPS</lblShowFPS>
+				<lblDisableMouseLock>Отключить блокировку мыши</lblDisableMouseLock>
+				<lblEnableMouseLock>Включить блокировку мыши</lblEnableMouseLock>
+				<lblShowWizard>Показать мастер</lblShowWizard>
+				<lblEnableClipping>Включить обрезание экрана</lblEnableClipping>
+				<lblShowOSD>Показывать экранные сообщения</lblShowOSD>
+				<lblForceVSyncOff>Форсировать откл. V-Sync</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>Простой метод проецирования</lblUseSimpleStereoProjection>
+				<lblShadowsMono>Изображать тени в моно</lblShadowsMono>
+
+				<lblClippingWidth>Ширина рамки </lblClippingWidth>
+				<lblWindowMode>Режим окна</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>Полноэкранный</lblFullScreen>
+					<lblWindowed>Оконный</lblWindowed>
+					<lblAuto>Автовыбор</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>Стерео сепарация</lblStereoSeparation>
+				<lblSeparationScale>Масштаб сепарации</lblSeparationScale>
+				<lblSeparationMode>Режим сепарации</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>Симетричный</lblSymmetric>
+					<lblRightShift>Сдвиг справа</lblRightShift>
+					<lblLeftShift>Сдвиг слева</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>Кнопки</lblCaption>
+				<lblIncConv>Увеличить конвергенцию</lblIncConv>
+				<lblDecConv>Уменьшить конвергенцию</lblDecConv>
+				<lblIncSep>Увеличить сепарацию</lblIncSep>
+				<lblDecSep>Уменьшить сепарацию</lblDecSep>
+				<lblToggleAutofocus>Переключить автофокус</lblToggleAutofocus>
+				<lblPreset1>Предустановки 1</lblPreset1>
+				<lblPreset2>Предустановки 2</lblPreset2>
+				<lblPreset3>Предустановки 3</lblPreset3>
+				<lblToggleStereo>Переключить стерео</lblToggleStereo>
+				<lblToggleLasersight>Сменить лазерный прицел</lblToggleLasersight>
+                <lblToggleWizard>Toggle Wizard</lblToggleWizard>
+				<lblSwapLR>Поменять L &amp;&amp; R</lblSwapLR>
+				<lblTakeScreenshot>Снимок экрана</lblTakeScreenshot>
+				<btnRestoreDef>Восстановить значения</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>Автофокус</lblCaption>
+				<lblWidth>Ширина</lblWidth>
+				<lblHeight>Высота</lblHeight>
+				<lblSpeed>Скорость</lblSpeed>
+				<lblMaximumShift>Максимальный сдвиг</lblMaximumShift>
+				<lblTop>Верхняя грань</lblTop>
+				<lblBottom>Нижняя грань</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>Исключения</lblCaption>
+			<sbExceptions>Исключения</sbExceptions>
+			<btnAdd>Добавить</btnAdd>
+			<btnRemove>Удалить</btnRemove>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>Обновить</lblCaption>
+			<textUpdateWindowTitle>Новые обновления</textUpdateWindowTitle>
+			<msgUpdateStatus>Проверка обновлений...</msgUpdateStatus>
+			<msgNewUpdates>Доступны обновления. Не желаете загрузить и установить их?</msgNewUpdates>
+			<msgNoUpdates>Обновления недоступны</msgNoUpdates>
+			<msgUpdatesInstalled>Обновления успешно установлены</msgUpdatesInstalled>
+			<btnUpdate>Обновить</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>Справка</lblCaption>
+			<textDynamicTest>Динамический тест</textDynamicTest>
+			<textStaticTest>Статический тест</textStaticTest>
+			<btnDiagnostic>Диагностика</btnDiagnostic>
+			<btnSetupScreens>Настройка экранов</btnSetupScreens>
+			<btnTrouble>Устранение проблем</btnTrouble>
+			<btnActivate>Активировать драйвер</btnActivate>
+
+			<msgDiagnosticError>Произошла ошибка при получение системной информации</msgDiagnosticError>
+			<msgDiagnosticFileError>Невозможно открыть файл отчета</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>Файл диагностики успешно создан.\nОткрыть файл?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>Запустить 32-битный динамический тест?</Run32BitDynamicTest>
+			<Select>Выберите</Select>
+			<ErrorWhileStaticTest>Произошла ошибка во время запуска статического теста!
+Убедитесь что iZ3D монитор подключен</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>Немогу создать диагностический файл отчета.
+Пожалуйста удалите его и попробуйте снова</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>Troubleshooting.chm</TroubleshootingCHM>
+			<btnManual>Руководство</btnManual>
+			<ManualCHM>Description</ManualCHM>
+	  <msgCantOpenPDF>Невозможно открыть PDF файл</msgCantOpenPDF>
+	  <msgInstallAdobeReader>В вашей системе нет приложения для открытия PDF файлов.
+Хотите установить Adobe Reader?</msgInstallAdobeReader>      
+		</Help>
+
+		<Settings>
+			<lblCaption>Настройки</lblCaption>
+			<sbSettings>Настройки Control Center</sbSettings>
+			<checkUpdateOnHold>Показывать сообщения обновлений</checkUpdateOnHold>
+			<checkMouseLock>Блокировка мыши</checkMouseLock>
+			<checkMouseAutostart>Запускать ControlCenter с Windows</checkMouseAutostart>
+			<sbLanguage>Язык</sbLanguage>
+			<error>Ошибка</error>
+		</Settings>
+
+		<statisticsQuestion>Dear customer!\nHelp us to make the iZ3D driver better.\n</statisticsQuestion>
+		<IWant>Я хочу учавствовать!</IWant>
+		<Submit>Отправить</Submit>
+		<Exit>Выход</Exit>
+
+		<About>
+			<lblCaption>О программе</lblCaption>
+			<ReleaseDate>Дата выпуска:</ReleaseDate>
+			<Version>Версия</Version>
+			<lblCopyright>Все права защищены. Торговая марка iZ3D™ принадлежит компании iZ3D Inc.</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>Подсчет...</CountingFPS>
+		<Mono>Моно</Mono>
+		<Stereo>Стерео</Stereo>
+		<drop>падение</drop>
+		<Preset>Предустановки</Preset>
+		<Convergence>Сведение</Convergence>
+		<ConvergenceINF>Сведение = ∞</ConvergenceINF>
+		<Separation>Стереобаза</Separation>
+		<AutoFocus>Авто сведение</AutoFocus>
+		<ON>Вкл.</ON>
+		<OFF>Выкл.</OFF>
+		<tooMuchSeparation> (слишком сильное разведение)</tooMuchSeparation>
+		<SwapLR>Поменять Л/П</SwapLR>
+		<DaysLeft>Осталось дней: </DaysLeft>
+		<CantFindStereoDevice>Не найдено стереоустройство</CantFindStereoDevice>
+		<CantLoadOutputDLL>Не могу загрузить библиотеку вывода</CantLoadOutputDLL>
+		<UpdateAMDDriver>Обновите драйвер AMD HD3D</UpdateAMDDriver>
+		<NotSupported3DDevice>Вероятно устройство вывода не поддерживается драйвером AMD HD3D</NotSupported3DDevice>
+	</Driver>
+	<Utils>
+		<StereoTestUp>ЭТО СТЕРЕО ТЕСТ</StereoTestUp>
+		<StereoTestDown>КНОПКИ УПРАВЛЕНИЯ СТЕРЕО ТУТ НЕ РАБОТАЮТ</StereoTestDown>
+		<!-- NEVER ALIGN  FrontScreenMsg  and BackScreenMsg  STRINGS!!! -->
+		<FrontScreenMsg>снимите стерео-очки
+и нажмите клавишу '1'</FrontScreenMsg>
+		<BackScreenMsg>снимите стерео-очки
+и нажмите клавишу 'A'</BackScreenMsg>
+		<MonitorNotFound>В настоящий момент метод установлен выход "iZ3D". Если это неправильно, пожалуйста, откройте iZ3D Control Center и выберите соответствующий вывод для вашего 3D устройства.</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. Наденьте ваши 3D очки и убедитесь что 3D включено (по-умолчанию кнопка "Num *")</IDS_STEP1>
+	<IDS_STEP2>2. Вы видете стерео на тестовом изображении?</IDS_STEP2>
+	<IDS_STEP3YES>3. Для установки стереопараметров
+	на экране должны быть трехмерные объекты
+	Вы видите на экране трехмерные объекты?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. Свяжитесь со службой поддержки
+	www.iz3d.com</IDS_STEP3NO>
+	<IDS_STEP4YES>4. Увеличивайте конвергенцию ('Shift ' + 'Num -')
+	до тех пор пока ближайший к экрану объект
+	не будет иметь одно изображение</IDS_STEP4YES>
+	<IDS_STEP4NO>4. Пожалуйста, выйдете из визарда и запустите
+	его когда у вас на экране будут трехмерные объекты</IDS_STEP4NO>
+	<IDS_STEP5>5. Удаленные объекты на экране двоятся?</IDS_STEP5>
+	<IDS_STEP6YES>6. Уменьшайте сепарацию ('Num -')
+	до тех пор пока удалённые объекты
+	не будут иметь одно изображение</IDS_STEP6YES>
+	<IDS_STEP6NO>6. Увеличивайте сепарацию ('Num +') 
+	до тех пор пока удалённые объекты
+	не начнут двоиться</IDS_STEP6NO>
+	<IDS_STEP7>7. Увеличивайте сепарацию ('Num +') 
+	до тех пор пока удалённые объекты
+	не начнут двоиться</IDS_STEP7>
+	<IDS_STEP8>8. Включите автофокус ('Num /')</IDS_STEP8>
+	<IDS_STEP9>9. Вы хотите увидеть iZ3D визард
+	следующий раз при запуске этой игры?</IDS_STEP9>
+	<IDS_STEP10NO>10. Уберите галочку вверху для выключения автозапуска
+	визарда для этой игры 
+	(вы сможете активировать его снова в Control Center)</IDS_STEP10NO>
+	<IDS_STEP10YES>10. Проверьте, что вверху стоит галочка</IDS_STEP10YES>
+	<IDS_NEXTBUTTON>(N)ext
+	Нажмите 'N'
+	чтобы продожить</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)es
+	Нажмите 'Y'
+	если да</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)o
+	Нажмите 'N'
+	если нет</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(P)revious
+	Нажмите 'P'
+	для шага назад</IDS_BACKBUTTON>
+	<IDS_SUPPORT>Свяжитесь с поддержкой</IDS_SUPPORT>
+	<IDS_EXITBUTTON>Нажмите 'Shift' + 'Num *' для выхода из визарда</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>Автозапуск визарда отменен (нажмите 'C' для установки автозапуска визарда)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>Автозапуск визарда включен (нажмите 'C' для установки автозапуска визарда)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>Выход
+	Нажмите 
+	'Shift' + 'Num *'</IDS_FINISHBUTTON>
+</LanguagePack>

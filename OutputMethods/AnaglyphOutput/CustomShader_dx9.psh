@@ -1,0 +1,48 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+
+struct PS_INPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+inline void GammaCorrection(inout float4 c)
+{	
+	float2 tR = {c.r, 0.0f};
+	float2 tG = {c.g, 0.0f};
+	float2 tB = {c.b, 0.0f};
+	c.ra = tex2D(sGamma, tR).ra;
+	c.g = tex2D(sGamma, tG).g;
+	c.b = tex2D(sGamma, tB).b;
+}
+
+// Least Squares Algorithm
+static const float3x3 m1 = LEFT_MATRIX;	  
+static const float3x3 m2 = RIGHT_MATRIX;
+
+float4 shaderCustomAll(PS_INPUT input, bool Gamma) : COLOR
+{
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	float3 c1 = mul(m1, cL);
+	float3 c2 = mul(m2, cR);
+	return float4(saturate(c1 + c2), cL.a);
+}
+
+float4 shaderCustom(PS_INPUT input) : COLOR
+{
+	return shaderCustomAll(input, false);
+}
+
+float4 shaderCustomAndGamma (PS_INPUT input) : COLOR
+{
+	return shaderCustomAll(input, true);
+}

@@ -1,0 +1,331 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+//cgc.exe -entry shaderS3D -profile arbfp1 Shaders_dx9.psh
+//cgc.exe -entry shaderS3D -profile glslf Shaders_dx9.psh
+
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+sampler sTable : register(s3);
+sampler sBTable : register(s4);
+sampler sFTable : register(s5);
+
+#define cTreshold 1e-10f
+#ifndef tex
+#define tex(a, b) tex2D(a,b.xy) 
+#endif
+
+struct PS_INPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+struct PS_OUTPUT2
+{
+	float4 oP : COLOR0; // Primary panel
+	float4 oS : COLOR1; // Secondary panel
+};
+
+struct PS_INPUT2
+{
+	float2 tL : TEXCOORD0;
+	float2 tR : TEXCOORD0;
+};
+
+inline float4 primaryColor(float4 cL, float4 cR)
+{
+	float4 HalfSum = (cL + cR) * 0.5f;	
+	return HalfSum;
+};
+
+inline float4 secondaryColor(float4 cL, float4 cR)
+{
+	float4 Sum = cL + cR;
+	float3 rVal = (cR / Sum).rgb;
+	float4 Res = (Sum >= cTreshold ? float4(rVal, cR.w) : 0.5f);
+	return Res;
+}
+
+inline float4 secondaryCFLColor(float4 cL, float4 cR)
+{ 
+#if 1
+	float rcR = dot(cR.rgb, 1.0f);
+	float rcSum = dot(cL.rgb, 1.0f) + rcR;
+#else
+	float3 bw = {0.2989, 0.5870, 0.1140};
+	float rcR = dot(cR.rgb, bw);
+	float rcSum = dot(cL.rgb, bw) + rcR;
+#endif
+	float rVal = rcR / rcSum;
+	return (rcSum >= 0.01f ? rVal : 0.5f);	
+}
+
+inline void GammaCorrection(inout float4 c)
+{	
+	float4 tR = {c.r, 0.0f, 0, 0};
+	float4 tG = {c.g, 0.0f, 0, 0};
+	float4 tB = {c.b, 0.0f, 0, 0};
+	c.ra = tex(sGamma, tR).ra;
+	c.g = tex(sGamma, tG).g;
+	c.b = tex(sGamma, tB).b;
+}
+
+PS_OUTPUT2 shaderS3DAll(PS_INPUT input, bool Gamma, bool CFL, bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL.rgb = bwcL;
+		cR.rgb = bwcR;
+	}
+	o.oP = primaryColor(cL, cR);
+
+	if (!CFL)
+		o.oS = secondaryColor(cL, cR);
+	else
+		o.oS = secondaryCFLColor(cL, cR);
+	return o;
+}
+
+PS_OUTPUT2 shaderS3D(PS_INPUT input)
+{
+	return shaderS3DAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DCFL(PS_INPUT input)
+{
+	return shaderS3DAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DAndGamma(PS_INPUT input)
+{
+	return shaderS3DAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DAll(input, true, true);
+}
+
+// S3D Table
+
+inline float ColorToTable(float c)
+{
+	float TableWidth = 512.0;
+	return c * ((TableWidth / 2 - 1) / TableWidth) + 1.0 / (TableWidth * 2);
+}
+
+inline float4 primaryTableColor(float4 cL, float4 cR)
+{
+	float4 tR = {ColorToTable(cL.r), cR.r, 0, 0};
+	float4 tG = {ColorToTable(cL.g), cR.g, 0, 0};
+	float4 tB = {ColorToTable(cL.b), cR.b, 0, 0};
+	float4 cB;
+	cB.r = tex(sTable,tR).r;
+	cB.g = tex(sTable,tG).g;
+	cB.b = tex(sTable,tB).b;
+	cB.a = cL.a;
+	return cB;
+};
+
+inline float4 secondaryTableColor(float4 cL, float4 cR)
+{
+	float4 tR = {0.5f + ColorToTable(cL.r), cR.r, 0, 0};
+	float4 tG = {0.5f + ColorToTable(cL.g), cR.g, 0, 0};
+	float4 tB = {0.5f + ColorToTable(cL.b), cR.b, 0, 0};
+	float4 cF;
+	cF.r = tex(sTable,tR).r;
+	cF.g = tex(sTable,tG).g;
+	cF.b = tex(sTable,tB).b;
+	cF.a = cR.a;
+	return cF;
+}
+
+float4  cDefFrontColor : register(c2) = { 0.5f, 0.5f, 0.5f, 1.0f};
+
+inline float4 secondaryTableCFLColor(float4 cL, float4 cR, float4 cB)
+{ 
+	float4 tR = {0.5f + ColorToTable(cL.r), cR.r, 0, 0};
+	float4 tG = {0.5f + ColorToTable(cL.g), cR.g, 0, 0};
+	float4 tB = {0.5f + ColorToTable(cL.b), cR.b, 0, 0};
+	float3 cF;
+	cF.r = tex(sTable,tR).r;
+	cF.g = tex(sTable,tG).g;
+	cF.b = tex(sTable,tB).b;
+	
+	float rcDot = dot(cB.rgb, cF.rgb);
+	float rcSum = dot(cB.rgb, 1);
+	float rVal = rcDot / rcSum;
+	float3 c = (rcSum >= cTreshold ? rVal : cDefFrontColor.rgb);
+	return float4(c, cR.a);
+}
+
+bool g_bNewFront : register(b0) = false;
+float4 cScreenSize : register(c3) = { 640, 480, 1/640, 1/480 };
+
+bool g_bAngleCorrection : register(b1) = false;
+
+PS_OUTPUT2 shaderS3DTableAll(PS_INPUT input, bool Gamma, bool CFL, 
+							 bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float4 cL = tex(sL, float4(input.t, 0, 0));
+	float4 cR = tex(sR, float4(input.t, 0, 0));
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL.rgb = bwcL;
+		cR.rgb = bwcR;
+	}
+	o.oP = primaryTableColor(cL, cR);
+
+	if (!CFL)
+	{
+		o.oS = secondaryTableColor(cL, cR);	
+
+		//--- color filter cross-passing compensation ---	
+		float4 F  = o.oS;
+		static const float3x3 m = 
+			{ 0.90, 0.05, 0.05,
+			  0.05, 0.90,  0.05,
+			  0.05, 0.05,  0.90 };
+		float3 t = mul(m, o.oP.rgb * F.rgb);
+		float3 r = mul(m, o.oP.rgb);
+		o.oS.rgb = t / r;
+		o.oS.a = F.a;
+	}
+	else
+	{
+		o.oS = secondaryTableCFLColor(cL, cR, o.oP);
+
+		if(g_bNewFront)
+		{
+			const float a = 0.9f;
+			int2 r = int2(input.t.x * cScreenSize.x, input.t.y * cScreenSize.y);
+			bool bOdd = (r.x + r.y) % 2;
+			float4 cF = o.oS;			
+			float4 cFn;
+			{
+				float4 t = float4(input.t, 0, 0);
+				t.x = bOdd ? t.x - cScreenSize.z : t.x + cScreenSize.z;
+				float4 cLn = tex2Dlod(sL, t);
+				float4 cRn = tex2Dlod(sR, t);
+				if (Gamma)
+				{
+					GammaCorrection(cLn);
+					GammaCorrection(cRn);
+				}
+				float4 cBn = primaryTableColor(cLn, cRn);
+				cFn = secondaryTableCFLColor(cLn, cRn, cBn);
+			}
+			if (!bOdd)
+			{
+				o.oS.r = saturate(cF.r + a*cF.g);
+				o.oS.g = (cF.r + cF.g) - o.oS.r;
+				o.oS.b = saturate(cF.b + a*cF.r);
+			}
+			else
+			{
+				float p = saturate(cFn.b + a*cF.r);
+				o.oS.r = (cFn.b + cF.r) - p;
+				o.oS.g = saturate(cF.g + a*cF.b);
+				o.oS.b = (cFn.g + cF.b) - o.oS.g;
+			}
+		}
+	}
+
+	if (g_bAngleCorrection)
+	{
+		float3 cBTable = tex2D(sBTable, input.t).rgb;
+		cBTable.r = lerp(-0.6986, 0.3062, cBTable.r);
+		cBTable.g = lerp( 0.6644, 1.8337, cBTable.g);
+		cBTable.b = lerp(-0.1246, 0.0129, cBTable.b);
+
+		float3 cB = o.oP.rgb;
+		cB = pow(abs(cB), 1/2.2f);
+		cB = cBTable.r*(cB*cB) + cBTable.g*cB + cBTable.b;
+		cB = pow(abs(cB), 2.2f);
+		o.oP.rgb = cB;
+
+		float3 cFTable = tex2D(sFTable, input.t).rgb;
+		cFTable.r = lerp(-0.5969, 0.5150, cFTable.r);
+		cFTable.g = lerp( 0.4189, 1.6078, cFTable.g);
+		cFTable.b = lerp(-0.1047, 0.0864, cFTable.b);
+
+		float3 cF = o.oS.rgb;
+		cF = pow(abs(cF), 1/2.2f);
+		cF = cFTable.r*(cF*cF) + cFTable.g*cF + cFTable.b;
+		cF = pow(abs(cF), 2.2f);
+		o.oS.rgb = cF;
+	}
+	return o;
+}
+
+PS_OUTPUT2 shaderS3DTable(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFL(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DTableAndGamma(PS_INPUT input)
+{
+	return shaderS3DTableAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, true, true);
+}
+
+
+// Two pass rendering
+
+float4 shaderS3DTable1st(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, false, false).oP;
+}
+
+float4 shaderS3DTable2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, false, false).oS;
+}
+
+float4 shaderS3DTableCFL2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, false, true).oS;
+}
+
+float4 shaderS3DTableAndGamma1st(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, true, false).oP;
+}
+
+float4 shaderS3DTableAndGamma2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, true, false).oS;
+}
+
+float4 shaderS3DTableCFLAndGamma2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DTableAll(input, true, true).oS;
+}

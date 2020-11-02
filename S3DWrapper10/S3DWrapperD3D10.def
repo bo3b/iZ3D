@@ -1,0 +1,8 @@
+EXPORTS
+    OpenAdapter10									@1 PRIVATE
+    OpenAdapter10_2									@2 PRIVATE
+    SetSyncRenderCallback							@3 PRIVATE
+    StartDDAServer									@4 PRIVATE
+    InitializeExchangeServer						@5 PRIVATE
+    CreateDXGIFactory=Hooked_CreateDXGIFactory		@6 PRIVATE
+    CreateDXGIFactory1=Hooked_CreateDXGIFactory1	@7 PRIVATE

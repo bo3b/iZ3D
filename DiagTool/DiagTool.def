@@ -1,0 +1,4 @@
+; Declares the module parameters.
+
+EXPORTS
+	CreateDXDiagLog

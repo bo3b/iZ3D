@@ -1,0 +1,27 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+
+struct PS_OUTPUT2
+{
+	float4 oP : COLOR0; // Primary panel
+	float4 oS : COLOR1; // Secondary panel
+};
+
+struct PS_INPUT2
+{
+	float2 tL : TEXCOORD0;
+	float2 tR : TEXCOORD1;
+};
+
+PS_OUTPUT2 shaderStereoMirror(PS_INPUT2 input)
+{    
+	PS_OUTPUT2 o;
+	float4 cL = tex2D(sL, input.tL);
+	o.oP = cL;
+	float4 cR = tex2D(sR, input.tR);
+	o.oS = cR;
+	return o;
+}

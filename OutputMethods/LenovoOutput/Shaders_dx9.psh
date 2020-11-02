@@ -1,0 +1,106 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+
+struct PS_INPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+float4 shaderAnaglyph(PS_INPUT input) : COLOR
+{
+	float3 bw = {0.2989, 0.5870, 0.1140};
+	float cL = dot(tex2D(sL, input.t).rgb, bw);
+	float cR = dot(tex2D(sR, input.t).rgb, bw);
+	float4 c = cR;
+	c.r = cL.r;
+#ifdef CORRECTALPHA
+	c.a = lc2;
+#endif
+	return c;
+}
+
+float4 shaderColorAnaglyph(PS_INPUT input) : COLOR
+{    
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	cR.r = cL.r;
+#ifdef CORRECTALPHA
+	cR.a = 1.0f;
+#endif
+	return cR;
+}
+
+float4 shaderYellowBlueAnaglyph(PS_INPUT input) : COLOR
+{    
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	cR.rg = cL.rg;
+#ifdef CORRECTALPHA
+	cR.a = 1.0f;
+#endif
+	return cR;
+}
+
+inline void GammaCorrection(inout float4 c)
+{	
+	float2 tR = {c.r, 0.0f};
+	float2 tG = {c.g, 0.0f};
+	float2 tB = {c.b, 0.0f};
+	#ifndef CORRECTALPHA
+	c.ra = tex2D(sGamma, tR).ra;
+	#else
+	c.r = tex2D(sGamma, tR).r;
+	#endif
+	c.g = tex2D(sGamma, tG).g;
+	c.b = tex2D(sGamma, tB).b;
+}
+
+// Least Squares Algorithm
+static const float3x3 m1 = 
+	{  0.4154,  0.4710,  0.1669,
+	  -0.0458, -0.0484, -0.0257,
+	  -0.0547, -0.0615,  0.0128 };	  
+static const float3x3 m2 = 
+	{ -0.0109, -0.0364, -0.0060,
+	   0.3756,  0.7333,  0.0111,
+	  -0.0651, -0.1287,  1.2971 };
+
+float4 shaderOptAnaglyphAll(PS_INPUT input, bool Gamma) : COLOR
+{
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	float3 c1 = mul(m1, cL.rgb);
+	float3 c2 = mul(m2, cR.rgb);
+	return float4(saturate(c1 + c2), cL.a);
+}
+
+float4 shaderOptAnaglyph(PS_INPUT input) : COLOR
+{
+	return shaderOptAnaglyphAll(input, false);
+}
+
+float4 shaderOptAnaglyphAndGamma (PS_INPUT input) : COLOR
+{
+	return shaderOptAnaglyphAll(input, true);
+}
+
+float4 shaderMono(PS_INPUT input) : COLOR
+{
+	float4 cL = tex2D(sL, input.t);
+	return cL;
+}
+
+float4 shaderMonoAndGamma(PS_INPUT input) : COLOR
+{
+	float4 cL = tex2D(sL, input.t);
+	GammaCorrection(cL);
+	return cL;
+}

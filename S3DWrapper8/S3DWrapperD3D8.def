@@ -1,0 +1,9 @@
+; Dx8wrp.def : Declares the module parameters.
+
+EXPORTS
+    InitializeExchangeServer	@1 PRIVATE    
+    StartDDAServer				@2 PRIVATE    
+    SetSyncRenderCallback		@3 PRIVATE    
+    StopDDAServer				@4 PRIVATE    
+    ClearHandles				@5 PRIVATE    
+	Direct3DCreate8				@6 PRIVATE    

@@ -1,0 +1,93 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+
+sampler s : register(s0);
+
+float4 shaderSimple(float2 t : TEXCOORD0) : COLOR0
+{    
+  return tex2D(s, t);
+}
+
+float4 shaderSimpleRAWZ(float2 t : TEXCOORD0) : COLOR0
+{    
+  //return dot(tex2D(s, t), float4 (0.0038909914428586627756752238080039, 
+  //1.5199185323666651467481343000015e-5, 0.0, 0.996093809371817670572857294849));
+  return dot(tex2D(s, t).arg, float3(0.996093809371817670572857294849,
+    0.0038909914428586627756752238080039, 1.5199185323666651467481343000015e-5));
+}
+
+struct PS_OUTPUTDEPTH
+{
+	float4 oC : COLOR0;
+	float  oD : DEPTH;
+};
+
+PS_OUTPUTDEPTH shaderSimpleDepth(float2 t : TEXCOORD0)
+{    
+  PS_OUTPUTDEPTH o;
+  o.oC = float4(0, 0, 0, 1);
+  o.oD = tex2D(s, t).r;
+  return o;  
+}
+
+PS_OUTPUTDEPTH shaderSimpleDepthRAWZ(float2 t : TEXCOORD0)
+{    
+  PS_OUTPUTDEPTH o;
+  o.oC = float4(0, 0, 0, 1);
+  o.oD = dot(tex2D(s, t).arg, float3(0.996093809371817670572857294849,
+    0.0038909914428586627756752238080039, 1.5199185323666651467481343000015e-5));
+  return o;  
+}
+
+float4 depthViewParams : register(c0) = { 0.0, 1.0, 0.0, 0.0 };
+
+float4 shaderViewDepth(float2 t : TEXCOORD0) : COLOR0
+{
+  float d = tex2D(s, t).r;
+  float dMin = depthViewParams.x;
+  float dMax = depthViewParams.y; 
+  float r = depthViewParams.z; // 1.0 / (dMax - dMin)
+  d = (d - dMin) * r;
+  //d = pow(d, 1.0 / 2.2);
+  return d;
+}
+
+//font
+
+float4x4 g_mView : register(c0); // Projection matrix
+
+void VSFont( float4 vPos         : POSITION,
+				int4   vChnl        : BLENDINDICES0,
+                float2 vTex0        : TEXCOORD0,
+                out int4   oChnl    : TEXCOORD1,
+                out float4 oPos     : POSITION,
+                out float2 oTex0    : TEXCOORD0 )
+{
+    oPos = mul( vPos, g_mView );
+
+    // Just copy the texture coordinate and color 
+    oChnl = vChnl;
+    oTex0 = vTex0;
+}
+
+float4 PSFont( int4   chnl  : TEXCOORD1,
+               float2 tex0  : TEXCOORD0 ) : COLOR0
+{
+    float4 pixel = tex2D(s, tex0);
+    
+	/*
+    // Are we rendering a colored image, or 
+    // a character from only one of the channels
+    if( dot(vector(1,1,1,1), chnl) )
+    {
+        // Get the pixel value
+		float val = dot(pixel, chnl);
+		
+        // A value above .5 is part of the actual character glyph
+        // A value below .5 is part of the glyph outline
+		pixel.rgb = val > 0.5 ? 2*val-1 : 0;
+		pixel.a   = val > 0.5 ? 1 : 2*val;
+    }
+	*/
+    
+	return pixel;
+}

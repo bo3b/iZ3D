@@ -1,0 +1,3038 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Tests>
+	<!-- IsTransposed == used dp4 -->
+	<!-- MustSuccess="0" == modify vertex shader -->
+	<Test Index="1" MustSuccess="1">
+		<IsMono Value="1"/>
+		<Matrices Count="0"/>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		mul r3, c12, v0
+		add r3, c13, r3
+		mov oPos.xy, r3.xyyy
+		mov oPos.zw, c0.yzzz
+		"/>
+	</Test>
+	<Test Index="2" MustSuccess="1">
+		<IsMono Value="1"/>
+		<Matrices Count="0"/>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_texcoord1 v2
+		mov r0, v0
+		mad r0.x, r0.x, c20.x, c20.z
+		mad r0.y, -r0.y, c20.y, c20.w
+		mov oPos, r0
+		mov oT0, v2
+		mov oD0, v1		
+		"/>
+	</Test>
+	<Test Index="3" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="2"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		dcl_normal v3
+		dcl_texcoord v7
+		mul r3, c12, v0
+		add r3, c13, r3
+		dp4 r10.x, r3, c15
+		dp4 r10.y, r3, c16
+		dp4 r10.z, r3, c17
+		mov r10.w, c0.z
+		mad r4.xyz, v3.xyzz, c11.x, c11.y
+		dp3 r0, c16, r4
+		mad r0, r0, -c0.y, c0.y
+		mad r1, c18, -r0, c18
+		mad r0, c19, r0, r1
+		mov r7, c30
+		mul r8.xyz, r0.xyzz, r7.xyzz
+		mov r8.w, r7.w
+		mov r9, c0.x
+		dp3 r11.x, r4, c15	
+		dp3 r11.y, r4, c16	
+		dp3 r11.z, r4, c17	
+		dp3 r9.w, r11.xyzz, -c21
+		max r9.w, r9.w, c0.x
+		mul r9.xyz, r9.w, c20.xyzz
+		mul r9.xyz, r9.xyzz, c20.w
+		mad r8.xyz, r9.xyzz, r7.xyzz, r8.xyzz
+		mul r9.xyz, r9.w, c20.xyzz
+		dp4 r1.x, r10, c2	
+		dp4 r1.y, r10, c3	
+		dp4 r1.z, r10, c4	
+		dp4 r1.w, r10, c5	
+		mov oPos, r1
+		mul r0, v7, c11.zzzw
+		mov oT0.xy, r0.xyyy	
+		mov oT0.zw, c0.xzzz	
+		mul oT1.xy, r0.xyyy, c31.zwww
+		mov oT1.zw, c0.xzzz	
+		mad r0.w, r1.w, c31.x, c31.y
+		min oT3, r0.w, c0.z	
+		dp4 r0.z, r10, c5	
+		mad r0.w, r0.z, c7.z, c7.w
+		mad oFog, r0.z, c7.x, c7.y
+		max r0.w, r0.w, c0.x
+		min r0.w, r0.w, c0.z
+		mul r0.w, r0.w, r0.w
+		mov oD0.xyz, r8.xyzz
+		mul oD0.w, r8.w, r0.w	
+		"/>
+	</Test>
+	<Test Index="4" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="2"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		dcl_texcoord v7
+		dcl_texcoord1 v8
+		dp4 r10.x, v0, c15
+		dp4 r10.y, v0, c16
+		dp4 r10.z, v0, c17
+		mov r10.w, c0.z
+		dp4 r3.x, r10, c2
+		dp4 r3.y, r10, c3
+		dp4 oPos.z, r10, c4
+		dp4 oPos.w, r10, c5
+		mad oPos.xy, r3.xyyy, c31.xyyy, c31.zwww	
+		mul oT0, v7, c11.zzzw
+		mul oT1, v8, c11.zzzw		
+		"/>
+	</Test>
+	<Test Index="5" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		def c12, 0.00499999989, 0.5, 1, 0
+		dcl_position v0
+		dcl_color v1	
+		dcl_texcoord v2
+		dp4 oT1.x, v0, c4
+		dp4 oT1.y, v0, c5
+		dp4 oT1.z, v0, c6
+		dp4 r0.x, v0, c7
+		mad oT2.x, r0.x, c12.x, c12.y
+		dp4 r0.y, v0, c1			
+		mov oT1.w, r0.x				
+		mov r1.y, -r0.y				
+		dp4 r1.x, v0, c0			
+		dp4 r0.w, v0, c3			
+		add r2.xy, r1, r0.w		
+		dp4 r1.w, v0, c10			
+		mov oPos.x, r1.x			
+		add r1.w, -r1.w, c11.x
+		mul oT3.xy, r2, c12.y	
+		mul r1.w, r1.w, c11.y	
+		max r1.w, r1.w, c11.z	
+		dp4 r0.z, v0, c2			
+		min oFog, r1.w, c12.z	
+		mov oPos.yzw, r0			
+		mov oT3.zw, r0				
+		mov oD0, v1						
+		mov oT0, v2						
+		mov oT2.yzw, c12.xwzz			
+		"/>
+	</Test>
+	<Test Index="6" MustSuccess="1">
+		<IsMono Value="1"/>
+		<Matrices Count="0"/>
+		<Shader Text="
+		vs_1_1
+		mov r1, - c0
+		mov r2, - c2[a0.x + 1].xy
+		add r1, -r2, c11.x
+		crs r1, r1, c3
+		mov oPos,r1				
+		"/>
+	</Test>
+	<Test Index="7" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1		
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		dcl_blendweight v3
+		dcl_blendindices v4
+		dp4 oT0.x, v2, c24
+		dp4 oT0.y, v2, c25
+		dp4 oT1.x, v2, c24
+		dp4 oT1.y, v2, c25
+		mad r1, v4.zyxw, c8.y, c8.x	
+		mov a0.x, r1.x
+		m3x3 r3.xyz, v1, c0[a0.x]	
+		m4x3 r4.xyz, v0, c0[a0.x]	
+		mov r4.w, c8.z
+		m4x4 r0, r4, c0
+		mov oPos, r0
+		mad oFog, r0.z, c9.y, c9.x	
+		mov oD0, c11.xyzz
+		add oD1, c10, -c10		
+		"/>
+	</Test>
+	<Test Index="8" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		m4x4 oPos, v4, c0	
+		"/>
+	</Test>
+	<Test Index="9" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c4, 2, 0, 0.159154937, 0.5
+		def c5, 6.28318548, -3.14159274, 1, 0
+		def c6, -1, 1, 0, 0
+		def c7, -1.55009923e-006, -2.17013894e-005, 0.00260416674, 0.00026041668
+		def c8, -0.020833334, -0.125, 1, 0.5				
+		defi i0, 2, 0, 0, 0													
+		dcl_position v0															
+		dcl_texcoord v1															
+		mov r3.w, v0.y															
+		mov r2.w, c4.y															
+		mov r1.w, c4.y															
+		mov r0.w, c4.y															
+		rep i0																		
+		  mova a0.w, r0.w														
+		  mul r0.xy, v0.xzzw, c52[a0.w]							
+		  add r4.w, r0.y, r0.x											
+		  mul r0.xy, c50[a0.w].zyzw, c50[a0.w].wxzw\n\
+		  mad r4.w, r4.w, c50[a0.w].x, r0.x		
+		  mad r4.w, r4.w, c4.z, c4.w					
+		  frc r4.w, r4.w											
+		  mad r5.w, r4.w, c5.x, c5.y					
+		  sincos r4.xy, r5.w, c7, c8					
+		  mul r4.w, r0.y, r4.x								
+		  mad r1.w, r4.w, c52[a0.w].y, r1.w		
+		  mad r3.w, c50[a0.w].y, r4.y, r3.w		
+		  mad r2.w, r4.w, c52[a0.w].x, r2.w		
+		  add r0.w, r0.w, c5.z								
+		endrep																
+		mov r0.y, r3.w												
+		mov r1.y, r2.w												
+		mov r2.z, r1.w												
+		mov r2.xw, c5.wyzz										
+		dp3 r0.x, r2.xzww, r2.xzww						
+		rsq r3.x, r0.x												
+		mul r3.y, r2.z, r3.x									
+		mov r1.xz, c5.zyww										
+		mov r2.z, -r2.z												
+		mul r2.xy, r1.yxzw, c6								
+		mul oT4.xyz, r3.xyxw, c4.yxxw					
+		dp3 r0.x, r2, r2											
+		rsq r0.w, r0.x												
+		dp3 r0.x, r1, r1											
+		mul oT6.xyz, r2, r0.w									
+		rsq r1.x, r0.x												
+		mul r1.y, r1.y, r1.x									
+		mov r0.xzw, v0												
+		mul oT5.xyz, r1.xyxw, c4.xxyw					
+		add oT3.xyz, r0, -c14									
+		dp4 oT1.w, r0, c47										
+		dp4 oPos.x, r0, c0										
+		dp4 oPos.y, r0, c1										
+		dp4 oPos.z, r0, c2										
+		dp4 oPos.w, r0, c3										
+		dp4 oT0.x, r0, c40										
+		dp4 oT0.y, r0, c41										
+		dp4 oT0.z, r0, c42										
+		dp4 oT0.w, r0, c43										
+		dp4 oT1.x, r0, c44										
+		dp4 oT1.y, r0, c45										
+		dp4 oT1.z, r0, c46										
+		mov oFog, c5.z												
+		mov oT2.xy, v			
+		"/>
+	</Test>
+	<Test Index="10" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		dcl_blendweight v3					
+		dcl_blendindices v4					
+		mov oT0, v2							
+		dp3 r2.w, v3, c8.z					
+		add r2.w, c8.z, -r2.w				
+		mad r3, v4.zyxw, c8.y, c8.x			
+		mov a0.x, r3.x						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mul r1, r5.xyzz, v3.x				
+		mul r0, r6.xyzz, v3.x				
+		mov a0.x, r3.y						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, v3.y, r1			
+		mad r0, r6.xyzz, v3.y, r0			
+		mov a0.x, r3.z						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, v3.z, r1			
+		mad r0, r6.xyzz, v3.z, r0			
+		mov a0.x, r3.w						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, r2.w, r1			
+		mad r0, r6.xyzz, r2.w, r0			
+		mov r0.w, c8.z						
+		dp4 oT0.x, v2, c24					
+		dp4 oT0.y, v2, c25					
+		m4x4 r2, r0, c0						
+		mov oPos, r2						
+		mad oFog, r2.w, c9.y, c9.x			
+		add r0, -r0, c10					
+		dp3 r8.w, r0, r0					
+		rsq r8.w, r8.w						
+		mul r8, r0, r8.w					
+		mul r0, r1, c11.w					
+		dp3 r1.w, r1, r8					
+		mad r1, r1.w, r0, -r8				
+		dp3 r0.x, r8, r1					
+		add r0.x, c8.z, -r0.x				
+		mul r0.x, r0.x, r0.x				
+		mul oT1.xy, r0.x, c11.z	
+		"/>
+	</Test>
+	<!-- Uber shader (generate 50kb string)-->
+	<Test Index="11" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1								
+		dcl_position v0						
+		dcl_normal v1						
+		dcl_texcoord v2						
+		dcl_blendweight v3					
+		dcl_blendindices v4					
+		dp4 oT0.x, v2, c24					
+		dp4 oT0.y, v2, c25					
+		dp3 r2.w, v3, c8.z					
+		add r2.w, c8.z, -r2.w				
+		mad r3, v4.zyxw, c8.y, c8.x			
+		mov a0.x, r3.x						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mul r1, r5.xyzz, v3.x				
+		mul r0, r6.xyzz, v3.x				
+		mov a0.x, r3.y						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, v3.y, r1			
+		mad r0, r6.xyzz, v3.y, r0			
+		mov a0.x, r3.z						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, v3.z, r1			
+		mad r0, r6.xyzz, v3.z, r0			
+		mov a0.x, r3.w						
+		m3x3 r5.xyz, v1, c0[a0.x]			
+		m4x3 r6.xyz, v0, c0[a0.x]			
+		mad r1, r5.xyzz, r2.w, r1			
+		mad r0, r6.xyzz, r2.w, r0			
+		mov r0.w, c8.z						
+		add r3.xyz, r0, -c17				
+		dp3 r4.x, r3, r3					
+		rsq r5.x, r4.x						
+		add r3.xyz, r0, -c18				
+		dp3 r4.y, r3, r3					
+		rsq r5.y, r4.y						
+		add r3.xyz, r0, -c19				
+		dp3 r4.z, r3, r3					
+		rsq r5.z, r4.z						
+		add r3.xyz, r0, -c20				
+		dp3 r4.w, r3, r3					
+		rsq r5.w, r4.w						
+		mul r2, r4, r5						
+		mul r4, r2, c13						
+		add r4, r4, -c12					
+		mad r4, r4, c4.z, c4.w				
+		expp r6.y, r4.x						
+		mad r4.x, r6.y, c4.y, -c4.x			
+		expp r6.y, r4.y						
+		mad r4.y, r6.y, c4.y, -c4.x			
+		expp r6.y, r4.z						
+		mad r4.z, r6.y, c4.y, -c4.x			
+		expp r6.y, r4.w						
+		mad r4.w, r6.y, c4.y, -c4.x			
+		mul r5, r4, r4						
+		mul r6, r4, r5						
+		mul r7, r5, r5						
+		mul r8, r5, r6						
+		mul r9, r6, r6						
+		mul r10, r6, r7						
+		mad r11, r5, c6.y, c6.x				
+		mad r11, r7, c6.z, r11				
+		mad r11, r9, c6.w, r11				
+		mad r11, r4, c5.x, r11				
+		mad r11, r6, c5.y, r11				
+		mad r11, r8, c5.z, r11				
+		mad r11, r10, c5.w, r11				
+		mul r2, r2, -c14					
+		add r2, r2, c8.z					
+		max r2, r2, c15						
+		mul r11, r11, r2					
+		mul r11, r11, c16					
+		dp4 r7.x, r11, c8.z					
+		mad r0.xyz, r7.x, r1, r0			
+		m4x4 r2, r0, c0						
+		mov oPos, r2						
+		mad oFog, r2.w, c9.y, c9.x			
+		add r0, -r0, c10					
+		dp3 r8.w, r0, r0					
+		rsq r8.w, r8.w						
+		mul r8, r0, r8.w					
+		dp3 r0.x, r1, -r8					
+		mad r3.x, -r0.x, r0.x, c8.z			
+		mul r3.x, r3.x, c11.y				
+		add r3.x, c8.z, -r3.x				
+		rsq r2.x, r3.x						
+		rcp r2.x, r2.x						
+		mad r2.x, c11.x, r0.x, r2.x			
+		mul r2, r1, r2.x					
+		mad r2, c11.x, -r8, r2				
+		mov oT1.x, r2.x						
+		mov oT1.y, r2.y						
+		mov oT1.z, -r2.z					
+		mul r0, r1, c11.w					
+		dp3 r1.w, r1, r8					
+		mad r1, r1.w, r0, -r8				
+		mov oT2.x, r1.x						
+		mov oT2.y, r1.y						
+		mov oT2.z, -r1.z					
+		dp3 r0.w, r8, r1					
+		add r0.w, c8.z, -r0.w				
+		mul r0.w, r0.w, r0.w				
+		mul r0.w, r0.w, c11.z				
+		mov r1, c21							
+		mad oD0, r1, r0.w, c22	
+		"/>
+	</Test>
+	<Test Index="12" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="4"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0																	
+		def c13, 0.00784313772, -1, 0, 1										
+		dcl_position v0															
+		dcl_tangent v1															
+		dcl_binormal v2															
+		dcl_normal v3															
+		dcl_blendweight v4														
+		mul r0, v0.y, c1														
+		mad r0, c0, v0.x, r0													
+		mad r0, c2, v0.z, r0													
+		mad r0, c3, v0.w, r0													
+		mad r1.xyz, r0, -c12.w, c12												
+		mul r2.xyz, r1.y, c9													
+		mad r2.xyz, c8, r1.x, r2												
+		mad r1.xyz, c10, r1.z, r2												
+		mad r5.xyz, v1, c13.x, c13.y											
+		dp3 oT6.x, r5, r1														
+		mad r4.xyz, v2, c13.x, c13.y											
+		dp3 oT6.y, r4, r1														
+		mad r2.xyz, v3, c13.x, c13.y											
+		dp3 oT6.z, r2, r1														
+		mov r3.xyz, c11															
+		mul r1.xyz, r3.y, c9													
+		mad r6.xyz, c8, r3.x, r1												
+		mul r1, r0.y, c5														
+		mad r3.xyz, c10, r3.z, r6												
+		mad r1, c4, r0.x, r1													
+		dp3 oT4.x, r5, r3														
+		mad r1, c6, r0.z, r1													
+		dp3 oT4.y, r4, r3														
+		mad r0, c7, r0.w, r1													
+		dp3 oT4.z, r2, r3														
+		mov oPos, r0															
+		mov oT7, r0																
+		mul oT5, v4.x, c13.zzzw	
+		"/>
+	</Test>
+	<Test Index="13" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="5"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1																	
+		dcl_texcoord v0															
+		dcl_texcoord1 v1														
+		dcl_texcoord2 v2														
+		dcl_texcoord3 v3														
+		mov r0.xy, v0															
+		mov r0.z, v1.x															
+		mov r0.w, c0.y															
+		add r1, r0, -c4															
+		dp4 oPos.x, r1, c5														
+		dp4 oPos.y, r1, c6														
+		dp4 oPos.z, r1, c7														
+		dp4 oPos.w, r1, c8														
+		add r2, r0.xyzz, -c4.xyzz												
+		dp3 r2, r2, r2															
+		rsq r2, r2.w															
+		rcp r2, r2.w															
+		dp3 r4, v2, -c19														
+		max r4.x, r4.x, c0.x													
+		min r4.y, r4.y, c0.x													
+		mul r4.x, r4.x, r4.x													
+		mul r3, r4.x, c20														
+		mad r3, -r4.y, c35, r3													
+		add r3, r3, c3															
+		mov oT0.xy, v3.yzzz														
+		mov oT0.zw, c0.y														
+		dp3 r5, r2, c42															
+		add r4, r5, c42.w														
+		min r4, r4, c0.y														
+		mul oD0.w, r4, v3.x														
+		mov oD0.xyz, r3															
+		dp4 r5.x, r0, c2														
+		mov r5.w, c0.y															
+		min r5.x, r5.x, r5.w													
+		mad oFog, r5.x, -c18.w, r5.w											
+		mov r5, c0.y															
+		dp4 r5.x, r0, c40														
+		dp4 r5.y, r0, c41														
+		mov oT1, r5					
+		"/>
+	</Test>
+	<Test Index="14" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="5"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1																	
+		dcl_texcoord v0															
+		dcl_texcoord1 v1														
+		dcl_texcoord2 v2														
+		dcl_texcoord3 v3														
+		dcl_texcoord4 v4														
+		mul r2, v1.zyxw, c1														
+		mov r3, v2.zyxw															
+		mov a0.x, r2.x															
+		mul r4, r3.x, c38[a0.x]													
+		mul r5, r3.x, c39[a0.x]													
+		mul r6, r3.x, c40[a0.x]													
+		mov a0.x, r2.y															
+		mad r4, r3.y, c38[a0.x], r4												
+		mad r5, r3.y, c39[a0.x], r5												
+		mad r6, r3.y, c40[a0.x], r6												
+		mov a0.x, r2.z															
+		mad r4, r3.z, c38[a0.x], r4												
+		mad r5, r3.z, c39[a0.x], r5												
+		mad r6, r3.z, c40[a0.x], r6												
+		mov r3, v0																
+		dp4 r0.x, r3, r4														
+		dp4 r0.y, r3, r5														
+		dp4 r0.z, r3, r6														
+		mov r0.w, c0.y															
+		dp3 r1.x, v3, r4														
+		dp3 r1.y, v3, r5														
+		dp3 r1.zw, v3, r6														
+		dp4 r2.x, r0, c5														
+		dp4 r2.y, r0, c6														
+		dp4 r2.z, r0, c7														
+		dp4 r2.w, r0, c8														
+		mov oPos, r2															
+		dp4 r3.x, r0, c2														
+		mov r3.w, c0.y															
+		min r3.x, r3.x, r3.w													
+		mad oFog, r3.x, -c18.w, r3.w											
+		dp3 r1.w, r1, r1														
+		rsq r1.w, r1.w															
+		mul r1, r1, r1.w														
+		dp3 r3, r1, -c19														
+		max r3.x, r3.x, c0.x													
+		min r3.y, r3.y, c0.x													
+		mul r3.x, r3.x, r3.x													
+		mul r2, r3.x, c20														
+		mad r2, -r3.y, c35, r2													
+		mov oD0.w, c0.y															
+		add oD0.xyz, r2, c3														
+		mov oT0, v4				
+		"/>
+	</Test>
+	<Test Index="15" MustSuccess="0">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="5"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1		
+		m4x4 oPos, v0, c0[a0.x]		
+		"/>
+	</Test>
+	<Test Index="16" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="4"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0							
+		dcl_position v0							
+		dcl_normal v1							
+		dcl_texcoord v2							
+		dcl_texcoord1 v3							
+		dcl_position o0							
+		dcl_texcoord o1.xy							
+		dcl_texcoord1 o2.xyz							
+		dcl_texcoord2 o3.xyz							
+		dcl_texcoord3 o4.xyz							
+		dcl_texcoord4 o5.xyz							
+		mul r0.xyz, c1, v0.y							
+		mad r1.xyz, v0.x, c0, r0							
+		mul r0, c5, v0.y							
+		mad r1.xyz, v0.z, c2, r1							
+		mad r0, v0.x, c4, r0							
+		add o2.xyz, r1, c3							
+		mad r0, v0.z, c6, r0							
+		add o0, r0, c7							
+		mov r1.xyz, v3							
+		mul r2.xyz, r1.yzxw, v1.zxyw							
+		mul r0.xyz, c1, v3.y							
+		mad r1.xyz, v1.yzxw, r1.zxyw, -r2							
+		mad r0.xyz, v3.x, c0, r0							
+		mul r1.xyz, r1, v3.w							
+		mad o3.xyz, v3.z, c2, r0							
+		mul r0.xyz, r1.y, c1							
+		mad r2.xyz, r1.x, c0, r0							
+		mul r0.xyz, c1, v1.y							
+		mad o4.xyz, r1.z, c2, r2							
+		mad r0.xyz, v1.x, c0, r0							
+		mad o5.xyz, v1.z, c2, r0							
+		mov o1.xy, v2				
+		"/>
+	</Test>
+	<Test Index="17" MustSuccess="1" Name="from ARMA">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="3"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		dcl_position v0
+		dcl_normal v1
+		dcl_blendweight v2
+		dcl_blendindices v3
+		dcl_texcoord v4
+		def c237, 1, 0, 0, 0
+		def c238, 0, 4, 0.300000012, 1
+		def c239, 5, 0.330000013, 8, 1
+		def c240, 0, 0, 0, 0
+		def c241, 0, 1, 0, 0
+		def c242, 0, 0.5, 0, 0
+		def c243, 1, 0, 0, 0
+		def c244, 2, -1, 1, 765.005859
+		add r0, v3.zyxw, -c32.x
+		mul r1, r0, c244.w
+		dp4 r0.w, c244.z, v2
+		mova a0, r1
+		add r0.w, -r0.w, c244.z
+		mul r1.yzw, v2.z, c45[a0.x]
+		mad r1.x, c45[a0.x].x, v2.z, r0.w
+		mad r1, c45[a0.y], v2.y, r1
+		mad r1, c45[a0.z], v2.x, r1
+		mad r2, c45[a0.w], v2.w, r1
+		mad r1.y, c46[a0.x].y, v2.z, r0.w
+		mad r0.z, c47[a0.x].z, v2.z, r0.w
+		mul r1.xzw, v2.z, c46[a0.x]
+		mul r0.xyw, v2.z, c47[a0.x]
+		mad r1, c46[a0.y], v2.y, r1
+		mad r0, c47[a0.y], v2.y, r0
+		mad r1, c46[a0.z], v2.x, r1
+		mad r0, c47[a0.z], v2.x, r0
+		mad r4, c46[a0.w], v2.w, r1
+		mad r0, c47[a0.w], v2.w, r0
+		mad r1.xyz, c244.x, v1, c244.y
+		dp3 r3.x, r2, r1
+		dp3 r3.y, r4, r1
+		dp4 r2.x, r2, v0
+		dp4 r2.y, r4, v0
+		dp4 r2.z, r0, v0
+		dp3 r3.z, r0, r1
+		add r1.xyz, -r2, c7
+		nrm r0.xyz, r3
+		dp3 r1.x, r1, r1
+		rsq r2.w, r1.x
+		mov r2.w, c244.z
+		mov r5.xyz, r0
+		mov r4, r2
+		dp4 r0.y, r2, c1
+		dp4 r0.x, r2, c0
+		mul r1, r0.y, c4
+		dp4 r0.z, r2, c2
+		mad r1, c3, r0.x, r1
+		mad r0, c5, r0.z, r1
+		add r0, r0, c6
+		mov oPos, r0
+		mov r0.xw, c38
+		mul r2.w, r0.x, c31.y
+		mov r2.xyz, c24
+		mul r1, r0.w, c241.xxxy
+		mov r0.xy, c241
+		mad r0, c25.xyzx, r0.yyyx, r0.xxxy
+		add r3.xyz, -r4, c7
+		dp3 r6.x, r3, r3
+		rsq r3.w, r6.x
+		mad r6.xyz, r3, r3.w, -c27
+		nrm r3.xyz, r6
+		dp3 r6.y, r5, r3
+		mov r6.zw, c31.x
+		dp3 r6.x, r5, -c27
+		lit r3, r6
+		max r3.w, -r6.x, c242.x
+		mad r8.xyz, r3.y, c28, r0
+		mul r3.xyz, r3.z, c29
+		mul r6.xyz, r3.w, c28
+		mov r7.xyz, c30
+		add r7.xyz, r7, c24.w
+		mad r7.xyz, r6, r7, r8
+		mad r6.xyz, r3, c242.y, r1
+		add r3.xyz, r7, r6
+		mov r0.xyz, r7
+		mov r1.xyz, r6
+		mad oT1.xyz, r3, r1.w, r2
+		mov r2, r2
+		mov r1.w, r1.w
+		mov r0.w, r0.w
+		mov oFog, c237.x
+		dp3 r3.x, r5, -c27
+		max r0.w, r3.x, c240.x
+		mov r0.xyz, r0
+		mov r1, r1
+		mov r2.w, r2.w
+		mov r3.xyz, c238.x
+		mov r3.w, c238.x
+		rep i0
+		  mul r6.w, r3.w, c238.y
+		  mova a0.w, r6.w
+		  add r6.xyz, -r4, c213[a0.w]
+		  dp3 r7.x, r6, r6
+		  rsq r6.w, r7.x
+		  mul r6.xyz, r6, r6.w
+		  dp3 r6.x, r5, r6
+		  mul r6.w, r6.w, r6.w
+		  mul r6.w, r6.w, c214[a0.w].x
+		  max r7.w, r6.x, c238.x
+		  min r6.w, r6.w, c238.z
+		  mov r6.xyz, c215[a0.w]
+		  mad r6.xyz, r7.w, r6, c216[a0.w]
+		  mad r3.xyz, r6, r6.w, r3
+		  add r3.w, r3.w, c238.w
+		endrep
+		mov r3.xyz, r3
+		mov r3.xyz, r3
+		mov r3.w, c238.x
+		rep i1
+		  add r6.w, -r3.w, c239.x
+		  mul r6.w, r6.w, c238.y
+		  mova a0.w, r6.w
+		  add r6.xyz, -r4, c213[a0.w]
+		  dp3 r7.x, r6, r6
+		  rsq r6.w, r7.x
+		  mul r6.xyz, r6, r6.w
+		  dp3 r7.x, r5, r6
+		  dp3 r6.x, -c214[a0.w], r6
+		  mul r6.w, r6.w, r6.w
+		  add r8.w, r6.x, -c213[a0.w].w
+		  mul r7.w, r8.w, c215[a0.w].w
+		  sge r8.w, c213[a0.w].w, r6.x
+		  mad r9.w, r8.w, -r7.w, r7.w
+		  slt r7.w, c214[a0.w].w, r6.x
+		  mul r6.w, r6.w, c216[a0.w].w
+		  lrp r8.w, r7.w, c238.w, r9.w
+		  mul r6.w, r6.w, r8.w
+		  max r7.w, r7.x, c238.x
+		  min r6.w, r6.w, c238.z
+		  mov r6.xyz, c215[a0.w]
+		  mad r6.xyz, r7.w, r6, c216[a0.w]
+		  mad r3.xyz, r6, r6.w, r3
+		  add r3.w, r3.w, c238.w
+		endrep
+		dp3 r4.x, r3, c239.y
+		mad r3.w, r4.x, -c239.z, c239.w
+		max r4.y, r3.w, c238.x
+		mov oD1, r4.xxxy
+		add r2.xyz, r3, r2
+		mul oT6, r2, c26
+		mul oT4.xyz, r0, c26
+		mov oT7, r1
+		mov oT4.w, r0.w
+		mad r0.xyz, v4.xyxw, c243.xxyw, c243.yyxw
+		dp3 oT0.x, r0, c8.xyww
+		dp3 oT0.y, r0, c9.xyww
+		mov oT0.zw, c243.y		
+		"/>
+	</Test>
+	<Test Index="18" MustSuccess="1" Name="From BF2">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		dcl_position v0
+		dcl_color v1
+		dcl_texcoord v2
+		dcl_texcoord1 v3
+		mov r0, c0
+		mul r0, r0, c4
+		mul r1, r0, c8
+		mov r0, c1
+		mul r0, r0, c5
+		dp4 oPos.x, v0, r1
+		mul r0, r0, c9
+		dp4 oPos.y, v0, r0
+		mov r0, c2
+		mul r0, r0, c6
+		mul r1, r0, c10
+		mov r0, c3
+		mul r0, r0, c7
+		dp4 oPos.z, v0, r1
+		mul r0, r0, c11
+		dp4 oPos.w, v0, r0
+		mov oD0, v1
+		mov oT0.xy, v2
+		mov oT1.xy, v3
+		"/>
+	</Test>
+	<Test Index="19" MustSuccess="1" Name="From BF2">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		def c7, 1, 0, 0.00499999989, 0
+		dcl_position v0
+		mad r0.xyz, v0.xyxw, c7.xxyw, c7.yyxw
+		dp3 oPos.x, r0, c0.xyww
+		dp3 oPos.y, r0, c1.xyww
+		dp3 oPos.z, r0, c2.xyww
+		dp3 oPos.w, r0, c3.xyww
+		dp3 oT0.x, r0, c4.xyww
+		dp3 r0.x, r0, c5.xyww
+		mov r0.w, c6.x
+		mad oT0.y, r0.w, c7.z, r0.x
+		mov oD0, c7.x
+		"/>
+	</Test>
+	<Test Index="20" MustSuccess="1" Name="ShadowVolume">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="4"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c12, 0, 0, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dp4 r0.x, v0, c8
+		dp4 r0.y, v0, c9
+		dp4 r0.z, v0, c10
+		add r0.xyz, r0, -c11
+		dp3 r1.x, r0, c0
+		dp3 r1.y, r0, c1
+		dp3 r1.z, r0, c2
+		dp3 r1.w, r0, c3
+		dp4 r2.x, v0, c4
+		dp4 r2.y, v0, c5
+		dp4 r2.z, v0, c6
+		dp4 r2.w, v0, c7
+		add r1, r1, -r2
+		dp3 r3.x, v1, c8
+		dp3 r3.y, v1, c9
+		dp3 r3.z, v1, c10
+		dp3 r0.x, r3, -r0
+		slt r0.x, r0.x, c12.x
+		mad oPos, r0.x, r1, r2
+		"/>
+	</Test>
+	<Test Index="21" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c4, 2, -1, 0, 0
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_normal v2
+		dp3 oPos.x, v0, c0
+		dp3 oPos.y, v0, c1
+		dp3 oPos.z, v0, c2
+		dp3 oPos.w, v0, c3
+		mad oT1.xyz, v2, c4.x, c4.y
+		mov oT0, v1
+		mov oT2.xyz, c4.z
+		mov oT3, c4.z
+		"/>
+	</Test>
+	<Test Index="22" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="2"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="vs_1_1
+		dcl_position v0
+		dcl_texcoord v7
+		mul r3, c13, v0
+		add r3, c14, r3
+		dp4 r10.x, r3, c16
+		dp4 r10.y, r3, c17
+		dp4 r10.z, r3, c18
+		mov r10.w, c0.z
+		mov r7, c39
+		mov r9, c0.x
+		mov r8, c8.zzzw
+		dp4 oPos.x, r10, c2
+		dp4 oPos.y, r10, c3
+		dp4 oPos.z, r10, c4
+		dp4 oPos.w, r10, c5
+		mul r0, v7, c12.zzzw
+		dp4 oT0.x, r0, c41
+		dp4 oT0.y, r0, c42
+		mov oT0.zw, c0.xzzz
+		dp4 oT1.x, r0, c43
+		dp4 oT1.y, r0, c44
+		mov oT1.zw, c0.xzzz
+		dp4 r0.z, r10, c5
+		mad r0.w, r0.z, c8.x, c8.y
+		mad r1.x, r0.z, c7.x, c7.y
+		mad r1.y, r10.y, c7.z, c7.w
+		min oFog, r1.x, r1.y
+		max r0.w, r0.w, c0.x
+		min r0.w, r0.w, c0.z
+		mul r0.w, r0.w, r0.w
+		mul oD0.w, r7.w, r0.w
+		mad r0, r8, c40.x, c40.y
+		mul oD0.xyz, r0, r7
+		"/>
+	</Test>
+	<!-- Uber shader 2-->
+	<Test Index="23" MustSuccess="1" Name="From UT3">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c19, -0.5, -0.5, 0, 3
+		def c20, 0.5, -0.5, 0, 4
+		def c22, 0.159154937, 0.5, 6.28318548, -3.14159274
+		def c21, 0, 1, -1, 0.00784313772
+		def c23, 0.00100000005, 4, 0.333333343, 1
+		def c24, 9.99999975e-005, 2, 0, 0
+		def c18, -0.5, 0.5, 0, 0.333333343
+		def c17, 0.5, 0.5, 0, 1
+		dcl_position v0
+		dcl_tangent v1
+		dcl_binormal v2
+		dcl_normal v3
+		dcl_blendindices v4
+		dcl_texcoord v5
+		dcl_texcoord1 v6
+		dcl_texcoord o0
+		dcl_texcoord4 o1
+		dcl_texcoord5 o2
+		dcl_texcoord6 o3
+		dcl_position o4
+		add r0.xy, c44.x, v4.xzzw
+		mul r0.zw, r0.xyxy, c18.w
+		frc r1.xy, r0.zwzw
+		add r1.zw, r0, -r1.xyxy
+		slt r1.xy, -r1, r1
+		slt r0.zw, r0, -r0
+		mad r0.zw, r0, r1.xyxy, r1
+		mad r0.xy, r0.zwzw, -c19.w, r0
+		frc r0.zw, r0.xyxy
+		add r0.xy, r0, -r0.zwzw
+		mul r0.xy, r0, c20.w
+		mova a0.xy, r0
+		dp4 r0.x, v0, c29
+		dp4 r0.y, v0, c30
+		dp4 r0.z, v0, c31
+		dp4 r0.w, v0, c32
+		dp4 r1.x, r0, c5[a0.x]
+		dp4 r1.y, r0, c6[a0.x]
+		dp4 r1.z, r0, c7[a0.x]
+		dp4 r1.w, r0, c8[a0.x]
+		lrp r2, v4.y, r1, r0
+		dp4 r0.x, r2, c5[a0.y]
+		dp4 r0.y, r2, c6[a0.y]
+		dp4 r0.z, r2, c7[a0.y]
+		lrp r1.xyz, v4.w, r0, r2
+		slt r0.xy, v6.wzzw, -v6.wzzw
+		frc r0.zw, v6.xywz
+		add r2.xy, -r0.zwzw, v6.wzzw
+		slt r0.zw, -r0, r0
+		mad r0.xy, r0, r0.zwzw, r2
+		add r0.z, r0.y, -c17.w
+		sge r0.z, -r0_abs.z, r0_abs.z
+		mad r2.xyz, r0.z, c21, c21.zxyw
+		mad r0.yzw, r0_abs.y, r2.xxyz, c17.xwzz
+		mova a0.x, r0.x
+		dp3 r0.x, c40, r0.yzww
+		dp3 r0.y, c41, r0.yzww
+		mul r0.x, r0.x, c42.x
+		mad r0.x, r0.x, c22.x, c22.y
+		frc r0.x, r0.x
+		mad r0.x, r0.x, c22.z, c22.w
+		sincos r2.xy, r0.x
+		mul r0.x, r0.y, c42.y
+		mad r0.x, r0.x, c22.x, c22.y
+		frc r0.x, r0.x
+		mad r0.x, r0.x, c22.z, c22.w
+		sincos r3.xy, r0.x
+		mul r0.z, -r2.y, r3.x
+		mov r0.w, r3.y
+		mul r0.xy, r2, r3
+		mov r4.xy, c17[a0.x]
+		mov r4.z, v5.w
+		mad r4.xyz, v5.z, c17.zwzw, r4
+		mul r4.xyz, r4, v5.xxyw
+		dp3 r0.w, r0.xzww, r4
+		mul r2.yzw, r2.xyxy, c17.xwwz
+		mul r0.x, r2.x, -r3.y
+		mov r0.z, r3.x
+		dp3 r1.w, r2.yzww, r4
+		dp3 r0.x, r0, r4
+		mul r2.xyz, r1.w, c38
+		mad r0.yzw, c37.xxyz, r0.w, r2.xxyz
+		mad r0.xyz, c39, r0.x, r0.yzww
+		mad r2.xy, v6, c22.x, c22.y
+		frc r2.xy, r2
+		mad r2.xy, r2, c22.z, c22.w
+		sincos r3.xy, r2.x
+		sincos r4.xy, r2.y
+		mul r2.xyz, r3.xyxw, c21.yzxw
+		mul r3, r3.yxyx, r4.xxyy
+		dp3 r2.x, r2, r0
+		mov r4.w, -r4.y
+		mov r5.z, r4.x
+		mov r4.yz, r3.xxyw
+		mov r5.xy, r3.zwzw
+		dp3 r2.y, r4.yzww, r0
+		dp3 r2.z, r5, r0
+		add r0.xyz, r1, r2
+		mul r1, r0.y, c26
+		mad r1, c25, r0.x, r1
+		mad r0, c27, r0.z, r1
+		add r0, r0, c28
+		mad r1.xyz, r0, -c4.w, c4
+		mad r2.xyz, v1, c21.w, c21.z
+		dp3 r3.x, r2, c29
+		dp3 r3.y, r2, c30
+		dp3 r3.z, r2, c31
+		dp3 o3.x, r3, r1
+		mad r2.xyz, v2, c21.w, c21.z
+		dp3 r3.x, r2, c29
+		dp3 r3.y, r2, c30
+		dp3 r3.z, r2, c31
+		dp3 o3.y, r3, r1
+		mad r2.xyz, v3, c21.w, c21.z
+		dp3 r3.x, r2, c29
+		dp3 r3.y, r2, c30
+		dp3 r3.z, r2, c31
+		dp3 o3.z, r3, r1
+		add r1.xyz, -r0, c4
+		add r2.xyz, r0, -c51
+		dp3 r3.y, r1, r2
+		dp3 r3.x, r1, r1
+		dp3 r3.z, r2, r2
+		add r1.x, r3.y, r3.y
+		mad r1.y, c51.w, -c51.w, r3.z
+		mul r2, r3.xxyz, c23.yzww
+		mul r1.y, r1.y, r2.x
+		mad r1.x, r1.x, r1.x, -r1.y
+		rsq r1.y, r1.x
+		sge r1.x, r1.x, c17.z
+		rcp r1.y, r1.y
+		mov r1.z, -r1.y
+		mad r1.yz, r3.y, c24.y, r1
+		add r1.w, r3.x, c24.x
+		rsq r2.x, r3.x
+		rcp r1.w, r1.w
+		mul r1.w, r1.w, c17.x
+		mul_sat r1.yz, -r1, r1.w
+		mov r3.w, r1.y
+		mul r4.xy, r1.yzzw, r1.yzzw
+		mul r3.xy, r1.yzzw, r4
+		mov r3.z, r4.x
+		dp3 r3.x, r2.yzww, r3.xzww
+		mov r4.z, r3.y
+		mov r4.w, r1.z
+		dp3 r3.z, r2.zyww, r4.yzww
+		mul r1.w, c51.w, c51.w
+		rcp r1.w, r1.w
+		mad r1.yz, r3.xxzw, -r1.w, r1
+		mul r1.y, r1.y, c50.x
+		mad r1.y, c50.x, r1.z, -r1.y
+		rcp r1.z, r2.x
+		mul r1.y, r1.y, r1.z
+		mul r1.x, r1.x, r1.y
+		exp r1.x, -r1.x
+		add r1.y, -r1.x, c17.w
+		mul r1.yzw, r1.y, c52.xxyz
+		add r2.xyz, r0, -c4
+		sge r2.w, c23.x, r2_abs.z
+		lrp r3.x, r2.w, c23.x, r2.z
+		dp3 r2.x, r2, r2
+		rcp r2.y, r3.x
+		mov r2.z, c4.z
+		add r3, -r2.z, c48
+		mul_sat r3, r2.y, r3
+		add r4, -r2.z, c49
+		mul_sat r4, r2.y, r4
+		add r3, -r3, r4
+		rsq r2.x, r2.x
+		rcp r2.x, r2.x
+		add r2, r2.x, -c47
+		max r2, r2, c17.z
+		mul r2, r3_abs, r2
+		slt r3, r2, c46
+		mul r2, r2, c45
+		exp r4.x, r2.x
+		exp r4.y, r2.y
+		exp r4.z, r2.z
+		exp r4.w, r2.w
+		mad r2, r3, r4, -c17.w
+		mul r3, r3, r4
+		mul r4.xyz, r2.x, c33
+		mov r4.w, r3.x
+		mul r4, r3.y, r4
+		mad r4.xyz, r2.y, c34, r4
+		mul r4, r3.z, r4
+		mad r4.xyz, r2.z, c35, r4
+		mul r3, r3.w, r4
+		mad r2.xyz, r2.w, c36, r3
+		mad o1.xyz, r1.yzww, r3.w, r2
+		mul o1.w, r1.x, r3.w
+		mov r1.zw, c17
+		mul o0, r1.zzzw, c43.x
+		mul r1, r0.y, c1
+		mad r1, c0, r0.x, r1
+		mad r1, c2, r0.z, r1
+		mad r0, c3, r0.w, r1
+		mov o2, r0
+		mov o4, r0
+		mov o3.w, c17.z
+		"/>
+	</Test>
+	<Test Index="24" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		dcl_color v3
+		dcl_texcoord1 v4
+		dcl_position o0
+		dcl_texcoord o1
+		dcl_texcoord1 o2.xyz
+		dcl_texcoord2 o3
+		dcl_texcoord3 o4
+		mul r0.x, c5.z, v0.y
+		mad r0.x, c4.z, v0.x, r0.x
+		mad r0.x, c6.z, v0.z, r0.x
+		add o4.z, r0.x, c7.z
+		add r0.xyz, c9, -v0
+		dp3 r0.w, r0, r0
+		rsq r0.w, r0.w
+		mul o1.xyz, r0, r0.w
+		dp3 o1.w, c8, v1
+		mul r0, c1, v0.y
+		mad r0, c0, v0.x, r0
+		mad r0, c2, v0.z, r0
+		add r0, r0, c3
+		rcp r1.x, r0.w
+		mad o0.x, r0.x, r1.x, -c10.x
+		mad o0.y, r0.y, r1.x, c10.y
+		mul r1.xy, r0.zwzw, r1.x
+		mov o4.xyw, r0
+		mov o0.zw, r1.xyxy
+		mov o2.xy, v2
+		mov o2.z, v4.x
+		mov o3, v3
+		"/>
+	</Test>
+	<Test Index="25" MustSuccess="1" Name="From StateManager">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_1_1
+		def c21, 1, 0, 0.5, 4
+		def c22, 0.25, 0, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		mov r4, c8
+		mul r0, r4.y, c5
+		mad r0, c4, r4.x, r0
+		mad r0, c6, r4.z, r0
+		mad r1, c7, r4.w, r0
+		mad r5, v0.xyzx, c21.xxxy, c21.yyyx
+		dp4 r0.x, r5, r1
+		dp3 r7.x, v1, r1
+		mov r3, c9
+		mul r1, r3.y, c5
+		mad r6, c4, r3.x, r1
+		mov r2, c10
+		mul r1, r2.y, c5
+		mad r6, c6, r3.z, r6
+		mad r1, c4, r2.x, r1
+		mad r6, c7, r3.w, r6
+		mad r1, c6, r2.z, r1
+		dp4 r0.y, r5, r6
+		mad r1, c7, r2.w, r1
+		dp3 r7.y, v1, r6
+		dp4 r0.z, r5, r1
+		dp3 r7.z, v1, r1
+		mov r0.w, c21.x
+		dp4 r1.x, r0, c0
+		dp4 r1.y, r0, c1
+		dp4 r1.z, r0, c2
+		dp4 r1.w, r0, c3
+		dp4 oPos.x, r1, c20
+		dp3 r4.x, c11, r4
+		dp3 r4.y, c11, r3
+		dp3 r4.z, c11, r2
+		dp3 r2.x, r7, r7
+		dp3 r1.x, r4, r4
+		rsq r2.w, r2.x
+		rsq r0.w, r1.x
+		mul r2.xyz, r7, r2.w
+		mul r3.xyz, r4, r0.w
+		mov oPos.yzw, r1
+		dp3 r1.x, r2, -r3
+		max r0.w, r1.x, c21.y
+		add r1.w, r1.x, r1.x
+		mov r1.xyz, c13
+		mul r4.xyz, r1, c15
+		mad r1.xyz, r1.w, r2, r3
+		dp3 r5.x, r1, r1
+		dp3 r3.x, r0, r0
+		rsq r2.w, r5.x
+		rsq r1.w, r3.x
+		mul r3.xyz, r1, r2.w
+		mul r1.xyz, r0, r1.w
+		mul r4.xyz, r0.w, r4
+		dp3 r5.x, r3, -r1
+		mov r3.xyz, c12
+		mad oD0.xyz, r3, c16, r4
+		max r0.w, r5.x, c21.y
+		dp3 r3.x, -r1, r2
+		log r1.w, r0.w
+		mov r0.w, c18.x
+		mul r0.w, r0.w, c22.x
+		dp3 r1.x, r2, -r0
+		mul r0.w, r1.w, r0.w
+		add r1.w, r1.x, r1.x
+		exp r0.w, r0.w
+		mad r0.xyz, r1.w, r2, r0
+		mov r1.xyz, c14
+		mul r1.xyz, r1, c17
+		dp3 r2.x, r0, r0
+		mul oD1.xyz, r0.w, r1
+		rsq r0.w, r2.x
+		mul r0.xyz, r0, r0.w
+		add r0.w, -r3.x, c21.z
+		mul r1.xyz, r0.y, c9
+		mul r0.w, r0.w, r0.w
+		mad r1.xyz, r0.x, c8, r1
+		mad r0.w, r0.w, -c21.w, c21.x
+		mad oT1.xyz, r0.z, c10, r1
+		mul r0.w, r0.w, c19.x
+		max oT2.xyz, r0.w, c21.y
+		mov oT0.xy, v2
+		"/>
+	</Test>
+	<Test Index="26" MustSuccess="1" Name="From Age of Conan">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="4"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_x
+		def c0, 0.5, 8, 0, 0
+		def c1, 2, -1, 1, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_tangent v2
+		dcl_texcoord v3
+		dcl_blendindices v4
+		dcl_blendweight v5
+		mad oT0.xy, v3, c36, c36.zwzw
+		slt r0, v4, -v4
+		frc r1, v4
+		add r2, -r1, v4
+		slt r1, -r1, r1
+		mad r0, r0, r1, r2
+		mova a0, r0
+		mul r0.x, c49[a0.z].y, c49[a0.z].y
+		mul r0.y, c49[a0.x].y, c49[a0.x].y
+		mul r0.z, c49[a0.y].y, c49[a0.y].y
+		add r1, v5, v5
+		mul r0.z, r0.z, r1.y
+		mad r0.y, r0.y, r1.x, r0.z
+		mad r0.x, r0.x, r1.z, r0.y
+		mul r0.y, c49[a0.w].y, c49[a0.w].y
+		mad r0.x, r0.y, r1.w, r0.x
+		mov r2.z, r0.x
+		mul r3, c49[a0.x].xyxx, c49[a0.x].zzxy
+		mul r4, c49[a0.y].xyxx, c49[a0.y].zzxy
+		mul r4, r1.y, r4
+		mad r3, r3, r1.x, r4
+		mul r4, c49[a0.z].xyxx, c49[a0.z].zzxy
+		mad r3, r4, r1.z, r3
+		mul r4, c49[a0.w].xyxx, c49[a0.w].zzxy
+		mad r3, r4, r1.w, r3
+		mad r4.xyz, r3, c1.zzyw, c1.wwzw
+		mul r5, c49[a0.x].zwww, c49[a0.x].zzyx
+		mul r6, c49[a0.y].zwww, c49[a0.y].zzyx
+		mul r6, r1.y, r6
+		mad r5, r5, r1.x, r6
+		mul r6, c49[a0.z].zwww, c49[a0.z].zzyx
+		mad r5, r6, r1.z, r5
+		mul r6, c49[a0.w].zwww, c49[a0.w].zzyx
+		mad r1, r6, r1.w, r5
+		mov r2.xy, r1.zwzw
+		mad r2.xyz, r2, c1.yzyw, r4
+		mad r4.xyz, v1, c1.x, c1.y
+		dp3 r5.z, r2, r4
+		mov r0.yz, r3.xwxw
+		mad r3.xyz, r3.wzyw, c1.zyzw, c1.wzww
+		mad r0.xyz, r0, c1.yzzw, c1.zwww
+		mad r0.xyz, r1, c1.yyzw, r0
+		mad r1.xyz, r1.yxww, c1.zyyw, r3
+		dp3 r5.x, r0, r4
+		dp3 r5.y, r1, r4
+		dp3 r3.x, r5, c30
+		dp3 r3.y, r5, c31
+		dp3 r3.z, r5, c32
+		mad oD1.xyz, r3, c0.x, c0.x
+		nrm r4.xyz, r3
+		mul r3.xyz, v5.y, c50[a0.y]
+		mad r3.xyz, c50[a0.x], v5.x, r3
+		mad r3.xyz, c50[a0.z], v5.z, r3
+		mad r3.xyz, c50[a0.w], v5.w, r3
+		dp3 r5.z, r2, v0
+		dp3 r5.x, r0, v0
+		dp3 r5.y, r1, v0
+		add r3.xyz, r3, r5
+		mov r3.w, v0.w
+		dp4 r5.z, r3, c32
+		add r6, -r5.z, c40
+		dp4 r5.x, r3, c30
+		dp4 r5.y, r3, c31
+		add r3, -r5.x, c38
+		add r7, -r5.y, c39
+		mul r8, r4.y, r7
+		mul r7, r7, r7
+		mad r8, r3, r4.x, r8
+		mad r3, r3, r3, r7
+		mad r7, r6, r4.z, r8
+		mad r3, r6, r6, r3
+		rsq r6.x, r3.x
+		rsq r6.y, r3.y
+		rsq r6.z, r3.z
+		rsq r6.w, r3.w
+		mul r3, r3, r6
+		mul r6, r7, r6
+		mul r7, r6, c0.y
+		max r7, r7, c1.w
+		min r7, r7, c1.z
+		mul r6, r6, r7
+		max r3, r3, c41
+		min r3, r3, c42
+		mov r7, c45
+		mad r7, r3, r7, c44
+		mad r3, r3, r7, c43
+		mul r3, r6, r3
+		mul r6, r3, c46
+		dp4 r6.x, r6, c1.z
+		mul r7, r3, c47
+		mul r3, r3, c48
+		dp4 r6.y, r7, c1.z
+		dp4 r6.z, r3, c1.z
+		mov r4.w, c1.z
+		dp4 r3.x, r4, c16
+		dp4 r3.y, r4, c17
+		dp4 r3.z, r4, c18
+		max r3.xyz, r3, c1.w
+		add oT2.xyz, r6, r3
+		mov r3, c4
+		mad r3, r5.x, r3, c7
+		mad r3, r5.y, c5, r3
+		mad r3, r5.z, c6, r3
+		add r0.w, r3.w, -c37.w
+		abs r0.w, r0.w
+		mad oPos.z, r3.z, r0.w, -c37.z
+		mul r3.xyz, r3.xyww, r0.w
+		mad r4.xyz, v2, c1.x, c1.y
+		dp3 r2.z, r2, r4
+		dp3 r2.x, r0, r4
+		dp3 r2.y, r1, r4
+		dp3 oT5.x, r2, c30
+		dp3 oT5.y, r2, c31
+		dp3 oT5.z, r2, c32
+		mad oD0.y, r5.y, c8.z, c8.w
+		add r0.xyz, r5, -c12
+		mov oT6.xyz, r5
+		dp3 r0.x, r0, r0
+		rsq r0.x, r0.x
+		rcp r0.x, r0.x
+		mad r0.y, r0.x, c8.x, c8.y
+		mad r0.z, r0.x, c9.x, c9.y
+		slt r0.x, r0.x, c9.z
+		mad r0.y, r0.y, c9.w, -r0.z
+		mad r0.x, r0.x, r0.y, r0.z
+		max r0.x, r0.x, c1.w
+		min oD0.z, r0.x, c1.z
+		mov oPos.xyw, r3.xyzz
+		mov r0.zw, c1
+		mul oD0.xw, r0.zyzw, c35.w
+		mov oD1.w, c1.w
+		mov oT3.xyz, c35
+		mad oT5.w, v2.w, c1.x, c1.y
+		mov oT7, c1.w
+		"/>
+	</Test>
+	<Test Index="27" MustSuccess="1" Name="From Dead Space">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c18, 0, 1, 0, 0
+		dcl_position v0  
+		dcl_texcoord1 v1  
+		dcl_normal v2  
+		dcl_position o0
+		dcl_texcoord1 o1
+		dcl_texcoord2 o2.xyz                                                                                          
+		mul r0.xyz, c1, v0.y
+		mad r0.xyz, v0.x, c0, r0
+		mad r0.xyz, v0.z, c2, r0
+		add r0.xyz, r0, c3          
+		mul r1.xyz, c13, v1.y
+		mad r1.xyz, v1.x, c12, r1
+		mad r1.xyz, v1.z, c14, r1
+		add r1.xyz, r1, c15  
+		lrp r2.xyz, c16.x, r1, r0
+		add r1.xyz, r2, c17          
+		add r0.xyz, r0, -r1          
+		dp3 r0.w, r0, r0
+		rsq r0.w, r0.w
+		rcp r1.w, r0.w          
+		mul r0.xyz, r0, r0.w
+		dp3 r0.x, r0, v2
+		sge r0.x, r0.x, c18.x          
+		max r0.y, r1.w, c16.y  
+		rcp r0.y, r0.y
+		mul r0.y, r0.y, c16.y          
+		mul r0.y, r0.x, r0.y          
+		add r0.x, -r0.x, c18.y
+		mul o2.z, r0.x, c16.z          
+		mul r2, r1.y, c5
+		mad r2, r1.x, c4, r2
+		mad r1, r1.z, c6, r2
+		add r1, r1, c7          
+		mul r2, c9, v0.y
+		mad r2, v0.x, c8, r2
+		mad r2, v0.z, c10, r2
+		add r2, r2, c11          
+		add r3, r1, -r2
+		mad o0, r0.y, r3, r2          
+		rcp r0.x, r1.w
+		mul r0.xy, r1, r0.x  
+		rcp r0.z, r2.w        
+		mad o2.xy, r2, r0.z, -r0          
+		mov o1, r2  
+		"/>
+	</Test>
+	<Test Index="28" MustSuccess="1" Name="From Alone In The Dark">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c22, 1, 2, 0, -9.99999975e-005
+		def c23, 0.00999999978, 0, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		dcl_texcoord o0
+		dcl_texcoord1 o1
+		dcl_texcoord2 o2
+		dcl_position o3
+		mov o0, v2
+		abs r0.x, c20.z
+		if_ge -r0.x, r0.x
+		  mov r0, c22.zzzx
+		  mov r1.xyz, v1
+		else
+		  mov r2.x, c0.y
+		  mov r2.y, c1.y
+		  mov r2.z, c2.y
+		  mov r2.w, c3.y
+		  dp4 r1.w, r2, r2
+		  rsq r1.w, r1.w
+		  mul r1.w, r1.w, c1.y
+		  mov r2.xyz, c20
+		  add r2.y, r2.y, c21.x
+		  add r2.z, -r2.z, c22.x
+		  mad r2.w, r2.z, -r2.y, r2.y
+		  mul r2.z, r2.y, r2.z
+		  rcp r3.x, r2.y
+		  mul r3.x, r2.z, r3.x
+		  mul r3.x, r3.x, c20.x
+		  mad r2.x, r3.x, c22.y, -r2.x
+		  add r2.x, r2.w, r2.x
+		  add r3.x, -r1_abs.w, c22.x
+		  mad r2.x, r3.x, r2.x, r2.z
+		  mul r2.z, r1_abs.w, r2.y
+		  slt r3.xy, r1.w, c22.zwzw
+		  mad r4.y, r3.x, r2.z, r2.x
+		  slt r2.x, -c22.w, r1.w
+		  add r2.x, r3.y, r2.x
+		  rcp r2.z, r1_abs.w
+		  mov r4.xzw, c22.z
+		  add r3, -r4, v0
+		  dp3 r5.x, r3, c12
+		  dp3 r4.x, r3, c13
+		  dp3 r5.z, r3, c14
+		  mov r6.xz, c22
+		  mad r7, c15.xyzx, r6.xxxz, r6.zzzx
+		  dp4 r3.w, r3, r7
+		  mul r4.z, r2.w, r2.z
+		  if_lt -r2.x, r2.x
+			slt r4.w, r4.x, -c22.z
+			mul r4.w, -r4.x, r4.w
+			slt r6.y, c22.z, r1.w
+			mad r4.w, r6.y, r4.w, r4.x
+			if_lt c22.z, r1.w
+			  slt r6.y, r4.z, r4.w
+			  mad r6.w, r2.w, r2.z, -r4.w
+			  mad r5.y, r6.y, r6.w, r4.w
+			else
+			  slt r6.y, r4.w, c22.z
+			  mad r6.w, r2.w, -r2.z, r2.y
+			  slt r8.x, r4.w, r6.w
+			  lrp r9.x, r8.x, r6.w, r4.w
+			  mad r5.y, r6.y, -r9.x, r9.x
+			endif
+			dp3 r4.w, r5, r5
+			rsq r6.y, r4.w
+			mul r6.w, r2.y, r2.y
+			slt r4.w, r6.w, r4.w
+			mul r8.xyz, r5, r6.y
+			mad r8.xyz, r8, r2.y, -r5
+			mad r8.xyz, r4.w, r8, r5
+			if_lt r8.y, c20.y
+			  mov r8.w, c22.z
+			  dp4 r4.w, r8.xzww, r8.xzww
+			  rsq r5.y, r4.w
+			  mul r6.y, c20.x, c20.x
+			  slt r4.w, r6.y, r4.w
+			  mul r6.yw, r8.xxzz, r5.y
+			  mad r6.yw, r6, c20.x, -r8.xxzz
+			  mad r3.xz, r4.w, r6.yyww, r8
+			else
+			  add r4.w, r8.y, -c20.y
+			  add r4.w, r4.w, -c21.y
+			  mul r4.w, r4.w, -c20.x
+			  rcp r5.y, c21.y
+			  mul r4.w, r4.w, r5.y
+			  mul r9, r8.xxzx, c22.xzxz
+			  dp4 r5.y, r9, r9
+			  rsq r6.y, r5.y
+			  mul r6.yw, r8.xxzz, r6.y
+			  mad r6.yw, r6, r4.w, -r8.xxzz
+			  mul r4.w, r4.w, r4.w
+			  slt r4.w, r4.w, r5.y
+			  mad r3.xz, r4.w, r6.yyww, r8
+			endif
+			mov r3.y, r8.y
+		  else
+			slt r4.w, r4.x, -c22.z
+			mul r4.w, -r4.x, r4.w
+			slt r5.y, c22.z, r1.w
+			mad r4.x, r5.y, r4.w, r4.x
+			add r4.w, r2.y, c23.x
+			if_lt c22.z, r1.w
+			  slt r6.y, r4.w, r4.x
+			  lrp r5.w, r6.y, r4.w, r4.x
+			else
+			  add r4.w, r2.y, -r4.w
+			  slt r5.y, r4.x, r4.w
+			  lrp r6.y, r5.y, r4.w, r4.x
+			  slt r4.x, r4.x, c22.z
+			  mad r5.w, r4.x, -r6.y, r6.y
+			endif
+			dp3 r4.x, r5.xzww, r5.xzww
+			rsq r4.w, r4.x
+			mul r5.y, r2.y, r2.y
+			slt r4.x, r5.y, r4.x
+			mul r8.xyz, r5.xwzw, r4.w
+			mad r8.xyz, r8, r2.y, -r5.xwzw
+			mad r5.xyz, r4.x, r8, r5.xwzw
+			if_lt r5.y, c20.y
+			  mov r5.w, c22.z
+			  dp4 r4.x, r5.xzww, r5.xzww
+			  rsq r4.w, r4.x
+			  mul r5.w, c20.x, c20.x
+			  slt r4.x, r5.w, r4.x
+			  mul r6.yw, r5.xxzz, r4.w
+			  mad r6.yw, r6, c20.x, -r5.xxzz
+			  mad r3.xz, r4.x, r6.yyww, r5
+			else
+			  add r4.x, r5.y, -c20.y
+			  add r4.x, r4.x, -c21.y
+			  mul r4.x, r4.x, -c20.x
+			  rcp r4.w, c21.y
+			  mul r4.x, r4.x, r4.w
+			  mul r8, r5.xxzx, c22.xzxz
+			  dp4 r4.w, r8, r8
+			  rsq r5.w, r4.w
+			  mul r6.yw, r5.xxzz, r5.w
+			  mad r6.yw, r6, r4.x, -r5.xxzz
+			  mul r4.x, r4.x, r4.x
+			  slt r4.x, r4.x, r4.w
+			  mad r3.xz, r4.x, r6.yyww, r5
+			endif
+			mov r3.y, r5.y
+		  endif
+		  add r4.x, r2.y, -r4.y
+		  dp3 r4.y, r3, c1
+		  slt r4.w, r4.x, r4.y
+		  lrp r5.y, r4.w, r4.x, r4.y
+		  dp3 r5.x, r3, c0
+		  dp3 r5.z, r3, c2
+		  mad r6, c3.xyzx, r6.xxxz, r6.zzzx
+		  dp4 r5.w, r3, r6
+		  dp4 r3.w, r5, r7
+		  dp3 r7.x, r5, c12
+		  dp3 r4.x, r5, c13
+		  dp3 r7.z, r5, c14
+		  if_lt -r2.x, r2.x
+			slt r2.x, r4.x, -c22.z
+			mul r2.x, -r4.x, r2.x
+			slt r4.y, c22.z, r1.w
+			mad r2.x, r4.y, r2.x, r4.x
+			if_lt c22.z, r1.w
+			  slt r4.y, r4.z, r2.x
+			  mad r4.z, r2.w, r2.z, -r2.x
+			  mad r7.y, r4.y, r4.z, r2.x
+			else
+			  mad r2.z, r2.w, -r2.z, r2.y
+			  slt r2.w, r2.x, r2.z
+			  lrp r4.y, r2.w, r2.z, r2.x
+			  slt r2.x, r2.x, c22.z
+			  mad r7.y, r2.x, -r4.y, r4.y
+			endif
+			dp3 r2.x, r7, r7
+			rsq r2.z, r2.x
+			mul r2.w, r2.y, r2.y
+			slt r2.x, r2.w, r2.x
+			mul r4.yzw, r7.xxyz, r2.z
+			mad r4.yzw, r4, r2.y, -r7.xxyz
+			mad r5.xyz, r2.x, r4.yzww, r7
+			if_lt r5.y, c20.y
+			  mov r5.w, c22.z
+			  dp4 r2.x, r5.xzww, r5.xzww
+			  rsq r2.z, r2.x
+			  mul r2.w, c20.x, c20.x
+			  slt r2.x, r2.w, r2.x
+			  mul r2.zw, r5.xyxz, r2.z
+			  mad r2.zw, r2, c20.x, -r5.xyxz
+			  mad r3.xz, r2.x, r2.zyww, r5
+			else
+			  add r2.x, r5.y, -c20.y
+			  add r2.x, r2.x, -c21.y
+			  mul r2.x, r2.x, -c20.x
+			  rcp r2.z, c21.y
+			  mul r2.x, r2.x, r2.z
+			  mul r8, r5.xxzx, c22.xzxz
+			  dp4 r2.z, r8, r8
+			  rsq r2.w, r2.z
+			  mul r4.yz, r5.xxzw, r2.w
+			  mad r4.yz, r4, r2.x, -r5.xxzw
+			  mul r2.x, r2.x, r2.x
+			  slt r2.x, r2.x, r2.z
+			  mad r3.xz, r2.x, r4.yyzw, r5
+			endif
+			mov r3.y, r5.y
+		  else
+			slt r2.x, r4.x, -c22.z
+			mul r2.x, -r4.x, r2.x
+			slt r2.z, c22.z, r1.w
+			mad r2.x, r2.z, r2.x, r4.x
+			add r2.z, r2.y, c23.x
+			if_lt c22.z, r1.w
+			  slt r1.w, r2.z, r2.x
+			  lrp r7.w, r1.w, r2.z, r2.x
+			else
+			  add r1.w, r2.y, -r2.z
+			  slt r2.z, r2.x, r1.w
+			  lrp r4.x, r2.z, r1.w, r2.x
+			  slt r1.w, r2.x, c22.z
+			  mad r7.w, r1.w, -r4.x, r4.x
+			endif
+			dp3 r1.w, r7.xzww, r7.xzww
+			rsq r2.x, r1.w
+			mul r2.z, r2.y, r2.y
+			slt r1.w, r2.z, r1.w
+			mul r2.xzw, r7.xywz, r2.x
+			mad r2.xyz, r2.xzww, r2.y, -r7.xwzw
+			mad r2.xyz, r1.w, r2, r7.xwzw
+			if_lt r2.y, c20.y
+			  mov r2.w, c22.z
+			  dp4 r1.w, r2.xzww, r2.xzww
+			  rsq r2.w, r1.w
+			  mul r4.x, c20.x, c20.x
+			  slt r1.w, r4.x, r1.w
+			  mul r4.xy, r2.xzzw, r2.w
+			  mad r4.xy, r4, c20.x, -r2.xzzw
+			  mad r3.xz, r1.w, r4.xyyw, r2
+			else
+			  add r1.w, r2.y, -c20.y
+			  add r1.w, r1.w, -c21.y
+			  mul r1.w, r1.w, -c20.x
+			  rcp r2.w, c21.y
+			  mul r1.w, r1.w, r2.w
+			  mul r4, r2.xxzx, c22.xzxz
+			  dp4 r2.w, r4, r4
+			  rsq r4.x, r2.w
+			  mul r4.xy, r2.xzzw, r4.x
+			  mad r4.xy, r4, r1.w, -r2.xzzw
+			  mul r1.w, r1.w, r1.w
+			  slt r1.w, r1.w, r2.w
+			  mad r3.xz, r1.w, r4.xyyw, r2
+			endif
+			mov r3.y, r2.y
+		  endif
+		  dp4 r0.w, r3, r6
+		  dp3 r0.x, r3, c0
+		  dp3 r0.y, r3, c1
+		  dp3 r0.z, r3, c2
+		  mov r1.xyz, c22.z
+		endif
+		mov r2.x, c0.w
+		mov r2.y, c1.w
+		mov r2.z, c2.w
+		mov r2.w, c3.w
+		dp4 r3.w, r2, c11
+		mov r3.xyz, c11
+		dp4 o3.w, r0, r3
+		dp4 r3.w, r2, c4
+		mov r3.xyz, c4
+		dp4 o1.x, r0, r3
+		dp4 r3.w, r2, c5
+		mov r3.xyz, c5
+		dp4 o1.y, r0, r3
+		dp4 r3.w, r2, c6
+		mov r3.xyz, c6
+		dp4 o1.z, r0, r3
+		dp4 r3.w, r2, c7
+		mov r3.xyz, c7
+		dp4 o1.w, r0, r3
+		dp4 r3.w, r2, c8
+		mov r3.xyz, c8
+		dp4 o3.x, r0, r3
+		dp4 r3.w, r2, c9
+		mov r3.xyz, c9
+		dp4 o3.y, r0, r3
+		dp4 r2.w, r2, c10
+		mov r2.xyz, c10
+		dp4 o3.z, r0, r2
+		dp3 r0.w, r1, c19
+		dp3 r0.x, r1, c16
+		dp3 r0.y, r1, c17
+		dp3 r0.z, r1, c18
+		dp4 r1.x, r0, r0
+		rsq r1.x, r1.x
+		mul o2, r0, r1.x
+	"/>
+	</Test>
+	<Test Index="29" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_position o0
+		dcl_texcoord o1.xy
+		mul r0, c9, v0.y
+		mad r0, v0.x, c8, r0
+		mad r0, v0.z, c10, r0
+		add o0, r0, c11
+		mov o1.xy, v1
+		"/>
+	</Test>
+	<Test Index="30" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c3, 1, 0, 0.5, -1
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_texcoord1 v2
+		dcl_2d s0
+		dcl_position o0
+		dcl_texcoord o1.xy
+		dcl_texcoord1 o2
+		dcl_texcoord2 o3.xyz
+		dcl_texcoord3 o4.xyz
+		dcl_texcoord4 o5.xyz
+		dcl_texcoord5 o6.xyz
+		texldl r1, v1, s0
+		mov r0.y, r1.x
+		mad r0.xzw, v0.xyzx, c3.xyxy, c3.yyyx
+		dp4 o0.x, r0, c8
+		dp4 r2.x, r0, c0
+		dp4 r2.y, r0, c1
+		dp4 r2.z, r0, c2
+		dp4 o0.y, r0, c9
+		add r5.xyz, -r2, c33
+		dp4 o0.z, r0, c10
+		dp3 r1.x, r5, r5
+		rsq r2.w, r1.x
+		dp3 r3.x, r1.yzww, c0
+		dp3 r3.y, r1.yzww, c1
+		dp3 r3.z, r1.yzww, c2
+		mul r1.xyz, r5, r2.w
+		mul r3.xyz, r3, c54.x
+		dp4 o0.w, r0, c11
+		dp3 r1.w, -r1, r3
+		add r0.xyz, -r2, c32
+		add r0.w, r1.w, r1.w
+		nrm r4.xyz, r0
+		mad r0.xyz, r3, -r0.w, -r1
+		mad r0.xyz, r0, v2.x, r2
+		mov r0.w, c3.x
+		mad o6.xyz, r5, r2.w, r4
+		dp4 r2.w, r0, c19
+		mov o5.xyz, r4
+		rcp r2.w, r2.w
+		dp4 r4.x, r0, c16
+		dp4 r4.y, r0, c17
+		mul r0.w, c51.x, c51.x
+		mad r0.z, r1.w, -r1.w, c3.x
+		mul r0.xy, r2.w, r4
+		mad r0.z, r0.w, -r0.z, c3.x
+		mad r0.xy, r0, c3.z, c3.z
+		sge r0.w, r0.z, c3.y
+		mad r0.xy, r0, c53, c53.zwzw
+		mul r2.w, r0.z, r0.w
+		add r0.z, -r0.y, c3.x
+		rsq r0.y, r2.w
+		mul r0.w, r0.w, c51.x
+		rcp r0.y, r0.y
+		mov o1.xy, r0.xzzw
+		mad r0.z, r0.w, r1.w, r0.y
+		mul r0.xyz, r3, r0.z
+		mov o3.xyz, r3
+		mad r0.xyz, r0.w, -r1, -r0
+		mov o4.xyz, r1
+		mad r1.xyz, r0, v2.y, r2
+		mov r1.w, c3.x
+		mad r0.xyz, r0, v2.w, r2
+		dp4 r0.w, r1, c19
+		rcp r2.w, r0.w
+		mov r0.w, c3.x
+		dp4 r2.x, r1, c16
+		dp4 r2.z, r0, c19
+		dp4 r2.y, r1, c17
+		rcp r1.y, r2.z
+		dp4 r1.z, r0, c16
+		dp4 r1.w, r0, c17
+		mul r0.xy, r2.w, r2
+		mul r0.zw, r1.y, r1
+		mad r0.xy, r0, c3.z, c3.z
+		mad r0.zw, r0, c3.z, c3.z
+		mad r0.xy, r0, c52, c52.zwzw
+		mad r0.zw, r0, c52.xyxy, c52
+		mad o2.xy, r0, c3.xwzw, c3.yxzw
+		mad o2.zw, r0, c3.xyxw, c3.xyyx
+		"/>
+	</Test>
+	<Test Index="31" MustSuccess="0" Name="from RA3">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="119"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		preshader
+		add r0.x, c0.x, (-2)
+		mul r1.x, r0.x, r0.x
+		neg r0.x, r1.x
+		ge c11.x, r0.x, r1.x
+
+		vs_2_0
+		def c0, 1, 0, 0, 0
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_color v2
+		mul oD0.x, v2.w, c1.x
+		mad r0, v0.xyzx, c0.xxxy, c0.yyyx
+		dp4 r1.x, r0, c124
+		dp4 r1.y, r0, c125
+		dp4 r1.z, r0, c126
+		mov r1.w, c0.x
+		dp4 r0.w, r1, c122
+		rcp r2.x, r0.w
+		dp4 r0.z, r1, c121
+		mul oT1.x, r2.x, r0.z
+		dp4 r0.x, r1, c119
+		dp4 r0.y, r1, c120
+		add r1, -r0, c0.xxxy
+		mad oPos, c11.x, r1, r0
+		mov oT0.xy, v1
+		"/>
+	</Test>
+	<Test Index="32" MustSuccess="1" Name="from GTAIV">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c0, 0.100000001, 9.99999997e-007, 0, 1
+		def c1, 0.159154937, 0.5, 6.28318548, -3.14159274
+		dcl_position v0
+		dcl_normal v1
+		dcl_color v2
+		dcl_texcoord v3
+		dcl_texcoord1 v4
+		dcl_texcoord2 v5
+		dcl_texcoord3 v6
+		dcl_position o0
+		dcl_color o1
+		dcl_texcoord o2
+		dcl_texcoord1 o3
+		dcl_texcoord2 o4
+		dcl_texcoord3 o5
+		dcl_texcoord4 o6
+		mov r0.xw, c0
+		mul r0.x, r0.x, c64.x
+		lrp r1.xyz, r0.x, c15, v0
+		mul r2, r1.y, c9
+		mad r2, r1.x, c8, r2
+		mad r1, r1.z, c10, r2
+		add r1, r1, c11
+		add r0.x, r1.w, -c128.x
+		rcp r0.y, c66.x
+		mul_sat r0.x, r0.x, r0.y
+		sge r0.y, c0.y, v2.w
+		mad r0.x, r0.y, -r0.x, r0.x
+		mul r0.y, r0.x, v2.w
+		max r0.x, r0.x, c0.z
+		mul r2, r0.x, v1.xyxy
+		mul_sat o1.w, r0.y, c65.x
+		mad r0.x, v1.z, c1.x, c1.y
+		frc r0.x, r0.x
+		mad r0.x, r0.x, c1.z, c1.w
+		sincos r3.xy, r0.x
+		mul r0.xyz, r2.yzww, r3.yyxw
+		mad r2.x, r2.x, r3.x, -r0.x
+		add r2.y, r0.z, r0.y
+		mov r2.zw, c0.z
+		mad r2, r2, c47, r1
+		mov o4.y, r1.w
+		add r0.x, -r2.w, c16.w
+		add r0.y, -c16.z, c16.w
+		rcp r0.y, r0.y
+		mul_sat r0.x, r0.x, r0.y
+		add r0.x, -r0.x, c0.w
+		add r0.yz, -r0.w, c16.xxyw
+		mad o3.zw, r0.x, r0.xyyz, c0.w
+		rcp r0.x, c41.x
+		mul_sat r0.x, r2.w, r0.x
+		add r0.y, r2.w, -c41.x
+		mov o0, r2
+		add r0.z, -c41.x, c41.y
+		rcp r0.z, r0.z
+		mul_sat r0.y, r0.y, r0.z
+		lrp r1.x, c41.w, r0.x, r0.y
+		add o5.w, r1.x, c41.z
+		mov r1.xyz, c43
+		add r0.xzw, -r1.xyyz, c42.xyyz
+		mad o5.xyz, r0.y, r0.xzww, c43
+		mov o1.xyz, v2
+		mov o2, v3
+		mov o3.xy, v4
+		mul o4.xzw, c0.wyzz, v5.z
+		mov o6, v6
+	"/>
+	</Test>
+	<Test Index="33" MustSuccess="1" Name="from GTAIV">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c0, 0.100000001, 9.99999997e-007, 0, 1
+		def c1, 0.159154937, 0.5, 6.28318548, -3.14159274
+		dcl_position v0
+		dcl_normal v1
+		dcl_color v2
+		dcl_texcoord v3
+		dcl_texcoord1 v4
+		dcl_texcoord2 v5
+		dcl_texcoord3 v6
+		dcl_position o0
+		dcl_color o1
+		dcl_texcoord o2
+		dcl_texcoord1 o3
+		dcl_texcoord2 o4
+		dcl_texcoord3 o5
+		dcl_texcoord4 o6
+		mov r0.xw, c0
+		mul r0.x, r0.x, c64.x
+		lrp r1.xyz, r0.x, c15, v0
+		mul r2, r1.y, c9
+		mad r2, r1.x, c8, r2
+		mad r1, r1.z, c10, r2
+		add r1, r1, c11
+		add r0.x, r1.w, -c128.x
+		rcp r0.y, c66.x
+		mul_sat r0.x, r0.x, r0.y
+		sge r0.y, c0.y, v2.w
+		mad r0.x, r0.y, -r0.x, r0.x
+		mul r0.y, r0.x, v2.w
+		max r0.x, r0.x, c0.z
+		mul r2, r0.x, v1.xyxy
+		mul_sat o1.w, r0.y, c65.x
+		mad r0.x, v1.z, c1.x, c1.y
+		frc r0.x, r0.x
+		mad r0.x, r0.x, c1.z, c1.w
+		sincos r3.xy, r0.x
+		mul r0.xyz, r2.yzww, r3.yyxw
+		mad r2.x, r2.x, r3.x, -r0.x
+		add r2.y, r0.z, r0.y
+		mov r2.zw, c0.z
+		mad r1, r2, c47, r1
+		add r0.x, -r1.w, c16.w
+		add r0.y, -c16.z, c16.w
+		rcp r0.y, r0.y
+		mul_sat r0.x, r0.x, r0.y
+		add r0.x, -r0.x, c0.w
+		add r0.yz, -r0.w, c16.xxyw
+		mad o3.zw, r0.x, r0.xyyz, c0.w
+		rcp r0.x, c41.x
+		mul_sat r0.x, r1.w, r0.x
+		add r0.y, r1.w, -c41.x
+		mov o0, r1
+		add r0.z, -c41.x, c41.y
+		rcp r0.z, r0.z
+		mul_sat r0.y, r0.y, r0.z
+		lrp r1.x, c41.w, r0.x, r0.y
+		add o5.w, r1.x, c41.z
+		mov r1.xyz, c43
+		add r0.xzw, -r1.xyyz, c42.xyyz
+		mad o5.xyz, r0.y, r0.xzww, c43
+		mov o1.xyz, v2
+		mov o2, v3
+		mov o3.xy, v4
+		mul o4, c0.wzzz, v5.z
+		mov o6, v6
+		"/>
+	</Test>
+	<Test Index="34" MustSuccess="1">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="25"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c3, 0, 0.333299994, 0.0149999997, 1
+		def c4, 1, 2, -1, 0.5
+		def c5, 1.97500002, 0.792999983, 0.375, 0.193000004
+		def c6, 0.699999988, 0.5, 2, 3
+		def c7, 0.189999998, 0.0915860012, 0.182600006, 0.11586
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_color v2
+		dcl_tangent v3
+		dcl_binormal v4
+		mov r0.xyz, c13
+		mul r0.yw, r0.y, c1.xxzy
+		mad r0.xy, r0.x, c0, r0.ywzw
+		mad r0.xy, r0.z, c2, r0
+		add r0.w, r0.y, r0.x
+		max r0.w, r0.w, c3.x
+		min r0.w, r0.w, c4.x
+		mul r0.w, r0.w, c3.y
+		mov r1.x, c0.w
+		mov r1.y, c1.w
+		mov r1.z, c2.w
+		add r2.xyz, r1, c31
+		dp3 r1.w, r2, r2
+		dp3 r2.x, r2, c4.y
+		rsq r1.w, r1.w
+		rcp r1.w, r1.w
+		mov r2.yw, c4
+		mad r1.w, r1.w, r2.y, c33.z
+		mul r3, r1.w, c7
+		frc r3, r3
+		mad r3, r3, c4.y, c4.z
+		mul r1.w, v0.z, c13.w
+		mul r3, r3, r1.w
+		mad r3, r3, c6.x, c6.y
+		frc r3, r3
+		mad r3, r3, c4.y, c4.z
+		abs r3, r3
+		mul r4, r3, r3
+		mad r3, r3, -c6.z, c6.w
+		mul r3, r4, r3
+		add r2.yz, r3.xyww, r3.xxzw
+		mad r0.xy, r0.w, r2.yzzw, r0
+		mul r0.xy, r0, c3.z
+		add r2.y, r2.x, v2.y
+		add r0.w, r2.y, c10.w
+		dp3 r2.x, v0, r0.w
+		add r3, r2.xxyy, c33.z
+		mul r3, r3, c5
+		frc r3, r3
+		mad r3, r3, c4.y, c4.z
+		mul r3, r1.w, r3
+		mad r2, r3, c10.x, r2.w
+		frc r2, r2
+		mad r2, r2, c4.y, c4.z
+		abs r2, r2
+		add r2.xyz, r2.yyww, r2.xxzw
+		mov r3.xyz, v3
+		mul r4.xyz, r3.zxyw, v4.yzxw
+		mad r3.xyz, r3.yzxw, v4.zxyw, -r4
+		dp3 r0.w, r3, r3
+		rsq r0.w, r0.w
+		mul r3.xy, r3, r0.w
+		mul r3.xy, r3, v3.w
+		mul r0.w, v2.x, c10.y
+		mul r3.xy, r3, r0.w
+		add r0.w, -v2.z, c4.x
+		mul r3.z, r0.w, c10.z
+		mad r2.xyz, r2, r3, v0
+		mad r0.z, r2.z, r0.z, c4.x
+		mul r0.z, r0.z, r0.z
+		mad r0.z, r0.z, r0.z, -r0.z
+		mad r0.xy, r0, r0.z, r2
+		mov r0.z, r2.z
+		dp3 r0.w, r2, r2
+		nrm r2.xyz, r0
+		rsq r0.x, r0.w
+		rcp r0.x, r0.x
+		mul r0.xyz, r2, r0.x
+		abs r2.xyz, c0
+		add r1.w, r2.y, r2.x
+		add r1.w, r2.z, r1.w
+		mad r1.xyz, r0, r1.w, r1
+		mul r2.xy, r0, r1.w
+		mul r2.zw, r2.xyxy, r2.xyxy
+		dp4 r1.w, r2, c14
+		add r2.z, r1.z, r1.w
+		mad r2.xyw, r1.xyzx, c3.wwzx, c3.xxzw
+		dp4 oPos.x, c25, r2
+		dp4 oPos.y, c26, r2
+		dp4 oPos.z, c27, r2
+		dp4 r1.x, c28, r2
+		mov r0.w, v0.w
+		dp4 r1.y, c0, r0
+		dp4 r1.z, c1, r0
+		dp4 r1.w, c2, r0
+		add oT0.yzw, r1, c31.xxyz
+		mul oT0.x, r1.x, c34.w
+		mov oPos.w, r1.x
+		mov oT1.xyz, v1
+		mov oT1.w, c12.w
+		"/>
+	</Test>
+	<Test Index="35" MustSuccess="1" Name="Titan Quest">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c96, 765.005859, 1, 0, -0.00999999978
+		def c97, -0.5, 0.5, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_tangent v2
+		dcl_binormal v3
+		dcl_texcoord v4
+		dcl_blendweight v5
+		dcl_blendindices v6
+		mul r1, v6.zyxw, c96.x
+		mad r0, v0.xyzx, c96.yyyz, c96.zzzy
+		mova a0, r1
+		dp4 r1.x, r0, c15[a0.y]
+		dp4 r1.y, r0, c16[a0.y]
+		dp4 r1.z, r0, c17[a0.y]
+		mul r2.xyz, r1, v5.y
+		dp4 r1.x, r0, c15[a0.x]
+		dp4 r1.y, r0, c16[a0.x]
+		dp4 r1.z, r0, c17[a0.x]
+		mad r2.xyz, r1, v5.x, r2
+		dp4 r1.x, r0, c15[a0.z]
+		dp4 r1.y, r0, c16[a0.z]
+		dp4 r1.z, r0, c17[a0.z]
+		mad r2.xyz, r1, v5.z, r2
+		dp4 r1.x, r0, c15[a0.w]
+		dp4 r1.y, r0, c16[a0.w]
+		dp4 r1.z, r0, c17[a0.w]
+		mad r1.xyz, r1, v5.w, r2
+		mov r1.w, c96.y
+		dp4 oPos.x, r1, c8
+		dp4 oPos.y, r1, c9
+		dp4 oPos.z, r1, c10
+		dp3 r0.x, v2, c15[a0.x]
+		dp3 r0.y, v2, c16[a0.x]
+		dp3 r0.z, v2, c17[a0.x]
+		dp4 oPos.w, r1, c11
+		dp3 r5.x, r0, c12
+		dp3 r5.z, r0, c14
+		dp3 r5.y, r0, c13
+		dp3 r3.x, c2, r5
+		dp3 r0.x, -v3, c15[a0.x]
+		dp3 r0.y, -v3, c16[a0.x]
+		dp3 r0.z, -v3, c17[a0.x]
+		dp3 r4.x, r0, c12
+		dp3 r4.z, r0, c14
+		dp3 r4.y, r0, c13
+		dp3 r0.x, v1, c15[a0.x]
+		dp3 r0.y, v1, c16[a0.x]
+		dp3 r0.z, v1, c17[a0.x]
+		dp3 r3.y, c2, r4
+		dp3 r2.x, r0, c12
+		dp3 r2.z, r0, c14
+		dp3 r2.y, r0, c13
+		dp3 r3.z, c2, r2
+		dp4 r0.x, r1, c12
+		dp4 r0.y, r1, c13
+		dp4 r0.z, r1, c14
+		dp3 r1.x, r3, r3
+		add r6.xyz, -r0, c0
+		rsq r0.w, r1.x
+		nrm r1.xyz, r6
+		mul oT1.xyz, r3, r0.w
+		dp3 r3.x, r1, r5
+		dp3 r3.y, r1, r4
+		dp3 r3.z, r1, r2
+		mov oT3.x, r5.y
+		mov oT3.y, r4.y
+		nrm r4.xyz, r3
+		mov oT2.xyz, r4
+		dp3 r3.x, -r1, r2
+		mov oT0.xy, v4
+		add r0.w, r3.x, r3.x
+		mad r1.xyz, r2, -r0.w, -r1
+		mov oT3.z, r2.y
+		mov oT1.w, r1.x
+		mov r0.w, c96.y
+		mov oT2.w, r1.y
+		dp4 r2.z, r0, c6
+		dp4 r2.x, r0, c4
+		dp4 r1.w, r0, c7
+		dp4 r2.y, r0, c5
+		rcp r0.w, r1.w
+		mov oT3.w, r1.z
+		mul r1.xzw, r2.xyyz, r0.w
+		max r1.w, r1.w, c96.z
+		mov r0.y, r1.x
+		min r1.w, r1.w, c96.y
+		add r1.y, r1.w, c96.w
+		mov r1.w, c3.x
+		mul r3.xy, r1.w, c97
+		mad r1.xw, r2.x, r0.w, r3.xyzy
+		mad r0.xw, r2.y, r0.w, r3.xyzy
+		mov oT4.xyz, r1.xzyw
+		mov r0.z, r1.y
+		mov oT5.xyz, r1.wzyw
+		mov oT6.xyz, r0.yxzw
+		mov oT7.xyz, r0.ywzw
+		mov oD0.xyz, c1
+		"/>
+	</Test>
+	<Test Index="36" MustSuccess="0" Name="FarCry">
+		<IsMono Value="1"/>
+		<Matrices Count="0"/>
+		<Shader Text="
+		vs_2_x
+		def c0, 0, 0, 0, 0
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_texcoord1 v2
+		dcl_texcoord2 v3
+		dcl_texcoord3 v4
+		dcl_texcoord4 v5
+		dcl_texcoord5 v6
+		dcl_texcoord6 v7
+		dcl_color v8
+		max r0.w, v0.z, c0.x
+		mad r0.w, r0.w, v7.z, v7.w
+		mul r0.w, r0.w, r0.w
+		mad r0.w, r0.w, r0.w, -v7.w
+		mov r0.xy, v0
+		mad r1.xy, v7, r0.w, r0
+		dp3 r0.w, v0, v0
+		mov r1.z, v0.z
+		rsq r0.w, r0.w
+		nrm r0.xyz, r1
+		rcp r0.w, r0.w
+		mul r0.xyz, r0, r0.w
+		mov r0.w, v0.w
+		dp4 oPos.x, v2, r0
+		dp4 oPos.y, v3, r0
+		dp4 r2.z, v4, r0
+		mov r1.xyz, v8
+		mul oD0.xyz, r1, v6
+		mad r1.w, c29.x, -r2.z, c29.y
+		dp4 r2.w, v5, r0
+		max r0.w, r1.w, c28.x
+		mov oPos.zw, r2
+		min oFog, r0.w, c28.w
+		mov oT0.xy, v1
+		mov oD0.w, v6.w
+		"/>
+	</Test>
+	<Test Index="37" MustSuccess="1" Name="DIRT">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c4, 1, 0, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_position o0
+		dcl_texcoord o1.x
+		mul r0.xyz, c1, v0.y
+		mad r0.xyz, c0, v0.x, r0
+		mad r0.xyz, c2, v0.z, r0
+		add r0.xyz, r0, c3
+		mov r0.w, c4.x
+		dp4 r0.x, r0, c64
+		mul r0.yzw, c1.xxyz, v1.y
+		mad r0.yzw, c0.xxyz, v1.x, r0
+		mad r0.yzw, c2.xxyz, v1.z, r0
+		dp3 r0.y, r0.yzww, c65
+		add o1.x, r0.x, r0.y
+		mov r0, c1
+		mul r1, r0.y, c9
+		mad r1, c8, r0.x, r1
+		mad r1, c10, r0.z, r1
+		mad r0, c11, r0.w, r1
+		mul r0, r0, v0.y
+		mov r1, c0
+		mul r2, r1.y, c9
+		mad r2, c8, r1.x, r2
+		mad r2, c10, r1.z, r2
+		mad r1, c11, r1.w, r2
+		mad r0, r1, v0.x, r0
+		mov r1, c2
+		mul r2, r1.y, c9
+		mad r2, c8, r1.x, r2
+		mad r2, c10, r1.z, r2
+		mad r1, c11, r1.w, r2
+		mad r0, r1, v0.z, r0
+		mov r1, c3
+		mul r2, r1.y, c9
+		mad r2, c8, r1.x, r2
+		mad r2, c10, r1.z, r2
+		mad r1, c11, r1.w, r2
+		add o0, r0, r1
+		"/>
+	</Test>
+	<Test Index="38" MustSuccess="1" Name="Resident Evil 5">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c12, 1, 0, -9.99999975e-006, 0
+		dcl_position v0
+		dcl_position o0
+		dcl_texcoord o1
+		mad r0, v0.xyzx, c12.xxxy, c12.yyyx
+		dp4 r1.x, c7, r0
+		dp4 r1.y, c8, r0
+		dp4 r1.z, c9, r0
+		mov r1.w, c12.x
+		dp4 r0.x, r1, c4
+		dp4 r0.y, r1, c5
+		dp4 r0.z, r1, c6
+		dp3 r0.w, r0, r0
+		rsq r0.w, r0.w
+		rcp r2.w, r0.w
+		mul r2.xy, r0, r2.w
+		mul r0.xy, r0, r0
+		add r0.x, r0.y, r0.x
+		rcp r0.x, r0.x
+		add r0.y, -r0.z, r2.w
+		slt r0.z, r0.z, c12.y
+		mul r0.yw, r2.xxzy, r0.y
+		mul r3.xy, r0.x, r0.ywzw
+		mad r2.z, c11.x, r2.w, c11.y
+		lrp r3.zw, r0.z, c12.xyxz, r2
+		dp4 r0.x, r1, c0
+		dp4 r0.y, r1, c1
+		dp4 r0.z, r1, c2
+		dp4 r0.w, r1, c3
+		lrp r1, c10.x, r3, r0
+		mov o0, r1
+		mov o1, r1
+		"/>
+	</Test>
+	<Test Index="39" MustSuccess="1" Name="Bionic Commando">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c9, 1, 0, 0, 0
+		dcl_position v0
+		dcl_texcoord v1
+		dcl_position o0
+		dcl_texcoord o1.xy
+		dcl_texcoord1 o2.xyz
+		dp4 o0.w, v0, c3
+		dp4 r0.x, v0, c0
+		dp4 r0.y, v0, c1
+		mul r1.xy, r0, c7
+		mov o0.xy, r0
+		mov r1.z, c9.x
+		dp3 o2.x, r1, c4
+		dp3 o2.y, r1, c5
+		dp3 o2.z, r1, c6
+		mov o0.z, c8.x
+		mov o1.xy, v1
+		"/>
+	</Test>
+	<Test Index="40" MustSuccess="1" Name="Witcher">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="8"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_2_0
+		def c4, 1, 0, 0, 0
+		dcl_position v0
+		dcl_normal v1
+		dcl_texcoord v2
+		mad r0.xyz, v2.xyxw, c4.xxyw, c4.yyxw
+		dp3 oT0.y, r0, c25
+		dp3 oT0.x, r0, c24
+		dp4 r3.x, v0, c0
+		dp4 r3.y, v0, c1
+		dp4 r3.z, v0, c2
+		dp4 r3.w, v0, c3
+		add r2, r3, -c27
+		dp3 r5.x, v1, c0
+		dp3 r5.y, v1, c1
+		dp3 r5.z, v1, c2
+		mov r1.xyz, c4.y
+		mov r0.xyz, c4.y
+		loop aL, i0
+		add r6.xyz, -r3, c48[aL]
+		dp3 r4.z, r6, r6
+		rsq r0.w, r4.z
+		rcp r4.y, r0.w
+		mov r4.x, c4.x
+		mul r6.xyz, r6, r0.w
+		dp3 r7.x, c56[aL], r4
+		dp3 r4.x, r5, r6
+		rcp r3.w, r7.x
+		slt r0.w, r4.y, c64[aL].x
+		max r1.w, r4.x, c4.y
+		mul r0.w, r3.w, r0.w
+		mul r4.xyz, r1.w, c40[aL]
+		mad r0.xyz, r4, r0.w, r0
+		mad r1.xyz, c32[aL], r0.w, r1
+		endloop
+		mov r3.xyz, r1
+		mov r1.xyz, r0
+		add r0.xyz, r3, c26
+		mul r1.xyz, r1, c29
+		dp4 r1.w, r2, r2
+		mad r0.xyz, r0, c28, r1
+		add oD0.xyz, r0, c30
+		mov r7, c1
+		mul r0, r7, c21.y
+		rsq r1.w, r1.w
+		mov r6, c0
+		mad r0, r6, c21.x, r0
+		rcp oFog, r1.w
+		mov r2, c2
+		mad r1, r2, c21.z, r0
+		mov r0, c3
+		mad r4, r0, c21.w, r1
+		mul r1, r7, c20.y
+		mul r5, r4, c11.y
+		mad r1, r6, c20.x, r1
+		mad r3, r2, c20.z, r1
+		mul r1, r7, c22.y
+		mad r3, r0, c20.w, r3
+		mad r1, r6, c22.x, r1
+		mad r5, r3, c11.x, r5
+		mad r1, r2, c22.z, r1
+		mad r1, r0, c22.w, r1
+		mul r7, r7, c23.y
+		mad r5, r1, c11.z, r5
+		mad r6, r6, c23.x, r7
+		mad r6, r2, c23.z, r6
+		mul r2, r4, c8.y
+		mad r0, r0, c23.w, r6
+		mad r2, r3, c8.x, r2
+		mad r5, r0, c11.w, r5
+		mad r2, r1, c8.z, r2
+		dp4 oPos.w, v0, r5
+		mad r2, r0, c8.w, r2
+		dp4 oPos.x, v0, r2
+		mul r2, r4, c9.y
+		mad r2, r3, c9.x, r2
+		mul r4, r4, c10.y
+		mad r2, r1, c9.z, r2
+		mad r3, r3, c10.x, r4
+		mad r2, r0, c9.w, r2
+		mad r1, r1, c10.z, r3
+		dp4 oPos.y, v0, r2
+		mad r0, r0, c10.w, r1
+		dp4 oPos.z, v0, r0
+		mov oD0.w, c29.w
+		"/>
+	</Test>
+	<Test Index="41" MustSuccess="1" Name="NFS Shift">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="0"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c8, 1, 1, 0.5, 0.25
+		def c9, 6.28318548, -3.14159274, 1.25, 0.125
+		def c10, 1, 0, 1.57079637, 0
+		dcl_position v0
+		dcl_color v1
+		dcl_texcoord v2
+		dcl_normal v3
+		dcl_texcoord8 v4
+		dcl_texcoord9 v5
+		dcl_texcoord10 v6
+		dcl_texcoord11 v7
+		dcl_position o0
+		dcl_texcoord4 o1
+		dcl_texcoord o2.xy
+		dcl_texcoord1 o3.xyz
+		dcl_texcoord2 o4
+		dp3 r0.z, v7, c8.x
+		add r0.w, r0.z, c5.x
+		mul r0.w, r0.w, c9.w
+		dp3 r2.w, v0, r0.z
+		frc r0.w, r0.w
+		mad r0.z, r0.w, c8.y, c8.z
+		mad r0.w, r2.w, c8.y, c8.z
+		frc r0.z, r0.z
+		frc r0.w, r0.w
+		mad r1.w, r0.z, c9.x, c9.y
+		mad r2.z, r0.w, c9.x, c9.y
+		sincos r0.y, r1.w
+		sincos r1.xy, r2.z
+		frc r0.w, r2.w
+		mul r2.xyz, r1.xxyw, c10.xyxw
+		dp3 r1.x, r2, v4
+		dp3 r1.y, r2, v5
+		dp3 r1.z, r2, v6
+		mov_sat r5.xy, v2
+		mul r0.xyz, r0.y, r1
+		min r1.w, r5.y, c8.x
+		mad r0.w, r0.w, c8.w, c8.w
+		add r1.w, -r1.w, c8.x
+		mul r0.w, r0.w, c9.z
+		mul r1.w, r1.w, r1.w
+		mul r1.w, r0.w, r1.w
+		dp3 r0.w, v0, v0
+		mad r1.xyz, r0, r1.w, v0
+		rsq r0.w, r0.w
+		nrm r0.xyz, r1
+		rcp r0.w, r0.w
+		mul r1.xyz, r0, r0.w
+		dp4 r2.x, v4, c0
+		dp4 r2.y, v5, c0
+		dp4 r2.z, v6, c0
+		dp4 r2.w, v7, c0
+		mov r1.w, c8.x
+		dp4 r0.x, v4, c1
+		dp4 r0.y, v5, c1
+		dp4 r0.z, v6, c1
+		dp4 r0.w, v7, c1
+		dp4 o0.x, r1, r2
+		dp4 o0.y, r1, r0
+		dp4 r0.x, v4, c2
+		dp4 r0.y, v5, c2
+		dp4 r0.z, v6, c2
+		mul r2.xyz, r1.y, v5
+		dp4 r0.w, v7, c2
+		mad r2.xyz, r1.x, v4, r2
+		dp4 o0.z, r1, r0
+		mad r0.xyz, r1.z, v6, r2
+		dp4 r2.x, v4, c3
+		add r0.xyz, r0, v7
+		add r0.xyz, -r0, c4
+		mov r0.w, c10.y
+		dp4 r2.y, v5, c3
+		dp3 r0.w, r0.xzww, r0.xzww
+		dp4 r2.z, v6, c3
+		rsq r0.w, r0.w
+		mul r3.xz, r0, r0.w
+		dp3 r2.w, v5, v5
+		rsq r3.w, r2.w
+		add r2.w, -r5.y, c8.x
+		mad r4.xz, v5, r3.w, -r3
+		min r2.w, r2.w, c8.x
+		mul r4.y, r3.w, v5.y
+		mul r2.w, r2.w, c10.z
+		sincos r3.y, r2.w
+		dp4 r2.w, v7, c3
+		mul r4.xyz, r4, r3.y
+		mad r4.xz, r0, r0.w, r4
+		dp4 o0.w, r1, r2
+		dp3 r0.w, r4, r4
+		mov o2.xy, r5
+		rsq r1.w, r0.w
+		mad r0.w, r4.y, r1.w, c8.x
+		mov r1.xyz, v5
+		mul r3.xyz, r1, v3.y
+		mul r2.xyz, r4, r1.w
+		mov r1.xyz, v4
+		mad r3.xyz, v3.x, r1, r3
+		mul r2.w, r0.w, c8.z
+		mov r1.xyz, v6
+		mad r1.xyz, v3.z, r1, r3
+		nrm r4.xyz, r0
+		nrm r3.xyz, r1
+		mov r1, c7
+		add r1, -r1, c6
+		dp3 r0.w, r3, r4
+		mad r1, r2.w, r1, c7
+		rsq r0.w, r0_abs.w
+		mad o4, r0.xyzx, c10.xxxy, c10.yyyx
+		rcp r0.w, r0.w
+		mul r0.w, r0.w, v1.w
+		mov r0.xyz, v1
+		mul o1, r1, r0
+		mov o3.xyz, r2		
+		"/>
+	</Test>
+	<Test Index="42" MustSuccess="1" Name="HL2 E2">
+		<IsMono Value="1"/>
+		<Matrices Count="0"/>
+		<Shader Text="
+		vs_2_0
+		dcl_position v0
+		mad oPos, v0.xyzx, c0.yyyx, c0.xxxy
+		"/>
+	</Test>
+	<Test Index="43" MustSuccess="1" Name="OF Dragon Rising">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="0"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+		vs_3_0
+		def c16, 32000, 1, 6, 0
+		def c17, 5000, 0.5, -0, 0.999899983
+		dcl_position v0
+		dcl_position o0
+		dcl_texcoord o1.xyz
+		dcl_texcoord1 o2.xyz
+		dcl_texcoord2 o3.xyz
+		dcl_texcoord3 o4.xyz
+		nrm r0.xyz, v0
+		mul r1.xyz, r0, c16.x
+		mul r2.xyz, r1.y, c5
+		mad r2.xyz, c4, r1.x, r2
+		mad r2.xyz, c6, r1.z, r2
+		add o3.xyz, r2, c7
+		mov r2.xyz, c8
+		add r2.xyz, -r2, c10
+		mul r3.xyz, r0.xzyw, c16.yyzw
+		mov o1.xyz, r0
+		dp3 r0.x, r3, r3
+		rsq r0.x, r0.x
+		mul r0.yz, r3.xxyw, r0.x
+		mad r0.x, r3.z, -r0.x, c16.y
+		max r3.xy, r0.yzzw, c16.w
+		max r0.yz, -r0, c16.w
+		mad r2.xyz, r3.x, r2, c8
+		lrp r3.xzw, r0.y, c11.xyyz, r2.xyyz
+		lrp r2.xyz, r0.z, c12, r3.xzww
+		lrp r0.yzw, r3.y, c13.xxyz, r2.xxyz
+		add r2.xyz, -r0.yzww, c9
+		mad o2.xyz, r0.x, r2, r0.yzww
+		nrm r0.xyz, c14
+		mul r2.xyz, r0.zxyw, c16.wyww
+		mad r2.xyz, r0.yzxw, c16.ywww, -r2
+		nrm r3.xyz, r2
+		mul r2.xyz, r0.yzxw, r3.zxyw
+		mad r2.xyz, r3.yzxw, r0.zxyw, -r2
+		nrm r4.xyz, r2
+		mul r2.xyz, c17.x, v0
+		dp3 r4.y, r4, r2
+		dp3 r4.x, r3, r2
+		dp3 r4.z, r0, r2
+		mov r0.yz, c17
+		mad o4.xyz, r4, c15.x, r0.yyzw
+		mov r0, c4
+		mul r2.xyz, r0.y, c1.xyww
+		mad r2.xyz, c0.xyww, r0.x, r2
+		mad r0.xyz, c2.xyww, r0.z, r2
+		mad r0.xyz, c3.xyww, r0.w, r0
+		mov r2, c5
+		mul r3.xyz, r2.y, c1.xyww
+		mad r3.xyz, c0.xyww, r2.x, r3
+		mad r2.xyz, c2.xyww, r2.z, r3
+		mad r2.xyz, c3.xyww, r2.w, r2
+		mul r2.xyz, r1.y, r2
+		mad r0.xyz, r0, r1.x, r2
+		mov r2, c6
+		mul r1.xyw, r2.y, c1
+		mad r1.xyw, c0, r2.x, r1
+		mad r1.xyw, c2, r2.z, r1
+		mad r1.xyw, c3, r2.w, r1
+		mad r0.xyz, r1.xyww, r1.z, r0
+		mov r1, c7
+		mul r2.xyz, r1.y, c1.xyww
+		mad r2.xyz, c0.xyww, r1.x, r2
+		mad r1.xyz, c2.xyww, r1.z, r2
+		mad r1.xyz, c3.xyww, r1.w, r1
+		add r0.xyz, r0, r1
+		mul o0.z, r0.z, c17.w
+		mov o0.xyw, r0.xyzz
+		"/>
+	</Test>
+	<Test Index="44" MustSuccess="1" Name="COD MW2 Sky">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="0"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+	vs_3_0
+	def c7, 1, 0, 0, 0
+	dcl_position v0
+	dcl_position o0
+	dcl_texcoord o1.xyz
+	mad r0, v0.xyzx, c7.xxxy, c7.yyyx
+	dp4 r1.x, r0, c4
+	dp4 r1.y, r0, c5
+	dp4 r1.z, r0, c6
+	dp3 o0.x, r1, c0
+	dp3 o0.y, r1, c1
+	dp3 o0.z, r1, c2
+	dp3 o0.w, r1, c3
+		"/>
+	</Test>
+	<Test Index="45" MustSuccess="1" Name="BF BC 2">
+		<IsMono Value="0"/>
+		<Matrices Count="1">
+			<Matrix>
+				<Register Value="4"/>
+				<IsTransposed Value="1"/>
+				<IncorrectProjection Value="1"/>
+			</Matrix>
+		</Matrices>
+		<Shader Text="
+	vs_3_0
+	def c3, 0, 0.5, 1, 0.159154937
+	def c8, 6.28318548, -3.14159274, 0, 0
+	dcl_texcoord v0
+	dcl_texcoord1 v1
+	dcl_texcoord3 v2
+	dcl_texcoord4 v3
+	dcl_texcoord5 v4
+	dcl_texcoord6 v5
+	dcl_position o0
+	dcl_texcoord o1
+	dcl_texcoord1 o2
+	dcl_texcoord2 o3
+	dcl_texcoord3 o4
+	dcl_texcoord4 o5
+	dcl_texcoord5 o6
+	mova a0.x, v4.x
+	mov r0.x, c3.x
+	if_lt r0.x, c21[a0.x].x
+	  add r0.x, v5.y, v5.x
+	  mul o3.w, r0.x, c3.y
+	  mov_sat r0.x, v3.x
+	  add r0.y, c0.w, v3.y
+	  add r0.y, r0.y, c2.w
+	  mad r0.z, v3.z, -v3.z, c3.z
+	  mad r0.z, v3.w, -v3.w, r0.z
+	  rsq r0.z, r0.z
+	  rcp r1.y, r0.z
+	  add r0.y, r0.y, c202.x
+	  mad r0.y, r0.y, c3.w, c3.y
+	  frc r0.y, r0.y
+	  mad r0.y, r0.y, c8.x, c8.y
+	  sincos r2.x, r0.y
+	  mov r1.xz, v3.zyww
+	  mul r0.yzw, r1.xxyz, r2.x
+	  mul r0.xyz, r0.x, r0.yzww
+	  mad r0.xyz, r0, c201.w, v0
+	  mov r0.w, c3.z
+	  dp4 r1.x, r0, c0
+	  dp4 r1.y, r0, c1
+	  dp4 r1.z, r0, c2
+	  dp3 r2.x, v1, c0
+	  dp3 r2.y, v1, c1
+	  dp3 r2.z, v1, c2
+	  nrm r3.xyz, r2
+	  dp4 o0.x, r0, c4
+	  dp4 o0.y, r0, c5
+	  dp4 o0.z, r0, c6
+	  dp4 o0.w, r0, c7
+	  mov r1.w, c3.z
+	  dp4 o3.x, r1, c13
+	  dp4 o3.y, r1, c14
+	  dp4 o3.z, r1, c15
+	  dp3_sat o1.w, r3, c17
+	  dp3 r0.x, r3, c18
+	  mad r0.x, r0.x, c3.y, c3.y
+	  mov r2.xyz, c20
+	  add r0.yzw, -r2.xxyz, c19.xxyz
+	  mad o1.xyz, r0.x, r0.yzww, c20
+	  dp3_sat o2.w, -r3, c17
+	  dp3 r0.x, -r3, c18
+	  mad r0.x, r0.x, c3.y, c3.y
+	  mad o2.xyz, r0.x, r0.yzww, c20
+	  mov o4.xyz, r1
+	  mov o4.w, c3.x
+	  mov o5.xyz, r3
+	  mov o5.w, c3.x
+	  mul o6, c3.zzxx, v2.xyxx
+	else
+	  mov o0, c3.x
+	  mov o1, c3.x
+	  mov o2, c3.x
+	  mov o3, c3.x
+	  mov o4, c3.x
+	  mov o5, c3.x
+	  mov o6, c3.x
+	endif
+		"/>
+	</Test>
+</Tests>

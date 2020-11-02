@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="Simplified Chinese" font="MS Gothic">
+	<ControlCenter>
+		<WindowTitle>iZ3D控制中心</WindowTitle>
+		<btnApply>套用</btnApply>
+		<btnSimple>普通调整模式</btnSimple>
+		<btnAdvanced>进阶调整模式</btnAdvanced>
+
+		<msgDiscardChanges>所有更改将被丢弃。 继续？</msgDiscardChanges>
+		<msgServiceError>发生服务错误</msgServiceError>
+
+		<DirectX>
+			<lblCaption>状态及模式</lblCaption>
+			<sbStereoStatus>立体状态及模式</sbStereoStatus>
+			<rbEnableDriver>立体启动</rbEnableDriver>
+			<cbEnableStereoAtStartup>执行应用程式后自动开启立体</cbEnableStereoAtStartup>
+			<rbDisableDriver>立体关闭</rbDisableDriver>
+			<sbOutput>选择立体装置</sbOutput>
+
+			<NoSuchOutput>没有这项立体装置</NoSuchOutput>
+			<UnexpectedError>无法预期的错误：未侦测到立体装置</UnexpectedError>
+
+			<S3DOutput>iZ3D萤幕</S3DOutput>
+			<S3DMarkedOutput>iZ3D 27&quot; Monitor</S3DMarkedOutput>
+			<AnaglyphOutput>彩色立体图(免费)</AnaglyphOutput>
+			<LenovoOutput>Lenovo 3D Anaglyph</LenovoOutput>
+			<ColorCodeOutput>ColorCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>双投影机(试用)</DualProjectionOutput>
+			<SideBySideOutput>并排(试用)</SideBySideOutput>
+			<DLP3DOutput>3D DLP (试用)</DLP3DOutput>
+			<InterlacedOutput>隔行(试用)</InterlacedOutput>
+			<ZalmanOutput>Zalman (试用)</ZalmanOutput>
+			<S3DShutterOutput>Marked Shutter (试用, beta)</S3DShutterOutput>
+			<Viewsonic_G2>Viewsonic (gen 2)</Viewsonic_G2>
+			<MSI>MSI</MSI>
+			<ASUS>ASUS</ASUS>
+			<Dell>Dell</Dell>
+			<S3D120HzProjectorsOutput>120Hz 3D投影仪（试行版，测试版）</S3D120HzProjectorsOutput>
+			<AMDHD3DOutput>AMD HD3D Devices (HDMI 1.4a) (试用)</AMDHD3DOutput>
+			<ShutterOutput>Shutter (试用, beta)</ShutterOutput>
+			<StereoMirrorOutput>立体镜像 (试用)</StereoMirrorOutput>
+			<VR920Output>VR920 (试用, beta)</VR920Output>
+			<Z800Output>Z800 (试用, beta)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP（对 ATI Radeon&#x2122; 客户免费）</ATIDLP3DOutput>
+  			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a)</AMDHD3DOutput>
+
+			<Auto>22&quot; Glasses 2009 [CFL] (default)</Auto>
+			<CFL>22&quot; Glasses 2007 [CFL]</CFL>
+			<CF>17&quot; Glasses 2007 [CF]</CF>
+			<TableCFL>22&quot; Glasses 2009 [CFL]</TableCFL>
+			<Table>17&quot; Glasses 2009 [CF]</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>BW Table CFL</BWTableCFL>
+			<LRCFL>L&amp;R CFL</LRCFL>
+			<ExtTable>Ext table</ExtTable>
+			<Interlaced>隔行</Interlaced>
+			<Checkerboard>棋盘式</Checkerboard>
+			<RedCyan>红色/青色</RedCyan>
+			<OptimizedRedCyan>优化（红色/青色）</OptimizedRedCyan>
+			<BlackWhite>黑白</BlackWhite>
+			<YellowBlue>黄色/蓝色</YellowBlue>
+			<Custom>自定义</Custom>
+			<Voltage120>Voltage 120</Voltage120>
+			<Voltage110>Voltage 110</Voltage110>
+			<Voltage100>Voltage 100</Voltage100>
+			<Normal>常规</Normal>
+			<Special>特殊</Special>
+			<Default>默认</Default>
+			<LeftRight>左/右</LeftRight>
+			<OverUnder>超出/不足</OverUnder>
+			<Crosseyed>对眼</Crosseyed>
+			<HorizontalOptimized>水平(优化)</HorizontalOptimized>
+			<VerticalOptimized>垂直(优化)</VerticalOptimized>
+			<Horizontal>水平</Horizontal>
+			<Vertical>垂直</Vertical>
+			<InterlacedOptimized>隔行(优化)</InterlacedOptimized>
+			<InterlacedNotOptimized>隔行(未优化)</InterlacedNotOptimized>
+			<Marked>已标记</Marked>
+			<Simple>简单</Simple>
+			<BlueLineCoded>蓝色行编码</BlueLineCoded>
+			<WhiteLineCoded>白色行编码</WhiteLineCoded>
+			<HorizontalFlip>Horizontal flip</HorizontalFlip>
+			<VerticalFlip>Vertical flip</VerticalFlip>
+			<HorizontalAndVerticalFlip>Horizontal and vertical flip</HorizontalAndVerticalFlip>
+			<VerticalAndHorizontalFlip>Vertical and horizontal flip </VerticalAndHorizontalFlip>
+			<WOFlush>W/O Flush</WOFlush>
+
+			<btnApply>套用</btnApply>
+		</DirectX>
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>立体状态</sbStereoStatus>
+			<rbDisableStereo>立体关闭</rbDisableStereo>
+			<rbEnableStereo>立体启动</rbEnableStereo>
+			<sbDriverOptions>驱动选择</sbDriverOptions>
+			<cbEmulateQB>模拟Quad Buffer</cbEmulateQB>
+		</OpenGL>
+		<AppExceptions>
+			<EnterValidNameOfApplication>登录合理的应用程式名称</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>你必须先选择一个档案!</YouMustChooseAFileFirst>
+			<BtnAdd>增加</BtnAdd>
+			<BtnRemove>移除</BtnRemove>
+		</AppExceptions>
+		<Application>
+			<UnexeptedErrorOccured>无法预期的错误!
+这个程式将被终止!</UnexeptedErrorOccured>
+ 		</Application>
+		<Book>
+			<CantReplacePanel>无法取代面板</CantReplacePanel>
+			<DefaultProfile>预设简介</DefaultProfile>
+		</Book>
+		<Config>
+			<CantFindResource>无法找到来源</CantFindResource>
+		</Config>
+		<Profiles>
+			<lblCaption>游戏内设定</lblCaption>
+			<defaultProfileName>预设简介</defaultProfileName>
+			<btnBrowse>浏览...</btnBrowse>
+			<Game>
+				<lblCaption>游戏</lblCaption>
+				<lblShowFPS>显示FPS</lblShowFPS>
+				<lblDisableMouseLock>关闭滑鼠锁定</lblDisableMouseLock>
+				<lblEnableMouseLock>启动滑鼠锁定</lblEnableMouseLock>
+				<lblShowWizard>显示操作指示</lblShowWizard>
+				<lblEnableClipping>启用剪裁</lblEnableClipping>
+				<lblShowOSD>显示萤幕讯息</lblShowOSD>
+				<lblForceVSyncOff>强制关闭垂直同步</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>使用简单立体投射方式</lblUseSimpleStereoProjection>
+				<lblSwapLR>切换左右</lblSwapLR>
+
+				<lblClippingWidth>剪裁宽度</lblClippingWidth>
+				<lblWindowMode>视窗模式</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>全萤幕</lblFullScreen>
+					<lblWindowed>视窗化</lblWindowed>
+					<lblAuto>自动</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>立体分离</lblStereoSeparation>
+				<lblSeparationScale>分离尺度</lblSeparationScale>
+				<lblSeparationMode>分离模式</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>对称</lblSymmetric>
+					<lblRightShift>向右偏移</lblRightShift>
+					<lblLeftShift>向左偏移</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+			<Input>
+				<lblCaption>热键</lblCaption>
+				<lblIncConv>增加集中(立体效果向外)</lblIncConv>
+				<lblDecConv>减少集中(立体效果向内)</lblDecConv>
+				<lblIncSep>增加分离(增强立体效果)</lblIncSep>
+				<lblDecSep>减少分离(减少立体效果)</lblDecSep>
+				<lblToggleAutofocus>切换自动对焦</lblToggleAutofocus>
+				<lblPreset1>预设值1</lblPreset1>
+				<lblPreset2>预设值2</lblPreset2>
+				<lblPreset3>预设值3</lblPreset3>
+				<lblToggleStereo>切换立体</lblToggleStereo>
+				<lblToggleLasersight>切换雷射光束</lblToggleLasersight>
+				<lblSwapLR>切换左右</lblSwapLR>
+				<lblTakeScreenshot>立体画面撷图</lblTakeScreenshot>
+                <lblToggleWizard>iZ3D操作指示</lblToggleWizard>
+				<btnRestoreDef>还原预设值</btnRestoreDef>
+			</Input>
+			<Autofocus>
+				<lblCaption>自动对焦</lblCaption>
+				<lblWidth>宽度</lblWidth>
+				<lblHeight>高度</lblHeight>
+				<lblSpeed>速度</lblSpeed>
+				<lblMaximumShift>最大偏移</lblMaximumShift>
+				<lblTop>上方</lblTop>
+				<lblBottom>底部</lblBottom>
+			</Autofocus>
+		</Profiles>
+		<Exceptions>
+			<lblCaption>例外</lblCaption>
+			<sbExceptions>例外</sbExceptions>
+			<btnAdd>新增</btnAdd>
+			<btnRemove>移除</btnRemove>
+			<btnBrowse>浏览...</btnBrowse>
+		</Exceptions>
+		<Update>
+			<lblCaption>更新</lblCaption>
+			<textUpdateWindowTitle>新的版本</textUpdateWindowTitle>
+			<msgUpdateStatus>更新状态...</msgUpdateStatus>
+			<msgNewUpdates>有较新的版本.你要下载及安装吗?</msgNewUpdates>
+			<msgNoUpdates>你目前使用是最新的版本</msgNoUpdates>
+			<msgUpdatesInstalled>更新安装成功</msgUpdatesInstalled>
+			<btnUpdate>更新</btnUpdate>
+		</Update>
+		<Help>
+			<lblCaption>辅助说明</lblCaption>
+			<textDynamicTest>动态测试</textDynamicTest>
+			<textStaticTest>静态测试</textStaticTest>
+			<btnDiagnostic>诊断</btnDiagnostic>
+			<btnSetupScreens>设定画面</btnSetupScreens>
+			<btnTrouble>疑难排解</btnTrouble>
+			<msgDiagnosticError>在取得系统讯息时发生错误</msgDiagnosticError>
+			<msgDiagnosticFileError>无法开起报告档案</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>已经成功建立诊断报告,你是否要开起该档案?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>你是否要执行32-bit动态测试?</Run32BitDynamicTest>
+			<Select>选择</Select>
+			<ErrorWhileStaticTest>当执行静态测试时，发生错误!
+确定你是否已经连接iZ3D萤幕</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>无法建立动态测试报告档案，
+请移除并再测试一次</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>疑难排除.chm</TroubleshootingCHM>
+			<btnManual>使用手册</btnManual>
+			<ManualCHM>叙述</ManualCHM>
+			<msgCantOpenPDF>无法打开PDF档案</msgCantOpenPDF>
+			<msgInstallAdobeReader>你没有可以开启PDF的程式.
+你想要安装Adobe Reader吗?</msgInstallAdobeReader>
+		</Help>
+		<Settings>
+			<lblCaption>设定</lblCaption>
+			<sbSettings>控制中心设定</sbSettings>
+			<checkUpdateOnHold>显示更新讯息</checkUpdateOnHold>
+			<checkMouseLock>将滑鼠游标锁定在萤幕主画面</checkMouseLock>
+			<checkMouseAutostart>从Windows启动控制中心</checkMouseAutostart>
+			<enableD3D10Driver>启动D3D10/11 Driver</enableD3D10Driver>
+			<sbLanguage>语言</sbLanguage>
+			<error>错误</error>
+		</Settings>
+		<statisticsQuestion>亲爱的客户,请帮助我们使iZ3D能更好</statisticsQuestion>
+		<IWant>我将参予!</IWant>
+		<Submit>提交</Submit>
+		<Exit>离开</Exit>
+		<About>
+			<lblCaption>关于</lblCaption>
+			<ReleaseDate>发行资料:</ReleaseDate>
+			<Version>本版</Version>
+			<lblCopyright>版权所有. iZ3D™是属于iZ3D Inc.的商标</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>继续...</CountingFPS>
+		<Mono>一般模式</Mono>
+		<Stereo>立体模式</Stereo>
+		<drop>drop</drop>
+		<Preset>预设</Preset>
+		<Convergence>集中</Convergence>
+		<ConvergenceINF>集中= ?</ConvergenceINF>
+		<Separation>分离</Separation>
+		<AutoFocus>自动对焦</AutoFocus>
+		<ON>开</ON>
+		<OFF>关</OFF>
+		<tooMuchSeparation> (分离度太大)</tooMuchSeparation>
+		<SwapLR>切换左右</SwapLR>
+		<DaysLeft>剩余天数: </DaysLeft>
+		<CantFindStereoDevice>无法发现立体装置</CantFindStereoDevice>
+		<CantLoadOutputDLL>无法载入立体装置的DLL档</CantLoadOutputDLL>
+		<UpdateAMDDriver>更新AMD HD3D驱动程式</UpdateAMDDriver>
+		<NotSupported3DDevice>AMD HD3D技术可能无法支援这个装置</NotSupported3DDevice>
+	</Driver>
+	<Utils>
+		<StereoTestUp>这是立体测试照片</StereoTestUp>
+		<StereoTestDown>立体控制的快捷键无法支援这项工作</StereoTestDown>
+		<!-- NEVER ALIGN FrontScreenMsg and BackScreenMsg STRINGS!!! -->
+		<FrontScreenMsg>脱掉眼镜
+并按数字'1'</FrontScreenMsg>
+		<BackScreenMsg>脱掉眼镜
+并按数字'A'</BackScreenMsg>
+		<MonitorNotFound>你现在有输出方式去设定"iZ3D".如果这是不正确的,请开起iZ3D控制中心并选择适当的输出模式，以符合你的立体装置.</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1.带上你的立体眼镜并确保立体模式是启动的(在预设状态下，按"Num *"切换立体模式)</IDS_STEP1>
+	<IDS_STEP2>2.请问你可以看到这张图片的立体效果吗?</IDS_STEP2>
+	<IDS_STEP3YES>3.如果你要调整立体效果，你必须要有3D物件在萤幕画面.
+你有看到任何3D物件在萤幕画面? </IDS_STEP3YES>
+	<IDS_STEP3NO>3.请联络iZ3D技术支援
+www.iz3d.com/support</IDS_STEP3NO>
+	<IDS_STEP4YES>4.减少集中值('Shift ' + 'Num -' by default)
+直到离我们最近的物件其两张影像叠成一张</IDS_STEP4YES>
+	<IDS_STEP4NO>4.当你已经进入游戏时，
+请离开操作指示并将他启动</IDS_STEP4NO>
+	<IDS_STEP5>5.在萤幕上比较远的物件
+呈现两个影像看起来是否不舒适?</IDS_STEP5>
+	<IDS_STEP6YES>6.减少你的分离度('Num -' by default)直到
+让比较远的物件
+变成一个影像</IDS_STEP6YES>
+	<IDS_STEP6NO>6.增加你的分离度('Num +' by default)直到
+让较远的物件呈现两个影像
+，但是你看起来比较舒适</IDS_STEP6NO>
+	<IDS_STEP7>7.增加你的分离度('Num +' by default)直到
+让较远的物件呈现两个影像
+，但是你看起来比较舒适</IDS_STEP7>
+	<IDS_STEP8>8.假如你不想在下次开启游戏时
+看到iZ3D的操作指示,
+请按'C'不检查
+上述的检查内容</IDS_STEP8>
+	<IDS_NEXTBUTTON>(N)ext
+按'N'
+to continue</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)es
+按'Y'
+假如是</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)o
+按'N'
+假如否</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(B)ack
+按'B'
+回上一页</IDS_BACKBUTTON>
+	<IDS_SUPPORT>联络技术支援</IDS_SUPPORT>
+	<IDS_EXITBUTTON>按'Shift' + 'Num *'离开操作指示</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>关闭操作指示(按' C'来开启操作指示)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>开启操作指示(按'C'来关闭操作指示)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>离开
+按
+'Shift' + 'Num *'</IDS_FINISHBUTTON>
+	<IDS_SHOWSAMPLE>按(s)
+显示范例</IDS_SHOWSAMPLE>
+	<IDS_HIDESAMPLE>按(s)
+隐藏范例</IDS_HIDESAMPLE>
+</LanguagePack>
+

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LanguagePack language="Ukrainian">
+	<ControlCenter>
+		<WindowTitle>Центр Керування iZ3D</WindowTitle>
+		<btnApply>Прийняти Зміни</btnApply>
+
+		<msgDiscardChanges>Всі зміни будуть втрачені - продовжити?</msgDiscardChanges>
+		<msgServiceError>Помилка</msgServiceError>
+
+		<DirectX>
+			<sbStereoStatus>Статус Стерео</sbStereoStatus>
+			<rbEnableStereo>Увімкнути Стерео</rbEnableStereo>
+			<rbEnableStereoByHK>Увімкнути Стерео гарячою клавішею</rbEnableStereoByHK>
+			<rbDisableStereo>Вимкнути Стерео</rbDisableStereo>
+			<sbOutput>Метод 3D</sbOutput>
+
+			<NoSuchOutput>немає такого 3D режиму</NoSuchOutput>
+			<UnexpectedError>непередбачена помилка – неможливо знайти такий 3D режим</UnexpectedError>
+
+			<S3DOutput>iZ3D</S3DOutput>
+			<AnaglyphOutput>Анагліф (безкоштовний)</AnaglyphOutput>
+			<LenovoOutput>Lenovo 3D Анагліф</LenovoOutput>
+			<ColorCodeOutput>ColorCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>Двійні прожектори (демо)</DualProjectionOutput>
+			<DLP3DOutput>3D DLP (демо)</DLP3DOutput>
+			<InterlacedOutput>Черезстроковий (демо)</InterlacedOutput>
+			<ZalmanOutput>Zalman (демо)</ZalmanOutput>
+			<S3DShutterOutput>S3D РК окуляри (демо, бета)</S3DShutterOutput>
+			<ShutterOutput>РК окуляри (демо, бета)</ShutterOutput>
+			<SideBySideOutput>Пліч-о-пліч (демо)</SideBySideOutput>
+			<StereoMirrorOutput>Стерео Дзеркало (демо)</StereoMirrorOutput>
+			<VR920Output>VR920 (демо, бета)</VR920Output>
+			<Z800Output>Z800 (демо, бета)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP (безкоштовно для користувачів ATI Radeon&#x2122;)</ATIDLP3DOutput>
+
+			<Auto>22&quot; окуляри 2009 [CFL] (стандартно)</Auto>
+			<CFL>22&quot; окуляри 2007 [CFL]</CFL>
+			<CF>17&quot; окуляри 2007 [CF]</CF>
+			<TableCFL>22&quot; окуляри 2009 [CFL]</TableCFL>
+			<Table>17&quot; окуляри 2009 [CF]</Table>
+			<BWCFL>Чорно-білий CFL</BWCFL>
+			<BWTableCFL>Чорно-білий табличний CFL</BWTableCFL>
+			<LRCFL>Лівий\правий CFL</LRCFL>
+			<ExtTable>Вихід з таблиці</ExtTable>
+			<Interlaced>Черезстроковий</Interlaced>
+			<Checkerboard>Шаховий</Checkerboard>
+			<RedCyan>Красно-синій</RedCyan>
+			<OptimizedRedCyan>Оптимізований (Красно-синій)</OptimizedRedCyan>
+			<BlackWhite>Чорно-білий</BlackWhite>
+			<YellowBlue>Жовто-блакитний</YellowBlue>
+			<Custom>спеціальний</Custom>
+			<Default>стандартний</Default>
+			<OverUnder>Понад/попід</OverUnder>
+			<Crosseyed>Схрещені очі</Crosseyed>
+			<HorizontalOptimized>Горизонтальний (оптимізований)</HorizontalOptimized>
+			<VerticalOptimized>Вертикальний (оптимізований)</VerticalOptimized>
+			<Horizontal>Горизонтальний</Horizontal>
+			<Vertical>Вертикальний</Vertical>
+			<InterlacedOptimized>Черезстроковий (оптимізований)</InterlacedOptimized>
+			<InterlacedNotOptimized>Черезстроковий  (неоптимізований)</InterlacedNotOptimized>
+			<Marked>Помічений</Marked>
+			<Simple>Простий</Simple>
+			<BlueLineCoded>Кодований синьою лінією</BlueLineCoded>
+			<WhiteLineCoded>Кодований білою лінією</WhiteLineCoded>
+			<HorizontalFlip>Горизонтально перевернутий</HorizontalFlip>
+			<VerticalFlip>Вертикально перевернутий</VerticalFlip>
+			<WOFlush>Без обнулення</WOFlush>
+
+			<btnApply>підтвердити</btnApply>
+		</DirectX>
+
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>Статус стерео</sbStereoStatus>
+			<rbDisableStereo>Вимкнути стерео</rbDisableStereo>
+			<rbEnableStereo>Увімкнути стерео</rbEnableStereo>
+			<sbDriverOptions>Налаштування драйверу</sbDriverOptions>
+			<cbEmulateQB>Емулювати Quad Buffer</cbEmulateQB>
+		</OpenGL>
+
+		<AppExceptions>
+			<EnterValidNameOfApplication>Введіть правильне ім’я програми</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>Ви повинні спочатку вибрати файл!</YouMustChooseAFileFirst>
+			<BtnAdd>Добавити</BtnAdd>
+			<BtnRemove>Видалити</BtnRemove>
+		</AppExceptions>
+
+		<Application>
+			<UnexeptedErrorOccured>Виникла неочікувана помилка!
+			Програму буде закрито!</UnexeptedErrorOccured>
+		</Application>
+
+		<Book>
+			<CantReplacePanel>неможливо замінити панель</CantReplacePanel>
+			<DefaultProfile>стандартний профіль</DefaultProfile>
+		</Book>
+
+		<Config>
+			<CantFindResource>Ресурс не знайдений</CantFindResource>
+		</Config>
+
+		<Profiles>
+			<lblCaption>Профілі</lblCaption>
+
+			<defaultProfileName>стандартний профіль</defaultProfileName>
+
+			<Game>
+				<lblCaption>Гра</lblCaption>
+				<lblShowFPS>Показати FPS</lblShowFPS>
+				<lblDisableMouseLock>Вимкнути замкнення миші</lblDisableMouseLock>
+		<lblEnableMouseLock>Увімкнути замкнення миші</lblEnableMouseLock>
+				<lblShowWizard>Показати майстер налагоджування</lblShowWizard>
+				<lblEnableClipping>Ввімкнути зрізання</lblEnableClipping>
+				<lblShowOSD>Показувати повідомлення на екрані</lblShowOSD>
+				<lblForceVSyncOff>Примусове відключення V-Sync</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>Використовувати метод простої стереопроекції</lblUseSimpleStereoProjection>
+				<lblSwapLR>Поміняти лівий/правий</lblSwapLR>
+
+				<lblClippingWidth>Ширина зрізу</lblClippingWidth>
+				<lblWindowMode>Режим вікна</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>Повний екран</lblFullScreen>
+					<lblWindowed>У вікні</lblWindowed>
+					<lblAuto>Автоматично</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>Сепарація</lblStereoSeparation>
+				<lblSeparationScale>масштаб</lblSeparationScale>
+				<lblSeparationMode>режим</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>Симетричний</lblSymmetric>
+					<lblRightShift>Зсув вправо</lblRightShift>
+					<lblLeftShift>Зсув вліво</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>Клавіатура</lblCaption>
+				<lblIncConv>Збільшити конвергенцію</lblIncConv>
+				<lblDecConv>Зменшити конвергенцію</lblDecConv>
+				<lblIncSep>Збільшити сепарацію</lblIncSep>
+				<lblDecSep>Зменшити сепарацію</lblDecSep>
+				<lblToggleAutofocus>Ввімкнути/вимкнути автофокус</lblToggleAutofocus>
+				<lblPreset1>Налаштування 1</lblPreset1>
+				<lblPreset2>Налаштування 2</lblPreset2>
+				<lblPreset3>Налаштування 3</lblPreset3>
+				<lblToggleStereo>Ввімкнути/вимкнути стерео</lblToggleStereo>
+				<lblToggleLasersight>Ввімкнути/вимкнути приціл</lblToggleLasersight>
+                <lblToggleWizard>Toggle Wizard</lblToggleWizard>
+				<lblSwapLR>Поміняти лівий/правий</lblSwapLR>
+				<lblTakeScreenshot>Стерео-скріншот</lblTakeScreenshot>
+				<btnRestoreDef>Відновити стандартні налаштування</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>Авофокус</lblCaption>
+				<lblWidth>Ширина</lblWidth>
+				<lblHeight>Висота</lblHeight>
+				<lblSpeed>Швидкість</lblSpeed>
+				<lblMaximumShift>Максимальний зсув</lblMaximumShift>
+				<lblTop>Зверху</lblTop>
+				<lblBottom>Знизу</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>Ігнорувати програми</lblCaption>
+			<sbExceptions>Ігнорувати програми</sbExceptions>
+			<btnAdd>Добавити</btnAdd>
+			<btnRemove>Видалити</btnRemove>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>Обновити</lblCaption>
+			<textUpdateWindowTitle>Свіжі оновлення</textUpdateWindowTitle>
+			<msgNewUpdates>Є свіжі оновлення. Скачати та встановити?</msgNewUpdates>
+			<msgNoUpdates>Немає оновлень</msgNoUpdates>
+			<msgUpdatesInstalled>Оновлення успішно встановлені</msgUpdatesInstalled>
+			<btnUpdate>Обновити</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>Допомога</lblCaption>
+			<textDynamicTest>Динамічний тест</textDynamicTest>
+			<textStaticTest>Статичний тест</textStaticTest>
+			<btnDiagnostic>Діагностика</btnDiagnostic>
+			<btnSetupScreens>Налаштування екранів</btnSetupScreens>
+			<btnTrouble>Усунення несправностей</btnTrouble>
+
+			<msgDiagnosticError>Виникла  помилка при діагностиці системи</msgDiagnosticError>
+			<msgDiagnosticFileError>Неможливо відкрити файл звіту</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>Звіт діагностики створено успішно.\nВідкрити файл?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>Запустити 32-бітний динамічний тест?</Run32BitDynamicTest>
+			<Select>Вибрати</Select>
+			<ErrorWhileStaticTest>Виникла помилка під час запуску статичного тесту!
+Потрібно підключити iZ3D монітор</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>Неможливо створити звітний файл діагностики.
+Будь-ласка, видалить його і спробуйте ще раз.</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>Troubleshooting.chm</TroubleshootingCHM>
+			<btnManual>Посібник користувача</btnManual>
+			<ManualCHM>Description</ManualCHM>
+	  <msgCantOpenPDF>Неможливо відкрити PDF файл</msgCantOpenPDF>
+	  <msgInstallAdobeReader>У вас немає програми для відкриття PDF файлів.
+Хочете встановити Adobe Reader?</msgInstallAdobeReader>
+	</Help>
+
+		<Settings>
+			<lblCaption>Налаштування</lblCaption>
+			<sbSettings>Налаштування Центру керування</sbSettings>
+			<checkUpdateOnHold>Показувати повідомлення про оновлення</checkUpdateOnHold>
+			<checkMouseLock>Замкнення миші</checkMouseLock>
+			<checkMouseAutostart>Запускати Центр керування під час запуску Windows</checkMouseAutostart>
+			<sbLanguage>Мова</sbLanguage>
+			<error>Помилка</error>
+		</Settings>
+
+		<statisticsQuestion>Шановний користувач!\nДопоможіть нам покращити драйвер iZ3D!</statisticsQuestion>
+		<IWant>Хочу допомогти!</IWant>
+		<Submit>Відправити</Submit>
+
+		<About>
+			<lblCaption>Про iZ3D</lblCaption>
+			<ReleaseDate>Дата випуску:</ReleaseDate>
+			<Version>Версія</Version>
+			<lblCopyright>Всі права захищені. iZ3D™ є торговою маркою iZ3D Inc.</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>Рахування...</CountingFPS>
+		<Mono>Моно</Mono>
+		<Stereo>Стерео</Stereo>
+		<drop>кинути</drop>
+		<Preset>Налаштування користувача</Preset>
+		<Convergence>Конвергенція</Convergence>
+		<ConvergenceINF>Конвергенція</ConvergenceINF>
+		<Separation>Сепарація</Separation>
+		<AutoFocus>Автофокус</AutoFocus>
+		<ON>включений</ON>
+		<OFF>виключений</OFF>
+		<tooMuchSeparation>(надто висока Сепарація)</tooMuchSeparation>
+		<DaysLeft>Лишилося днів :</DaysLeft>
+		<CantFindStereoDevice>Стерео-пристрій не знайдений</CantFindStereoDevice>
+		<CantLoadOutputDLL>Не завантажується DLL виводу</CantLoadOutputDLL>
+	</Driver>
+
+	<Utils>
+		<StereoTestUp>ЦЕ КАРТИНКА ДЛЯ СТЕРЕО-ТЕСТУ</StereoTestUp>
+		<StereoTestDown>ГАРЯЧІ КЛАВІШИ КОНТРОЛЮ 3D ТУТ ПРАЦЮВАТИ НЕ БУДУТЬ</StereoTestDown>
+		<FrontScreenMsg>Зніміть окуляри
+і натисніть '1'</FrontScreenMsg>
+		<BackScreenMsg>Зніміть окуляри
+і натисніть  'A'</BackScreenMsg>
+		<MonitorNotFound>Вибачте, iZ3D монітор не знайдений. Якщо ви використовуєте саме монітор iZ3D, перевірте кабельні з'єднання</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. Вдягніть  iZ3D окуляри</IDS_STEP1>
+	<IDS_STEP2>2. Ви бачите 3D-ефект в тестовій картинці?</IDS_STEP2>
+	<IDS_STEP3YES>3. Щоб налаштувати 3D-ефект,
+	на вашому екрані повинні бути відображені 3D-об'єкти.
+	Зараз на моніторі ви бачите 3D-об'єкти?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. Зв’яжіться з технічною службою iZ3D на сайті
+	www.iz3d.com</IDS_STEP3NO>
+	<IDS_STEP4YES>4. Зменшуйте конвергенцію ('Shift ' + 'Num -' за стандартом)
+	доки найближчі об'єкти
+	на екрані не стануть однією картинкою.</IDS_STEP4YES>
+	<IDS_STEP4NO>4. Будь-ласка вийдіть з майстра налаштування і запустить
+	його знову, коли будете знаходитися в ігровому середовищі.</IDS_STEP4NO>
+	<IDS_STEP5>5. Чи роздвоюються віддалені об'єкти  на екрані
+	до некомфортного рівня?</IDS_STEP5>
+	<IDS_STEP6YES>6. Зменшуйте сепарацію ('Num -' за стандартом)
+	доки  віддалені об'єкти
+	не стануть однією картинкою</IDS_STEP6YES>
+	<IDS_STEP6NO>6.  Збільшуйте сепарацію ('Num +' за стандартом)
+	доки  віддалені об'єкти
+	не стануть двоїтися на зручному рівні</IDS_STEP6NO>
+	<IDS_STEP7>7.  Збільшуйте сепарацію ('Num +' за стандартом)
+	доки віддалені об'єкти
+	не стануть двоїтися на зручному рівні</IDS_STEP7>
+	<IDS_STEP8>8. Якщо ви не хочете бачити майстер налаштування iZ3D наступного разу, коли запускаєте гру,  натисніть 'C', щоб зняти галочку вище</IDS_STEP8>
+	<IDS_NEXTBUTTON>Натисніть 'N',
+	щоб продовжити</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>Натисніть  'Y',
+	якщо вибираєте ТАК</IDS_YESBUTTON>
+	<IDS_NOBUTTON>Натисніть  'N',
+	якщо вибираєте НІ</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>Натисніть  'B',
+	щоб повернутись назад</IDS_BACKBUTTON>
+	<IDS_SUPPORT>Зв’яжіться зі службою підтримки</IDS_SUPPORT>
+	<IDS_EXITBUTTON>Натисніть 'Shift' + 'Num *' щоб вийти з майстера налаштування</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>Майстер НЕ БУДЕ запускатись наступного разу  (натисніть 'C',  щоб наступного разу він запустився)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>Майстер БУДЕ запускатись наступного разу  (натисніть 'C'  щоб наступного разу він НЕ запустився)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>Натисніть
+	'Shift' + 'Num *'</IDS_FINISHBUTTON>
+	<IDS_SHOWSAMPLE>Натисніть (s), щоб   побачити приклад</IDS_SHOWSAMPLE>
+	<IDS_HIDESAMPLE>Натисніть (s), щоб   закрити приклад</IDS_HIDESAMPLE>
+</LanguagePack>

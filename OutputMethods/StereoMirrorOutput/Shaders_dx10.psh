@@ -1,0 +1,25 @@
+SamplerState	TextureSampler;
+
+Texture2D g_Left			: register(t0);
+Texture2D g_Right			: register(t1);
+
+struct PS_Output
+{
+	float4 oP : SV_Target0; // Primary panel
+	float4 oS : SV_Target1; // Secondary panel
+};
+
+struct PS_Input
+{
+	float2 t1 : TEXCOORD0;
+	float2 t2 : TEXCOORD1;
+};
+
+
+PS_Output shaderStereoMirror( PS_Input input_ )
+{
+	PS_Output o;
+	o.oP = g_Left.Sample( TextureSampler, input_.t1 );
+	o.oS = g_Right.Sample( TextureSampler, input_.t2 );
+	return o;
+};

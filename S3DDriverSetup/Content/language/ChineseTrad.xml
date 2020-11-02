@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="Traditional Chinese" font="MS Gothic">
+	<ControlCenter>
+		<WindowTitle>iZ3D控制中心</WindowTitle>
+		<btnApply>套用</btnApply>
+		<btnSimple>普通調整模式</btnSimple>
+		<btnAdvanced>進階調整模式</btnAdvanced>
+
+		<msgDiscardChanges>所有變更將不會儲存。 是否要繼續？</msgDiscardChanges>
+		<msgServiceError>發生服務錯誤</msgServiceError>
+
+		<DirectX>
+			<lblCaption>狀態及模式</lblCaption>
+			<sbStereoStatus>立體狀態及模式</sbStereoStatus>
+			<rbEnableDriver>立體啟動</rbEnableDriver>
+			<cbEnableStereoAtStartup>執行應用程式後自動開啟立體</cbEnableStereoAtStartup>
+			<rbDisableDriver>立體關閉</rbDisableDriver>
+			<sbOutput>選擇立體裝置</sbOutput>
+
+			<NoSuchOutput>沒有這項立體裝置</NoSuchOutput>
+			<UnexpectedError>無法預期的錯誤：未偵測到立體裝置</UnexpectedError>
+
+			<S3DOutput>iZ3D 螢幕</S3DOutput>
+			<S3DMarkedOutput>iZ3D 27&quot; Monitor</S3DMarkedOutput>
+			<AnaglyphOutput>立體影片（免費）</AnaglyphOutput>
+			<LenovoOutput>Lenovo 3D Anaglyph</LenovoOutput>
+			<ColorCodeOutput>ColorCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>雙投影機（試用）</DualProjectionOutput>
+			<SideBySideOutput>並排（試用）</SideBySideOutput>
+			<DLP3DOutput>3D DLP（試用）</DLP3DOutput>
+			<InterlacedOutput>交錯式（試用）</InterlacedOutput>
+			<ZalmanOutput>Zalman（試用）</ZalmanOutput>
+			<S3DShutterOutput>S3DShutter（試用、Beta 版）</S3DShutterOutput>
+			<Viewsonic_G2>Viewsonic (gen 2)</Viewsonic_G2>
+			<MSI>MSI</MSI>
+			<ASUS>ASUS</ASUS>
+			<Dell>Dell</Dell>
+			<S3D120HzProjectorsOutput>120Hz 3D 投影機 (試用版、測試版)</S3D120HzProjectorsOutput>
+			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a) （試用）</AMDHD3DOutput>
+			<ShutterOutput>快門（試用、Beta 版）</ShutterOutput>
+			<StereoMirrorOutput>StereoMirror（試用）</StereoMirrorOutput>
+			<VR920Output>VR920（試用、Beta 版）</VR920Output>
+			<Z800Output>Z800（試用、Beta 版）</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP（對 ATI Radeon&#x2122; 客戶免費）</ATIDLP3DOutput>
+			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a)</AMDHD3DOutput>
+
+			<Auto>22&quot; Glasses 2009 [CFL] (default)</Auto>
+			<CFL>22&quot; Glasses 2007 [CFL]</CFL>
+			<CF>17&quot; Glasses 2007 [CF]</CF>
+			<TableCFL>22&quot; Glasses 2009 [CFL]</TableCFL>
+			<Table>17&quot; Glasses 2009 [CF]</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>BW Table CFL</BWTableCFL>
+			<LRCFL>L&amp;R CFL</LRCFL>
+			<ExtTable>Ext table</ExtTable>
+			<Interlaced>交錯式</Interlaced>
+			<Checkerboard>棋盤式</Checkerboard>
+			<RedCyan>紅／青</RedCyan>
+			<OptimizedRedCyan>最佳化（紅／青）</OptimizedRedCyan>
+			<BlackWhite>黑與白</BlackWhite>
+			<YellowBlue>黃／藍</YellowBlue>
+			<Custom>自訂</Custom>
+			<Voltage120>Voltage 120</Voltage120>
+			<Voltage110>Voltage 110</Voltage110>
+			<Voltage100>Voltage 100</Voltage100>
+			<Normal>正常</Normal>
+			<Special>特殊</Special>
+			<Default>預設</Default>
+			<LeftRight>左/右</LeftRight>
+			<OverUnder>超過／不足</OverUnder>
+			<Crosseyed>斜視</Crosseyed>
+			<HorizontalOptimized>水平（最佳化）</HorizontalOptimized>
+			<VerticalOptimized>垂直（最佳化）</VerticalOptimized>
+			<Horizontal>水平</Horizontal>
+			<Vertical>垂直</Vertical>
+			<InterlacedOptimized>交錯式（最佳化）</InterlacedOptimized>
+			<InterlacedNotOptimized>交錯式（未最佳化）</InterlacedNotOptimized>
+			<Marked>已標示</Marked>
+			<Simple>簡單</Simple>
+			<BlueLineCoded>藍線標示</BlueLineCoded>
+			<WhiteLineCoded>白線標示</WhiteLineCoded>
+			<HorizontalFlip>Horizontal flip</HorizontalFlip>
+			<VerticalFlip>Vertical flip</VerticalFlip>
+			<HorizontalAndVerticalFlip>Horizontal and vertical flip</HorizontalAndVerticalFlip>
+			<VerticalAndHorizontalFlip>Vertical and horizontal flip</VerticalAndHorizontalFlip>
+			<WOFlush>W/O Flush</WOFlush>
+
+			<btnApply>套用</btnApply>
+		</DirectX>
+
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>立體狀態</sbStereoStatus>
+			<rbDisableStereo>立體關閉</rbDisableStereo>
+			<rbEnableStereo>立體啟動</rbEnableStereo>
+			<sbDriverOptions>驅動選擇</sbDriverOptions>
+			<cbEmulateQB>模擬Quad Buffer</cbEmulateQB>
+		</OpenGL>
+
+		<AppExceptions>
+			<EnterValidNameOfApplication>登錄合理的應用程式名稱</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>你必須先選擇一個檔案!</YouMustChooseAFileFirst>
+			<BtnAdd>增加</BtnAdd>
+			<BtnRemove>移除</BtnRemove>
+		</AppExceptions>
+
+		<Application>
+			<UnexeptedErrorOccured>無法預期的錯誤!
+			這個程式將被終止!</UnexeptedErrorOccured>
+		</Application>
+
+		<Book>
+			<CantReplacePanel>無法取代面板</CantReplacePanel>
+			<DefaultProfile>預設 簡介</DefaultProfile>
+		</Book>
+
+		<Config>
+			<CantFindResource>無法找到來源</CantFindResource>
+		</Config>
+
+		<Profiles>
+			<lblCaption>遊戲內設定</lblCaption>
+
+			<defaultProfileName>預設 簡介</defaultProfileName>
+			<btnBrowse>瀏覽...</btnBrowse>
+
+			<Game>
+				<lblCaption>遊戲</lblCaption>
+				<lblShowFPS>顯示 FPS</lblShowFPS>
+				<lblDisableMouseLock>關閉滑鼠鎖定</lblDisableMouseLock>
+				<lblEnableMouseLock>啟動滑鼠鎖定</lblEnableMouseLock>
+				<lblShowWizard>顯示操作指示</lblShowWizard>
+				<lblEnableClipping>啟用剪裁</lblEnableClipping>
+				<lblShowOSD>顯示螢幕訊息</lblShowOSD>
+				<lblForceVSyncOff>強制關閉垂直同步</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>使用簡單立體投射方式</lblUseSimpleStereoProjection>
+				<lblSwapLR>切換左右</lblSwapLR>
+
+				<lblClippingWidth>剪裁寬度 </lblClippingWidth>
+				<lblWindowMode>視窗模式</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>全螢幕</lblFullScreen>
+					<lblWindowed>視窗化</lblWindowed>
+					<lblAuto>自動</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>立體分離</lblStereoSeparation>
+				<lblSeparationScale>分離尺度</lblSeparationScale>
+				<lblSeparationMode>分離模式</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>對稱</lblSymmetric>
+					<lblRightShift>向右偏移</lblRightShift>
+					<lblLeftShift>向左偏移</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>熱鍵</lblCaption>
+				<lblIncConv>增加集中(立體效果向外)</lblIncConv>
+				<lblDecConv>減少集中(立體效果向內)</lblDecConv>
+				<lblIncSep>增加分離(增強立體效果)</lblIncSep>
+				<lblDecSep>減少分離(減少立體效果)</lblDecSep>
+				<lblToggleAutofocus>切換自動對焦</lblToggleAutofocus>
+				<lblPreset1>預設值 1</lblPreset1>
+				<lblPreset2>預設值 2</lblPreset2>
+				<lblPreset3>預設值 3</lblPreset3>
+				<lblToggleStereo>切換立體</lblToggleStereo>
+				<lblToggleLasersight>切換雷射光束</lblToggleLasersight>
+				<lblSwapLR>切換左右</lblSwapLR>
+				<lblTakeScreenshot>立體畫面擷圖</lblTakeScreenshot>
+                <lblToggleWizard>iZ3D操作指示</lblToggleWizard>
+				<btnRestoreDef>還原預設值</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>自動對焦</lblCaption>
+				<lblWidth>寬度</lblWidth>
+				<lblHeight>高度</lblHeight>
+				<lblSpeed>速度</lblSpeed>
+				<lblMaximumShift>最大偏移</lblMaximumShift>
+				<lblTop>上方</lblTop>
+				<lblBottom>底部</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>例外</lblCaption>
+			<sbExceptions>例外</sbExceptions>
+			<btnAdd>新增</btnAdd>
+			<btnRemove>移除</btnRemove>
+			<btnBrowse>瀏覽...</btnBrowse>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>更新</lblCaption>
+			<textUpdateWindowTitle>新的版本</textUpdateWindowTitle>
+			<msgUpdateStatus>更新狀態...</msgUpdateStatus>
+			<msgNewUpdates>有較新的版本. 你要下載及安裝嗎?</msgNewUpdates>
+			<msgNoUpdates>你目前使用是最新的版本</msgNoUpdates>
+			<msgUpdatesInstalled>更新安裝成功</msgUpdatesInstalled>
+			<btnUpdate>更新</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>輔助說明</lblCaption>
+			<textDynamicTest>動態測試</textDynamicTest>
+			<textStaticTest>靜態測試</textStaticTest>
+			<btnDiagnostic>診斷</btnDiagnostic>
+			<btnSetupScreens>設定畫面</btnSetupScreens>
+			<btnTrouble>疑難排解</btnTrouble>
+
+			<msgDiagnosticError>在取得系統訊息時發生錯誤</msgDiagnosticError>
+			<msgDiagnosticFileError>無法開起報告檔案</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>已經成功建立診斷報告,你是否要開起該檔案?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>你是否要執行 32-bit 動態測試?</Run32BitDynamicTest>
+			<Select>選擇</Select>
+			<ErrorWhileStaticTest>當執行靜態測試時，發生錯誤!
+確定你是否已經連接iZ3D螢幕</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>無法建立動態測試報告檔案，
+請移除並再測試一次</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>疑難排除.chm</TroubleshootingCHM>
+			<btnManual>使用手冊</btnManual>
+			<ManualCHM>敘述</ManualCHM>
+	  		<msgCantOpenPDF>無法打開PDF檔案</msgCantOpenPDF>
+	  		<msgInstallAdobeReader>你沒有可以開啟PDF的程式.
+你想要安裝 Adobe Reader嗎?</msgInstallAdobeReader>
+		</Help>
+
+		<Settings>
+			<lblCaption>設定</lblCaption>
+			<sbSettings>控制中心設定</sbSettings>
+			<checkUpdateOnHold>顯示更新訊息</checkUpdateOnHold>
+			<checkMouseLock>將滑鼠遊標鎖定在螢幕主畫面</checkMouseLock>
+			<checkMouseAutostart>從Windows啟動控制中心</checkMouseAutostart>
+			<enableD3D10Driver>啟動 D3D10/11 Driver</enableD3D10Driver>
+			<sbLanguage>語言</sbLanguage>
+			<error>錯誤</error>
+		</Settings>
+
+		<statisticsQuestion>親愛的客戶,請幫助我們使iZ3D能更好</statisticsQuestion>
+		<IWant>我將參予!</IWant>
+		<Submit>提交</Submit>
+		<Exit>離開</Exit>
+
+		<About>
+			<lblCaption>關於</lblCaption>
+			<ReleaseDate>發行資料:</ReleaseDate>
+			<Version>本版</Version>
+			<lblCopyright>版權所有. iZ3D™是屬於iZ3D Inc.的商標</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>繼續...</CountingFPS>
+		<Mono>一般模式</Mono>
+		<Stereo>立體模式</Stereo>
+		<drop>drop</drop>
+		<Preset>預設</Preset>
+		<Convergence>集中</Convergence>
+		<ConvergenceINF>集中 = ?</ConvergenceINF>
+		<Separation>分離</Separation>
+		<AutoFocus>自動對焦</AutoFocus>
+		<ON>開</ON>
+		<OFF>關</OFF>
+		<tooMuchSeparation> (分離度太大)</tooMuchSeparation>
+		<SwapLR>切換左右</SwapLR>
+		<DaysLeft>剩餘天數: </DaysLeft>
+		<CantFindStereoDevice>無法發現立體裝置</CantFindStereoDevice>
+		<CantLoadOutputDLL>無法載入立體裝置的DLL檔</CantLoadOutputDLL>
+		<UpdateAMDDriver>更新AMD HD3D驅動程式</UpdateAMDDriver>
+		<NotSupported3DDevice>AMD HD3D技術可能無法支援這個裝置</NotSupported3DDevice>
+	</Driver>
+	<Utils>
+		<StereoTestUp>這是立體測試照片</StereoTestUp>
+		<StereoTestDown>立體控制的快捷鍵無法支援這項工作</StereoTestDown>
+		<!-- NEVER ALIGN  FrontScreenMsg  and BackScreenMsg  STRINGS!!! -->
+		<FrontScreenMsg>脫掉眼鏡
+並按數字 '1'</FrontScreenMsg>
+		<BackScreenMsg>脫掉眼鏡
+並按數字 'A'</BackScreenMsg>
+		<MonitorNotFound>你現在有輸出方式去設定"iZ3D". 如果這是不正確的, 請開起iZ3D控制中心並選擇適當的輸出模式，以符合你的立體裝置.</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. 帶上你的立體眼鏡並確保立體模式是啟動的(在預設狀態下，按 "Num *" 切換立體模式)</IDS_STEP1>
+	<IDS_STEP2>2. 請問你可以看到這張圖片的立體效果嗎?</IDS_STEP2>
+	<IDS_STEP3YES>3. 如果你要調整立體效果，你必須要有3D物件在螢幕畫面.
+	你有看到任何3D物件在螢幕畫面?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. 請聯絡iZ3D技術支援
+	www.iz3d.com/support</IDS_STEP3NO>
+	<IDS_STEP4YES>4. 減少集中值 ('Shift ' + 'Num -' by default)
+	直到離我們最近的物件其兩張影像疊成一張</IDS_STEP4YES>
+	<IDS_STEP4NO>4. 當你已經進入遊戲時，
+	請離開操作指示並將他啟動</IDS_STEP4NO>
+	<IDS_STEP5>5. 在螢幕上比較遠的物件
+	呈現兩個影像看起來是否不舒適?</IDS_STEP5>
+	<IDS_STEP6YES>6. 減少你的分離度 ('Num -' by default) 直到
+	讓比較遠的物件
+	變成一個影像</IDS_STEP6YES>
+	<IDS_STEP6NO>6. 增加你的分離度 ('Num +' by default) 直到
+	讓較遠的物件呈現兩個影像
+	，但是你看起來比較舒適</IDS_STEP6NO>
+	<IDS_STEP7>7. 增加你的分離度 ('Num +' by default) 直到
+	讓較遠的物件呈現兩個影像
+	，但是你看起來比較舒適</IDS_STEP7>
+	<IDS_STEP8>8. 假如你不想在下次開啟遊戲時
+	看到iZ3D的操作指示,
+	請按 'C' 不檢查
+	上述的檢查內容</IDS_STEP8>
+	<IDS_NEXTBUTTON>(N)ext
+	按 'N'
+	to continue</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)es
+	按 'Y'
+	假如 是</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)o
+	按 'N'
+	假如 否</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(B)ack
+	按 'B'
+	回上一頁</IDS_BACKBUTTON>
+	<IDS_SUPPORT>聯絡技術支援</IDS_SUPPORT>
+	<IDS_EXITBUTTON>按 'Shift' + 'Num *' 離開操作指示</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>關閉操作指示 (按 'C' 來開啟 操作指示)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>開啟操作指示 (按 'C' 來關閉 操作指示)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>離開
+	按
+	'Shift' + 'Num *'</IDS_FINISHBUTTON>
+	<IDS_SHOWSAMPLE>按 (s) 
+	顯示範例</IDS_SHOWSAMPLE>
+	<IDS_HIDESAMPLE>按 (s) 
+	隱藏範例</IDS_HIDESAMPLE>
+</LanguagePack>

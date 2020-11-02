@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final Release|Win32">
+      <Configuration>Final Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Final Release|x64">
+      <Configuration>Final Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>S3DWrapperD3D9</ProjectName>
+    <ProjectGuid>{30895056-63A6-4F4D-80FD-8BCFEA6CDF8D}</ProjectGuid>
+    <RootNamespace>S3DWrapper9</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\FinalRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Debug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\FinalRelease_x64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Release_x64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\Debug_x64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)bin\$(Configuration)\Win64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Win64\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)bin\$(Configuration)\Win64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Win64\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">$(SolutionDir)bin\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">$(SolutionDir)bin\$(Configuration)\Win64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">Win64\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>LlamaXMLd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook32d.lib;ticppd.lib;comctl32.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;NVPerfSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\d3d9\lib\x86\;..\lib\tinyxml\lib\x86\;..\lib\LlamaXML\lib\x86\;..\lib\madCHook;..\lib\boost\lib\Win32;..\lib\xerces\lib\Win32\lib;..\lib\PerfSDK\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include\Win64;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>LlamaXMLd.lib;libcmtd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64d.lib;ticppd.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\LlamaXML\lib\x64\;..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\madCHook;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;BOOST_NO_STD_TYPEINFO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>LlamaXML.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook32.lib;ticpp.lib;comctl32.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3.lib;xerces-c_3.lib;ddraw.lib;S3DDevIL.lib;S3Dilu.lib;version.lib;NVPerfSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\d3d9\lib\x86\;..\lib\tinyxml\lib\x86\;..\lib\LlamaXML\lib\x86\;..\lib\madCHook;..\lib\boost\lib\Win32;..\lib\xerces\lib\Win32\lib;..\lib\PerfSDK\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include\Win64;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;XERCES_STATIC_LIBRARY;XML_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>LlamaXML.lib;libcmt.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64.lib;ticpp.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3.lib;ddraw.lib;S3DDevIL.lib;S3Dilu.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\LlamaXML\lib\x64\;..\lib\madCHook;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;BOOST_NO_STD_TYPEINFO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;ticpp.lib;comctl32.lib;xerces-c_static_3.lib;version.lib;S3DDevIL.lib;S3Dilu.lib;MadCHook32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\d3d9\lib\x86\;..\lib\tinyxml\lib\x86\;..\lib\madCHook;..\lib\boost\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\Shared\;..\lib\d3d9\include\;..\lib\madCHook;..\lib\tinyxml\include\;..\lib\alglib\include\;..\lib\boost\;..\lib\xerces\include\Win64;..\lib\DbgHelp\inc\;..\OutputMethods\OutputLib\;..\lib\PerfSDK\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;S3DWRAPPER9_EXPORTS;BOOST_NO_STD_TYPEINFO;XERCES_STATIC_LIBRARY;XML_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <PreLinkEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;ticpp.lib;comctl32.lib;xerces-c_static_3.lib;version.lib;S3DDevIL.lib;S3Dilu.lib;MadCHook64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\madCHook..;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
+      <DelayLoadDLLs>version.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="atiqbstereo.h" />
+    <ClInclude Include="BackgroundPresenterThread.h" />
+    <ClInclude Include="BasePresenter.h" />
+    <ClInclude Include="CommandDumper.h" />
+    <ClInclude Include="D3DInterfaceMethods.h" />
+    <ClInclude Include="DeviceState.h" />
+    <ClInclude Include="DX9OsdDrawer.h" />
+    <ClInclude Include="Presenter.h" />
+    <ClInclude Include="PresenterHelpers.h" />
+    <ClInclude Include="PresenterMultiThread.h" />
+    <ClInclude Include="ProxyBase.h" />
+    <ClInclude Include="ProxyDevice9-inl.h" />
+    <ClInclude Include="ProxyDevice9.h" />
+    <ClInclude Include="ProxyDevice9_Hook.h" />
+    <ClInclude Include="ProxyDirect9-inl.h" />
+    <ClInclude Include="ProxyDirect9.h" />
+    <ClInclude Include="ProxyDirect9_Hook.h" />
+    <ClInclude Include="ProxyMulti_Hook.h" />
+    <ClInclude Include="ProxySwapChain9-inl.h" />
+    <ClInclude Include="ProxySwapChain9.h" />
+    <ClInclude Include="ProxySwapChain9_Hook.h" />
+    <ClInclude Include="UMDDeviceWrapper.h" />
+    <ClInclude Include="UMDriverHook.h" />
+    <ClInclude Include="UMDShutterPresenter.h" />
+    <ClInclude Include="Direct3D9.h" />
+    <ClInclude Include="ProxyQuery.h" />
+    <ClInclude Include="CallGuard.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WDirect3DCreate9.h" />
+    <ClInclude Include="DumpManager.h" />
+    <ClInclude Include="DX9AutoShift.h" />
+    <ClInclude Include="DX9LaserSight.h" />
+    <ClInclude Include="NVTraceDisplay\pdhhelper.h" />
+    <ClInclude Include="NVTraceDisplay\trace.h" />
+    <ClInclude Include="NVTraceDisplay\tracedisplayd3d.h" />
+    <ClInclude Include="EnumToString.h" />
+    <ClInclude Include="GlobalData.h" />
+    <ClInclude Include="States.h" />
+    <ClInclude Include="Trace.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="res\resource.h" />
+    <ClInclude Include="DX9ShaderConverter.h" />
+    <ClInclude Include="ShaderAnalyzer.h" />
+    <ClInclude Include="ShaderAnalyzerMatrices.h" />
+    <ClInclude Include="ShaderInstruction.h" />
+    <ClInclude Include="ShaderRegister.h" />
+    <ClInclude Include="BaseSwapChain-inl.h" />
+    <ClInclude Include="BaseSwapChain.h" />
+    <ClInclude Include="MonoSwapChain.h" />
+    <ClInclude Include="SwapChain.h" />
+    <ClInclude Include="WideSwapChain.h" />
+    <ClInclude Include="BaseStereoRenderer-inl.h" />
+    <ClInclude Include="BaseStereoRenderer.h" />
+    <ClInclude Include="BaseStereoRenderer_Hook.h" />
+    <ClInclude Include="BaseStereoRenderer_InternalClasses-inl.h" />
+    <ClInclude Include="BaseStereoRenderer_InternalClasses.h" />
+    <ClInclude Include="MonoRenderer.h" />
+    <ClInclude Include="MonoRenderer_Hook.h" />
+    <ClInclude Include="StereoRenderer.h" />
+    <ClInclude Include="StereoRenderer_Hook.h" />
+    <ClInclude Include="WideStereoRenderer.h" />
+    <ClInclude Include="WideStereoRenderer_Hook.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BackgroundPresenterThread.cpp" />
+    <ClCompile Include="BasePresenter.cpp" />
+    <ClCompile Include="CommandDumper.cpp" />
+    <ClCompile Include="DeviceState.cpp" />
+    <ClCompile Include="DX9OsdDrawer.cpp" />
+    <ClCompile Include="Presenter.cpp" />
+    <ClCompile Include="PresenterHelpers.cpp" />
+    <ClCompile Include="PresenterMultiThread.cpp" />
+    <ClCompile Include="ProxyDevice9_Hook.cpp" />
+    <ClCompile Include="ProxyDirect9_Hook.cpp" />
+    <ClCompile Include="ProxyMulti_Hook.cpp" />
+    <ClCompile Include="ProxySwapChain9_Hook.cpp" />
+    <ClCompile Include="UMDDeviceWrapper.cpp" />
+    <ClCompile Include="UMDeviceUnmodified.cpp" />
+    <ClCompile Include="UMDriverHook.cpp" />
+    <ClCompile Include="UMDShutterPresenter.cpp" />
+    <ClCompile Include="Direct3D9.cpp" />
+    <ClCompile Include="ProxyQuery.cpp" />
+    <ClCompile Include="CallGuard.cpp" />
+    <ClCompile Include="FakeFunctions.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="S3DWrapperD3D9.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WDirect3DCreate9.cpp" />
+    <ClCompile Include="DumpManager.cpp" />
+    <ClCompile Include="DX9AutoShift.cpp" />
+    <ClCompile Include="DX9LaserSight.cpp" />
+    <ClCompile Include="NVTraceDisplay\tracedisplayd3d.cpp" />
+    <ClCompile Include="EnumToString.cpp" />
+    <ClCompile Include="GlobalData.cpp" />
+    <ClCompile Include="Trace.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="DX9ShaderConverter.cpp" />
+    <ClCompile Include="ShaderAnalyzer.cpp" />
+    <ClCompile Include="ShaderAnalyzerMatrices.cpp" />
+    <ClCompile Include="ShaderInstruction.cpp" />
+    <ClCompile Include="ShaderRegister.cpp" />
+    <ClCompile Include="BaseSwapChain.cpp" />
+    <ClCompile Include="MonoSwapChain.cpp" />
+    <ClCompile Include="SwapChain.cpp" />
+    <ClCompile Include="WideSwapChain.cpp" />
+    <ClCompile Include="BaseStereoRenderer.cpp" />
+    <ClCompile Include="BaseStereoRenderer_Hook.cpp" />
+    <ClCompile Include="BaseStereoRenderer_InternalClasses.cpp" />
+    <ClCompile Include="BaseStereoRenderer_Main.cpp" />
+    <ClCompile Include="BaseStereoRenderer_Modified.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">false</WholeProgramOptimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_ModifiedMain.cpp">
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">false</WholeProgramOptimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_RHW.cpp" />
+    <ClCompile Include="BaseStereoRenderer_Utils.cpp" />
+    <ClCompile Include="MonoRenderer.cpp" />
+    <ClCompile Include="MonoRenderer_Hook.cpp" />
+    <ClCompile Include="StereoRenderer.cpp" />
+    <ClCompile Include="StereoRenderer_Hook.cpp" />
+    <ClCompile Include="WideStereoRenderer.cpp" />
+    <ClCompile Include="WideStereoRenderer_Hook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="S3DWrapperD3D9.def" />
+    <CustomBuild Include="res\Shaders.psh">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Final Release|x64'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compiling shaders</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compile_shaders.bat
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Shaders\shaderSimple.h;Shaders\shaderSimpleRAWZ.h;Shaders\shaderSimpleDepth.h;Shaders\shaderSimpleDepthRAWZ.h;Shaders\shaderViewDepth.h;Shaders\VSFont.h;Shaders\PSFont.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArchiveFile\ArchiveFile.vcxproj">
+      <Project>{bff89902-765e-409e-9b62-a1fabbaf5ed4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonUtils\CommonUtils.vcxproj">
+      <Project>{75b0730f-143e-4cd8-9908-1020f103e21b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Font\Font.vcxproj">
+      <Project>{174875f4-c653-44a6-a21f-8269f6500578}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\OutputMethods\OutputLib\OutputLib.vcxproj">
+      <Project>{a9359b0c-631a-4dc3-bc68-2fab517022db}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\S3DAPI\S3DAPI.vcxproj">
+      <Project>{1a6f9cd3-e915-4c1c-ac06-b87d7b21de35}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\UILIB\UILIB.vcxproj">
+      <Project>{1d1d96f2-b73d-4581-b107-f24319a22a15}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\ZLOg\ZLOg.vcxproj">
+      <Project>{c538d122-90db-4d2b-accb-d5b43eabc2cc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

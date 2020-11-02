@@ -1,0 +1,21 @@
+EXPORTS
+    Direct3DCreate9=WDirect3DCreate9						@1	PRIVATE
+    Direct3DCreate9Ex=WDirect3DCreate9Ex					@2	PRIVATE
+    D3DPERF_BeginEvent=WD3DPERF_BeginEvent					@3	PRIVATE
+    D3DPERF_EndEvent=WD3DPERF_EndEvent						@4	PRIVATE
+    D3DPERF_SetMarker=WD3DPERF_SetMarker					@5	PRIVATE
+    D3DPERF_SetRegion=WD3DPERF_SetRegion					@6	PRIVATE
+    D3DPERF_QueryRepeatFrame=WD3DPERF_QueryRepeatFrame		@7	PRIVATE
+    D3DPERF_SetOptions=WD3DPERF_SetOptions					@8	PRIVATE
+    D3DPERF_GetStatus=WD3DPERF_GetStatus					@9	PRIVATE
+    
+    InitializeExchangeServer								@10	PRIVATE    
+    StartDDAServer											@11	PRIVATE    
+    SetSyncRenderCallback									@12	PRIVATE    
+    StopDDAServer											@13	PRIVATE    
+    ClearHandles											@14	PRIVATE    
+    GetD3D9Creator											@15	PRIVATE  
+    GetD3D9CreatorEx										@16	PRIVATE
+    
+    DisableCreatingStereoResources							@17	PRIVATE
+    RestoreCreatingStereoResourcesMode						@18	PRIVATE

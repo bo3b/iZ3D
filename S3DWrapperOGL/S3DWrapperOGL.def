@@ -1,0 +1,19 @@
+EXPORTS
+;glViewport				= HglViewport
+;glScissor				= HglScissor
+;glDrawBuffer 			= HglDrawBuffer
+;glReadBuffer 			= HglReadBuffer
+;wglCreateContext 		= HwglCreateContext
+;wglGetCurrentContext 	= HwglGetCurrentContext
+;wglGetCurrentDC 		= HwglGetCurrentDC
+;wglMakeCurrent 			= HwglMakeCurrent
+;wglSwapBuffers			= HwglSwapBuffers
+;wglSwapLayerBuffers	= HwglSwapLayerBuffers
+;wglSwapMultipleBuffers	= HwglSwapMultipleBuffers
+;wglChoosePixelFormat	= HwglChoosePixelFormat
+;wglDescribePixelFormat	= HwglDescribePixelFormat
+;wglGetPixelFormat		= HwglGetPixelFormat
+;wglSetPixelFormat		= HwglSetPixelFormat
+;wglGetProcAddress		= HwglGetProcAddress
+HookOGL
+SetSyncRenderCallback

@@ -1,0 +1,94 @@
+//fxc.exe shaders.psh /Tps_4_0 /EshaderS3D /DCFL
+
+SamplerState TextureSampler
+{
+	Filter = MIN_MAG_MIP_POINT;
+	AddressU = Clamp;
+	AddressV = Clamp;
+};
+
+SamplerState DataSampler
+{
+	Filter = MIN_MAG_MIP_POINT;
+	AddressU = Clamp;
+	AddressV = Clamp;
+};
+
+Texture2D g_Left			: register(t0);
+Texture2D g_Right			: register(t1);
+Texture2D <float3> g_Gamma	: register(t2);
+
+struct PS_INPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+float3 shaderAnaglyph(PS_INPUT input) : SV_Target0
+{
+	float3 bw = {0.2989, 0.5870, 0.1140};
+	float cL = dot(g_Left.Sample(TextureSampler, input.t).rgb, bw);
+	float cR = dot(g_Right.Sample(TextureSampler, input.t).rgb, bw);
+	float3 c = cR;
+	c.r = cL.r;
+	return c;
+}
+
+float3 shaderColorAnaglyph(PS_INPUT input) : SV_Target0
+{    
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	cR.r = cL.r;
+	return cR;
+}
+
+float3 shaderYellowBlueAnaglyph(PS_INPUT input) : SV_Target0
+{    
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	cR.rg = cL.rg;
+	return cR;
+}
+
+inline void GammaCorrection(inout float3 c)
+{	
+	float2 tR = {c.r, 0.0f};
+	float2 tG = {c.g, 0.0f};
+	float2 tB = {c.b, 0.0f};
+	c.r = g_Gamma.Sample(DataSampler, tR).r;
+	c.g = g_Gamma.Sample(DataSampler, tG).g;
+	c.b = g_Gamma.Sample(DataSampler, tB).b;
+}
+
+// Least Squares Algorithm
+static const float3x3 m1 = 
+	{  0.4154,  0.4710,  0.1669,
+	  -0.0458, -0.0484, -0.0257,
+	  -0.0547, -0.0615,  0.0128 };	  
+static const float3x3 m2 = 
+	{ -0.0109, -0.0364, -0.0060,
+	   0.3756,  0.7333,  0.0111,
+	  -0.0651, -0.1287,  1.2971 };
+
+float3 shaderOptAnaglyphAll(PS_INPUT input, bool Gamma) : SV_Target0
+{
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	float3 c1 = mul(m1, cL.rgb);
+	float3 c2 = mul(m2, cR.rgb);
+	return saturate(c1 + c2);
+}
+
+float3 shaderOptAnaglyph(PS_INPUT input) : SV_Target0
+{
+	return shaderOptAnaglyphAll(input, false);
+}
+
+float3 shaderOptAnaglyphAndGamma (PS_INPUT input) : SV_Target0
+{
+	return shaderOptAnaglyphAll(input, true);
+}

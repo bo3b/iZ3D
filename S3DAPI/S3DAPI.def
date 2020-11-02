@@ -1,0 +1,3 @@
+EXPORTS
+    InitStereoAPI   @1
+    InitStereoAPIInternal   @2

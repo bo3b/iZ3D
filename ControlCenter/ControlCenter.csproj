@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19210C6A-A869-4E88-BC37-31905FEF4F82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlCenter</RootNamespace>
+    <AssemblyName>ControlCenter</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;IZ3D_BUILD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\release\</OutputPath>
+    <DefineConstants>TRACE;IZ3D_BUILD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release|x86'">
+    <OutputPath>..\bin\final release\</OutputPath>
+    <DefineConstants>TRACE;IZ3D_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;IZ3D_BUILD</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\release\</OutputPath>
+    <DefineConstants>TRACE;IZ3D_BUILD</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release|x64'">
+    <OutputPath>..\bin\final release\</OutputPath>
+    <DefineConstants>TRACE;IZ3D_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\iz3d.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Anaglyph|x86'">
+    <OutputPath>..\bin\final release - anaglyph\</OutputPath>
+    <DefineConstants>TRACE;ANAGLYPH_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Anaglyph|x64'">
+    <OutputPath>..\bin\final release - anaglyph\</OutputPath>
+    <DefineConstants>TRACE;ANAGLYPH_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - CMO Edition|x86'">
+    <OutputPath>..\bin\final release - CMO edition\</OutputPath>
+    <DefineConstants>TRACE;CMO_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - CMO Edition|x64'">
+    <OutputPath>..\bin\final release - CMO edition\</OutputPath>
+    <DefineConstants>TRACE;CMO_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Lenovo|x86'">
+    <OutputPath>..\bin\final release - lenovo\</OutputPath>
+    <DefineConstants>TRACE;LENOVO_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Lenovo|x64'">
+    <OutputPath>..\bin\final release - lenovo\</OutputPath>
+    <DefineConstants>TRACE;LENOVO_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - YGT|x86'">
+    <OutputPath>..\bin\Final Release - YGT\</OutputPath>
+    <DefineConstants>TRACE;YGT_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - YGT|x64'">
+    <OutputPath>..\bin\Final Release - YGT\</OutputPath>
+    <DefineConstants>TRACE;YGT_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Taerim|x86'">
+    <OutputPath>..\bin\Final Release - Taerim\</OutputPath>
+    <DefineConstants>TRACE;TAERIM_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Final Release - Taerim|x64'">
+    <OutputPath>..\bin\Final Release - Taerim\</OutputPath>
+    <DefineConstants>TRACE;TAERIM_BUILD;FINAL_RELEASE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ControlCenter.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.3.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>Krypton\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>Krypton\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\bin\temp_version.cs">
+      <Link>Data\temp_version.cs</Link>
+    </Compile>
+    <Compile Include="..\BuildSetup\version.cs">
+      <Link>Data\version.cs</Link>
+    </Compile>
+    <Compile Include="Data\ExceptionElement.cs" />
+    <Compile Include="Data\FileData.cs" />
+    <Compile Include="Data\ProfileKeys.cs" />
+    <Compile Include="Data\Profile.cs" />
+    <Compile Include="Data\DataHolder.cs" />
+    <Compile Include="Data\DriverSettings.cs" />
+    <Compile Include="Data\HotKey.cs" />
+    <Compile Include="Data\ProfilePreset.cs" />
+    <Compile Include="Data\ProfileValueAttribute.cs" />
+    <Compile Include="Data\StereoSettings.cs" />
+    <Compile Include="Data\StringLocalization.cs" />
+    <Compile Include="Data\OutputDll.cs" />
+    <Compile Include="Data\Utils.cs" />
+    <Compile Include="Shell\FileIcon.cs" />
+    <Compile Include="IPC\APipeConnection.cs" />
+    <Compile Include="IPC\ClientPipeConnection.cs" />
+    <Compile Include="IPC\IInterProcessConnection.cs" />
+    <Compile Include="IPC\InterProcessConnectionState.cs" />
+    <Compile Include="IPC\InterProcessIOException.cs" />
+    <Compile Include="IPC\IPC.cs" />
+    <Compile Include="IPC\NamedPipeIOException.cs" />
+    <Compile Include="IPC\NamedPipeNative.cs" />
+    <Compile Include="IPC\NamedPipeWrapper.cs" />
+    <Compile Include="IPC\PipeHandle.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shell\ShellLink.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\COMTypes.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\IIDGuid.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\Interop.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\JumpListImpl.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\JumpListManager.cs" />
+    <Compile Include="Windows7Integration\DesktopIntegration\Windows7Taskbar.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\comguids.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\definitionoptions.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\errorhelper.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\externdll.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\foldercategory.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\helpers.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\nativemethods.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\redirectioncapabilities.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\safenativemethods.cs" />
+    <Compile Include="Windows7Integration\VistaBridge\shellcominterfaces.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skin\Buttons\btnActivation_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnActivation_over.png" />
+    <None Include="Resources\Skin\Buttons\btnActivation_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnUserGuide_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnUserGuide_over.png" />
+    <None Include="Resources\Skin\Buttons\btnUserGuide_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnTrobleshooting_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnTrobleshooting_over.png" />
+    <None Include="Resources\Skin\Buttons\btnTrobleshooting_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnSetupScreens_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnSetupScreens_over.png" />
+    <None Include="Resources\Skin\Buttons\btnSetupScreens_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnDiagnostic_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnDiagnostic_over.png" />
+    <None Include="Resources\Skin\Buttons\btnDiagnostic_norm.png" />
+    <None Include="Resources\Skin\Pages\Icons\UserGuide.png" />
+    <None Include="Resources\Skin\Pages\Icons\Troubleshooting.png" />
+    <None Include="Resources\Skin\Pages\Icons\SetupScreens.png" />
+    <None Include="Resources\Skin\Pages\Icons\Diagnostic.png" />
+    <None Include="Resources\Skin\Tabs\Icons\Update.png" />
+    <None Include="Resources\Skin\Tabs\Icons\StatusAndMethods.png" />
+    <None Include="Resources\Skin\Tabs\Icons\InGameSettings.png" />
+    <None Include="Resources\Skin\Tabs\Icons\Help.png" />
+    <None Include="Resources\Skin\Tabs\Icons\Exceptions.png" />
+    <None Include="Resources\Skin\Tabs\Icons\DriverSettings.png" />
+    <None Include="Resources\Skin\Tabs\Icons\About.png" />
+    <None Include="Resources\Skin\Buttons\btnUpdate_disabled.png" />
+    <None Include="Resources\Skin\Buttons\btnUpdate_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnUpdate_over.png" />
+    <None Include="Resources\Skin\Buttons\btnUpdate_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnRemove_exceptions_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnRemove_exceptions_over.png" />
+    <None Include="Resources\Skin\Buttons\btnRemove_exceptions_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnAdd_exceptions_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnAdd_exceptions_over.png" />
+    <None Include="Resources\Skin\Buttons\btnAdd_exceptions_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_exceptions_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnRestore_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnRestore_over.png" />
+    <None Include="Resources\Skin\Buttons\btnRestore_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_over.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_exceptions_over.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_exceptions_norm.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p3b3.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p3b2.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p3b1.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p2b3.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p2b2.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p2b1.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p1b3.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p1b2.png" />
+    <None Include="Resources\Skin\Tabs\InGame\p1b1.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse_disabl.png" />
+    <None Include="Resources\Skin\Buttons\btnRemove.png" />
+    <None Include="Resources\Skin\Buttons\btnBrowse.png" />
+    <None Include="Resources\Skin\Pages\panelAutofocus.png" />
+    <None Include="Resources\Skin\Pages\panelBackground.png" />
+    <None Include="Resources\Skin\Pages\pageSettings.png" />
+    <None Include="Resources\Skin\Pages\btnHelp_pressed.png" />
+    <None Include="Resources\Skin\Pages\btnHelp_over.png" />
+    <None Include="Resources\Skin\Pages\btnHelp_norm.png" />
+    <None Include="Resources\Skin\Pages\btnSTest_pressed.png" />
+    <None Include="Resources\Skin\Pages\btnSTest_over.png" />
+    <None Include="Resources\Skin\Pages\btnSTest_norm.png" />
+    <None Include="Resources\Skin\Pages\btnDTest_pressed.png" />
+    <None Include="Resources\Skin\Pages\btnDTest_over.png" />
+    <None Include="Resources\Skin\Pages\btnDTest_norm.png" />
+    <None Include="Resources\Skin\Pages\pageHelp.png" />
+    <None Include="Resources\Skin\Pages\exceptionList.png" />
+    <None Include="Resources\Skin\Pages\pageStatus.png" />
+    <None Include="Resources\Skin\Pages\pageAbout.png" />
+    <None Include="Resources\Skin\Radiobutton\unchecked.png" />
+    <None Include="Resources\Skin\Radiobutton\checked.png" />
+    <None Include="Resources\Skin\Checkbox\unchecked.png" />
+    <None Include="Resources\Skin\Checkbox\checked.png" />
+    <None Include="Resources\Skin\BackG_tran.png" />
+    <None Include="Resources\Skin\tabsBackground.png" />
+    <None Include="Resources\Skin\Tabs\icon_pressed.png" />
+    <None Include="Resources\Skin\Tabs\icon_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnUpdate_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnUpdate_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnStatus_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnStatus_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnSetting_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnSetting_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnInGame_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnInGame_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnHelp_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnHelp_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnException_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnException_normal.png" />
+    <None Include="Resources\Skin\Tabs\btnAbout_pressed.png" />
+    <None Include="Resources\Skin\Tabs\btnAbout_normal.png" />
+    <None Include="Resources\Skin\Buttons\btnSimpleAdvanced_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnApply_over.png" />
+    <None Include="Resources\Skin\Buttons\btnApply_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnApply_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnClose_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnClose_over.png" />
+    <None Include="Resources\Skin\Buttons\btnClose_norm.png" />
+    <None Include="Resources\Skin\Buttons\btnMin_pressed.png" />
+    <None Include="Resources\Skin\Buttons\btnMin_over.png" />
+    <None Include="Resources\Skin\Buttons\btnMin_norm.png" />
+    <Content Include="Resources\iz3d.ico" />
+    <None Include="Resources\Skin\BackG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

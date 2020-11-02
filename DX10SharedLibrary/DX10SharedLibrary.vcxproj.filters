@@ -1,0 +1,1496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Streamer">
+      <UniqueIdentifier>{b20191c2-42aa-4926-a9cf-563aefef512e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands">
+      <UniqueIdentifier>{f900c52c-5e09-465f-a057-017bc5b89dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\DXGI G2">
+      <UniqueIdentifier>{de9a1c2e-0112-4452-b461-5d5419b94b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Create G2">
+      <UniqueIdentifier>{80cedff7-9499-4837-8d5f-cece3d9b61de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\CalcPrivateDataSize G2">
+      <UniqueIdentifier>{8605104f-c8af-4f40-b2ac-0f21d3b7a224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Destroy G2">
+      <UniqueIdentifier>{b7aa8ae6-b736-459d-9553-5e63c33bea03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Map/Unmap G2">
+      <UniqueIdentifier>{e73c38fb-32ee-4a4e-b614-a89e0872af98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Check G3">
+      <UniqueIdentifier>{0e1dbb88-4c02-4888-b7f3-63899ccce1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\G1">
+      <UniqueIdentifier>{be053cea-527e-442e-abf3-da3541653780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\G2">
+      <UniqueIdentifier>{53938a1b-6bc1-4805-a82f-933e2017ecff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Change device state G1">
+      <UniqueIdentifier>{6ae8d691-48b5-4b12-b3bd-eb1c19b853ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\Shader Commands">
+      <UniqueIdentifier>{cb48cde8-e75d-4c39-847d-bd7d4fa9e1a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commands\D3D11">
+      <UniqueIdentifier>{e3990dd9-7a6a-4c1a-836a-59348f8a69f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wrappers">
+      <UniqueIdentifier>{8fd8a3bf-a925-4d02-b84c-c78c99825d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Font">
+      <UniqueIdentifier>{ebbb38af-eeae-4220-98d3-28a6c88aad5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{9a4f77be-4012-4f8e-b762-31e7475da3ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QBSHeaders">
+      <UniqueIdentifier>{8bbe0fc7-6dbf-41f3-9383-e6a7f4e30efd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\S3DWrapper10\CallGuard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\CommandBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\D3DDeviceState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\D3DSwapChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\EnumToString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\GlobalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\memmgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\MonoCommandBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\StereoCommandBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\CmdFlowStreamers.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\CodeGenerator.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\ResourceManager.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\XMLStreamer.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\XMLStreamer_ReadValue.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\XMLStreamer_WriteValue.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ChangeDeviceView.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ChangeShaderMatrixView.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Command.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs10_1.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs11_0.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Blt.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GetGammaCaps.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Present.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\QueryResourceResidency.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResolveSharedResource.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\RotateResourceIdentities.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetDisplayMode.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetResourcePriority.cpp">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateBlendState.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateBlendState10_1.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateCommandList11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateComputeShader11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateDeferredContext11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateDepthStencilState.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateDepthStencilView.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateDepthStencilView11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateDomainShader11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateElementLayout.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateGeometryShader.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateGeometryShaderWithStreamOutput.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateGeometryShaderWithStreamOutput11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateHullShader11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreatePixelShader.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateQuery.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateRasterizerState.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateRenderTargetView.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateResource.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateResource11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateSampler.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateShaderResourceView.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateShaderResourceView10_1.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateShaderResourceView11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateUnorderedAccessView11_0.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateVertexShader.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\OpenResource.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcDeferredContextHandleSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateBlendStateSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateBlendStateSize10_1.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateCommandListSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateDeferredContextSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilStateSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilViewSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilViewSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateElementLayoutSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateGeometryShaderWithStreamOutput.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateGeometryShaderWithStreamOutput11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateOpenedResourceSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateQuerySize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateRasterizerStateSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateRenderTargetViewSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateResourceSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateResourceSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateSamplerSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize10_1.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateShaderSize.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateTessellationShaderSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CalcPrivateUnorderedAccessViewSize11_0.cpp">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyBlendState.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyCommandList11_0.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyDepthStencilState.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyDepthStencilView.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyDevice.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyElementLayout.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyQuery.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyRasterizerState.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyRenderTargetView.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyResource.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroySampler.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyShader.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyShaderResourceView.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DestroyUnorderedAccessView11_0.cpp">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DefaultConstantBufferUpdateSubresourceUP.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicConstantBufferMapDiscard.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicConstantBufferUnmap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicIABufferMapDiscard.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicIABufferMapNoOverwrite.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicIABufferUnmap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicResourceMapDiscard.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DynamicResourceUnmap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceMap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceUnmap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceUpdateSubresourceUP.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\StagingResourceMap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\StagingResourceUnmap.cpp">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CheckCounter.cpp">
+      <Filter>Commands\Check G3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CheckCounterInfo.cpp">
+      <Filter>Commands\Check G3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CheckDeferredContextHandleSizes11_0.cpp">
+      <Filter>Commands\Check G3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CheckFormatSupport.cpp">
+      <Filter>Commands\Check G3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CheckMultisampleQualityLevels.cpp">
+      <Filter>Commands\Check G3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ClearDepthStencilView.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ClearRenderTargetView.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ClearUnorderedAccessViewFloat11_0.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ClearUnorderedAccessViewUint11_0.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CopyStructureCount11_0.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Draw.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawAuto.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawIndexed.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawIndexedInstanced.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawIndexedInstancedIndirect11_0.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawInstanced.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawInstancedIndirect11_0.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GenMips.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\QueryBegin.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\QueryEnd.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceConvert10_1.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceConvertRegion10_1.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceCopy.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceCopyRegion.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceReadAfterWriteHazard.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceResolveSubresource.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ShaderResourceViewReadAfterWriteHazard.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Flush.cpp">
+      <Filter>Commands\G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\QueryGetData.cpp">
+      <Filter>Commands\G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\ResourceIsStagingBusy.cpp">
+      <Filter>Commands\G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetConstantBuffers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetSamplers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetShader11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetShaderResources11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CsSetUnorderedAccessViews11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DsSetConstantBuffers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DsSetSamplers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DsSetShader11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DsSetShaderResources11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GsSetConstantBuffers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GsSetSamplers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GsSetShader.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GsSetShaderResources.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\GsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\HsSetConstantBuffers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\HsSetSamplers11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\HsSetShader11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\HsSetShaderResources11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\HsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\IaSetIndexBuffer.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\IaSetInputLayout.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\IaSetTopology.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\IaSetVertexBuffers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\PsSetSamplers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\PsSetShader.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\PsSetShaderResources.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\PsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetBlendState.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetDepthStencilState.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetPredication.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetRasterizerState.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetRenderTargets.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetRenderTargets11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetScissorRects.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetTextFilterSize.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetViewports.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SoSetTargets.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\VsSetConstantBuffers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\VsSetSamplers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\VsSetShader.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\VsSetShaderResources.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\VsSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetSamplers.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetShader.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetShaderResources.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetShaderWithIfaces11_0.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\AbandonCommandList11_0.cpp">
+      <Filter>Commands\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CommandListExecute11_0.cpp">
+      <Filter>Commands\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\Dispatch11_0.cpp">
+      <Filter>Commands\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DispatchIndirect11_0.cpp">
+      <Filter>Commands\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetResourceMinLOD11_0.cpp">
+      <Filter>Commands\D3D11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ConstantBufferWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ConstantBufferWrapperUsageDefault.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ConstantBufferWrapperUsageDynamic.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\D3DDeviceWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\DepthStencilViewWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\DXGIFactoryWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\DXGISwapChainWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\RenderTargetViewWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ResourceWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ShaderResourceViewWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\ShaderWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\StereoResourceWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\UMHandleWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\UnorderedAccessViewWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Wrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\acgfx_dynrender_dx10UM.cpp">
+      <Filter>Font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\AutoFocus.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\LaserSight.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\DumpState.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Streamer\BinaryDumper.cpp">
+      <Filter>Streamer</Filter>
+    </ClCompile>
+    <ClCompile Include="WizardDrawer.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Presenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxUpdateSubresourceUP.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\AdapterFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper9\PresenterHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\SwapChainResources.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetRenderTargets.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="ExternalConstantBuffer.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateShaderBase.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\DrawBase.cpp">
+      <Filter>Commands\G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxMap.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxUnmap.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\SetDestResourceType.cpp">
+      <Filter>Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\PsSetConstantBuffers.cpp">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\xxSetConstantBuffers.cpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\Commands\CreateResourceBase.cpp">
+      <Filter>Commands\Create G2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\S3DWrapper10\D3DMonoDeviceWrapper.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\S3DWrapper10\CallGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\CommandBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\CommandFlow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\D3DDeviceState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\D3DSwapChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\DumpFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\EnumToString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\GlobalData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\memmgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\MonoCommandBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\StereoCommandBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\CmdFlowStreamers.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\CodeGenerator.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\ResourceManager.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\TiXmlIterator.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\TypePtr.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\XMLStreamer.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\XMLStreamer_ReadValue.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\XMLStreamer_WriteValue.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ChangeDeviceView.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ChangeShaderMatrixView.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Command.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CommandSet.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs10_1.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\RelocateDeviceFuncs11_0.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Blt.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GetGammaCaps.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Present.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\QueryResourceResidency.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResolveSharedResource.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\RotateResourceIdentities.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetDisplayMode.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetResourcePriority.h">
+      <Filter>Commands\DXGI G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateBlendState.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateBlendState10_1.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateCommandList11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateComputeShader11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateDeferredContext11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateDepthStencilState.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateDepthStencilView.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateDepthStencilView11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateDomainShader11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateElementLayout.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateGeometryShader.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateGeometryShaderWithStreamOutput.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateGeometryShaderWithStreamOutput11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateHullShader11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreatePixelShader.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateQuery.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateRasterizerState.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateRenderTargetView.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateResource.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateResource11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateSampler.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateShaderResourceView.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateShaderResourceView10_1.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateShaderResourceView11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateUnorderedAccessView11_0.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateVertexShader.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\OpenResource.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcDeferredContextHandleSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateBlendStateSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateBlendStateSize10_1.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateCommandListSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateDeferredContextSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilStateSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilViewSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateDepthStencilViewSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateElementLayoutSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateGeometryShaderWithStreamOutput.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateGeometryShaderWithStreamOutput11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateOpenedResourceSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateQuerySize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateRasterizerStateSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateRenderTargetViewSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateResourceSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateResourceSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateSamplerSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize10_1.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateShaderResourceViewSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateShaderSize.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateTessellationShaderSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CalcPrivateUnorderedAccessViewSize11_0.h">
+      <Filter>Commands\CalcPrivateDataSize G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyBlendState.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyCommandList11_0.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyDepthStencilState.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyDepthStencilView.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyDevice.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyElementLayout.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyQuery.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyRasterizerState.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyRenderTargetView.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyResource.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroySampler.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyShader.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyShaderResourceView.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DestroyUnorderedAccessView11_0.h">
+      <Filter>Commands\Destroy G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DefaultConstantBufferUpdateSubresourceUP.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicConstantBufferMapDiscard.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicConstantBufferUnmap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicIABufferMapDiscard.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicIABufferMapNoOverwrite.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicIABufferUnmap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicResourceMapDiscard.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DynamicResourceUnmap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceMap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceUnmap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceUpdateSubresourceUP.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\StagingResourceMap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\StagingResourceUnmap.h">
+      <Filter>Commands\Map/Unmap G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CheckCounter.h">
+      <Filter>Commands\Check G3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CheckCounterInfo.h">
+      <Filter>Commands\Check G3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CheckDeferredContextHandleSizes11_0.h">
+      <Filter>Commands\Check G3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CheckFormatSupport.h">
+      <Filter>Commands\Check G3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CheckMultisampleQualityLevels.h">
+      <Filter>Commands\Check G3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ClearDepthStencilView.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ClearRenderTargetView.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ClearUnorderedAccessViewFloat11_0.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ClearUnorderedAccessViewUint11_0.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CopyStructureCount11_0.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Draw.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawAuto.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawIndexed.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawIndexedInstanced.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawIndexedInstancedIndirect11_0.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawInstanced.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawInstancedIndirect11_0.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GenMips.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\QueryBegin.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\QueryEnd.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceConvert10_1.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceConvertRegion10_1.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceCopy.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceCopyRegion.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceReadAfterWriteHazard.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceResolveSubresource.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ShaderResourceViewReadAfterWriteHazard.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Flush.h">
+      <Filter>Commands\G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\QueryGetData.h">
+      <Filter>Commands\G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\ResourceIsStagingBusy.h">
+      <Filter>Commands\G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetConstantBuffers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetSamplers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetShader11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetShaderResources11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CsSetUnorderedAccessViews11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DsSetConstantBuffers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DsSetSamplers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DsSetShader11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DsSetShaderResources11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GsSetConstantBuffers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GsSetSamplers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GsSetShader.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GsSetShaderResources.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\GsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\HsSetConstantBuffers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\HsSetSamplers11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\HsSetShader11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\HsSetShaderResources11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\HsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\IaSetIndexBuffer.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\IaSetInputLayout.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\IaSetTopology.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\IaSetVertexBuffers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\PsSetConstantBuffers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\PsSetSamplers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\PsSetShader.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\PsSetShaderResources.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\PsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetBlendState.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetDepthStencilState.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetPredication.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetRasterizerState.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetRenderTargets.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetRenderTargets11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetScissorRects.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetTextFilterSize.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetViewports.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SoSetTargets.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\VsSetConstantBuffers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\VsSetSamplers.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\VsSetShader.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\VsSetShaderResources.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\VsSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Change device state G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetConstantBuffers.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetSamplers.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetShader.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetShaderResources.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetShaderWithIfaces11_0.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\AbandonCommandList11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CommandListExecute11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\Dispatch11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DispatchIndirect11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetResourceMinLOD11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ConstantBufferWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ConstantBufferWrapperUsageDefault.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ConstantBufferWrapperUsageDynamic.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\D3DDeviceWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\DepthStencilViewWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\DXGIFactoryWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\DXGISwapChainWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\RenderTargetViewWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ResourceWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ShaderResourceViewWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\ShaderWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\StereoResourceWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\UMHandleWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\UnorderedAccessViewWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Wrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\acgfx_dynrender_dx10UM.h">
+      <Filter>Font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\AutoFocus.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\LaserSight.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\QBSHeaders\AmdDxExt.h">
+      <Filter>QBSHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\QBSHeaders\amddxextapi.h">
+      <Filter>QBSHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\QBSHeaders\AmdDxExtIface.h">
+      <Filter>QBSHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\QBSHeaders\AmdDxExtQbStereoApi.h">
+      <Filter>QBSHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\DumpState.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Streamer\BinaryDumper.h">
+      <Filter>Streamer</Filter>
+    </ClInclude>
+    <ClInclude Include="WizardDrawer.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Presenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxUpdateSubresourceUP.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\TreeAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\AdapterFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper9\PresenterHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSetRenderTargets.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalConstantBuffer.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\SwapChainResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\SmallObjectAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateShaderBase-inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateResourceBase.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\CreateShaderBase.h">
+      <Filter>Commands\Create G2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DrawBase.h">
+      <Filter>Commands\G1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxMap.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxUnmap.h">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\xxSet.hpp">
+      <Filter>Commands\Shader Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\SetDestResourceType.h">
+      <Filter>Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\D3DMonoDeviceWrapper.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\D3DMonoDeviceFunctions-inl.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\S3DWrapper10\Commands\DispatchBase11_0.h">
+      <Filter>Commands\D3D11</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

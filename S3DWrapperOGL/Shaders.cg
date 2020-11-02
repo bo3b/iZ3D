@@ -1,0 +1,317 @@
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+sampler sTable : register(s3);
+
+#define cTreshold 1e-10f
+
+struct PS_INPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+struct PS_OUTPUT2
+{
+	float4 oP : COLOR0; // Primary panel
+	float4 oS : COLOR1; // Secondary panel
+};
+
+struct PS_INPUT2
+{
+	float2 tL : TEXCOORD0;
+	float2 tR : TEXCOORD0;
+};
+
+inline float4 primaryColor(float4 cL, float4 cR)
+{
+	float4 HalfSum = (cL + cR) * 0.5f;	
+	return HalfSum;
+};
+
+inline float4 secondaryColor(float4 cL, float4 cR)
+{
+	float4 Sum = cL + cR;
+	float3 rVal = (cR / Sum).rgb;
+	float4 Res = (Sum >= cTreshold ? float4(rVal, cR.w) : 0.5f);
+	return Res;
+}
+
+inline float4 secondaryCFLColor(float4 cL, float4 cR)
+{ 
+#if 1
+	float rcR = dot(cR.rgb, 1.0f);
+	float rcSum = dot(cL.rgb, 1.0f) + rcR;
+#else
+	float3 bw = {0.2989, 0.5870, 0.1140};
+	float rcR = dot(cR.rgb, bw);
+	float rcSum = dot(cL.rgb, bw) + rcR;
+#endif
+	float rVal = rcR / rcSum;
+	return (rcSum >= 0.02f ? rVal : 0.5f);	
+}
+
+inline void GammaCorrection(inout float4 c)
+{	
+	float2 tR = {c.r, 0.0f};
+	float2 tG = {c.g, 0.0f};
+	float2 tB = {c.b, 0.0f};
+	c.ra = tex2D(sGamma, tR).ra;
+	c.g = tex2D(sGamma, tG).g;
+	c.b = tex2D(sGamma, tB).b;
+}
+
+PS_OUTPUT2 shaderS3DAll(PS_INPUT input, bool Gamma, bool CFL, bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL.rgb = bwcL;
+		cR.rgb = bwcR;
+	}
+	o.oP = primaryColor(cL, cR);
+
+	if (!CFL)
+		o.oS = secondaryColor(cL, cR);
+	else
+		o.oS = secondaryCFLColor(cL, cR);
+	return o;
+}
+
+PS_OUTPUT2 shaderS3D(PS_INPUT input)
+{
+	return shaderS3DAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DCFL(PS_INPUT input)
+{
+	return shaderS3DAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DAndGamma(PS_INPUT input)
+{
+	return shaderS3DAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DAll(input, true, true);
+}
+
+// S3D B&W
+
+PS_OUTPUT2 shaderS3DBWCFL(PS_INPUT input)
+{
+	return shaderS3DAll(input, false, true, true);
+}
+
+PS_OUTPUT2 shaderS3DBWCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DAll(input, true, true, true);
+}
+
+// S3D Table
+
+inline float ColorToTable(float c)
+{
+	float TableWidth = 512.0;
+	return c * ((TableWidth / 2 - 1) / TableWidth) + 1.0 / (TableWidth * 2);
+}
+
+inline float4 primaryTableColor(float4 cL, float4 cR)
+{
+	float2 tR = {ColorToTable(cL.r), cR.r};
+	float2 tG = {ColorToTable(cL.g), cR.g};
+	float2 tB = {ColorToTable(cL.b), cR.b};
+	float4 cB;
+	cB.r = tex2D(sTable,tR).r;
+	cB.g = tex2D(sTable,tG).g;
+	cB.b = tex2D(sTable,tB).b;
+	cB.a = cL.a;
+	return cB;
+};
+
+inline float4 secondaryTableColor(float4 cL, float4 cR)
+{
+	float2 tR = {0.5f + ColorToTable(cL.r), cR.r};
+	float2 tG = {0.5f + ColorToTable(cL.g), cR.g};
+	float2 tB = {0.5f + ColorToTable(cL.b), cR.b};
+	float4 cF;
+	cF.r = tex2D(sTable,tR).r;
+	cF.g = tex2D(sTable,tG).g;
+	cF.b = tex2D(sTable,tB).b;
+	cF.a = cR.a;
+	return cF;
+}
+
+float4  cDefFrontColor : register(c2) = { 0.5f, 0.5f, 0.5f, 1.0f};
+
+inline float4 secondaryTableCFLColor(float4 cL, float4 cR, float4 cB)
+{ 
+	float2 tR = {0.5f + ColorToTable(cL.r), cR.r};
+	float2 tG = {0.5f + ColorToTable(cL.g), cR.g};
+	float2 tB = {0.5f + ColorToTable(cL.b), cR.b};
+	float3 cF;
+	cF.r = tex2D(sTable,tR).r;
+	cF.g = tex2D(sTable,tG).g;
+	cF.b = tex2D(sTable,tB).b;
+	
+	float rcDot = dot(cB.rgb, cF.rgb);
+	float rcSum = dot(cB.rgb, 1);
+	float rVal = rcDot / rcSum;
+	float3 c = (rcSum >= cTreshold ? rVal : cDefFrontColor.rgb);
+	return float4(c, cR.a);
+}
+
+PS_OUTPUT2 shaderS3DTableAll(PS_INPUT input, bool Gamma, bool CFL, bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL.rgb = bwcL;
+		cR.rgb = bwcR;
+	}
+	o.oP = primaryTableColor(cL, cR);
+
+	if (!CFL)
+		o.oS = secondaryTableColor(cL, cR);
+	else
+		o.oS = secondaryTableCFLColor(cL, cR, o.oP);
+	return o;
+}
+
+PS_OUTPUT2 shaderS3DTable(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFL(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DTableAndGamma(PS_INPUT input)
+{
+	return shaderS3DTableAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, true, true);
+}
+
+// S3D Table B&W
+
+PS_OUTPUT2 shaderS3DTableBWCFL(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, false, true, true);
+}
+
+PS_OUTPUT2 shaderS3DTableBWCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DTableAll(input, true, true, true);
+}
+
+// Left & Right CFL
+
+PS_OUTPUT2 shaderS3DFBCFLAll(PS_INPUT input, bool Gamma)
+{
+	PS_OUTPUT2 o;
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	float4 f = primaryColor(cL, cR);
+	float b = secondaryCFLColor(cL, cR).r;
+	float4 L = 2 * f * (1 - b);
+	float4 R = 2 * f * b;
+	o.oP = L;
+	o.oS = R;
+	return o;
+}
+
+PS_OUTPUT2 shaderS3DFBCFL(PS_INPUT input)
+{
+	return shaderS3DFBCFLAll(input, false);
+}
+
+PS_OUTPUT2 shaderS3DFBCFLAndGamma(PS_INPUT input)
+{
+	return shaderS3DFBCFLAll(input, true);
+}
+
+// Two pass rendering
+
+float4 shaderS3DAll2Pass(PS_INPUT input, bool FirstPass, bool Gamma, bool CFL)
+{    
+	float4 cL = tex2D(sL, input.t);
+	float4 cR = tex2D(sR, input.t);
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (FirstPass)
+	{
+		return primaryColor(cL, cR);
+	}
+	else
+	{
+		if (!CFL)
+			return secondaryColor(cL, cR);
+		else
+			return secondaryCFLColor(cL, cR);
+	}
+}
+
+float4 shaderS3D1st(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, true, false, false);
+}
+
+float4 shaderS3D2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, false, false, false);
+}
+
+float4 shaderS3DCFL2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, false, false, true);
+}
+
+float4 shaderS3DAndGamma1st(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, true, true, false);
+}
+
+float4 shaderS3DAndGamma2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, false, true, false);
+}
+
+float4 shaderS3DCFLAndGamma2nd(PS_INPUT input) : COLOR
+{
+	return shaderS3DAll2Pass(input, false, true, true);
+}

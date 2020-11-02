@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{58ab1b87-5684-41ce-9efa-b621062f3863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wrapper">
+      <UniqueIdentifier>{bc4a223e-40a4-45fb-8b35-c1f86fafff67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{b1784d8b-429f-4f0b-bb70-56a42e0a9e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{46c36760-d4ec-44f9-8736-d7394d2f6ef5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\NVTraceDisplay">
+      <UniqueIdentifier>{d0147db3-7f22-4b34-91aa-da34287f96c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{bb8cb650-8914-4f0e-9d95-4be9e6ef86c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{835e37a7-ecf1-4769-a726-851c4c49686e}</UniqueIdentifier>
+      <Extensions>rc;res;jpg;png;fnt</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{f8934ab4-cad6-47df-b8ac-926256dfef7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SwapChain">
+      <UniqueIdentifier>{43161adf-e058-4f1b-948a-f82349274089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StereoRenderer">
+      <UniqueIdentifier>{d5202730-e105-46cd-a6ad-7ebfe1d4cbbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook">
+      <UniqueIdentifier>{85a1f843-8b49-4ac3-97a0-0776234a263c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="atiqbstereo.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundPresenterThread.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="BasePresenter.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="PresenterHelpers.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="PresenterMultiThread.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="UMDDeviceWrapper.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="UMDriverHook.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="UMDShutterPresenter.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="Direct3D9.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyQuery.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="CallGuard.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="WDirect3DCreate9.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DumpManager.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9AutoShift.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9LaserSight.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="NVTraceDisplay\pdhhelper.h">
+      <Filter>Features\NVTraceDisplay</Filter>
+    </ClInclude>
+    <ClInclude Include="NVTraceDisplay\trace.h">
+      <Filter>Features\NVTraceDisplay</Filter>
+    </ClInclude>
+    <ClInclude Include="NVTraceDisplay\tracedisplayd3d.h">
+      <Filter>Features\NVTraceDisplay</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumToString.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="res\resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9ShaderConverter.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderAnalyzer.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderAnalyzerMatrices.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderInstruction.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderRegister.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseSwapChain-inl.h">
+      <Filter>SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseSwapChain.h">
+      <Filter>SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="MonoSwapChain.h">
+      <Filter>SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapChain.h">
+      <Filter>SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="WideSwapChain.h">
+      <Filter>SwapChain</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStereoRenderer-inl.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStereoRenderer.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStereoRenderer_Hook.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStereoRenderer_InternalClasses-inl.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseStereoRenderer_InternalClasses.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MonoRenderer.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="MonoRenderer_Hook.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="StereoRenderer.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="StereoRenderer_Hook.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="WideStereoRenderer.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="WideStereoRenderer_Hook.h">
+      <Filter>StereoRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxySwapChain9.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxySwapChain9_Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxySwapChain9-inl.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DInterfaceMethods.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDevice9.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDevice9_Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDevice9-inl.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDirect9.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDirect9-inl.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyDirect9_Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyBase.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyMulti_Hook.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9OsdDrawer.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceState.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandDumper.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BackgroundPresenterThread.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="BasePresenter.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="Presenter.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="PresenterHelpers.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="PresenterMultiThread.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="UMDDeviceWrapper.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="UMDeviceUnmodified.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="UMDriverHook.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="UMDShutterPresenter.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct3D9.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyQuery.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="CallGuard.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="FakeFunctions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="S3DWrapperD3D9.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="WDirect3DCreate9.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DumpManager.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9AutoShift.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9LaserSight.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="NVTraceDisplay\tracedisplayd3d.cpp">
+      <Filter>Features\NVTraceDisplay</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumToString.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalData.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Trace.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9ShaderConverter.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderAnalyzer.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderAnalyzerMatrices.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderInstruction.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderRegister.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseSwapChain.cpp">
+      <Filter>SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="MonoSwapChain.cpp">
+      <Filter>SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapChain.cpp">
+      <Filter>SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="WideSwapChain.cpp">
+      <Filter>SwapChain</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_Hook.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_InternalClasses.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_Main.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_Modified.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_ModifiedMain.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_RHW.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseStereoRenderer_Utils.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="MonoRenderer.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="MonoRenderer_Hook.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="StereoRenderer.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="StereoRenderer_Hook.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="WideStereoRenderer.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="WideStereoRenderer_Hook.cpp">
+      <Filter>StereoRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxySwapChain9_Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyDevice9_Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyDirect9_Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="ProxyMulti_Hook.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9OsdDrawer.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandDumper.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceState.cpp">
+      <Filter>Features</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="S3DWrapperD3D9.def">
+      <Filter>Main</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\app.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\Shaders.psh">
+      <Filter>Features</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\Shared\;$(SolutionDir)\lib\d3d10\include\;$(SolutionDir)\lib\d3d9\include\;$(SolutionDir)\lib\madCHook;$(SolutionDir)\lib\ticpp\include\;$(SolutionDir)\lib\LlamaXML\include\;$(SolutionDir)\lib\boost\include\;$(SolutionDir)\lib\wxWidgets\include\;$(SolutionDir)\lib\wxWidgets\include\msvc\;$(SolutionDir)\lib\DevIL\include\;$(SolutionDir)\lib\xerces\include;$(SolutionDir)\lib\vld\include;$(SolutionDir)\lib\squish\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TIXML_USE_TICPP;XERCES_STATIC_LIBRARY;XML_LIBRARY;STRSAFE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4127;4201;4203;4342;4347;4514;4710;4820;4986;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <TreatSpecificWarningsAsErrors>4289;4545;4546;4549;4714;4836;4905;4906;4946 </TreatSpecificWarningsAsErrors>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib\squish\lib\x86\;$(SolutionDir)\lib\d3d9\lib\x86\;$(SolutionDir)\lib\ticpp\lib\x86\;$(SolutionDir)\lib\madCHook;$(SolutionDir)\lib\DevIL\lib\x86\;$(SolutionDir)\lib\xerces\lib\Win32\lib;$(SolutionDir)\lib\boost\lib\Win32;$(SolutionDir)\lib\vld\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4006 /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib\d3d9\lib\x86\;$(SolutionDir)\lib\ticpp\lib\x86\;$(SolutionDir)\lib\madCHook;$(SolutionDir)\lib\DevIL\lib\x86\;$(SolutionDir)\lib\xerces\lib\Win32\lib;$(SolutionDir)\lib\boost\lib\Win32;$(SolutionDir)\lib\vld\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+</Project>

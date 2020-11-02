@@ -1,0 +1,40 @@
+SamplerState	TextureSampler;
+
+Texture2D g_Left			: register(t0);
+Texture2D g_Right			: register(t1);
+Texture2D <float3> g_Gamma	: register(t2);
+
+float4  	cHalfScreenSize = { 640 / 2, 480 / 2, 0.5 / 640, 0.5 / 480 };
+
+struct PS_Input
+{
+	float2 t : TEXCOORD0;
+};
+
+float4 shaderHorizontalSideBySide( PS_Input input_ ) : SV_Target
+{
+	float fU = input_.t.x;
+	input_.t.x = 2.0f * fU;
+
+	if ( fU < 0.5f )		
+		return g_Left.SampleLevel( TextureSampler, input_.t, 0 );
+	else
+	{
+		input_.t.x = input_.t.x - 1.0f;
+		return g_Right.SampleLevel( TextureSampler, input_.t, 0 );
+	}
+};
+
+float4 shaderVerticalSideBySide( PS_Input input_ ) : SV_Target
+{
+	float fV = input_.t.y;
+	input_.t.y = 2.0f * fV;
+
+	if ( fV < 0.5f )		
+		return g_Left.SampleLevel( TextureSampler, input_.t, 0 );
+	else
+	{
+		input_.t.y = input_.t.y - 1.0f;
+		return g_Right.SampleLevel( TextureSampler, input_.t, 0 );
+	}
+};

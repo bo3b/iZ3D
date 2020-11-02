@@ -1,0 +1,10 @@
+; S3DWrapperD3D7.def : Declares the module parameters.
+
+EXPORTS
+    InitializeExchangeServer						@1 PRIVATE
+    StartDDAServer									@2 PRIVATE
+    SetSyncRenderCallback							@3 PRIVATE
+    StopDDAServer									@4 PRIVATE
+    ClearHandles									@5 PRIVATE
+	DirectDrawCreate = DirectDrawCreateHooked	    @6 PRIVATE
+	DirectDrawCreateEx = DirectDrawCreateExHooked	@7 PRIVATE

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Tests>
+	<!-- IsTransposed == used dp4 -->
+	<Test Index="1" Name="Assasin Creed">
+		<IsMono Value="0"/>
+		<Declaration File="shader1_0xBC54EEEC.dcl"/>
+		<Shader      File="shader1_0xBC54EEEC.csh"/>
+		<CBuffers>
+			<CBuffer Value="6">
+				<Matrices>
+					<Matrix Register = "4" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="2" Name="Crysis">
+		<IsMono Value="0"/>
+		<Declaration File="shader2_0x82D13CCB.dcl"/>
+		<Shader      File="shader2_0x82D13CCB.csh"/>
+		<CBuffers>
+			<CBuffer Value="2">
+				<Matrices>
+					<Matrix Register = "10" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<!-- <Test Index="3" Name="Clipmaps from NVidia SDK">
+	<IsMono Value="0"/>
+	<Declaration File="shader3_0x48C5694.dcl"/>
+	<Shader      File="shader3_0x48C5694.csh"/>
+	<CBuffers>
+		<CBuffer Value="0">
+			<Matrices>
+				<Matrix Register = "0" IsTransposed = "0" IncorrectProjection = "0"/>
+			</Matrices>			
+		</CBuffer>
+	</CBuffers>
+  </Test> -->
+	<Test Index="4" Name="RE V">
+		<IsMono Value="1"/>
+		<Declaration File="shader4_0xC5675F12.dcl"/>
+		<Shader      File="shader4_0xC5675F12.csh"/>
+		<CBuffers/>
+	</Test>
+	<Test Index="5" Name="PT Boats Knights of the Sea">
+		<IsMono Value="0"/>
+		<Declaration File="shader5_0x91BAEBEB.dcl"/>
+		<Shader      File="shader5_0x91BAEBEB.csh"/>
+		<CBuffers>
+			<CBuffer Value="1">
+				<!-- we should recheck results -->
+				<Matrices>
+					<Matrix Register = "8" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="6" Name="BF BC 2">
+		<IsMono Value="1"/>
+		<Declaration File="shader6_0xEDBD59D1.dcl"/>
+		<Shader      File="shader6_0xEDBD59D1.csh"/>
+		<CBuffers/>
+	</Test>
+	<Test Index="7" Name="DMC 4">
+		<IsMono Value="1"/>
+		<Declaration File="shader7_0x298547D5.dcl"/>
+		<Shader      File="shader7_0x298547D5.csh"/>
+		<CBuffers/>
+	</Test>
+	<Test Index="8" Name="BF BC 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader8_0xBA781B06.dcl"/>
+		<Shader      File="shader8_0xBA781B06.csh"/>
+		<CBuffers>
+			<CBuffer Value="0">
+				<Matrices>
+					<Matrix Register = "4" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="9" Name="Dirt 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader9_0x1C6711EA.dcl"/>
+		<Shader      File="shader9_0x1C6711EA.csh"/>
+		<CBuffers>
+			<CBuffer Value="3">
+				<Matrices>
+					<Matrix Register = "8" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="10" Name="Dirt 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader10_0xD32664CE.dcl"/>
+		<Shader      File="shader10_0xD32664CE.csh"/>
+		<CBuffers>
+			<CBuffer Value="3">
+				<Matrices>
+					<Matrix Register = "8" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="11" Name="Unigine - Heaven">
+		<IsMono Value="0"/>
+		<Declaration File="shader11_0x18C4AFC4.dcl"/>
+		<Shader      File="shader11_0x18C4AFC4.csh"/>
+		<CBuffers>
+			<CBuffer Value="1">
+				<Matrices>
+					<Matrix Register = "0" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="12" Name="Just Cause 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader12_0xC4FC77B9.dcl"/>
+		<Shader      File="shader12_0xC4FC77B9.csh"/>
+		<CBuffers>
+			<CBuffer Value="2">
+				<Matrices>
+					<Matrix Register = "4" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="13" Name="Crysis Depth Pass">
+		<IsMono Value="0"/>
+		<Declaration File="shader13_0xEBDC338D.dcl"/>
+		<Shader      File="shader13_0xEBDC338D.csh"/>
+		<CBuffers>
+			<CBuffer Value="2">
+				<Matrices>
+					<Matrix Register = "10" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="14" Name="Crysis Depth Pass 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader14_0xBC77A4D5.dcl"/>
+		<Shader      File="shader14_0xBC77A4D5.csh"/>
+		<CBuffers>
+			<CBuffer Value="2">
+				<Matrices>
+					<Matrix Register = "10" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="15" Name="Just Cause 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader15_0x98848EEB.dcl"/>
+		<Shader      File="shader15_0x98848EEB.csh"/>
+		<CBuffers>
+			<CBuffer Value="0">
+				<Matrices>
+					<Matrix Register = "0" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="16" Name="Just Cause 2">
+		<IsMono Value="0"/>
+		<Declaration File="shader16_0x7D1B21D8.dcl"/>
+		<Shader      File="shader16_0x7D1B21D8.csh"/>
+		<CBuffers>
+			<CBuffer Value="1">
+				<Matrices>
+					<Matrix Register = "0" IsTransposed = "0" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+	<Test Index="17" Name="Resident Evil V">
+		<IsMono Value="0"/>
+		<Declaration File="shader17_0x4E32E4A5.dcl"/>
+		<Shader      File="shader17_0x4E32E4A5.csh"/>
+		<CBuffers>
+			<CBuffer Value="0">
+				<Matrices>
+					<Matrix Register = "8" IsTransposed = "1" IncorrectProjection = "0"/>
+				</Matrices>
+			</CBuffer>
+		</CBuffers>
+	</Test>
+</Tests>

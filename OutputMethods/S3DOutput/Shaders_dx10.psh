@@ -1,0 +1,274 @@
+//fxc.exe shaders.psh /Tps_4_0 /EshaderS3D /DCFL
+
+SamplerState TextureSampler
+{
+	Filter = MIN_MAG_MIP_POINT;
+	AddressU = Clamp;
+	AddressV = Clamp;
+};
+
+SamplerState DataSampler
+{
+	Filter = MIN_MAG_MIP_POINT;
+	AddressU = Clamp;
+	AddressV = Clamp;
+};
+
+Texture2D g_Left			: register(t0);
+Texture2D g_Right			: register(t1);
+Texture2D <float3> g_Gamma	: register(t2);
+Texture2D <float3> g_Table	: register(t3);
+
+#ifdef DYNAMIC_CONSTANTS
+float4  c0 : register(c0) = { 1e-6f, 0.5f, 1.0f, 0.0f }; 
+float4  c1 : register(c1) = { 0.0f, 1.0f/3, 2.0f/3, 3.0f/3};
+#else
+static float4  c0 = { 1e-6f, 0.5f, 1.0f, 0.0f }; 
+static float4  c1 = { 0.0f, 1.0f/3, 2.0f/3, 3.0f/3};
+#endif
+
+#define cTreshold c0.x // 0.003f
+#define cDiv2 c0.y // 0.5f
+#define cOne c0.z // 1.0f
+#define cZero c0.w // 0.0f
+
+struct VS_OUTPUT
+{
+	float2 t : TEXCOORD0;
+};
+
+struct PS_OUTPUT2
+{
+	float3 oP : SV_Target0; // Primary panel
+	float3 oS : SV_Target1; // Secondary panel
+};
+
+inline float3 primaryColor(float3 cL, float3 cR)
+{
+	float3 HalfSum = (cL + cR)* cDiv2;	
+	return HalfSum;
+};
+
+inline float3 secondaryColor(float3 cL, float3 cR)
+{
+	float3 Sum = cL + cR;
+	float3 rVal = cR / Sum;
+	float3 Res = (Sum >= cTreshold ? rVal : cDiv2);
+	return Res;
+}
+
+inline float3 secondaryCFLColor(float3 cL, float3 cR)
+{ 
+	//float3 bw = {0.2989, 0.5870, 0.1140};
+	//float rcR = dot(cR, bw);
+	//float rcSum = dot(cL, bw) + rcR;
+	float rcR = dot(cR, cOne);
+	float rcSum = dot(cL, cOne) + rcR;
+	float rVal = rcR / rcSum;
+	return (rcSum >= cTreshold ? rVal : cDiv2);	
+}
+
+inline void GammaCorrection(inout float3 c)
+{	
+	float2 tR = {c.r, cZero};
+	float2 tG = {c.g, cZero};
+	float2 tB = {c.b, cZero};
+	c.r = g_Gamma.Sample(DataSampler, tR).r;
+	c.g = g_Gamma.Sample(DataSampler, tG).g;
+	c.b = g_Gamma.Sample(DataSampler, tB).b;
+}
+
+PS_OUTPUT2 shaderS3DAll(VS_OUTPUT input, bool Gamma, bool CFL, bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL = bwcL;
+		cR = bwcR;
+	}
+	o.oP = primaryColor(cL, cR);
+
+	if (!CFL)
+		o.oS = secondaryColor(cL, cR);
+	else
+		o.oS = secondaryCFLColor(cL, cR);
+	return o;
+}
+
+PS_OUTPUT2 shaderS3D(VS_OUTPUT input)
+{
+	return shaderS3DAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DCFL(VS_OUTPUT input)
+{
+	return shaderS3DAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DCFLAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DAll(input, true, true);
+}
+
+// S3D B&W
+
+PS_OUTPUT2 shaderS3DBWCFL(VS_OUTPUT input)
+{
+	return shaderS3DAll(input, false, true, true);
+}
+
+PS_OUTPUT2 shaderS3DBWCFLAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DAll(input, true, true, true);
+}
+
+// S3D Table
+
+inline float3 primaryTableColor(float3 cL, float3 cR)
+{
+	float2 tR = {cL.r * cDiv2, cR.r};
+	float2 tG = {cL.g * cDiv2, cR.g};
+	float2 tB = {cL.b * cDiv2, cR.b};
+	float3 cB;
+	cB.r = g_Table.Sample(DataSampler, tR).r;
+	cB.g = g_Table.Sample(DataSampler, tG).g;
+	cB.b = g_Table.Sample(DataSampler, tB).b;
+	return cB;
+};
+
+inline float3 secondaryTableColor(float3 cL, float3 cR)
+{
+	float2 tR = {cDiv2 + cL.r * cDiv2, cR.r};
+	float2 tG = {cDiv2 + cL.g * cDiv2, cR.g};
+	float2 tB = {cDiv2 + cL.b * cDiv2, cR.b};
+	float3 cF;
+	cF.r = g_Table.Sample(DataSampler, tR).r;
+	cF.g = g_Table.Sample(DataSampler, tG).g;
+	cF.b = g_Table.Sample(DataSampler, tB).b;
+	return cF;
+}
+
+float3  cDefFrontColor : register(c2) = { 0.5f, 0.5f, 0.5f};
+
+inline float3 secondaryTableCFLColor(float3 cL, float3 cR, float3 cB)
+{ 
+	float2 tR = {cDiv2 + cL.r * cDiv2, cR.r};
+	float2 tG = {cDiv2 + cL.g * cDiv2, cR.g};
+	float2 tB = {cDiv2 + cL.b * cDiv2, cR.b};
+	float3 cF;
+	cF.r = g_Table.Sample(DataSampler, tR).r;
+	cF.g = g_Table.Sample(DataSampler, tG).g;
+	cF.b = g_Table.Sample(DataSampler, tB).b;
+	
+	float rcDot = dot(cB, cF);
+	float rcSum = dot(cB, 1);
+	float rVal = rcDot / rcSum;
+	float3 c = (rcSum >= cTreshold ? rVal : cDefFrontColor);
+	return c;
+}
+
+PS_OUTPUT2 shaderS3DTableAll(VS_OUTPUT input, bool Gamma, bool CFL, bool BW = false)
+{    
+	PS_OUTPUT2 o;
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}
+	if (BW)
+	{
+		float3 bw = {0.2989, 0.5870, 0.1140};
+		float bwcL = dot(cL.rgb, bw);
+		float bwcR = dot(cR.rgb, bw);
+		cL.rgb = bwcL;
+		cR.rgb = bwcR;
+	}
+	o.oP = primaryTableColor(cL, cR);
+
+	if (!CFL)
+		o.oS = secondaryTableColor(cL, cR);
+	else
+		o.oS = secondaryTableCFLColor(cL, cR, o.oP);
+	return o;
+}
+
+PS_OUTPUT2 shaderS3DTable(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input, false, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFL(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input, false, true);
+}
+
+PS_OUTPUT2 shaderS3DTableAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input,true, false);
+}
+
+PS_OUTPUT2 shaderS3DTableCFLAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input, true, true);
+}
+
+// S3D Table B&W
+
+PS_OUTPUT2 shaderS3DTableBWCFL(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input, false, true, true);
+}
+
+PS_OUTPUT2 shaderS3DTableBWCFLAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DTableAll(input, true, true, true);
+}
+
+// Left & Right CFL
+
+PS_OUTPUT2 shaderS3DFBCFLAll(VS_OUTPUT input, bool Gamma)
+{
+	PS_OUTPUT2 o;
+	float3 cL = g_Left.Sample(TextureSampler, input.t).rgb;
+	float3 cR = g_Right.Sample(TextureSampler, input.t).rgb;
+	if (Gamma)
+	{
+		GammaCorrection(cL);
+		GammaCorrection(cR);
+	}	
+	float3 f = primaryColor(cL, cR);
+	float b = secondaryCFLColor(cL, cR).r;
+	float3 L = 2 * f * (1 - b);
+	float3 R = 2 * f * b;
+	o.oP = L;
+	o.oS = R;
+	return o;
+}
+
+PS_OUTPUT2 shaderS3DFBCFL(VS_OUTPUT input)
+{
+	return shaderS3DFBCFLAll(input, false);
+}
+
+PS_OUTPUT2 shaderS3DFBCFLAndGamma(VS_OUTPUT input)
+{
+	return shaderS3DFBCFLAll(input, true);
+}
+

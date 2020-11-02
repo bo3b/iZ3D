@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8e2cd9ad-f8cf-4907-abe2-00bd4f471de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX10">
+      <UniqueIdentifier>{6b5d6b40-b734-4f12-b4f4-dba78e1a02c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wizard">
+      <UniqueIdentifier>{44878fd2-3c71-45b9-8f4c-ddf0a7986f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{7a1313d1-1e7b-4363-876b-bd9f2aca5a52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX9">
+      <UniqueIdentifier>{9f2e921e-371e-4c87-8992-e22dd4819cd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InformOSD">
+      <UniqueIdentifier>{a0b7d0cf-5cc2-4e09-aeff-6d389ec0391a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DX10Device.cpp">
+      <Filter>DX10</Filter>
+    </ClCompile>
+    <ClCompile Include="DX10Sprite.cpp">
+      <Filter>DX10</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtWindow.cpp">
+      <Filter>Wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="Wizard.cpp">
+      <Filter>Wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckBox.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="DesktopWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="DropDownList.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9Texture.cpp">
+      <Filter>DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9Sprite.cpp">
+      <Filter>DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9Line.cpp">
+      <Filter>DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9Font.cpp">
+      <Filter>DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DX9Device.cpp">
+      <Filter>DX9</Filter>
+    </ClCompile>
+    <ClCompile Include="DX10Texture.cpp">
+      <Filter>DX10</Filter>
+    </ClCompile>
+    <ClCompile Include="DX10Font.cpp">
+      <Filter>DX10</Filter>
+    </ClCompile>
+    <ClCompile Include="FontTexture.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="FontTextureManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="TextGlyphs.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="LineGlyphs.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="WizardSCData.cpp">
+      <Filter>Wizard</Filter>
+    </ClCompile>
+    <ClCompile Include="InformTable.cpp">
+      <Filter>InformOSD</Filter>
+    </ClCompile>
+    <ClCompile Include="HotKeyOSD.cpp">
+      <Filter>InformOSD</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DX10Device.h">
+      <Filter>DX10</Filter>
+    </ClInclude>
+    <ClInclude Include="DX10Sprite.h">
+      <Filter>DX10</Filter>
+    </ClInclude>
+    <ClInclude Include="Wizard.h">
+      <Filter>Wizard</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtWindow.h">
+      <Filter>Wizard</Filter>
+    </ClInclude>
+    <ClInclude Include="UILIB.H">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollBar.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ListItem.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DropDownList.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DesktopWindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckBox.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9Device.h">
+      <Filter>DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9Font.h">
+      <Filter>DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9Line.h">
+      <Filter>DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9Sprite.h">
+      <Filter>DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="DX9Texture.h">
+      <Filter>DX9</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDevice.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFont.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonLine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonSprite.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonTexture.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DX10Texture.h">
+      <Filter>DX10</Filter>
+    </ClInclude>
+    <ClInclude Include="DX10Font.h">
+      <Filter>DX10</Filter>
+    </ClInclude>
+    <ClInclude Include="FontTexture.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="FontTextureManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="TextGlyphs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="LineGlyphs.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommonDrawer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="WizardSCData.h">
+      <Filter>Wizard</Filter>
+    </ClInclude>
+    <ClInclude Include="InformTable.h">
+      <Filter>InformOSD</Filter>
+    </ClInclude>
+    <ClInclude Include="HotKeyOSD.h">
+      <Filter>InformOSD</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

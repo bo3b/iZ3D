@@ -1,0 +1,35 @@
+_______________________________________________________________________________________
+Vertex shader
+
+		NumInputSignatureEntries		3
+
+			D3D10_SB_NAME_UNDEFINED		0		7
+			D3D10_SB_NAME_UNDEFINED		1		15
+			D3D10_SB_NAME_UNDEFINED		2		3
+
+			SystemValue			Register	Mask
+
+		
+		NumOutputSignatureEntries		2
+
+			D3D10_SB_NAME_POSITION		0		15
+			D3D10_SB_NAME_UNDEFINED		1		3
+
+_______________________________________________________________________________________
+
+pixel shader
+
+		NumInputSignatureEntries		2
+
+			D3D10_SB_NAME_POSITION		0		15
+			D3D10_SB_NAME_UNDEFINED		1		3
+
+			SystemValue			Register	Mask
+
+		
+		NumOutputSignatureEntries		1
+
+			D3D10_SB_NAME_UNDEFINED		0		15
+
+_______________________________________________________________________________________
+

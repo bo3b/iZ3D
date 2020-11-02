@@ -1,0 +1,51 @@
+//fxc.exe shaders.psh /Tps_2_0 /EshaderS3D /DCFL
+
+sampler sL : register(s0);
+sampler sR : register(s1);
+sampler sGamma : register(s2);
+
+float4  cHalfScreenSize : register(c2) = { 640 / 2, 480 / 2, 0.5 / 640, 0.5 / 480 };
+float4  cOffset : register(c3) = { 0.0f, 0.0f, 0.0f, 0.0f };
+
+struct PS_INPUT
+{
+    float2 t : TEXCOORD0;
+};
+
+float4 shaderHorizontalInterlaced(PS_INPUT input) : COLOR
+{
+    if (frac(input.t.y * cHalfScreenSize.y + cOffset.y) < 0.5f) // y odd check
+        return tex2D(sL, input.t);
+    else
+        return tex2D(sR, input.t);
+}
+
+float4 shaderVerticalInterlaced(PS_INPUT input) : COLOR
+{
+    if (frac(input.t.x * cHalfScreenSize.x + cOffset.x) < 0.5f) // x odd check
+        return tex2D(sL, input.t);
+    else
+        return tex2D(sR, input.t);
+}
+
+float4 shaderHorizontalInterlacedOptimized(PS_INPUT input) : COLOR
+{
+    if (frac(input.t.y * cHalfScreenSize.y + cOffset.y) < 0.5f) // y odd check
+        return tex2D(sL, input.t + float2(0, cHalfScreenSize.w));
+    else
+        return tex2D(sR, input.t - float2(0, cHalfScreenSize.w));
+}
+
+float4 shaderVerticalInterlacedOptimized(PS_INPUT input) : COLOR
+{
+    if (frac(input.t.x * cHalfScreenSize.x + cOffset.x) < 0.5f) // x odd check
+        return tex2D(sL, input.t + float2(cHalfScreenSize.z, 0));
+    else
+        return tex2D(sR, input.t - float2(cHalfScreenSize.z, 0));
+}
+
+float4 shaderMono(PS_INPUT input) : COLOR
+{
+    float4 cL = tex2D(sL, input.t);
+    return cL;
+}

@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="Japanese" font="MS Mincho">
+	<ControlCenter>
+		<WindowTitle>iZ3D コントロール センター</WindowTitle>
+		<btnApply>適用</btnApply>
+		<btnSimple>基本</btnSimple>
+		<btnAdvanced>高度</btnAdvanced>
+
+		<msgDiscardChanges>全ての変更は取消されます。 続けますか?</msgDiscardChanges>
+		<msgServiceError>サービスエラー発生</msgServiceError>
+
+		<DirectX>
+			<lblCaption>ステータス&amp;&amp; メソッド</lblCaption>
+			<sbStereoStatus>ステレオ ステータス</sbStereoStatus>
+			<rbEnableDriver>ドライバーの有効化</rbEnableDriver>
+			<cbEnableStereoAtStartup>アプリケーションの起動時にステレオを有効化</cbEnableStereoAtStartup>
+			<rbDisableDriver>ドライバーを無効化</rbDisableDriver>
+			<sbOutput>出力</sbOutput>
+
+			<NoSuchOutput>そのような出力はありません</NoSuchOutput>
+			<UnexpectedError>予期しないエラーです。 選択された出力が見つかりません</UnexpectedError>
+
+			<S3DOutput>iZ3D モニター</S3DOutput>
+			<S3DMarkedOutput>iZ3D 27&quot; Monitor</S3DMarkedOutput>
+			<AnaglyphOutput>Anaglyph (free)</AnaglyphOutput>
+			<LenovoOutput>Lenovo 3D アナグリフ</LenovoOutput>
+			<AvitridOutput>Avitrid</AvitridOutput>
+			<ColorCodeOutput>ColorCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>Dual Projectors (トライアル)</DualProjectionOutput>
+			<SideBySideOutput>Side by Side (トライアル)</SideBySideOutput>
+			<DLP3DOutput>3D DLP (トライアル)</DLP3DOutput>
+			<InterlacedOutput>インターリーブド (トライアル)</InterlacedOutput>
+			<ZalmanOutput>Zalman モニター</ZalmanOutput>
+			<S3DShutterOutput>Marked Shutter (トライアル, ベータ)</S3DShutterOutput>
+			<Viewsonic_G1>V3D241wm-LED</Viewsonic_G1>
+			<MSI>MSI</MSI>
+			<ASUS>ASUS</ASUS>
+			<Dell>Dell</Dell>
+			<S3D120HzProjectorsOutput>120Hz 3D ディバイス (トライアル)</S3D120HzProjectorsOutput>
+			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a) (トライアル)</AMDHD3DOutput>
+			<ShutterOutput>Shutter(トライアル, ベータ)</ShutterOutput>
+			<StereoMirrorOutput>StereoMirror (トライアル)</StereoMirrorOutput>
+			<VR920Output>VR920 API (トライアル)</VR920Output>
+			<Z800Output>Z800 API (トライアル, ベータ)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP (ATI Radeon&#x2122; お客様は無料)</ATIDLP3DOutput>
+
+			<Auto>22&quot; メガネ 2009 [CFL] (既定値)</Auto>
+			<CFL>22&quot; メガネ 2007 [CFL]</CFL>
+			<CF>17&quot; メガネ 2007 [CF]</CF>
+			<TableCFL>22&quot; メガネ 2009 [CFL]</TableCFL>
+			<Table>17&quot; メガネ 2009 [CF]</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>BW テーブル CFL</BWTableCFL>
+			<LRCFL>L&amp;R CFL</LRCFL>
+			<ExtTable>Ext テーブル</ExtTable>
+			<Interlaced>インターレースド</Interlaced>
+			<Checkerboard>チェッカーボード</Checkerboard>
+			<RedCyan>レッド/シアン</RedCyan>
+			<OptimizedRedCyan>最適化された (レッド/シアン)</OptimizedRedCyan>
+			<BlackWhite>ブラック &amp; ホワイト</BlackWhite>
+			<YellowBlue>イエロー/ブルー</YellowBlue>
+			<Custom>カスタムカラー</Custom>
+			<Voltage120>電圧 120</Voltage120>
+			<Voltage110>電圧 110</Voltage110>
+			<Voltage100>電圧 100</Voltage100>
+			<Force120Hz>強度 120 Hz</Force120Hz>
+			<Force110Hz>強度 110 Hz</Force110Hz>
+			<Force100Hz>強度 100 Hz</Force100Hz>
+			<Normal>普通</Normal>
+			<Special>特別</Special>
+			<Default>既定値</Default>
+			<LeftRight>左/右</LeftRight>
+			<OverUnder>上/下</OverUnder>
+			<Crosseyed>クロスアイド</Crosseyed>
+			<HorizontalOptimized>水平 (最適化された)</HorizontalOptimized>
+			<VerticalOptimized>垂直 (最適化された)</VerticalOptimized>
+			<Horizontal>水平</Horizontal>
+			<Vertical>垂直</Vertical>
+			<InterlacedOptimized>インターレースド (最適化された)</InterlacedOptimized>
+			<InterlacedNotOptimized>インターレースド (Not 最適化された)</InterlacedNotOptimized>
+			<Marked>マーク済</Marked>
+			<Simple>基本</Simple>
+			<BlueLineCoded>ブルーラインコード化</BlueLineCoded>
+			<WhiteLineCoded>ホワイト ラインコード化</WhiteLineCoded>
+			<HorizontalFlip>水平反転セカンドモニター</HorizontalFlip>
+			<VerticalFlip>垂直反転セカンドモニター</VerticalFlip>
+			<HorizontalAndVerticalFlip>水平と垂直反転</HorizontalAndVerticalFlip>
+			<VerticalAndHorizontalFlip>垂直と水平反転</VerticalAndHorizontalFlip>
+			<DoubleHorizontalFlip>水平反転</DoubleHorizontalFlip>
+			<DoubleVerticalFlip>垂直反転</DoubleVerticalFlip>
+			<WOFlush>W/O フラッシュ</WOFlush>
+
+			<btnApply>適用</btnApply>
+		</DirectX>
+
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>ステレオステート</sbStereoStatus>
+			<rbDisableStereo>ステレオの無効化</rbDisableStereo>
+			<rbEnableStereo>ステレオの有効化</rbEnableStereo>
+			<sbDriverOptions>ドライバーオプション</sbDriverOptions>
+			<cbEmulateQB>クアッドバッファーのエミュレート</cbEmulateQB>
+		</OpenGL>
+
+		<AppExceptions>
+			<EnterValidNameOfApplication>有効なアプリケーション名を入力してください</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>最初のファイルを選択してください!</YouMustChooseAFileFirst>
+			<BtnAdd>追加</BtnAdd>
+			<BtnRemove>削除</BtnRemove>
+		</AppExceptions>
+
+		<Application>
+			<UnexeptedErrorOccured>予期しないエラーが発生しました!
+			プログラムを終了します!</UnexeptedErrorOccured>
+		</Application>
+
+		<Book>
+			<CantReplacePanel>パネルを入れ替えできません</CantReplacePanel>
+			<DefaultProfile>既定プロファイル</DefaultProfile>
+		</Book>
+
+		<Config>
+			<CantFindResource>ソースファイルが見つかりません</CantFindResource>
+		</Config>
+
+		<Profiles>
+			<lblCaption>ゲーム内設定</lblCaption>
+
+			<defaultProfileName>既定プロファイル</defaultProfileName>
+			<btnBrowse>参照...</btnBrowse>
+
+			<Game>
+				<lblCaption>ゲーム</lblCaption>
+				<lblShowFPS>FPS の表示</lblShowFPS>
+				<lblDisableMouseLock>マウスロックの無効化</lblDisableMouseLock>
+				<lblEnableMouseLock>マウスロックの有効化</lblEnableMouseLock>
+				<lblShowWizard>ウィザードの表示</lblShowWizard>
+				<lblEnableClipping>クリッピングの有効化</lblEnableClipping>
+				<lblShowOSD>画面表示メッセージの表示</lblShowOSD>
+				<lblForceVSyncOff>強度 V同期オフ</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>シンプルステレオ プロジェクション メソッドの使用メソッドの使用</lblUseSimpleStereoProjection>
+				<lblSwapLR>L&amp;&amp;R のスワップ</lblSwapLR>
+
+				<lblClippingWidth>クリッピング幅</lblClippingWidth>
+				<lblWindowMode>ウィンドウモード</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>全画面</lblFullScreen>
+					<lblWindowed>ウィンドウ表示</lblWindowed>
+					<lblAuto>Auto</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>ステレオ分離</lblStereoSeparation>
+				<lblSeparationScale>分離スケール</lblSeparationScale>
+				<lblSeparationMode>分離モード</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>対称</lblSymmetric>
+					<lblRightShift>右シフト</lblRightShift>
+					<lblLeftShift>左シフト</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>ホットキー</lblCaption>
+				<lblIncConv>コンバージェンスの増加</lblIncConv>
+				<lblDecConv>コンバージェンスの減少</lblDecConv>
+				<lblIncSep>分離の増加</lblIncSep>
+				<lblDecSep>分離の減少</lblDecSep>
+				<lblToggleAutofocus>オートフォーカスの切替</lblToggleAutofocus>
+				<lblPreset1>プリセット 1</lblPreset1>
+				<lblPreset2>プリセット 2</lblPreset2>
+				<lblPreset3>プリセット 3</lblPreset3>
+				<lblToggleStereo>ステレオの切替</lblToggleStereo>
+				<lblToggleLasersight>レーザーサイトの切替 </lblToggleLasersight>
+				<lblSwapLR>L &amp;&amp; R のスワップ </lblSwapLR>
+				<lblTakeScreenshot>ステレオスクリーンショット</lblTakeScreenshot>
+				<lblToggleWizard>ウィザードの切替</lblToggleWizard>
+				<lblToggleFPS>FPS の切替</lblToggleFPS>
+				<lblToggleHotkeysOSD>ホットキー OSD の切替</lblToggleHotkeysOSD>
+				<btnRestoreDef>既定値のリストア</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>オートフォーカス</lblCaption>
+				<lblWidth>幅</lblWidth>
+				<lblHeight>高さ</lblHeight>
+				<lblSpeed>スピード</lblSpeed>
+				<lblMaximumShift>最大移動</lblMaximumShift>
+				<lblTop>上</lblTop>
+				<lblBottom>下</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>例外</lblCaption>
+			<sbExceptions>例外</sbExceptions>
+			<btnAdd>追加</btnAdd>
+			<btnRemove>削除</btnRemove>
+			<btnBrowse>参照...</btnBrowse>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>アップデート</lblCaption>
+			<textUpdateWindowTitle>新しいアップデート</textUpdateWindowTitle>
+			<msgUpdateStatus>アップデート ステータス...</msgUpdateStatus>
+			<msgNewUpdates>新しいアップデートがあります。ダウンロードしてインストールしますか?</msgNewUpdates>
+			<msgNoUpdates> 利用可能なアップデートはありません</msgNoUpdates>
+			<msgUpdatesInstalled>アップデートのインストールは完了しました。</msgUpdatesInstalled>
+			<btnUpdate>アップデート</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>ヘルプ</lblCaption>
+			<textDynamicTest>ダイナミックテスト</textDynamicTest>
+			<textStaticTest>スタティックテスト</textStaticTest>
+			<btnDiagnostic>診断</btnDiagnostic>
+			<btnSetupScreens>セットアップ画面</btnSetupScreens>
+			<btnTrouble>トラブルシューティング</btnTrouble>
+			<btnActivate>ドライバーのアクティブ化</btnActivate>
+
+			<msgDiagnosticError>システム情報の取得中にエラーが発生しました</msgDiagnosticError>
+			<msgDiagnosticFileError>レポートファイルを開けません</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>診断ログが無事作成されました。\nファイルを開きますか?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>32 ビットダイナミックテストを実行しますか?</Run32BitDynamicTest>
+			<Select>選択</Select>
+			<ErrorWhileStaticTest>スタティックテストの起動中にエラーが発生しました!
+iZ3D モニターが接続されていることを確認してください</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>診断レポートファイルを作成できません。
+削除してやり直してください。</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>Troubleshooting.chm</TroubleshootingCHM>
+			<btnManual>ユーザーマニュアル</btnManual>
+			<ManualCHM>説明</ManualCHM>
+	  <msgCantOpenPDF>PDF ファイルを開けません。</msgCantOpenPDF>
+	  <msgInstallAdobeReader>PDF ファイルタイプと関連付けられたプログラムはありません。
+Adobe Reader をインストールしますか?</msgInstallAdobeReader>
+		</Help>
+
+		<Settings>
+			<lblCaption>ドライバー設定</lblCaption>
+			<sbSettings>コントロール センター設定</sbSettings>
+			<checkUpdateOnHold>アップデートメッセージの表示</checkUpdateOnHold>
+			<checkMouseLock>プライマリモニターにマウスポインターをロック</checkMouseLock>
+			<checkMouseAutostart>コントロールセンターを Windows で起動</checkMouseAutostart>
+			<enableD3D10Driver>D3D10/11 の有効化</enableD3D10Driver>
+			<sbLanguage>ドライバーの言語</sbLanguage>
+			<error>エラー</error>
+		</Settings>
+
+		<statisticsQuestion>お客様へ!\niZ3D ドライバーの改善にご協力ください。\n</statisticsQuestion>
+		<IWant>参加します!</IWant>
+		<Submit>送信</Submit>
+		<Exit>終了</Exit>
+
+		<About>
+			<lblCaption>製品案内</lblCaption>
+			<ReleaseDate>リリース日:</ReleaseDate>
+			<Version>バージョン</Version>
+			<lblCopyright>全版権所有。 iZ3D™ はiZ3D Inc. の商標です。</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>カウント中...</CountingFPS>
+		<Mono>モノ</Mono>
+		<Stereo>ステレオ</Stereo>
+		<drop>ドロップ</drop>
+		<Preset>プリセット</Preset>
+		<Convergence>コンバージェンス</Convergence>
+		<ConvergenceINF>コンバージェンス = ?</ConvergenceINF>
+		<Separation>分離</Separation>
+		<AutoFocus>オートフォーカス</AutoFocus>
+		<ON>ON</ON>
+		<OFF>OFF</OFF>
+		<tooMuchSeparation> (分離されすぎです)</tooMuchSeparation>
+		<SwapLR>L&amp;R のスワップ</SwapLR>
+		<DaysLeft>残り日数: </DaysLeft>
+		<CantFindStereoDevice>ステレオデバイスが見つかりません。</CantFindStereoDevice>
+		<CantLoadOutputDLL>出力 DLL をロードできません。</CantLoadOutputDLL>
+		<UpdateAMDDriver>AMD HD3D ドライバーをアップデートしてください</UpdateAMDDriver>
+		<NotSupported3DDevice>デバイスが AMD HD3D テクノロジーでサポートされていない可能性があります</NotSupported3DDevice>
+	</Driver>
+	<Utils>
+		<StereoTestUp>これはステレオ テストイメージです</StereoTestUp>
+		<StereoTestDown>ステレオ コントロールキーはここでは機能しないようになっています</StereoTestDown>
+		<!-- NEVER ALIGN  FrontScreenMsg  and BackScreenMsg  STRINGS!!! -->
+		<FrontScreenMsg>メガネを外して
+'1' キーを押し</FrontScreenMsg>
+		<BackScreenMsg>メガネを外して
+'A' キーを押し</BackScreenMsg>
+		<MonitorNotFound>現在の出力メソッドは"iZ3D"に設定されています。 これが不正な場合、iZ3D コントロール センターを開き、 3D デバイスに適切な出力を選択してください。</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. 3D メガネを装着して、ステレオが有効化されているようにしてください (ステレオ切替の既定値は"Num *" )</IDS_STEP1>
+	<IDS_STEP2>2. テストイメージにステレオが見えますか?</IDS_STEP2>
+	<IDS_STEP3YES>3. ステレオ設定を調整するためには
+	画面に 3D オブジェクトがあることが必要です。
+	今現在 3D オブジェクトが画面に出ていますか?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. iZ3D サポート：
+	www.iz3d.com/support に連絡してください。</IDS_STEP3NO>
+	<IDS_STEP4YES>4.  コンバージェンス (既定では 'Shift ' + 'Num -')
+	を画面に最寄のオブジェクトが
+	1つの画像になるまで減少します。</IDS_STEP4YES>
+	<IDS_STEP4NO>4. ウィザードを終了してとゲーム環境
+	に入ったときに再度オンにしてください。</IDS_STEP4NO>
+	<IDS_STEP5>5.  画面上の遠
+	いオブジェクトは見づらいほど二重に見えますか?</IDS_STEP5>
+	<IDS_STEP6YES>6. 遠いオブジェクトが1つの画像になるまで
+	分離(既定は 'Num -')
+	を減少してください。</IDS_STEP6YES>
+	<IDS_STEP6NO>6. 遠いオブジェクトが見づらいほど二重になるまで
+	分離(既定は 'Num +')
+	を増加してください。</IDS_STEP6NO>
+	<IDS_STEP7>7. 遠いオブジェクトが見づらいほど二重になるまで
+	分離(既定は 'Num +')
+	を増加してください。</IDS_STEP7>
+	<IDS_STEP8>8. 次回このゲームを実行するときに iZ3D
+	ウィザードを見たくない場合、
+	'C'キーを押して上
+	のチェックボックスからチェックを外してください。</IDS_STEP8>
+	<IDS_NEXTBUTTON>(N)次へ　
+	'N'を押して進めます。
+	to continue</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)はい
+	はいの場合は'Y'を
+	押します</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)いいえ
+	いいえの場合は
+	'N' を押します</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(B)戻る
+	戻るには
+	'B'を押します</IDS_BACKBUTTON>
+	<IDS_SUPPORT>サポートに連絡</IDS_SUPPORT>
+	<IDS_EXITBUTTON>このウィザードを終了するには'Shift' + 'Num *'を押します。</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>スタートアップウィザード起動は無効 (スタートアップウィザード起動を有効化するには 'C'を押します。)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO> スタートアップウィザード起動は有効 (スタートアップウィザード起動を無効化するには 'C'を押します。)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>終了
+	'Shift' + 'Num *'
+	を押します</IDS_FINISHBUTTON>
+	<IDS_SHOWSAMPLE>例を表示するには
+	(s)を押します</IDS_SHOWSAMPLE>
+	<IDS_HIDESAMPLE>例を隠すには
+	(s)を押します</IDS_HIDESAMPLE>
+</LanguagePack>

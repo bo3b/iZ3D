@@ -1,0 +1,40 @@
+SamplerState	TextureSampler;
+
+Texture2D g_Left			: register(t0);
+Texture2D g_Right			: register(t1);
+
+float4  cHalfScreenSize = { 640 / 2, 480 / 2, 0.5 / 640, 0.5 / 480 };
+float4  cOffset = { 0.0f, 0.0f, 0.0f, 0.0f };
+
+struct PS_Input
+{
+	float2 t : TEXCOORD0;
+};
+
+float4 shaderHorizontalInterlaced( PS_Input input_ ) : SV_Target
+{
+	if ( frac( input_.t.y * cHalfScreenSize.y + cOffset.y ) >= 0.5f ) // y odd check
+		return g_Left.SampleLevel( TextureSampler, input_.t, 0 );
+	else
+		return g_Right.SampleLevel( TextureSampler, input_.t, 0 );
+};
+
+
+float4 shaderHorizontalInterlacedOptimized( PS_Input input_ ) : SV_Target
+{
+	float2 vTex1 = input_.t + float2( 0.0f, cHalfScreenSize.w );
+	float2 vTex2 = input_.t - float2( 0.0f, cHalfScreenSize.w );
+
+	if ( frac( input_.t.y * cHalfScreenSize.y + cOffset.y ) >= 0.5f ) // y odd check
+		return g_Left.SampleLevel( TextureSampler, vTex1, 0 );
+	else
+		return g_Right.SampleLevel( TextureSampler, vTex2, 0 );
+};
+
+
+float4 shaderMono( PS_Input input_ ) : SV_Target
+{
+	float4 cL = g_Left.Sample( TextureSampler, input_.t );
+	return cL;
+};
+

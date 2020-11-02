@@ -1,0 +1,3017 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Don't change that file, instead modify :
+  XP:	X:\Documents and Settings\<username>\Application Data\iZ3D Driver\UserProfile.xml
+  Vista:	X\Users\<username>\AppData\Roaming\iZ3D Driver\UserProfile.xml
+-->
+<Profiles Version="1" xmlns="http://schemas.iz3d.com/baseprofile/2007">
+	<Profile Name="Disable driver">
+		<File AppName="iZ3D Control Center" Name="Control Center.exe" />
+		<File AppName="Windows Media Player" Name="wmplayer.exe" />
+		<File AppName="Media Player Classic" Name="mplayerc.exe" />
+		<File AppName="Media Player Classic Homecinema" Name="mpc-hc.exe" />
+		<File AppName="Media Player Classic Homecinema x64" Name="mpc-hc64.exe" />
+		<File AppName="Quicktime Player" Name="QuicktimePlayer.exe" />
+		<File AppName="Steam Media Player" Name="smp.exe" />
+		<File AppName="Windows Moviemaker" Name="moviemk.exe" />
+		<File AppName="GOM Player" Name="GOM.exe" />
+		<File AppName="KMPlayer" Name="KMPlayer.exe" />
+		<File AppName="Adobe Premiere" Name="Adobe_Premiere_Pro.exe" />
+		<File AppName="PowerStarter" Name="PowerStarter.exe" />
+		<File AppName="PowerDVD" Name="PowerDVD.exe" />
+		<File AppName="PowerDVD 10" Name="PowerDVD10.exe" />
+		<File AppName="PowerDVD 10" Name="PowerDVDCox10.exe" />
+		<File AppName="DWM" Name="dwm.exe" />
+		<File AppName="Explorer" Name="explorer.exe" />
+		<File AppName="Internet Explorer" Name="iexplore.exe" />
+		<File AppName="Remote Desktop" Name="mstsc.exe" />
+		<File AppName="Skype" Name="Skype.exe" />
+		<File AppName="DirectX Diagnostic tool" Name="dxdiag.exe" />
+		<File AppName="PIX for Windows" Name="PIXWin.exe" />
+		<File AppName="DeskSpace" Name="deskspace.exe" />
+		<File AppName="VLC Player" Name="vlc.exe" />
+		<File AppName="Stereoscopic Player" Name="StereoPlayer.exe" />
+		<File AppName="WMserver tools" Name="wmst.exe" />
+		<!--  use SwapChains-->
+		<File AppName="Windows Photo Gallery" Name="WindowsPhotoGallery.exe" />
+		<File AppName="Windows Live Photo Gallery" Name="WLXPhotoGallery.exe" />
+		<File AppName="Windows System Assessment Tool" Name="WinSAT.exe" />
+		<File AppName="COM Surrogate" Name="dllhost.exe" />
+		<File AppName="Steam" Name="steam.exe" />
+		<File AppName="Fraps" Name="fraps.exe" />
+		<File AppName="RGSC" Name="RGSC.exe" />
+		<File AppName="IP-TV Player" Name="IpTvPlayer.exe" />
+		<File AppName="NVidia CPL" Name="nvcplui.exe" />
+		<File AppName="NVidia Stereo Wizard" Name="nvstwiz.exe" />
+		<File AppName="System process" Name="taskeng.exe" />
+		<File AppName="Visual Studio 2010" Name="devenv.exe" />
+		<File AppName="amBX" Name="amBXFxGen.exe" />
+		<File AppName="WinTV7" Name="WinTV7.exe" />
+		<File AppName="AMD CPU Setup" Name="amdcpusetup.exe" />
+		<File AppName="iTunes" Name="itunes.exe" />
+		<File AppName="MediaPortal" Name="MediaPortal.exe" />
+		<File AppName="Spider-Man Launcher" Name="Spider-Man Launcher.exe" />
+		<File AppName="CyberLink YouCam" Name="YouCam.exe" />
+		<File AppName="CyberLink YouPaint" Name="YouPaint.exe" />
+		<File AppName="Nero Vision" Name="NeroVision.exe" />
+		<File AppName="Nero ShowTime" Name="ShowTime.exe" />
+		<File AppName="Roxio Creator" Name="RoxioCentralFx.exe" />
+		<File AppName="Air Video Server" Name="AirVideoServer.exe" />
+		<File AppName="Firefox 4" Name="firefox.exe" />
+		<File AppName="Norton AntiVirus" Name="ccSvcHst.exe" />
+		<File AppName="GoToMeeting" Name="G2Mui.exe" /> 
+		<RouterType Value="2"/>
+	</Profile>
+	<Profile Name="Catalyst Control Centre">
+		<File Name="CCCPrev.exe" />
+		<EnableAA Value="1"/>
+	</Profile>
+	<Profile Name="iZ3D Dynamic Test">
+		<File Name="dtest.exe" />
+		<EnableStereo Value="1" />
+		<ForceVSyncOff Value="0" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.160664" />
+				<StereoBase Value="0.174264" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Firefox">
+		<File Name="plugin-container.exe" />
+		<GameSpecific Value="2" />
+		<EnableStereo Value="0" />
+	</Profile>
+	<Profile Name="Internet Explorer">
+		<File Name="iexplore.exe" />
+		<GameSpecific Value="2" />
+		<EnableStereo Value="0" />
+	</Profile>
+
+	<!-- Games -->
+	<Profile Name="Oblivion">
+		<File Name="Oblivion.exe" />
+		<MultiWindowsMode Value="1"/>
+		<MonoFixedPipelineCheckingMethodIndex Value="1"/>
+		<CreateOneComponentRTInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.036482" />
+				<StereoBase Value="0.241343" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="World in Conflict">
+		<File Name="wic.exe" />
+		<File Name="wic_online.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<!--make all GUI mono-->
+		<MonoRHWPipeline Value="1"/>
+		<Mono>
+			<!--mini-map radar-->
+			<VertexShader CRC="0xD0AEBC8E"/>
+			<VertexShader CRC="0xACF974EA"/>
+		</Mono>
+		<Presets>
+			<SwapEyes Value="0" />
+			<Preset Index="0">
+				<One_div_ZPS Value="0.024368" />
+				<StereoBase Value="3.533098" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Crysis">
+		<File Name="Crysis.exe" />
+		<File Name="Crysis64.exe" />
+		<DontLockMouse Value="1"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<ModeObtainingDepthBuffer Value="1"/>
+		<Mono>
+			<!--motion blur-->
+			<VertexShader CRC="0x35432930" />
+		</Mono>
+		<Presets>
+			<SwapEyes Value="0" />
+			<Preset Index="0">
+				<One_div_ZPS Value="0.500000" />
+				<StereoBase Value="0.003192" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Crysis 2 Demo">
+		<File Name="Crysis2Demo.exe" />
+		<Mono>
+			<VertexShader CRC="0xE20807A4" />
+			<VertexShader CRC="0xFDFAD468" />
+			<VertexShader CRC="0x417FDACA" />
+			<VertexShader CRC="0xFE082420" />
+			<VertexShader CRC="0x8101965D" />
+			<VertexShader CRC="0xB8B35ECA" />
+			<VertexShader CRC="0x9326654B" />
+			<VertexShader CRC="0xADBC1487" />
+			</Mono>
+	</Profile>	
+	<Profile Name="King's Bounty">
+		<File Name="kb.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="Black &amp; White 2">
+		<File Name="BW2.exe" />
+		<File Name="BW2Demo.exe" />
+		<Mono>
+			<VertexShader CRC="0xF56E7F3F" />
+		</Mono>
+	</Profile>
+	<Profile Name="Battlefield 2">
+		<File Name="BF2.exe" />
+		<MultiWindowsMode Value="1"/>
+		<RenderNonMatrixShadersInMono Value="1"/>
+		<CheckShadowMatrix Value="1"/>
+		<Mono>
+			<!--main battle crosshair-->
+			<VertexShader CRC="0xFF793DC0"/>
+			<!-- UI, options, font-->
+			<VertexShader CRC="0x02643294"/>
+			<!-- UI, options, back picture-->
+			<VertexShader CRC="0xAAB35157"/>
+			<!-- UI, options, dialog background-->
+			<VertexShader CRC="0x76B84A13"/>
+			<!-- UI, options, dialog frame-->
+			<VertexShader CRC="0x0616C541"/>
+			<!-- Weapon black frame in scope mode (very good for sniper rifle)-->
+			<VertexShader CRC="0x9b337cca"/>
+			<!-- Weapon crosshair in scope mode-->
+			<VertexShader CRC="0x513ad40d"/>
+			<!-- Never do this VertexShader mono, it's used to draw military objects in the game, and not only bazooka's crosshair. A.Matveev
+			<VertexShader CRC="0xd819520b"/> <! Bazooka crosshair in scope mode >
+			-->
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.010511" />
+				<StereoBase Value="0.495110" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Battlefield 2142">
+		<File Name="BF2142.exe" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+		<CheckShadowMatrix Value="1"/>
+		<Mono>
+			<!--triangle base marker, ATi-->
+			<VertexShader CRC="0xE20A613A"/>
+			<!--game text,crosshair, minimap, interface ATi-->
+			<VertexShader CRC="0x949FE84A"/>
+			<!--menu interface-->
+			<VertexShader CRC="0x4433855B"/>
+			<!--menu interface-->
+			<VertexShader CRC="0xB95A1E19"/>
+			<!--menu interface-->
+			<VertexShader CRC="0xA49D9AFD"/>
+			<!--frames in menu interface-->
+			<VertexShader CRC="0xD975B709"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.356402" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Fly For Fun">
+		<File Name="Flyff.exe" />
+		<RouterType Value="1"/>
+	</Profile>
+	<Profile Name="SW Battlefront">
+		<File Name="Battlefront.exe" />
+		<!-- guns and buildings become mono with low detail -->
+		<Mono>
+			<!-- UI-->
+			<VertexShader CRC="0xA93AEC01"/>
+			<!-- UI-->
+			<VertexShader CRC="0xC990616F"/>
+			<!-- UI-->
+			<VertexShader CRC="0x1C41BD76"/>
+			<!-- UI-->
+			<VertexShader CRC="0xA377037F"/>
+		</Mono>
+		<!-- Fixes wrong depth-->
+		<Multiplier Value="3.0">
+			<!-- sun-->
+			<VertexShader CRC="0xC67B9F62"/>
+			<!-- sun-->
+			<VertexShader CRC="0x77D8DB33"/>
+
+			<!--Bespin: Platforms sky -->
+			<Texture CRC="0xdbda24ff"/>
+			<!--Bespin: Cloud City sky -->
+			<Texture CRC="0x5617E482"/>
+			<!--Endor: Bunker sky -->
+			<Texture CRC="0x9CEF01B3"/>
+			<!--Endor: Bunker Generator -->
+			<Texture CRC="0x289150F0"/>
+			<!--Endor: Bunker back layer-->
+			<Texture CRC="0xBCF12B6F"/>
+			<!--Endor: Bunker Death Star  -->
+			<Texture CRC="0x958FD452"/>
+			<!--Geonosis: Spire sky -->
+			<Texture CRC="0x6EC14A64"/>
+			<!--Geonosis: Spire back layer 1 -->
+			<Texture CRC="0x77FB348D"/>
+			<!--Geonosis: Spire back layer 2 -->
+			<Texture CRC="0x7A5713DF"/>
+			<!--Geonosis: Spire back layer 3-->
+			<Texture CRC="0x0A407FF5"/>
+			<!--Hot sky -->
+			<Texture CRC="0x7FB1F5A7"/>
+			<!--Hot back layer 1 -->
+			<Texture CRC="0xC08A11CE"/>
+			<!--Hot back layer 2 -->
+			<Texture CRC="0xDD93853E"/>
+			<!--Hot rocks -->
+			<Texture CRC="0x05A5C385"/>
+			<!--Hot generator-->
+			<Texture CRC="0x4271A712"/>
+			<!--Kamino sky  -->
+			<Texture CRC="0x9B073399"/>
+			<!--Kamino back layer 1 -->
+			<Texture CRC="0x788CD3EF"/>
+			<!--Kamino back layer 2 -->
+			<Texture CRC="0x649D44E9"/>
+			<!--Kashyyyk: Islands sky -->
+			<Texture CRC="0xF9D79441"/>
+			<!--Kashyyyk: Islands back layer 1-->
+			<Texture CRC="0x7B8557F6"/>
+			<!--Kashyyyk: Docks sky -->
+			<Texture CRC="0x2CEADF46"/>
+			<!--Kashyyyk: Docks forest-->
+			<Texture CRC="0x6BDDBC70"/>
+			<!--Naboo: Plains sky -->
+			<Texture CRC="0x1785DAA3"/>
+			<!--Naboo: Plains waterfall -->
+			<Texture CRC="0x9F14C3F6"/>
+			<!--Naboo: Plains waterfall -->
+			<Texture CRC="0x8DDAB563"/>
+			<!--Naboo: Plains grain -->
+			<Texture CRC="0xCADF91E2"/>
+			<!--Naboo: Theed sky-->
+			<Texture CRC="0x8BF17592"/>
+			<!--Rhen Var: Harbor sky   -->
+			<Texture CRC="0xC405CDE8"/>
+			<!--Rhen Var: Citadel sky  -->
+			<Texture CRC="0xB99B1A1D"/>
+			<!--Rhen Var: Citadel clouds  -->
+			<Texture CRC="0x59A80C3A"/>
+			<!--Rhen Var: Citadel snow  -->
+			<Texture CRC="0xBCA25FCE"/>
+
+			<!-- do not modify, because of checkpoints
+			<VertexShader CRC="0x7B65F051"/> <!  Rhen Var: Citadel stars (and, unfortunatly, checkpoints)  >
+			-->
+			<!--Tatooine: Dune See sky -->
+			<Texture CRC="0x0F190A42"/>
+			<!--Tatooine: Dune See back layer 1 rock-->
+			<Texture CRC="0x6C7F80C4"/>
+			<!--Tatooine: Dune See back layer 2 rock -->
+			<Texture CRC="0x3D83A8F8"/>
+			<!--Tatooine: Mos Eisley sky-->
+			<Texture CRC="0x1804686F"/>
+			<!--Yavin 4: Temple sky  -->
+			<Texture CRC="0x42659429"/>
+			<!--Yavin 4: Temple red star  -->
+			<Texture CRC="0xE044DD1F"/>
+			<!--Yavin 4: Arena sky  -->
+			<Texture CRC="0x465548CF"/>
+			<!--Yavin 4: Arena red star  -->
+			<Texture CRC="0x13F48697"/>
+		</Multiplier>
+	</Profile>
+	<Profile Name="StarWars Battlefront II">
+		<File Name="BattlefrontII.exe" />
+		<!-- guns and buildings become mono with low detail -->
+		<Mono>
+			<!--menu interface ATi-->
+			<VertexShader CRC="0xCFFECC8A"/>
+			<!--Minimap-->
+			<VertexShader CRC="0x33A55DBF"/>
+		</Mono>
+		<Stereo>
+			<!--Weapon glow-->
+			<VertexShader CRC="0x2AC6660D" ZNear="3.0"/>
+			<!--Crosshair-->
+			<VertexShader CRC="0x4871A9AA" ZNear="3.0"/>
+			<!--Crosshair-->
+			<VertexShader CRC="0x77825664" ZNear="3.0"/>
+			<!--Gun and grenade pictures for Humans-->
+			<VertexShader CRC="0x06DE00A4" ZNear="3.0"/>
+			<!--Gun and grenade pictures  for Robots-->
+			<VertexShader CRC="0x1F3F4E7D" ZNear="3.0"/>
+			<!--Stripe under gun and grenade pictures in interface-->
+			<VertexShader CRC="0x94EA9682" ZNear="3.0"/>
+		</Stereo>
+		<MonoFixedPipeline Value="1"/>
+		<Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.186112" />
+                <StereoBase Value="0.282936" />
+            </Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="StarTrek Legacy">
+		<File Name="Legacy.exe" />
+		<MultiWindowsMode Value="1"/>
+		<Stereo>
+			<VertexShader CRC="0x67913AFE" ZNear="3.0"/>
+		</Stereo>
+		<Multiplier Value="0.1">
+			<VertexShader CRC="0xCFBE4A7D"/>
+		</Multiplier>
+	</Profile>
+	<Profile Name="Heroes of Might &amp; Magic V">
+		<File Name="H5_Game.exe" />
+		<MonoFixedPipeline Value="1"/>
+	</Profile>
+	<Profile Name="Sid Meier's Railroads">
+		<File Name="Railroads.exe" />
+		<File Name="RailRoadsDemo.exe" />
+		<SeparationScale Value="10"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.040476" />
+				<StereoBase Value="0.060000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Microsoft Flight Simuliator">
+		<File Name="fsx.exe" />
+		<HideAdditionalAdapters Value="1"/>
+		<CreateOneComponentRTInMono Value="1"/>
+	</Profile>
+	<Profile Name="Freelancer">
+		<File Name="Freelancer.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.199939" />
+				<StereoBase Value="0.060000" />
+				<AutoFocusEnable Value="1" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="World Shift">
+		<File Name="WorldShift.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="Narnia">
+		<File Name="Narnia.exe" />
+		<MonoFixedPipeline Value="1"/>
+	</Profile>
+	<Profile Name="Sam &amp; Max 104 Abe Lincoln Must Die">
+		<File Name="sammax104_drm.exe" />
+		<!--interface-->
+		<CheckShadowMatrix Value="1"/>
+	</Profile>
+	<Profile Name="Guild Wars">
+		<File Name="Gw.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Mono>
+			<!--interface-->
+			<VertexShader CRC="0x01DCFBF"/>
+			<VertexShader CRC="0xBD04091"/>
+			<!--portraits-->
+			<VertexShader CRC="0xCD4DD8C5"/>
+			<VertexShader CRC="0x39F843D7"/>
+			<!--loading screen-->
+			<VertexShader CRC="0xCDD11052"/>
+			<!--minimap-->
+			<VertexShader CRC="0x7C56042E"/>
+			<VertexShader CRC="0x57B60C15"/>
+			<VertexShader CRC="0x13D9F732"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.166575" />
+				<StereoBase Value="0.202536" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Bet on Soldier">
+		<File Name="BoS.exe" />
+		<Mono>
+			<VertexShader CRC="0x2302031C"/>
+			<!--minimap-->
+			<VertexShader CRC="0xDC8F3F9A"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.171117" />
+				<StereoBase Value="0.187572" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Command &amp; Conquer 3 Tiberium Wars">
+		<File Name="Game.dat" />
+		<File Name="DemoGame.dat" />
+		<Mono>
+			<VertexShader CRC="0xB9DA8AED"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.075986" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Brothers in Arms Road to Hill 30">
+		<File Name="bia.exe" />
+		<Mono>
+			<VertexShader CRC="0x1A2BDFC8"/>
+			<VertexShader CRC="0xBF55FA42"/>
+			<VertexShader CRC="0x39562611"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.000000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Tomb Raider Anniversary">
+		<File Name="tra.exe" />
+		<Stereo>
+			<VertexShader CRC="0xADBF5498" ZNear="30.0"/>
+			<Texture CRC="0xEE2E283B"/>
+		</Stereo>
+	</Profile>
+	<Profile Name="Lego Star Wars">
+		<File Name="LegoStarwars.exe" />
+		<Stereo>
+			<VertexShader CRC="0x5D96D80C" ZNear="2.0"/>
+		</Stereo>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.521500" />
+				<StereoBase Value="0.120000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Rise and Fall">
+		<File Name="RiseAndFall.exe" />
+		<File Name="RiseAndFallDemo.exe" />
+		<Mono>
+			<Texture CRC="0xCFB15886"/>
+			<Texture CRC="0x1D3DCA58"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Team Fortress 2">
+		<File Name="hl2.exe" CmdLine="-game tf"/>
+		<Mono>
+			<!--TF2 background-->
+			<Texture CRC="0xF42C79B4" Size="131072"/>
+			<Texture CRC="0x7B713421" Size="32768"/>
+			<Texture CRC="0x5375A932" Size="16384"/>
+			<!-- team select-->
+			<Texture CRC="0xAA24677E" Size="524288"/>
+			<!-- player select-->
+			<Texture CRC="0xB0B67F61" Size="131072"/>
+			<Texture CRC="0x01C368FC" Size="32768"/>
+		</Mono>
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.022100" />
+                <StereoBase Value="0.496000" />
+				<AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+	</Profile>
+	<Profile Name="Fable The Lost Chapters">
+		<File Name="Fable.exe" />
+		<CheckInverseLR Value="1"/>
+		<Mono>
+			<!--for shadows-->
+			<VertexShader CRC="0x89B51829"/>
+			<VertexShader CRC="0x2B8B9BD6"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Call of Duty 2">
+		<File Name="CoD2SP_s.exe" />
+		<File Name="CoD2MP_s.exe" />
+		<Multiplier Value="0.2">
+			<!--for FP weapon-->
+			<Texture CRC="0xCB2DE3BC"/>
+			<!--for FP arms-->
+			<Texture CRC="0xFB00A389"/>
+		</Multiplier>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.060511" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Overlord">
+		<File Name="Overlord.exe" />
+		<!--for shadows-->
+		<CreateOneComponentRTInMono Value="1"/>
+	</Profile>
+	<Profile Name="TimeShift">
+		<File Name="TimeShift.exe" />
+		<Mono>
+			<!--for sight-->
+			<VertexShader CRC="0xCC3E398D"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Unreal Tournament 3">
+		<File Name="UT3.exe" />
+		<File Name="UT3Demo.exe" />
+		<DontLockMouse Value="1"/>
+		<Mono>
+			<!--for menu-->
+			<VertexShader CRC="0x9D6485CA"/>
+		</Mono>
+		<Stereo>
+			<VertexShader CRC="0x1720F096" ZNear="2.0"/>
+		</Stereo>
+		<Multiplier Value="0.21">
+			<PixelShader CRC="0x977FA849">
+				<Matrices Count="1">
+					<Matrix>
+						<Register Value="14"/>
+						<IsTransposed Value="0"/>
+						<IncorrectProjection Value="0"/>
+						<Inverse Value="1"/>
+					</Matrix>
+				</Matrices>
+			</PixelShader>
+		</Multiplier>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.041380" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Gears of War">
+		<File Name="wargame-g4wlive.exe" />
+		<Mono>
+			<!--for menu-->
+			<VertexShader CRC="0x363EBF0B"/>
+			<VertexShader CRC="0xAFBC94F5"/>
+			<VertexShader CRC="0xE994A0AB"/>
+			<VertexShader CRC="0xF988171F"/>
+		</Mono>
+		<Stereo>
+			<VertexShader CRC="0x9D6485CA" ZNear="720.0"/>
+			<VertexShader CRC="0x1720F096" ZNear="720.0"/>
+			<!-- 
+			  <VertexShader CRC="0x168A535C" ZNear="2.0"/>
+			  <VertexShader CRC="0x38D39235" ZNear="2.0"/>
+			  <VertexShader CRC="0x4EC880B" ZNear="2.0"/>
+			  <VertexShader CRC="0x59429671" ZNear="2.0"/>
+			  <VertexShader CRC="0xDD2E9E9B" ZNear="2.0"/>
+			 -->
+		</Stereo>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.103600" />
+				<StereoBase Value="0.136000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Google Earth">
+		<File Name="googleearth.exe"/>
+		<SeparationScale Value="0.01"/>
+	</Profile>
+	<Profile Name="S.T.A.L.K.E.R.">
+		<File Name="XR_3DA.exe"/>
+		<DontLockMouse Value="1"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateBigSquareRTInStereo Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateBigSquareDSInStereo Value="1" />
+		<RenderToRightInMono Value="1"/>
+		<Mono>
+			<!--for shadow-->
+			<VertexShader CRC="0xD4EC8294"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="1.888815" />
+				<StereoBase Value="0.023068" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="S.T.A.L.K.E.R. CS or CoP">
+		<File Name="xrEngine.exe"/>
+		<DontLockMouse Value="1"/>
+		<MonoFixedPipeline Value="1"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateBigSquareRTInStereo Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateBigSquareDSInStereo Value="1" />
+		<PresenterSleepTime Value="-1" />
+		<Multiplier Value="0.0081">
+			<!--for sky box-->
+			<VertexShader CRC="0x1A50A140"/>
+		</Multiplier>
+		<Mono>
+			<!--for campfire-->
+			<VertexShader CRC="0xD4EC8294"/>
+		</Mono>
+		<Multiplier Value="0.0010" ConvergenceShift="0.0185">
+			<Weapon />
+		</Multiplier>
+	</Profile>
+	<Profile Name="Empire Earth 2">
+		<File Name="EE2.exe"/>
+		<File Name="EE2Demo.exe"/>
+		<MonoFixedPipelineCheckingMethodIndex Value="2"/>
+	</Profile>
+	<Profile Name="Hitman Blood Money">
+		<File Name="HitmanBloodMoney.exe"/>
+		<Mono>
+			<!--for UI-->
+			<VertexShader CRC="0xB5ECF69D"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Alone In The Dark">
+		<File Name="Alone.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.240000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Test Drive Unlimited">
+		<File Name="TestDriveUnlimited.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Multiplier Value="0.0180">
+			<VertexShader CRC="0x329429EA"/>
+		</Multiplier>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.027600" />
+				<StereoBase Value="0.452080" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="World Of Warcraft">
+		<File Name="wow.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<CheckOnlyProjectionMatrix Value="1"/>
+		<AlwaysUseDefaultProjectionMatrixForVS Value="1"/>
+		<!-- DX11 -->
+		<CheckExistenceInverseMatrix Value="1"/>
+		<Mono>
+			<!--Tauren login screen-->
+			<Texture CRC="0xDB393D41" Size="262144"/>
+			<!--Tauren login screen WOW4-->
+			<Texture CRC="0xCB66D495" Size="262144"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.116200" />
+				<StereoBase Value="0.148400" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Silent Hunter 3">
+		<File Name="sh3.exe" />
+		<SeparationScale Value="0.1"/>
+	</Profile>
+	<Profile Name="Silent Hunter Wolves of the Pacific">
+		<File Name="sh4.exe" />
+		<MonoFixedPipelineCheckingMethodIndex Value="2"/>
+	</Profile>
+	<Profile Name="Thief - Deadly Shadows">
+		<File Name="T3Main.exe" />
+		<Mono>
+			<VertexShader CRC="0xD28184B9"/>
+			<VertexShader CRC="0xFB087481"/>
+			<VertexShader CRC="0x7B578207"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Spore">
+		<File Name="SporeApp.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Mono>
+			<VertexShader CRC="0xEC0821AB" />
+			<VertexShader CRC="0xA2D403C9" />
+			<VertexShader CRC="0x56B906D3" />
+			<VertexShader CRC="0xAE8F257E" />
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Spore Creature Editor">
+		<File Name="SporeCreatureCreator.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Mono>
+			<VertexShader CRC="0xEC0821AB" />
+		</Mono>
+	</Profile>
+	<Profile Name="Witcher">
+		<File Name="witcher.exe" />
+		<Stereo>
+			<!--for UI-->
+			<VertexShader CRC="0x103EA1E9" ZNear="1.0"/>
+		</Stereo>
+	</Profile>
+	<Profile Name="Mythos">
+		<File Name="mythos.exe" />
+		<ScaleSeparationForSmallViewPorts Value="0.2"/>
+	</Profile>
+	<Profile Name="Warhammer Online">
+		<File Name="WAR.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="Company Of Heroes">
+		<File Name="RelicCOH.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.285802" />
+				<StereoBase Value="0.623690" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mercenaries 2">
+		<File Name="Mercenaries2.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="Dead Space">
+		<File Name="Dead Space.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Stereo>
+			<!--interface-->
+			<VertexShader CRC="0x133D2D18" ZNear="3.5"/>
+		</Stereo>
+		<Mono>
+			<VertexShader CRC="0xDD3D3A68"/>
+			<!-- ZNear="3.5" -->
+
+			<VertexShader CRC="0x4212036A"/>
+			<VertexShader CRC="0xEE9D4C62"/>
+		</Mono>
+		<Multiplier Value="0.5">
+			<PixelShader CRC="0xAC72449D">
+				<Matrices Count="1">
+					<Matrix>
+						<Register Value="0" />
+						<IsTransposed Value="0" />
+						<IncorrectProjection Value="0" />
+						<Inverse Value="1" />
+					</Matrix>
+				</Matrices>
+			</PixelShader>
+			<PixelShader CRC="0xDCC01969" UseMatricesFrom="0xAC72449D"/>
+			<PixelShader CRC="0x59A09942" UseMatricesFrom="0xAC72449D"/>
+			<PixelShader CRC="0x9321599A" UseMatricesFrom="0xAC72449D"/>
+			<PixelShader CRC="0xC4D17701" UseMatricesFrom="0xAC72449D"/>
+			<PixelShader CRC="0xD5FA4A9F" UseMatricesFrom="0xAC72449D"/>
+			<PixelShader CRC="0x665AB096" UseMatricesFrom="0xAC72449D"/>
+		</Multiplier>
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="ViewProj" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.029900" />
+				<StereoBase Value="1.067920" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="GTA IV">
+		<File Name="GTAIV.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.007839" />
+				<StereoBase Value="1.485860" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="FarCry 2">
+		<File Name="FarCry2.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Mono>
+			<VertexShader CRC="0xCDFBC344" />
+			<VertexShader CRC="0x8E058FAC" />
+			<!-- dx10 only, fix shadows problem -->
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.044500" />
+				<StereoBase Value="0.548800" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="LOTR Online Shadows of Angmar">
+		<File Name="lotroclient.exe" />
+		<MultiWindowsMode Value="1"/>
+		<AlwaysUseDefaultProjectionMatrixForVS Value="1"/>
+		<ScaleSeparationForSmallViewPorts Value="0.03"/>
+		<!--
+		<Mono>
+		  <VertexShader CRC="0x72D4DE35"/>
+		</Mono>
+		-->
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.001401" />
+				<StereoBase Value="0.161000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Red Alert 3">
+		<File Name="ra3.game" />
+		<File Name="ra3_demo.game" />
+		<File Name="ra3_1.0.game" />
+		<File Name="ra3_1.1.game" />
+		<File Name="ra3_1.2.game" />
+		<File Name="ra3_1.3.game" />
+		<File Name="ra3_1.4.game" />
+		<File Name="ra3_1.5.game" />
+		<File Name="ra3_1.6.game" />
+		<File Name="ra3_1.7.game" />
+		<File Name="ra3_1.8.game" />
+		<File Name="ra3_1.9.game" />
+		<File Name="ra3_1.10.game" />
+		<File Name="ra3_1.11.game" />
+		<File Name="ra3_1.12.game" />
+		<File Name="ra3_1.13.game" />
+		<File Name="ra3_1.14.game" />
+		<File Name="ra3_1.15.game" />
+		<CreateOneComponentRTInMono Value="1"/>
+		<Mono>
+			<VertexShader CRC="0xC64E3ADE" />
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.010700" />
+				<StereoBase Value="0.708640" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Need for Speed">
+		<File Name="nfs.exe" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+	</Profile>
+	<Profile Name="Age of Conan">
+		<File Name="AgeOfConan.exe" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+	</Profile>
+	<Profile Name="Mirror's Edge">
+		<File Name="MirrorsEdge.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1"/>
+		<GameSpecific Value="1"/>
+		<Mono>
+			<PixelShader CRC="0x8A9FA05D" />
+			<PixelShader CRC="0x82FE9DD1" />
+			<VertexShader CRC="0x9D6485CA" />
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.014800" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Devil May Cry 4">
+		<File Name="DevilMayCry4_DX9.exe" />
+		<File Name="DevilMayCry4_DX10.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="gXfPrevProj" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.366829" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Tomb Raider Underworld">
+		<File Name="tru.exe"/>
+		<Multiplier Value="0.001">
+			<VertexShader CRC="0x68A6499"/>
+		</Multiplier>
+		<Mono>
+			<!--under water-->
+			<VertexShader CRC="0xCEF9837E"/>
+			<PixelShader CRC="0x733F522D"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Burnout Paradise">
+		<File Name="BurnoutParadise.exe"/>
+		<SeparationScale Value="0.3" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.965476" />
+				<StereoBase Value="0.020000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Left 4 Dead">
+		<File Name="left4dead.exe"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.057700" />
+				<StereoBase Value="0.080000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Half-Life 2 Episode Two">
+		<File Name="hl2.exe" CmdLine="-game ep2"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<SwapEyes Value="0" />
+			<Preset Index="0">
+				<One_div_ZPS Value="0.094343" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="FEAR 2">
+		<File Name="FEAR2SPDemo.exe"/>
+		<File Name="FEAR2MPDemo.exe"/>
+		<File Name="FEAR2SP.exe"/>
+		<File Name="FEAR2MP.exe"/>
+		<File Name="FEAR2.exe"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="k_mObjectToClip_Previous" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.039700" />
+				<StereoBase Value="0.280000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Tom Clancy&apos;s H.A.W.X">
+		<File Name="HAWX.exe" />
+		<AlwaysModifyShaders Value="1"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Mono>
+			<!--interface-->
+			<VertexShader CRC="0xEBD2D2DC"/>
+			<!--effects-->
+			<VertexShader CRC="0xB18799FE"/>
+		</Mono>
+		<Stereo>
+			<!--interface and sun-->
+			<VertexShader CRC="0xB3132541" ZNear="5.1"/>
+		</Stereo>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.035400" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Wanted Weapons of Fate">
+		<File Name="Wanted.exe" />
+		<Mono>
+			<!--menu-->
+			<VertexShader CRC="0xF103EAB3"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.380000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Tom Clancy's Ghost Recon 2 Advanced Warfighter">
+		<File Name="graw2.exe" />
+		<Mono>
+			<!--interface: compass -->
+			<VertexShader CRC="0xF63416CC"/>
+			<!--interface: friendly troops marker -->
+			<VertexShader CRC="0x8893900F"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Call of Duty - World at War">
+		<File Name="CoDWaW.exe" />
+		<File Name="CoDWaWmp.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.623947" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Call of Duty - Black Ops">
+		<File Name="BlackOps.exe" />
+		<File Name="BlackOpsMP.exe" />
+		<DisableNVCSTextureInWRTMode Value="1"/>
+	</Profile>
+	<Profile Name="Titan Quest">
+		<File Name="Titan Quest.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.085900" />
+				<StereoBase Value="0.440000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="NecroVisioN">
+		<File Name="NecroVisioN.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.844100" />
+				<StereoBase Value="0.120000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Bioshock">
+		<File Name="Bioshock.exe"/>
+		<Mono>
+			<VertexShader CRC="0x2FC73178"/>
+			<VertexShader CRC="0x01CBCC95"/>
+		</Mono>
+		<!-- <Multiplier Value="0.5">
+			<PixelShader CRC="0xBE9C6E7">
+				<Matrices Count="1">
+					<Matrix>
+						<Register Value="0"/>
+						<IsTransposed Value="1"/>
+						<IncorrectProjection Value="0"/>
+						<Inverse Value="1"/>
+					</Matrix>
+				</Matrices>
+			</PixelShader>
+		</Multiplier> -->
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.091775" />
+				<StereoBase Value="1.138030" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Lost Planet">
+		<File Name="LostPlanetDX9.exe" />
+		<File Name="LostPlanetDX10.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="gXfPrevProj" />
+	</Profile>
+	<Profile Name="GRID">
+		<File Name="GRID.exe"/>
+		<Mono>
+			<VertexShader CRC="0xE863565A" />
+			<VertexShader CRC="0xEF9ED162" />
+			<VertexShader CRC="0x290458E2" />
+			<VertexShader CRC="0xC8DC53EE" />
+			<VertexShader CRC="0x9519811E" />
+		</Mono>
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="prevViewProj" />
+	</Profile>
+	<Profile Name="DeferredShading">
+		<File Name="DeferredShading.exe"/>
+		<Stereo>
+			<PixelShader CRC="0xD745D525">
+				<Matrices Count="1">
+					<Matrix>
+						<Register Value="0"/>
+						<IsTransposed Value="1"/>
+						<IncorrectProjection Value="0"/>
+						<Inverse Value="1"/>
+					</Matrix>
+				</Matrices>
+			</PixelShader>
+		</Stereo>
+	</Profile>
+	<Profile Name="AFR-FriendlyD3D">
+		<File Name="AFR-FriendlyD3D.exe"/>
+		<Mono>
+			<VertexShader CRC="0xECB1C339"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Call Of Cthulhu DCoTE">
+		<File Name="CoCMainWin32.exe" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+	</Profile>
+	<Profile Name="Rise of Flight">
+		<File Name="ROF.exe" />
+		<CreateSquareDSInMono Value="1" />
+	</Profile>
+	<Profile Name="Resident Evil 5">
+		<File Name="RE5DX9.exe" />
+		<File Name="RE5DX10.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="gXfPrevProj" />
+		<PresenterSleepTime Value="3"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.009300" />
+				<StereoBase Value="0.330480" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Call of Juarez - Bound in Blood">
+		<File Name="CoJBiBGame_x86.exe"/>
+		<File Name="CoJBiBGame_x64.exe"/>
+		<RenderNonMatrixShadersInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.022100" />
+				<StereoBase Value="0.497280" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Rise Of TheArgonauts">
+		<File Name="RiseOfTheArgonauts.exe"/>
+		<MonoDepthStencilTextures Value="1" />
+		<Mono>
+			<VertexShader CRC="0x9D6485CA"/>
+			<VertexShader CRC="0x1720F096"/>
+			<VertexShader CRC="0xB503AD9D"/>
+		</Mono>
+		<Stereo>
+			<VertexShader CRC="0x168A535C" ZNear="650"/>
+		</Stereo>
+	</Profile>
+	<Profile Name="Trine">
+		<File Name="Trine.exe" />
+		<Mono>
+			<VertexShader CRC="0x214D42A3"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.021500" />
+				<StereoBase Value="0.661680" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Tomb Rider Legend">
+		<File Name="trl.exe" />
+		<Mono>
+			<VertexShader CRC="0x1CD594CF" />
+		</Mono>
+	</Profile>
+	<Profile Name="Sims 3">
+		<File Name="TS3.exe"/>
+		<Mono>
+			<VertexShader CRC="0xDAEFEBA2"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Street Fighter IV">
+		<File Name="StreetFighterIV.exe" />
+		<!-- for bug on XP -->
+		<EnableAA Value="0" Vendor="NVidia"/>
+		<!--shadows-->
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<ModeObtainingDepthBuffer Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.035300" />
+				<StereoBase Value="0.549440" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mini Ninjas">
+		<File Name="ninja.exe"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<Mono>
+			<VertexShader CRC="0x133DD393"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Flatout Ultimate Carnage">
+		<File Name="Fouc.exe"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<Mono>
+			<VertexShader CRC="0xF5C168A0"/>
+		</Mono>
+	</Profile>
+	<Profile Name="G-Force">
+		<File Name="GForce.exe"/>
+		<MonoRHWPipeline Value="1"/>
+		<Mono>
+			<Texture CRC="0xBABFAA46" Size="512"/>
+			<Texture CRC="0x26B45E5A" Size="1048576"/>
+			<Texture CRC="0xE3DDA5C9" Size="2097152"/>
+			<Texture CRC="0xFBC7AFC6" Size="8192"/>
+			<Texture CRC="0x558C813" Size="4096"/>
+			<Texture CRC="0x172D6A4B" Size="32768"/>
+			<Texture CRC="0x64E660A8" Size="32768"/>
+			<Texture CRC="0x77329AA0" Size="4096"/>
+			<Texture CRC="0x21BC1A09" Size="262144"/>
+			<Texture CRC="0x93DD26B6" Size="262144"/>
+			<Texture CRC="0x449D0E3E" Size="262144"/>
+			<Texture CRC="0x7AFB371A" Size="262144"/>
+			<Texture CRC="0x60892F16" Size="128"/>
+			<Texture CRC="0x1051B146" Size="65536"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Overlord 2">
+		<File Name="Overlord2.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.001493" />
+				<StereoBase Value="1.077554" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Empire Total War">
+		<File Name="Empire.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+	</Profile>
+	<Profile Name="Battlestation Pacific">
+		<File Name="bsp.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.020600" />
+				<StereoBase Value="0.447840" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Batman Arkham Asylum">
+		<File Name="ShippingPC-BmGame.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.016200" />
+				<StereoBase Value="0.610080" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Settlers II">
+		<File Name="S2DNG.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+	</Profile>
+	<Profile Name="Madden NFL 08">
+		<File Name="mainapp.exe"/>
+		<MonoDrawFromMemory Value="1"/>
+	</Profile>
+	<Profile Name="Beyond Good and Evil">
+		<File Name="BGE.exe" />
+		<MonoRHWPipeline Value="1"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+	</Profile>
+	<Profile Name="Need for Speed Shift">
+		<File Name="shift.exe" />
+		<File Name="shift.bin" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+		<Mono>
+			<VertexShader CRC="0x4A3B0148"/>
+			<VertexShader CRC="0xE9282322"/>
+			<VertexShader CRC="0x90E69F20"/>
+			<VertexShader CRC="0x0ED6EFB6"/>
+			<VertexShader CRC="0xA8316E65"/>
+			<VertexShader CRC="0xBDC7E035"/>
+			<VertexShader CRC="0xD73834F9"/>
+			<VertexShader CRC="0xF886178"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.018000" />
+				<StereoBase Value="0.227520" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="DiRT">
+		<File Name="DiRT.exe" />
+		<!-- Motion Blur -->
+		<AdditionalMatrixName Value="prevViewProj" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.062738" />
+				<StereoBase Value="0.215678" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Section 8">
+		<File Name="S8Game-F.exe"/>
+		<DontLockMouse Value="1"/>
+		<Mono>
+			<VertexShader CRC="0x0354F662"/>
+			<VertexShader CRC="0xAF802897"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Majesty 2">
+		<File Name="Majesty2.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<MonoRHWPipeline Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.147300" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Killing Floor">
+		<File Name="KillingFloor.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.034300" />
+				<StereoBase Value="0.336000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Ghostbusters">
+		<File Name="ghost_w32.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Mono>
+			<VertexShader CRC="0xF18EE452"/>
+			<VertexShader CRC="0x2A11026E"/>
+			<VertexShader CRC="0x4CC2AC50"/>
+			<VertexShader CRC="0xCF1EA40A"/>
+			<VertexShader CRC="0x0A1CB7AA"/>
+			<VertexShader CRC="0x324022C8"/>
+			<VertexShader CRC="0x2616B14D"/>
+			<VertexShader CRC="0xCD1A7F0D"/>
+			<VertexShader CRC="0xE746ADFE"/>
+			<VertexShader CRC="0x5202A1C8"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Guitar Hero 3 Legends of Rock">
+		<File Name="gh3.exe" />
+		<Multiplier Value="0.01">
+			<PixelShader CRC="0x19FD2EA3"/>
+		</Multiplier>
+		<Mono>
+			<!-- <VertexShader CRC="0x3277DE58"/> -->
+			<VertexShader CRC="0x38FA34C6"/>
+			<VertexShader CRC="0x54302C51"/>
+			<VertexShader CRC="0xB60BB9A2"/>
+			<VertexShader CRC="0x193B92B3"/>
+			<VertexShader CRC="0x9A021F53"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.032572" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Serious Sam 2">
+		<File Name="sam2.exe"/>
+		<SeparationScale Value="0.005"/>
+	</Profile>
+	<Profile Name="Sexy Beach 3">
+		<File Name="Sexy Beach 3.exe"/>
+		<File Name="Sexy Beach 3 Plus!.exe"/>
+		<File Name="SB3Plus.exe"/>
+		<CreateSquareRTInMono Value="1" />
+		<MonoFixedPipelineCheckingMethodIndex Value="3"/>
+	</Profile>
+	<Profile Name="Allods Online">
+		<File Name="AOGame.exe" />
+		<AlwaysModifyShaders Value="1"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="Microsoft Flight Simulator 2004">
+		<File Name="fs9.exe" />
+		<HideAdditionalAdapters Value="1"/>
+	</Profile>
+	<Profile Name="Left 4 Dead 2">
+		<File Name="left4dead2.exe"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.039300" />
+				<StereoBase Value="0.656000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="OF Dragon Rising">
+		<File Name="OFDR.exe"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<Stereo>
+			<VertexShader CRC="0x2814E162">
+				<Matrices Count="1">
+					<Matrix>
+						<Register Value="224" />
+						<IsTransposed Value="0" />
+					</Matrix>
+				</Matrices>
+			</VertexShader>
+		</Stereo>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.039300" />
+				<StereoBase Value="0.656000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Torchlight">
+		<File Name="Torchlight.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.098200" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Global Agenda">
+		<File Name="globalagenda.exe" />
+		<Mono>
+			<VertexShader CRC="0xAF802897"/>
+			<VertexShader CRC="0x354F662"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.098200" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mass Effect 2">
+		<File Name="MassEffect2.exe"/>
+		<File Name="MassEffect.exe"/>
+		<Mono>
+			<VertexShader CRC="0x7C376B29"/>
+		</Mono>
+	</Profile>
+	<Profile Name="REFLEX XTR Model Flight Simulator">
+		<File Name="REFLEX.exe"/>
+		<File Name="REFLEX_Demo.exe"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+	</Profile>
+	<Profile Name="Dark Void">
+		<File Name="ShippingPC-SkyGame.exe"/>
+		<Mono>
+			<!-- Capcom logo -->
+			<VertexShader CRC="0x731724D9"/>
+			<!-- Menu logo -->
+			<VertexShader CRC="0x564E9113"/>
+			<VertexShader CRC="0x6C08866F"/>
+			<!-- Menu text -->
+			<VertexShader CRC="0x9D6485CA"/>
+			<!-- Menu selected text -->
+			<VertexShader CRC="0xCF0C87D4"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Supreme Commander 2">
+		<File Name="Supreme Commander 2.exe" />
+		<File Name="Supreme Commander 2 Demo.exe" />
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+	</Profile>
+	<Profile Name="Starcraft II">
+		<File Name="SC2.exe" />
+		<RenderNonMatrixShadersInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.021900" />
+				<StereoBase Value="0.320000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Battlefield Bad Company 2">
+		<File Name="BFBC2Game.exe" />
+		<SeparationScale Value="0.01"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<MonoDrawFromMemory Value="1"/>
+		<AlwaysModifyShaders Value="1"/>
+		<VertexShaderModificationMethod Value="2"/>
+		<PresenterSleepTime Value="-2"/>
+		<DX10MonoNonIndexedDraw Value="1"/>
+		<!-- <Mono>
+			// DX10 GUI
+			<VertexShader CRC="0x52B986A4"/>
+			<VertexShader CRC="0xC2A76DF"/>
+			<VertexShader CRC="0x43AF74F1"/>
+			<VertexShader CRC="0xF9AEC213"/>
+			<VertexShader CRC="0xE3709448"/>
+			<VertexShader CRC="0xB03E7DAC"/>
+			<VertexShader CRC="0xE5FC210C"/>
+		</Mono> -->
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.079400" />
+				<StereoBase Value="0.400000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Just Cause 2">
+		<File Name="JustCause2.exe"/>
+		<CreateSquareRTInMono Value="1" />
+		<CreateRTThatLessThanBBInMono Value="1" />
+		<CreateSquareDSInMono Value="1" />
+		<CreateDSThatLessThanBBInMono Value="1" />
+		<Mono>
+			<!-- DX10 -->
+			<VertexShader CRC="0xD67A412E"/>
+			<VertexShader CRC="0x4C06483B"/>
+		</Mono>
+	</Profile>
+	<Profile Name="Kane and Lynch 2 Dog Days">
+		<File Name="kl2.exe"/>
+		<Mono>
+			<PixelShader CRC="0x9436074A" />
+			<VertexShader CRC="0x1233A847" />
+		</Mono>
+	</Profile>
+	<Profile Name="Civilization V">
+		<File Name="CivilizationV.exe" />
+		<Mono>
+			<VertexShader CRC="0x28743A62"/>
+			<VertexShader CRC="0x34493B3C"/>
+			<VertexShader CRC="0x8827ED0A"/>
+		</Mono>
+	</Profile>
+
+	<!-- force fullscreen -->
+	<Profile Name="Assassin's Creed">
+		<File Name="AssassinsCreed_Dx9.exe" />
+		<File Name="AssassinsCreed_Dx10.exe" />
+		<MultiWindowsMode Value="1"/>
+		<FixNone16x9TextPosition Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.014000" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Rainbow Six Vegas">
+		<File Name="R6Vegas_Game.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Rainbow Six Vegas2">
+		<File Name="R6Vegas2_Game.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Trackmania Nations Forever">
+		<File Name="TmForever.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="GTR">
+		<File Name="GTR.exe" />
+		<File Name="GTRDemo.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Painkiller Overdose">
+		<File Name="Overdose.exe" />
+		<File Name="OverdoseDemo.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Painkiller">
+		<File Name="Painkiller.exe" />
+		<File Name="PainkillerDemo.exe" />
+		<MultiWindowsMode Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="2.004625" />
+				<StereoBase Value="0.022940" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="EVE Online">
+		<File Name="ExeFile.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Everquest">
+		<File Name="eqgame.exe" />
+		<File Name="testeqgame.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Everquest 2">
+		<File Name="EverQuest2.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Dungeons &amp; Dragons Online">
+		<File Name="dndclient.exe" />
+		<MultiWindowsMode Value="1"/>
+		<Presets>
+			<SwapEyes Value="0" />
+			<Preset Index="0">
+				<One_div_ZPS Value="0.106753" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+
+	<Profile Name="SAMURAI WARRIORS 2">
+		<File Name="SW2.exe" />
+		<MultiWindowsMode Value="1"/>
+	</Profile>
+	<Profile Name="Silent Hunter 5">
+		<File Name="sh5.exe" />
+		<SeparationScale Value="0.1"/>
+		<MonoFixedPipelineCheckingMethodIndex Value="2"/>
+	</Profile>
+	<Profile Name="Splinter Cell Conviction">
+		<File Name="Conviction_game.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Mono>
+			<!--for UI-->
+			<VertexShader CRC="0xABC78D48"/>
+			<VertexShader CRC="0x89619216"/>
+		</Mono>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.624174" />
+				<StereoBase Value="0.000670" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Prince of Persia Forgotten Sands">
+		<File Name="Prince of Persia.exe" />
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.147000" />
+				<StereoBase Value="1.048000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Metro 2033">
+		<File Name="Metro2033.exe" />
+		<CreateSquareDSInMono Value="1"/>
+		<CreateDSThatLessThanBBInMono Value="1"/>
+		<Multiplier Value="0.1700">
+			<VertexShader CRC="0xEF02F2A4"/>
+		</Multiplier>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Disciples III">
+		<File Name="DisciplesIII.exe" />
+		<MonoRHWPipeline Value="1"/>
+		<CreateSquareRTInMono Value="1"/>
+		<CreateRTThatLessThanBBInMono Value="1"/>
+	</Profile>
+	<Profile Name="AaAaAA!!! - A Reckless Disregard for Gravity">
+		<File Name="main.exe"/>
+		<MonoDrawFromMemory Value="1"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.206143" />
+				<StereoBase Value="0.277437" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Dragon Age 2">
+		<File Name="DragonAge2.exe" />
+		<Multiplier Value="0.01">
+			<!--for sky box-->
+			<VertexShader CRC="0x21177AD8"/>
+		</Multiplier>
+	</Profile>
+	<Profile Name="Back to the Future">
+		<File Name="BackToTheFuture101.exe" />
+		<File Name="BackToTheFuture102.exe" />
+		<File Name="BackToTheFuture103.exe" />
+		<File Name="BackToTheFuture104.exe" />
+		<File Name="BackToTheFuture105.exe" />
+		<Mono>
+			<VertexShader CRC="0x8AF290A6" />
+			<VertexShader CRC="0xAA2E09B" />
+			<VertexShader CRC="0x52FFF4F" />
+			<VertexShader CRC="0x78819FDB" />
+			<VertexShader CRC="0x9D0C2138" />
+			<VertexShader CRC="0x2FBC9E92" />
+			<VertexShader CRC="0x1EFEF81D" />
+			<VertexShader CRC="0xDC26F5E2" />
+			<VertexShader CRC="0xA2FC164F" />
+		</Mono>
+	</Profile>
+
+	<!-- empty profiles -->
+	<Profile Name="Alien Breed 2 Assault">
+		<File Name="AlienBreed2Assault.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.133738" />
+				<StereoBase Value="0.130141" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Allien Swarm">
+		<File Name="swarm.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="AquaNox 2">
+		<File Name="AN2.dat" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Armies Exigo">
+		<File Name="exigo.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.038668" />
+				<StereoBase Value="0.229720" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Bionic Commando Rearmed">
+		<File Name="bcr.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.072467" />
+				<StereoBase Value="0.154471" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Beowulf">
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="QuestViewer - Audiosurf">
+		<File Name="QuestViewer.exe" />>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.173036" />
+				<StereoBase Value="0.140000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Pro Skater 3">
+		<File Name="Skate3.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.760858" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Pro Skater 3-Rus">
+		<File Name="Skate3-Rus.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Sims 2 EP1">
+		<File Name="Sims2EP1.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.116007" />
+				<StereoBase Value="0.000000" />
+				<AutoFocusEnable Value="1" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Splinter Cell 4">
+		<File Name="SplinterCell4.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="1.031623" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Singularity">
+		<File Name="Singularity.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Forged Alliance">
+		<File Name="ForgedAlliance.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="1">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="2">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Shadowgrounds">
+		<File Name="Shadowgrounds.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="4.141872" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Sniper Elite">
+		<File Name="SniperElite.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="RavenShield">
+		<File Name="RavenShield.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.320000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Fahrenheit">
+		<File Name="Fahrenheit.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.319363" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="FEAR XP 2">
+		<File Name="FEARXP2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.432116" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Richard Burn's Rally">
+		<File Name="RichardBurnsRally.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.171981" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Two Worlds">
+		<File Name="TwoWorlds.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.334943" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Eragon">
+		<File Name="Eragon.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.140000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Warhammer 40k Dark Crusade">
+		<File Name="DarkCrusade.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Warhammer 40k Soulstorm">
+		<File Name="Soulstorm.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.060000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Warhammer 40k">
+		<File Name="W40k.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Wallace and Gromit 101">
+		<File Name="WallaceGromit101.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.302927" />
+				<StereoBase Value="0.020000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Wallace and Gromit 102">
+		<File Name="WallaceGromit102.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.020000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Virtual Tennis 2009">
+		<File Name="Virtua Tennis 2009.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.205731" />
+				<StereoBase Value="0.080000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Cryostasis">
+		<File Name="cryostasis.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Dungeon Siege 2">
+		<File Name="DungeonSiege2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.202786" />
+				<StereoBase Value="0.262600" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Comand and Conquier 3 ep1">
+		<File Name="cnc3ep1.dat" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.838082" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Comand and Conquer 3">
+		<File Name="cnc3game.dat" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.414963" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Comand and Conquer 4">
+		<File Name="CNC4.game" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.120000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="De Blob">
+		<File Name="De Blob.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Chromadrome 2">
+		<File Name="chromadrome2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100208" />
+				<StereoBase Value="37.515972" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Day of Defeat">
+		<File Name="hl2.exe" CmdLine="-game dod" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Drakensang">
+		<File Name="drakensang.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="9.069331" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Call of Duty Black Ops">
+		<File Name="BlackOps.exe" />
+		<File Name="BlackOpsMP.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.214286" />
+				<StereoBase Value="0.040000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="DefenseGrid">
+		<File Name="DefenseGrid.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.011809" />
+				<StereoBase Value="0.746716" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Condemned">
+		<File Name="Condemned.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.126164" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Cars">
+		<File Name="Cars.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Flatout">
+		<File Name="flatout.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.126139" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Freelancer">
+		<File Name="Freelancer.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.199939" />
+				<StereoBase Value="0.060000" />
+				<AutoFocusEnable Value="1" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Risen">
+		<File Name="Risen.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.101500" />
+				<StereoBase Value="0.072000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Majesty 2">
+		<File Name="Majesty2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.147300" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Sins of a Solar Empire">
+		<File Name="Sins of a Solar Empire.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.025500" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mirror&apos;s Edge">
+		<File Name="MirrorsEdge.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.014800" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Borderlands">
+		<File Name="Borderlands.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.037600" />
+				<StereoBase Value="0.320000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Warcraft 3">
+		<File Name="war3.exe" />
+		<Presets>
+			<SwapEyes Value="0" />
+			<Preset Index="0">
+				<One_div_ZPS Value="0.012340" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mafia 2">
+		<File Name="mafia2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.102894" />
+				<StereoBase Value="0.180000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="AION">
+		<File Name="aion.bin" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Dead Rising 2">
+		<File Name="deadrising2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="MEGAMAN X8">
+		<File Name="MEGAMANX8.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Brothers in Arms - Hell's Highway">
+		<File Name="biahh.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.088778" />
+				<StereoBase Value="0.397557" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Brothers in Arms Earned in Blood">
+		<File Name="EiB.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.505066" />
+				<StereoBase Value="0.240000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Black and White 2">
+		<File Name="white.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.097011" />
+				<StereoBase Value="0.184426" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Starship Troopers">
+		<File Name="STGame.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.491027" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Saints Row 2">
+		<File Name="SR2_pc.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.260000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Movies">
+		<File Name="Movies.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.029127" />
+				<StereoBase Value="0.140000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="OutRun 2006 Coast 2 Coast">
+		<File Name="OR2006C2C.EXE" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Watchmen The End Is Nigh">
+		<File Name="KapowMulti.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.040000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Mercedes Benz World Racing">
+		<File Name="mbwr_pc.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.296637" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Simulator">
+		<File Name="simulator.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100323" />
+				<StereoBase Value="12.356541" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Game">
+		<File Name="Game.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.387870" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Cabela Big Game Hunter">
+		<File Name="BGH10.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Build_12_12_10">
+		<File Name="Build_12_12_10.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.028943" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Lost Planet 2">
+		<File Name="LP2DX9.exe" />
+		<File Name="LP2DX11.exe" />
+	</Profile>
+	<Profile Name="Zeno Clash">
+		<File Name="zenoclash.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="1">
+				<One_div_ZPS Value="0.051900" />
+				<StereoBase Value="0.352000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="2">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Serious Sam HD">
+		<File Name="SamHD.exe" />
+		<SwapEyes Value="0" />
+		<LaserSightEnable Value="0" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.624000" />
+				<StereoBase Value="0.056000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Assassins Creed II">
+		<File Name="AssassinsCreedIIGame.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.180000" />
+				<StereoBase Value="0.189480" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Warhammer 40k Dawn of War II">
+		<File Name="dow2.exe" />
+		<Presets>
+			<Preset Index="0">
+                <One_div_ZPS Value="0.039155" />
+                <StereoBase Value="0.256000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Aliens vs Predator">
+		<File Name="AvP.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.031411" />
+				<StereoBase Value="0.060000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Operation Flashpoint Dragon Rising">
+		<File Name="OFDR.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.020000" />
+				<StereoBase Value="0.200000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="BioShock 2">
+		<File Name="BioShock2.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.011400" />
+				<StereoBase Value="0.525600" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Damnation">
+		<File Name="DamnGame.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.025600" />
+				<StereoBase Value="0.280000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Frontlines Fuel of War">
+		<File Name="ffow.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.029500" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Red Faction Guerrilla">
+		<File Name="rfg.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.032700" />
+				<StereoBase Value="0.240000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Dragon Age Origins">
+		<File Name="DAOrigins.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.070500" />
+				<StereoBase Value="0.331760" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Wings of Prey">
+		<File Name="acess.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.059200" />
+				<StereoBase Value="0.220000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Dark Messiah Might and Magic">
+		<File Name="mm.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.027600" />
+				<StereoBase Value="0.452080" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Ninja Blade">
+		<File Name="NinjaBlade.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.112000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="ARMA">
+		<File Name="ArmA.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.032086" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Call of Duty - Modern Warfare 2">
+		<File Name="iw4sp.exe" />
+		<File Name="iw4mp.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.026800" />
+				<StereoBase Value="0.401440" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Wolfenstein (2009)">
+		<File Name="Wolf2.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="-0.023191" />
+				<StereoBase Value="0.123361" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="1">
+				<One_div_ZPS Value="0.165757" />
+				<StereoBase Value="0.111611" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="2">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.160000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Fallout 3">
+		<File Name="Fallout3.exe" />
+	</Profile>
+	<Profile Name="Race Driver 3">
+		<File Name="RD3.exe" />
+	</Profile>
+	<Profile Name="NASCAR Racing 2003 Season">
+		<File Name="NR2003.exe" />
+	</Profile>
+	<Profile Name="LOTR ROTK">
+		<File Name="lotrbfme2.exe" />
+	</Profile>
+	<Profile Name="MTX">
+		<File Name="MTX.exe" />
+		<File Name="MTXDemo.exe" />
+	</Profile>
+	<Profile Name="Sniper Elite">
+		<File Name="SniperElite.exe" />
+	</Profile>
+	<Profile Name="Delta Force Xtreme">
+		<File Name="DFX.exe" />
+		<File Name="DFXDemo.exe" />
+	</Profile>
+	<Profile Name="America's Army">
+		<File Name="ArmyOps.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.023989" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Supreme Commander">
+		<File Name="SupremeCommander.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.500000" />
+				<StereoBase Value="0.038243" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Fury">
+		<File Name="Fury.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.026952" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Hellgate London">
+		<File Name="Hellgate_sp_dx9_x86.exe" />
+		<File Name="Hellgate_sp_dx10_x86.exe" />
+		<File Name="Hellgate_mp_dx9_x86.exe" />
+		<File Name="Hellgate_mp_dx10_x86.exe" />
+	</Profile>
+	<Profile Name="Call of Duty 4 - Modern Warfare">
+		<File Name="iw3sp.exe" />
+		<File Name="iw3mp.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.454376" />
+				<StereoBase Value="0.068479" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Medal of Honor Airborne">
+		<File Name="MOHA.exe" />
+		<File Name="MOHADemo.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.069631" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Civilization IV">
+		<File Name="Civilization4.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.100000" />
+				<StereoBase Value="0.120000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="FarCry">
+		<File Name="FarCry.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="1.434963" />
+				<StereoBase Value="0.028177" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="FEAR">
+		<File Name="FEARSPDemo.exe"/>
+		<File Name="FEARMPDemo.exe"/>
+		<File Name="FEARSP.exe"/>
+		<File Name="FEARMP.exe"/>
+		<File Name="FEAR.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.026905" />
+				<StereoBase Value="0.436500" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="UT2004">
+		<File Name="UT2004.exe" />
+		<DontLockMouse Value="1" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.012298" />
+				<StereoBase Value="2.885422" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Half-Life 2 Episode One">
+		<File Name="hl2.exe" CmdLine="-game episodic"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.088600" />
+				<StereoBase Value="0.106400" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Counter-Srike Source">
+		<File Name="hl2.exe" CmdLine="-game cstrike"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.044783" />
+				<StereoBase Value="0.160000" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="Day of Defeat">
+		<File Name="hl2.exe" CmdLine="-game dod"/>
+	</Profile>
+	<Profile Name="Half-Life 2 Deathmatch">
+		<File Name="hl2.exe" CmdLine="-game hl2dm"/>
+	</Profile>
+	<Profile Name="Portal">
+		<File Name="hl2.exe" CmdLine="-game portal" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.041700" />
+				<StereoBase Value="0.480000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+	<Profile Name="GTA San Andreas">
+		<File Name="gta_sa.exe" />
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.273759" />
+				<StereoBase Value="0.161000" />
+			</Preset>
+		</Presets>
+	</Profile>
+    <Profile Name="ARES">
+        <File Name="ARES.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.010878" />
+                <StereoBase Value="0.205212" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="Divinity 2">
+        <File Name="Divinity2.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.298374" />
+                <StereoBase Value="0.020000" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="DC Universe Online">
+        <File Name="DCGame.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.048348" />
+                <StereoBase Value="0.113427" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="RIFT">
+		<File Name="rift.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.154977" />
+                <StereoBase Value="0.080000" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+	<Profile Name="Sam &amp; Max 301">
+        <File Name="SamMax301.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.001350" />
+                <StereoBase Value="0.607981" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+	<Profile Name="ProtoGalaxy">
+        <File Name="ProtoGalaxy.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.039905" />
+                <StereoBase Value="0.256637" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="Monday Night Combat">
+        <File Name="mnc.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.021151" />
+                <StereoBase Value="0.502831" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="Devil May Cry 3 Special Edition">
+        <File Name="dmc3se.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.017210" />
+                <StereoBase Value="0.455001" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="World of Tanks">
+        <File Name="worldoftanks.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.100000" />
+                <StereoBase Value="0.300000" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+    <Profile Name="King Artur The Druids">
+        <File Name="Launcher.exe" />
+        <Presets>
+            <Preset Index="0">
+                <One_div_ZPS Value="0.032303" />
+                <StereoBase Value="0.216575" />
+                <AutoFocusEnable Value="0" />
+            </Preset>
+        </Presets>
+    </Profile>
+
+	<!--should be last-->
+	<Profile Name="Half-Life 2">
+		<File Name="hl2.exe"/>
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.038300" />
+				<StereoBase Value="0.320000" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+	</Profile>
+</Profiles>

@@ -1,0 +1,1 @@
+copy "%CD%\bin\final release\Win64\Setup\*.exe" "\\dev1\Public\*.*"

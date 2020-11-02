@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="German">
+	<ControlCenter>
+		<WindowTitle>iZ3D Kontrollzentrum</WindowTitle>
+		<btnApply>Anwenden</btnApply>
+
+		<msgDiscardChanges>Alle ungespeicherten Änderungen werden verloren gehen.
+Fortsetzen?</msgDiscardChanges>
+		<msgServiceError>Dienst Fehler:</msgServiceError>
+
+		<DirectX>
+			<sbStereoStatus>Stereo Status</sbStereoStatus>
+			<rbEnableStereo>Stereo einschalten</rbEnableStereo>
+			<rbEnableStereoByHK>Stereo mit Hot-Key einschalten</rbEnableStereoByHK>
+			<rbDisableStereo>Stereo ausschalten</rbDisableStereo>
+			<sbOutput>Ausgang</sbOutput>
+
+			<NoSuchOutput>Kein solcher Ausgang</NoSuchOutput>
+			<UnexpectedErrorCantFindSelectedOutput>Unerwarteter Fehler: kann den
+gewählten Ausgang nicht finden</UnexpectedErrorCantFindSelectedOutput>
+
+			<S3DOutput>iZ3D</S3DOutput>
+			<AnaglyphOutput>Anaglyph (Kostenlos)</AnaglyphOutput>
+			<DualProjectionOutput>Dual Projectors (Probezeit)</DualProjectionOutput>
+			<DLP3DOutput>3D DLP (Probezeit)</DLP3DOutput>
+			<InterlacedOutput>Interlaced (Probezeit)</InterlacedOutput>
+			<ZalmanOutput>Zalman (Probezeit)</ZalmanOutput>
+			<S3DShutterOutput>S3DShutterbrille (Probezeit, beta)</S3DShutterOutput>
+			<ShutterOutput>Shutter (Probezeit, beta)</ShutterOutput>
+			<SideBySideOutput>Side by Side (Probezeit)</SideBySideOutput>
+			<StereoMirrorOutput>StereoMirror (Probezeit)</StereoMirrorOutput>
+			<VR920Output>VR920 (Probezeit, beta)</VR920Output>
+			<Z800Output>Z800 (Probezeit, beta)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP (Kostenlos für ATI Radeon&#x2122; Kunden)</ATIDLP3DOutput>
+
+			<Auto>Auto</Auto>
+			<CFL>CFL</CFL>
+			<CF>CF</CF>
+			<TableCFL>Tabelle CFL</TableCFL>
+			<Table>Tabelle</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>BW Tabelle CFL</BWTableCFL>
+			<LRCFL>L&amp;R CFL</LRCFL>
+			<ExtTable>Ext Tabelle</ExtTable>
+			<Interlaced>Interlaced</Interlaced>
+			<Checkerboard>Schachbrett</Checkerboard>
+			<RedCyan>Rot/Cyan</RedCyan>
+			<OptimizedRedCyan>Optimiert (Rot/Cyan)</OptimizedRedCyan>
+			<BlackWhite>Schwarz &amp; Weiß</BlackWhite>
+			<YellowBlue>Gelb/Blau</YellowBlue>
+			<Default>Default</Default>
+			<OverUnder>Ober/Unter</OverUnder>
+			<HorizontalOptimized>Horizontal (Optimiert)</HorizontalOptimized>
+			<VerticalOptimized>Vertikal (Optimimiert)</VerticalOptimized>
+			<Horizontal>Horizontal</Horizontal>
+			<Vertical>Vertikal</Vertical>
+			<InterlacedOptimized>Interlaced (Optimiert)</InterlacedOptimized>
+			<InterlacedNotOptimized>Interlaced (Nicht Optimiert)</InterlacedNotOptimized>
+			<Marked>Markiert</Marked>
+			<Simple>Einfach</Simple>
+			<BlueLineCoded>Blue line kodiert</BlueLineCoded>
+			<WhiteLineCoded>White line kodiert</WhiteLineCoded>
+			<HorizontalFlip>Horizontal gewendet</HorizontalFlip>
+			<VerticalFlip>Vertikal gewendet</VerticalFlip>
+		</DirectX>
+
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>Stereostatus</sbStereoStatus>
+			<rbDisableStereo>Stereo ausschalten</rbDisableStereo>
+			<rbEnableStereo>Stereo einschalten</rbEnableStereo>
+			<sbDriverOptions>Treibereinstellungen</sbDriverOptions>
+			<cbEmulateQB>Quad Buffer emulieren</cbEmulateQB>
+		</OpenGL>
+		<AppExceptions>
+			<EnterValidNameOfApplication>Gültigen Programmnamen
+eingeben</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>Du musst zuerst eine Datei
+auswählen!</YouMustChooseAFileFirst>
+			<BtnAdd>Hinzufügen</BtnAdd>
+			<BtnRemove>Entfernen</BtnRemove>
+		</AppExceptions>
+		<Application>
+			<UnexeptedErrorOccured>Unerwarteter Fehler!
+			Das Programm wird beendet.</UnexeptedErrorOccured>
+		</Application>
+		<Book>
+			<CantReplacePanel>Kann das Panel nicht ersetzen.</CantReplacePanel>
+			<DefaultProfile>Default Profil</DefaultProfile>
+		</Book>
+		<Config>
+			<CantFindResource>Kann Ressource nicht finden</CantFindResource>
+		</Config>
+		<Profiles>
+			<lblCaption>Profile</lblCaption>
+
+			<defaultProfileName>Default Profil</defaultProfileName>
+
+			<Game>
+				<lblCaption>Spiel</lblCaption>
+				<lblShowFPS>FPS Anzeigen</lblShowFPS>
+				<lblDisableMouseLock>Mouselock deaktivieren</lblDisableMouseLock>
+				<lblShowWizard>Assistent anzeigen</lblShowWizard>
+				<lblEnableClipping>Abschneiden einschalten</lblEnableClipping>
+				<lblShowOSD>Bildschirmmitteilungen anzeigen</lblShowOSD>
+				<lblForceVSyncOff>V-Sync erzwingen ausschalten</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>Einfache Stereoprojektrionsmethode
+verwenden</lblUseSimpleStereoProjection>
+				<lblSwapLR>L&amp;&amp;R vertauschen</lblSwapLR>
+
+				<lblClippingWidth>Abschneidbreite</lblClippingWidth>
+				<lblWindowMode>Fenstermodus</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>Vollbild</lblFullScreen>
+					<lblWindowed>Fenster</lblWindowed>
+					<lblAuto>Auto</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>Stereo Separation</lblStereoSeparation>
+				<lblSeparationScale>Separationsskala</lblSeparationScale>
+				<lblSeparationMode>Separationsmodus</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>Symmetrisch</lblSymmetric>
+					<lblRightShift>Rechts verschoben</lblRightShift>
+					<lblLeftShift>Links verschoben</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>Eingang</lblCaption>
+				<lblIncConv>Konvergenz vergrößern</lblIncConv>
+				<lblDecConv>Konvergenz verkleinern</lblDecConv>
+				<lblIncSep>Separation vergrößern</lblIncSep>
+				<lblDecSep>Separation verkleinern</lblDecSep>
+				<lblToggleAutofocus>Autofocus ein-/ausschalten</lblToggleAutofocus>
+				<lblPreset1>Voreinstellung 1</lblPreset1>
+				<lblPreset2>Voreinstellung 2</lblPreset2>
+				<lblPreset3>Voreinstellung 3</lblPreset3>
+				<lblToggleStereo>Stereo ein-/ausschalten</lblToggleStereo>
+				<lblToggleLasersight>Lasersight ein-/ausschalten</lblToggleLasersight>
+                <lblToggleWizard>Toggle Wizard</lblToggleWizard>
+				<btnRestoreDef>Standardeinstellungen zurücksetzen</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>Autofocus</lblCaption>
+				<lblWidth>Breite</lblWidth>
+				<lblHeight>Höhe</lblHeight>
+				<lblSpeed>Geschwindigkeit</lblSpeed>
+				<lblMaximumShift>Maximale Verschiebung</lblMaximumShift>
+				<lblTop>Oben</lblTop>
+				<lblBottom>Unten</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>Ausnahmen</lblCaption>
+			<sbExceptions>Ausnahmen</sbExceptions>
+			<btnAdd>Hinzufügen...</btnAdd>
+			<btnRemove>Entfernen</btnRemove>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>Aktualisieren</lblCaption>
+			<textUpdateWindowTitle>Neue Aktualisierungen</textUpdateWindowTitle>
+			<msgNewUpdates>Neue Aktualisierungen zur Verfügung! Willst du sie jetzt
+herunterladen und installieren?</msgNewUpdates>
+			<msgNoUpdates>Keine neuen Aktualisierungen zur Verfügung</msgNoUpdates>
+			<msgUpdatesInstalled>Aktualisierungen erfolgreich
+installiert</msgUpdatesInstalled>
+			<btnUpdate>Aktualisieren</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>Hilfe</lblCaption>
+			<textDynamicTest>Dynamischer Test</textDynamicTest>
+			<textStaticTest>Statischer Test</textStaticTest>
+			<btnDiagnostic>Diagnose</btnDiagnostic>
+			<btnSetupScreens>Bildschirmsetup</btnSetupScreens>
+			<btnTrouble>Fehlerbehebung</btnTrouble>
+
+			<msgDiagnosticError>Ein Fehler ist beim Laden der Systeminformationen
+aufgetreten</msgDiagnosticError>
+			<msgDiagnosticFileError>Konnte Report-Datei nicht
+öffnen</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>Diagnose Log wurde erfolgreich erstellt.\nWillst du
+die Datei jetzt öffnen?</msgDiagnosticSuccess>
+			<btnManual>Beschreibung</btnManual>
+		</Help>
+
+		<Settings>
+			<lblCaption>Einstellungen</lblCaption>
+			<sbSettings>Kontrollzentrum Einstellugen</sbSettings>
+			<checkUpdateOnHold>Aktualisierungsmitteilungen
+anzeigen</checkUpdateOnHold>
+			<checkMouseLock>Mouse Lock</checkMouseLock>
+			<sbLanguage>Sprache</sbLanguage>
+			<error>Fehler</error>
+		</Settings>
+
+		<statisticsQuestion>Lieber Kunde!\nHilf uns die iZ3D Treiber zu
+verbessern.\n</statisticsQuestion>
+		<IWant>Ich will teilnehmen!</IWant>
+		<Submit>Abschicken</Submit>
+
+		<About>
+			<lblCaption>Info</lblCaption>
+			<ReleaseDate>Freigabedatum:</ReleaseDate>
+			<Version>Version</Version>
+			<lblCopyright>All Rechte vorbehalten. iZ3D™ ist ein Warenzeichen von
+iZ3D Inc.</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>Zähle...</CountingFPS>
+		<Mono>Mono</Mono>
+		<Stereo>Stereo</Stereo>
+		<drop>drop</drop>
+		<Preset>Voreinstellung</Preset>
+		<Convergence>Konvergenz</Convergence>
+		<ConvergenceINF>Konvergenz = ∞</ConvergenceINF>
+		<Separation>Separation</Separation>
+		<AutoFocus>AutoFocus</AutoFocus>
+		<ON>EIN</ON>
+		<OFF>AUS</OFF>
+		<tooMuchSeparation> (zu viel Separation)</tooMuchSeparation>
+		<DaysLeft>Verbleibende Tage: </DaysLeft>
+	  <CantFindStereoDevice>Kann Stereohardware nicht
+finden</CantFindStereoDevice>
+		<CantLoadOutputDLL>Kann Ausgangs-DLL nicht laden</CantLoadOutputDLL>
+	</Driver>
+	<Utils>
+		<StereoTestUp>DIESES IST EIN STEREO TEST BILD</StereoTestUp>
+		<StereoTestDown>STEREO EINSTELLUNGSTASTEN FUNKTIONIEREN HIER
+NICHT</StereoTestDown>
+		<FrontScreenMsg>Nimm die Brille ab\n und drücke die Taste
+'1'</FrontScreenMsg>
+		<BackScreenMsg>Nimm die Brille ab\n und drücke die Taste
+'A'</BackScreenMsg>
+		<MonitorNotFound>Sorry, iZ3D Monitor wurde nicht gefunden. Bitte
+kontrolliere die Kabelverbindung wenn sie einen iZ3D Monitor
+verwenden.</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. Setze die iZ3D Brille auf</IDS_STEP1>
+	<IDS_STEP2>2. Siehst du Stereo im Testbild?</IDS_STEP2>
+	<IDS_STEP3YES>3. Um Stereoeinstellungen vorzunehmen
+	musst du ein 3D Objekt auf dem Bildschirm haben.
+	Hast du gerade einen 3D Objekt auf dem Bildschirm?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. Kontaktiere den iZ3D Kundendienst
+	www.iz3d.com</IDS_STEP3NO>
+	<IDS_STEP4YES>4. Verringere Konvergenz ('Shift ' + 'Num -'
+Grundeinstellung)
+	bis die nähesten Objekte zu einem einzigen Bild werden</IDS_STEP4YES>
+	<IDS_STEP4NO>4. Bitte schließe den Assistent und starte ihn wieder
+	wenn du ein 3D Objekt auf dem Bildschirm hast</IDS_STEP4NO>
+	<IDS_STEP5>5. Sind fern liegende Objekte unkonfortabel
+	verdoppelt?</IDS_STEP5>
+	<IDS_STEP6YES>6. Verringere die Separation ('Num -' Grundeinstellung)
+	bis diese fern liegenden Objekte ein ein Bild werden.</IDS_STEP6YES>
+	<IDS_STEP6NO>6. Vergrößere die Separation ('Num +' Grundeinstellung)
+	bis fern liegene Objekte komfortabel separiert sind.</IDS_STEP6NO>
+	<IDS_STEP7>7. Vergrößere die Separation ('Num +' Grundeinstellung)
+	bis fern liegene Objekte komfortabel separiert sind.</IDS_STEP7>
+	<IDS_STEP8>8. Schalte Autofocus ein ('Num /' Grundeinstellung)</IDS_STEP8>
+	<IDS_STEP9>9. Willst du den Assistenten sehen, wenn du das nächste Mal
+dieses
+	Spiel startest?</IDS_STEP9>
+	<IDS_STEP10NO>10. Checkbox Haken entfernen, um den Austostart des iZ3D
+Assistenten
+	für dieses Spiel abzuschalten.
+	(Anmerkung: Du kannst ihn jederzeit im Kontollzentrum
+	unter Profile wieder aktivieren.)</IDS_STEP10NO>
+	<IDS_STEP10YES>10. Kontrolliere dass die Checkbox abgehakt
+ist.</IDS_STEP10YES>
+	<IDS_NEXTBUTTON>(N)ext
+	Drücke 'N' um Fortzufahren</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)es
+	Drücke 'Y' wenn Ja</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)o
+	Drücke 'N' wenn Nein</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(P)revious
+	Drücke 'P' um zurück zu gehen</IDS_BACKBUTTON>
+	<IDS_SUPPORT>Kontaktiere den Kundendienst</IDS_SUPPORT>
+	<IDS_EXITBUTTON>Drücke 'Shift' + 'Num *' um den Assistenten zu
+schließen</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>Startup Assistentenstart deaktiviert (Drücke 'C' um
+ihn zu aktivieren)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>Startup Assistentenstart aktiviert (Drücke 'C' um
+ihn zu deaktivieren)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>Schließen
+	Drücke 'Shift' + 'Num *'</IDS_FINISHBUTTON>
+</LanguagePack>

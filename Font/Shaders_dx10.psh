@@ -1,0 +1,30 @@
+Texture2D	txDiffuse;
+
+SamplerState	samFilter;
+
+struct PS_Input
+{
+	float4	m_Pos	:	SV_POSITION;
+    	float2	m_Tex 	: 	TEXCOORD0;
+	//int4	m_Blend	:	TEXCOORD1;
+};
+
+//------------------------------------------------------------------------
+// Name: PSFont
+// Desc: 
+//------------------------------------------------------------------------
+float4 PSFont( PS_Input _In ) : SV_Target
+{	
+	//float4 diffuseColor = float4( 1.0f, 1.0f, 0.0f, 1.0f );
+	//return diffuseColor;
+	return txDiffuse.Sample( samFilter, _In.m_Tex );	
+};
+
+//------------------------------------------------------------------------
+// Name: PSBlack
+// Desc: 
+//------------------------------------------------------------------------
+float4 PSBlack( PS_Input _In ) : SV_Target
+{
+	return float4( 0.0f, 0.0f, 0.0f, 0.0f );
+};

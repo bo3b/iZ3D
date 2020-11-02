@@ -1,0 +1,12 @@
+; Declares the module parameters.
+
+EXPORTS
+	SetGamma
+	CheckS3DMonitor
+	SetupS3DMonitor
+	Show3DTestWindow
+	GenerateFont
+	FindMonitor
+	Show3D
+	GetAndWriteToRegistryDriverModuleName
+	RemoveFromRegistryDriverModuleName

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Profiles">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DefaultProfile"/>
+				<xs:element ref="Profile" maxOccurs="unbounded"/>
+			</xs:sequence>     
+			<xs:attribute name="Version" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DefaultProfile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VendorSetting" maxOccurs="unbounded"/>
+				<xs:element ref="Presets"/>
+				<xs:element ref="Keys"/>
+			</xs:sequence>
+			<xs:attribute name="RouterType"								type="xs:integer"/>
+			<xs:attribute name="UseWrapper"								type="xs:integer"/>
+			<xs:attribute name="ShowFPS"								type="xs:boolean"/>
+			<xs:attribute name="ShowOSD"								type="xs:boolean"/>
+			<xs:attribute name="EnableStereo" 							type="xs:boolean"/>
+			<xs:attribute name="SeparationMode"	 						type="xs:integer"/>
+			<xs:attribute name="FrustumAdjustMode"						type="xs:integer"/>
+			<xs:attribute name="BlackAreaWidth"							type="xs:decimal"/>
+			<xs:attribute name="DeviceMode"								type="xs:integer"/>
+			<xs:attribute name="DisableFullscreenModeEmulation"			type="xs:boolean"/>
+			<xs:attribute name="ForceVSyncOff"							type="xs:boolean"/>
+			<xs:attribute name="MonoRenderTargetTextures"				type="xs:string"/>
+			<xs:attribute name="MonoRenderTargetSurfaces"				type="xs:string"/>
+			<xs:attribute name="MonoDepthStencilTextures"				type="xs:string"/>
+			<xs:attribute name="MonoDepthStencilSurfaces"				type="xs:string"/>
+			<xs:attribute name="AlwaysModifyShaders"					type="xs:boolean"/>
+			<xs:attribute name="VertexShaderModificationMethod"			type="xs:string"/>
+			<xs:attribute name="ModifyIncorrectProjectionShaders"		type="xs:boolean"/>
+			<xs:attribute name="AlwaysUseDefaultProjectionMatrixForVS"	type="xs:boolean"/>
+			<xs:attribute name="CreateOneComponentRTInMono"				type="xs:boolean"/>
+			<xs:attribute name="DontCreateSquareRTInMono"				type="xs:boolean"/>
+			<xs:attribute name="DontCreateRTThatLessThanBBInMono"		type="xs:boolean"/>
+			<xs:attribute name="DontCreateSquareDSInMono"				type="xs:boolean"/>
+			<xs:attribute name="DontCreateDSThatLessThanBBInMono"		type="xs:boolean"/>
+			<xs:attribute name="CreateBigSquareRTInStereo"				type="xs:boolean"/>
+			<xs:attribute name="CreateBigSquareDSInStereo"				type="xs:boolean"/>
+			<xs:attribute name="RenderToRightInMono"					type="xs:boolean"/>
+			<xs:attribute name="GameSpecific"							type="xs:boolean"/>
+			<xs:attribute name="MonoFixedPipeline"						type="xs:boolean"/>
+			<xs:attribute name="MonoFixedPipelineCheckingMethodIndex"	type="xs:boolean"/>
+			<xs:attribute name="MonoRHWPipeline"						type="xs:boolean"/>
+			<xs:attribute name="MonoRHWCheckingMethodIndex"				type="xs:boolean"/>
+			<xs:attribute name="RenderNonMatrixShadersInMono"			type="xs:boolean"/>
+			<xs:attribute name="RenderIncorrectProjectionShadersInMono"	type="xs:boolean"/>
+			<xs:attribute name="UseSimpleStereoProjectionMethod"		type="xs:boolean"/>
+			<xs:attribute name="SkipCheckOrthoMatrix"					type="xs:boolean"/>
+			<xs:attribute name="CheckExistenceInverseMatrix"			type="xs:boolean"/>
+			<xs:attribute name="CheckShadowMatrix"						type="xs:boolean"/>
+			<xs:attribute name="CheckInverseLR"							type="xs:boolean"/>
+			<xs:attribute name="FixNone16x9TextPosition"				type="xs:boolean"/>
+			<xs:attribute name="SeparationScale"						type="xs:decimal"/>
+			<xs:attribute name="SearchFrameSizeX"						type="xs:integer"/>
+			<xs:attribute name="SearchFrameSizeY"						type="xs:integer"/>
+			<xs:attribute name="ShiftSpeed"								type="xs:boolean"/>
+			<xs:attribute name="Max_ABS_rZPS"							type="xs:decimal"/>
+			<xs:attribute name="FrameYCoordinate"						type="xs:decimal"/>
+			<xs:attribute name="LaserSightXCoordinate"					type="xs:decimal"/>
+			<xs:attribute name="LaserSightYCoordinate"					type="xs:decimal"/>
+			<xs:attribute name="ShowWizardAtStartup"					type="xs:boolean"/>
+			<xs:attribute name="SwapEyes"								type="xs:boolean"/>
+			<xs:attribute name="LaserSightEnable"						type="xs:boolean"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VendorSetting">
+		<xs:complexType>
+			<xs:attribute name="Vendor" type="xs:string"/>
+			<xs:attribute name="EnableAA" type="xs:integer"/>
+			<xs:attribute name="WideRenderTarget" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Presets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Preset" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Preset">
+		<xs:complexType>
+			<xs:attribute name="One_div_ZPS" type="xs:decimal" use="required"/>
+			<xs:attribute name="StereoBase" type="xs:decimal" use="required"/>
+			<xs:attribute name="AutoFocusEnable" type="xs:boolean" use="required"/>
+			<xs:attribute name="Index" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Keys">
+		<xs:complexType>
+			<xs:attribute name="ToggleStereo" type="xs:integer"/>
+			<xs:attribute name="ZPSIncrease" type="xs:integer"/>
+			<xs:attribute name="ZPSDecrease" type="xs:integer"/>
+			<xs:attribute name="StereoBaseIncrease" type="xs:integer"/>
+			<xs:attribute name="StereoBaseDecrease" type="xs:integer"/>
+			<xs:attribute name="SetPreset1" type="xs:integer"/>
+			<xs:attribute name="SetPreset2" type="xs:integer"/>
+			<xs:attribute name="SetPreset3" type="xs:integer"/>
+			<xs:attribute name="SwapEyes" type="xs:integer"/>
+			<xs:attribute name="ToggleAutoFocus" type="xs:integer"/>
+			<xs:attribute name="ToggleLaserSight" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Profile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="File" maxOccurs="unbounded"/>
+				<xs:element ref	="Mono"  minOccurs="0"/>
+				<xs:element ref	="Stereo" minOccurs="0"/>
+				<xs:element ref	="Multiplier"  minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="RouterType"								type="xs:integer"/>
+			<xs:attribute name="EnableAA"								type="xs:boolean"/>
+			<xs:attribute name="EnableStereo"							type="xs:boolean"/>
+			<xs:attribute name="GameSpecific"							type="xs:integer"/>
+			<xs:attribute name="DeviceMode"								type="xs:integer"/>
+			<xs:attribute name="MonoFixedPipelineCheckingMethodIndex"	type="xs:integer"/>
+			<xs:attribute name="MonoRHWPipeline"						type="xs:integer"/>
+			<xs:attribute name="DontLockMouse"							type="xs:boolean"/>
+			<xs:attribute name="RenderNonMatrixShadersInMono"			type="xs:integer"/>
+			<xs:attribute name="CheckShadowMatrix"						type="xs:boolean"/>
+			<xs:attribute name="MonoFixedPipeline"						type="xs:boolean"/>
+			<xs:attribute name="SeparationScale"						type="xs:decimal"/>
+			<xs:attribute name="HideAdditionalAdapters"					type="xs:boolean"/>
+			<xs:attribute name="DontCreateSquareRTInMono"				type="xs:boolean"/>
+			<xs:attribute name="DontCreateSquareDSInMono"				type="xs:boolean"/>
+			<xs:attribute name="CheckInverseLR"							type="xs:boolean"/>
+			<xs:attribute name="CreateOneComponentRTInMono"				type="xs:boolean"/>
+			<xs:attribute name="CreateBigSquareRTInStereo"				type="xs:boolean"/>
+			<xs:attribute name="CreateBigSquareDSInStereo"				type="xs:boolean"/>
+			<xs:attribute name="RenderToRightInMono"					type="xs:boolean"/>
+			<xs:attribute name="AlwaysUseDefaultProjectionMatrixForVS"	type="xs:boolean"/>
+			<xs:attribute name="ScaleSeparationForSmallViewPorts"		type="xs:decimal"/>
+			<xs:attribute name="FixNone16x9TextPosition"				type="xs:boolean"/>
+			<xs:attribute name="Name"									type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="File">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="CmdLine" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Mono">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VertexShader" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Texture" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="PixelShader" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VertexShader">
+		<xs:complexType>
+			<xs:all>        
+				<xs:element ref="Matrices" minOccurs="0"/>
+			</xs:all>
+			<xs:attribute name="CRC" type="xs:string" use="required"/>
+			<xs:attribute name="ZNear" type="xs:string"/>
+			<xs:attribute name="UseMatricesFrom" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Multiplier">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VertexShader" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Texture" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="PixelShader" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="Value" type="xs:decimal" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Texture">
+		<xs:complexType>
+			<xs:attribute name="CRC" type="xs:string" use="required"/>
+			<xs:attribute name="Size" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Stereo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="VertexShader" minOccurs ="0" maxOccurs="unbounded"/>
+				<xs:element ref="Texture" minOccurs="0"/>
+				<xs:element ref="PixelShader" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PixelShader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Matrices" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="CRC" type="xs:string" use="required"/>
+			<xs:attribute name="UseMatricesFrom" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Matrices">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Matrix" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="Count" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Matrix">
+		<xs:complexType>
+			<xs:attribute name="Register" type="xs:integer"/>
+			<xs:attribute name="IsTransposed" type="xs:boolean"/>
+			<xs:attribute name="IncorrectProjection" type="xs:boolean"/>
+			<xs:attribute name="Inverse" type="xs:boolean"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

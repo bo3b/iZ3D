@@ -1,0 +1,1 @@
+..\bin\debug\Win32\DX10ShaderAnalyzingTest.exe 

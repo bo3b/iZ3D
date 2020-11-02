@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguagePack language="Italian">
+	<ControlCenter>
+		<WindowTitle>Centro di Controllo iZ3D</WindowTitle>
+		<btnApply>Applica</btnApply>
+		<btnSimple>Semplice</btnSimple>
+		<btnAdvanced>Avanzato</btnAdvanced>
+
+		<msgDiscardChanges>Tutti i cambiamenti non salvati andranno persi. Vuoi continuare?</msgDiscardChanges>
+		<msgServiceError>Errore di servizio:</msgServiceError>
+
+		<DirectX>
+			<lblCaption>Stato &amp;&amp; Dispositivo</lblCaption>
+			<sbStereoStatus>Stato 3D</sbStereoStatus>
+			<rbEnableDriver>3D Abilitato</rbEnableDriver>
+			<cbEnableStereoAtStartup>3D Attivato automaticamente all'avvio di una applicazione</cbEnableStereoAtStartup>
+			<rbDisableDriver>3D Disattivato</rbDisableDriver>
+			<sbOutput>Dispositivo 3D</sbOutput>
+			
+			<NoSuchOutput>Tipo di segnale 3D non esistente</NoSuchOutput>
+			<UnexpectedError>Errore: non riesco a trovare il tipo di segnale selezionato</UnexpectedError>
+			
+			<S3DOutput>Monitor iZ3D</S3DOutput>
+			<S3DMarkedOutput>Monitor iZ3D 27"</S3DMarkedOutput>
+			<AnaglyphOutput>Anaglifo (gratuito)</AnaglyphOutput>
+			<LenovoOutput>Anaglifo Lenovo 3D</LenovoOutput>
+			<ColorCodeOutput>ColoCode 3-D</ColorCodeOutput>
+			<DualProjectionOutput>Doppio proiettore (prova)</DualProjectionOutput>
+			<SideBySideOutput>Side by Side (prova)</SideBySideOutput>
+			<DLP3DOutput>3D DLP (prova)</DLP3DOutput>
+			<InterlacedOutput>Interlacciato (prova)</InterlacedOutput>
+			<ZalmanOutput>Monitor Zalman (prova)</ZalmanOutput>
+			<S3DShutterOutput>S3D Shutter (prova, beta)</S3DShutterOutput>
+			<Viewsonic_G2>Viewsonic (gen 2)</Viewsonic_G2>
+			<MSI>MSI</MSI>
+			<ASUS>ASUS</ASUS>
+			<Dell>Dell</Dell>
+			<S3D120HzProjectorsOutput>Dispositivi 3D 120Hz (prova)</S3D120HzProjectorsOutput>
+			<AMDHD3DOutput>AMD HD3D (HDMI 1.4a) (prova)</AMDHD3DOutput>
+			<ShutterOutput>Shutter (prova, beta)</ShutterOutput>
+			<StereoMirrorOutput>StereoMirror (prova)</StereoMirrorOutput>
+			<VR920Output>VR920 (prova, beta)</VR920Output>
+			<Z800Output>Z800 (prova, beta)</Z800Output>
+			<ATIDLP3DOutput>AMD 3D DLP (Gratuito per clienti ATI Radeon™)</ATIDLP3DOutput>
+			
+			<Auto>Occhiali iZ3D 22&quot; 2009 [CFL] (predefinito)</Auto>
+			<CFL>Occhiali iZ3D 22&quot; 2007 [CFL]</CFL>
+			<CF>Occhiali iZ3D 17&quot; 2007 [CF]</CF>
+			<TableCFL>Occhiali iZ3D 22&quot; 2009 [CFL]</TableCFL>
+			<Table>Occhiali iZ3D 17&quot; 2009 [CF]</Table>
+			<BWCFL>BW CFL</BWCFL>
+			<BWTableCFL>Tabella BW CFL</BWTableCFL>
+			<LRCFL>Sx &amp; Dx CFL</LRCFL>
+			<ExtTable>Tabella Ext</ExtTable>
+			<Interlaced>Interlacciato</Interlaced>
+			<Checkerboard>Scacchiera</Checkerboard>
+			<RedCyan>Rosso/Ciano</RedCyan>
+			<OptimizedRedCyan>Ottimizzato (Rosso/ciano)</OptimizedRedCyan>
+			<BlackWhite>Nero &amp; Bianco</BlackWhite>
+			<YellowBlue>Giallo/Blu</YellowBlue>
+			<Custom>Personalizzato</Custom>
+			<Voltage120>Voltage 120</Voltage120>
+			<Voltage110>Voltage 110</Voltage110>
+			<Voltage100>Voltage 100</Voltage100>
+			<Normal>Normal</Normal>
+			<Special>Special</Special>
+			<Default>Predefinito</Default>
+			<LeftRight>Sinistra/Destra</LeftRight>
+			<OverUnder>Sopra/sotto</OverUnder>
+			<Crosseyed>Crosseye</Crosseyed>
+			<HorizontalOptimized>Orizzontale (Ottimizzato)</HorizontalOptimized>
+			<VerticalOptimized>Verticale (Ottimizzato)</VerticalOptimized>
+			<Horizontal>Orizzontale</Horizontal>
+			<Vertical>Verticale</Vertical>
+			<InterlacedOptimized>Interlacciato (Ottimizzato)</InterlacedOptimized>
+			<InterlacedNotOptimized>Interlacciato (Non ottimizzato)</InterlacedNotOptimized>
+			<Marked>Marcato</Marked>
+			<Simple>Semplice</Simple>
+			<BlueLineCoded>Codificato linea blu</BlueLineCoded>
+			<WhiteLineCoded>Codificato linea bianca</WhiteLineCoded>
+			<HorizontalFlip>Monitor secondario rovesciato orizzontalmente </HorizontalFlip>
+			<VerticalFlip>Monitor secondario rovesciato verticalmente</VerticalFlip>
+			<HorizontalAndVerticalFlip>Rovesciato orizzontale + verticale</HorizontalAndVerticalFlip>
+			<VerticalAndHorizontalFlip>Rovesciato verticale + orizzontale</VerticalAndHorizontalFlip>
+			<DoubleHorizontalFlip>Rovesciato orizzontalmente</DoubleHorizontalFlip>
+			<DoubleVerticalFlip>Rovesciato verticalmente</DoubleVerticalFlip>
+			<WOFlush>W/O Flush</WOFlush>
+			
+			<btnApply>Applica</btnApply>
+		</DirectX>
+		<OpenGL>
+			<lblCaption>OpenGL</lblCaption>
+			<sbStereoStatus>Stato 3D</sbStereoStatus>
+			<rbDisableStereo>3D Disabilitato</rbDisableStereo>
+			<rbEnableStereo>3D Abilitato</rbEnableStereo>
+			<sbDriverOptions>Opzioni driver</sbDriverOptions>
+			<cbEmulateQB>Emula Quad Buffer</cbEmulateQB>
+		</OpenGL>
+
+		<AppExceptions>
+			<EnterValidNameOfApplication>Inserisci un nome applicazione valido</EnterValidNameOfApplication>
+			<YouMustChooseAFileFirst>Devi selezionare un file prima!</YouMustChooseAFileFirst>
+			<BtnAdd>Aggiungi</BtnAdd>
+			<BtnRemove>Rimuovi</BtnRemove>
+		</AppExceptions>
+
+		<Application>
+			<UnexeptedErrorOccured>Errore inaspettato!
+			Il programma sarà terminato!</UnexeptedErrorOccured>
+		</Application>
+
+		<Book>
+			<CantReplacePanel>Non riesco a sostituire il panello</CantReplacePanel>
+			<DefaultProfile>Profilo predefinito</DefaultProfile>
+		</Book>
+
+		<Config>
+			<CantFindResource>Non riesco a trovare la risorsa</CantFindResource>
+		</Config>
+
+		<Profiles>
+			<lblCaption>Profili</lblCaption>
+
+			<defaultProfileName>Profilo predefinito</defaultProfileName>
+			<btnBrowse>Trova...</btnBrowse>
+
+			<Game>
+				<lblCaption>Gioco</lblCaption>
+				<lblShowFPS>Visualizza FPS</lblShowFPS>
+				<lblDisableMouseLock>Disabilita blocco mouse</lblDisableMouseLock>
+				<lblEnableMouseLock>Abilita blocco mouse</lblEnableMouseLock>
+				<lblShowWizard>Visualizza procedura guidata</lblShowWizard>
+				<lblEnableClipping>Abilita ritaglio</lblEnableClipping>
+				<lblShowOSD>Visualizza messaggi a video</lblShowOSD>
+				<lblForceVSyncOff>Forza disattivazione V-Sync</lblForceVSyncOff>
+				<lblUseSimpleStereoProjection>Utilizza metodo di proiezione\n stereo semplice</lblUseSimpleStereoProjection>
+				<lblSwapLR>Scambia Sx&amp;&amp;Dx</lblSwapLR>
+
+				<lblClippingWidth>Larghezza ritaglio</lblClippingWidth> 
+				<lblWindowMode>Modalità finestra</lblWindowMode>
+				<lblWindowModes>
+					<lblFullScreen>Schermo intero</lblFullScreen>
+					<lblWindowed>In finestra</lblWindowed>
+					<lblAuto>Automatico</lblAuto>
+				</lblWindowModes>
+				<lblStereoSeparation>Separazione 3D</lblStereoSeparation>
+				<lblSeparationScale>Scala di separazione</lblSeparationScale>
+				<lblSeparationMode>Metodo separazione</lblSeparationMode>
+				<lblSeparationModes>
+					<lblSymmetric>Simmetrico</lblSymmetric>
+					<lblRightShift>Spostamento a destra</lblRightShift>
+					<lblLeftShift>Spostamento a sinistra</lblLeftShift>
+				</lblSeparationModes>
+			</Game>
+
+			<Input>
+				<lblCaption>Comandi</lblCaption>
+				<lblIncConv>Aumenta convergenza</lblIncConv>
+				<lblDecConv>Diminuisci convergenza</lblDecConv>
+				<lblIncSep>Aumenta separazione</lblIncSep>
+				<lblDecSep>Diminuisci separazione</lblDecSep>
+				<lblToggleAutofocus>Attiva/disattiva messa a fuoco automatica</lblToggleAutofocus>
+				<lblPreset1>Impostazione 1</lblPreset1>
+				<lblPreset2>Impostazione 2</lblPreset2>
+				<lblPreset3>Impostazione 3</lblPreset3>
+				<lblToggleStereo>Attiva/disattiva Stereo</lblToggleStereo>
+				<lblToggleLasersight>Attiva/disattiva mirino</lblToggleLasersight>
+                <lblToggleWizard>Procedura guidata</lblToggleWizard>
+				<lblSwapLR>Scambia Sx &amp;&amp; Dx</lblSwapLR>
+				<lblTakeScreenshot>Screenshot Stereo</lblTakeScreenshot>
+				<btnRestoreDef>Ripristina predefiniti</btnRestoreDef>
+			</Input>
+
+			<Autofocus>
+				<lblCaption>Messa a fuoco automatica</lblCaption>
+				<lblWidth>Larghezza</lblWidth>
+				<lblHeight>Altezza</lblHeight>
+				<lblSpeed>Velocità</lblSpeed>
+				<lblMaximumShift>Escursione
+Massima</lblMaximumShift>
+				<lblTop>Sopra</lblTop>
+				<lblBottom>Sotto</lblBottom>
+			</Autofocus>
+		</Profiles>
+
+		<Exceptions>
+			<lblCaption>Eccezioni</lblCaption>
+			<sbExceptions>Eccezioni</sbExceptions>
+			<btnAdd>Aggiungi</btnAdd>
+			<btnRemove>Rimuovi</btnRemove>
+			<btnBrowse>Trova...</btnBrowse>
+		</Exceptions>
+
+		<Update>
+			<lblCaption>Aggiorna</lblCaption>
+			<textUpdateWindowTitle>Nuovi aggiornamenti</textUpdateWindowTitle>
+			<msgUpdateStatus>Stato aggiornamento...</msgUpdateStatus>
+			<msgNewUpdates>Sono disponibili nuovi aggiornamenti. Vuoi scaricarli e installarli?</msgNewUpdates>
+			<msgNoUpdates>Non sono disponibili aggiornamenti</msgNoUpdates>
+			<msgUpdatesInstalled>Aggiornamenti installati con successo</msgUpdatesInstalled>
+			<btnUpdate>Aggiorna</btnUpdate>
+		</Update>
+
+		<Help>
+			<lblCaption>Aiuto</lblCaption>
+			<textDynamicTest>Test dinamico</textDynamicTest>
+			<textStaticTest>Test statico</textStaticTest>
+			<btnDiagnostic>Diagnostica</btnDiagnostic>
+			<btnSetupScreens>Imposta schermi</btnSetupScreens>
+			<btnTrouble>Risoluzione problemi</btnTrouble>
+						<btnActivate>Attiva licenza</btnActivate>
+
+			<msgDiagnosticError>È avvenuto un errore caricando le impostazioni di sistema</msgDiagnosticError>
+			<msgDiagnosticFileError>Non riesco ad aprire il file di report</msgDiagnosticFileError>
+			<msgDiagnosticSuccess>Il log di diagnosi é stato creato con successo.\nVuoi aprire il file?</msgDiagnosticSuccess>
+			<Run32BitDynamicTest>Eseguire il test dinamico a 32-bit?</Run32BitDynamicTest>
+			<Select>Seleziona</Select>
+			<ErrorWhileStaticTest>Si è verificato un errore nell'esecuzione del test statico!
+Assicurati che il monitor iZ3D sia connesso</ErrorWhileStaticTest>
+			<CantCreateDiagnosticFile>Impossibile creare il file di rapporto della diagnostica.
+Per favore, rimuoverlo e provare di nuovo</CantCreateDiagnosticFile>
+			<TroubleshootingCHM>Troubleshooting.chm</TroubleshootingCHM>
+			<btnManual>Guida</btnManual>
+			<ManualCHM>Descrizione</ManualCHM>
+	  <msgCantOpenPDF>Impossibile aprire i file PDF</msgCantOpenPDF>
+	  <msgInstallAdobeReader>Non hai alcun programma associato per l'apertura di un file PDF.
+Vuoi installare Adobe Reader?</msgInstallAdobeReader>
+		</Help>
+
+		<Settings>
+			<lblCaption>Impostazioni driver</lblCaption>
+			<sbSettings>Impostazioni centro di controllo</sbSettings>
+			<checkUpdateOnHold>Mostra messaggi di aggiornamento</checkUpdateOnHold>
+			<checkMouseLock>Blocca il puntatore sullo schermo primario</checkMouseLock>
+			<checkMouseAutostart>Esegui il Centro di Controllo all'avvio di Windows</checkMouseAutostart>
+			<enableD3D10Driver>Abilita Driver D3D10/11</enableD3D10Driver>
+			<sbLanguage>Lingua</sbLanguage>
+			<error>Errore</error>
+		</Settings>
+
+		<statisticsQuestion>Gentile cliente!\nAiutaci a migliorare i driver iZ3D.\n</statisticsQuestion>
+		<IWant>Voglio partecipare!</IWant>
+		<Submit>Invia</Submit>
+		<Exit>Esci</Exit>
+
+		<About>
+			<lblCaption>Informazioni</lblCaption>
+			<ReleaseDate>Data di rilascio:</ReleaseDate>
+			<Version>Versione</Version>
+			<lblCopyright>Tutti i diritti riservati. iZ3D™ é un marchio di iZ3D Inc.</lblCopyright>
+		</About>
+	</ControlCenter>
+	<Driver>
+		<CountingFPS>Sto contando...</CountingFPS>
+		<Mono>Mono</Mono>
+		<Stereo>Stereo</Stereo>
+		<drop>drop</drop>
+		<Preset>Impostazione</Preset>
+		<Convergence>Convergenza</Convergence>
+		<ConvergenceINF>Convergenza = ∞</ConvergenceINF>
+		<Separation>Separazione</Separation>
+		<AutoFocus>Messa a fuoco automatica</AutoFocus>
+		<ON>Accesa</ON>
+		<OFF>Spenta</OFF>
+		<tooMuchSeparation>(Troppa separazione)</tooMuchSeparation>
+		<SwapLR>Scambia L &amp; R</SwapLR>
+		<DaysLeft>Giorni rimanenti: </DaysLeft>
+		<CantFindStereoDevice>Non riesco a trovare un dispositivo stereoscopico</CantFindStereoDevice>
+		<CantLoadOutputDLL>Non riesco a caricare la DLL per l'uscita</CantLoadOutputDLL>
+		<UpdateAMDDriver>Aggiorna driver AMD HD3D</UpdateAMDDriver>
+		<NotSupported3DDevice>Dispositivo probabilmente non supportato da tecnologia AMD HD3D</NotSupported3DDevice>
+	</Driver>
+	<Utils>
+		<StereoTestUp>QUESTA È UM IMMAGINE 3D DI PROVA</StereoTestUp>
+		<StereoTestDown>I TASTI DI CONTROLLO NON FUNZIONANO QUI!</StereoTestDown>
+		<!--  NEVER ALIGN  FrontScreenMsg  and BackScreenMsg  STRINGS!!! -->
+		<FrontScreenMsg>Togli gli occhiali e premi '1'</FrontScreenMsg>
+		<BackScreenMsg>Togli gli occhiali e premi 'A'</BackScreenMsg>
+		<MonitorNotFound>Hai selezionato come dispositivo 3D il monitor iZ3D, che non é stato trovato. Per favore controlla i cavi se stai usando un monitor iZ3D, oppure imposta il segnale corretto per il tuo dispositivo.</MonitorNotFound>
+	</Utils>
+	<IDS_STEP1>1. Indossa gli occhiali 3D e assicurati che la modalità stereo sia attiva (attiva/disattiva Stereo è "Num *" come valore predefinito)</IDS_STEP1>
+	<IDS_STEP2>2. Vedi in stereoscopia nell'immagine di prova?</IDS_STEP2>
+	<IDS_STEP3YES>3. Per poter cambiare le impostazioni 3D devi avere un oggetto tridimensionale sullo schermo. In questo momento hai degli oggetti tridimensionali sullo schermo?</IDS_STEP3YES>
+	<IDS_STEP3NO>3. Contatta il supporto iZ3D www.iz3d.com/support</IDS_STEP3NO>
+	<IDS_STEP4YES>4. Diminuisci la convergenza ('Maiusc ' + 'Num -' predefinito) fino a quanto l'oggetto piu vicino allo schermo si sovvrapone e diventa un unica immagine</IDS_STEP4YES>
+	<IDS_STEP4NO>4. Per favore chiudi la la procedura guidata e riavviala quando hai degli oggetti tridimensionali sullo schermo</IDS_STEP4NO>
+	<IDS_STEP5>5. Gli oggetti distanti sono sdoppiati a tal punto da dare fastidio?</IDS_STEP5>
+	<IDS_STEP6YES>6. Diminuisci la separazione ('Num -' predefinito) finché gli oggetti lontani diventano un immagine singola.</IDS_STEP6YES>
+	<IDS_STEP6NO>6. Aumenta la separazione ('Num +' predefinito) finche la separazione degli oggetti lontani raggiunge un livello confortevole.</IDS_STEP6NO>
+	<IDS_STEP7>7. Aumenta la separazione ('Num +' predefinito) finché
+la separazione degli oggetti lontani raggiunge un livello confortevole.</IDS_STEP7>
+	<IDS_STEP8>8. Attiva la messa a fuoco automatica ('Num /' predefinito).
+Se non vuoi vedere la procedura guidata la prossima volta che esegui questo gioco,
+premi 'C' per deselezionare la casella di controllo in alto.</IDS_STEP8>
+	<IDS_NEXTBUTTON>(N)ext
+Premi 'N'
+per continuare</IDS_NEXTBUTTON>
+	<IDS_YESBUTTON>(Y)es
+Premi 'Y'
+se Sì</IDS_YESBUTTON>
+	<IDS_NOBUTTON>(N)o
+Premi 'N'
+se No</IDS_NOBUTTON>
+	<IDS_BACKBUTTON>(B)ack
+
+Premi 'B'
+per tornare indietro</IDS_BACKBUTTON>
+	<IDS_SUPPORT>Contatta supporto</IDS_SUPPORT>
+	<IDS_EXITBUTTON>Premi 'Maiusc' + 'Num *' per uscire dalla procedura guidata</IDS_EXITBUTTON>
+	<IDS_STARTUP_WIZARD>Avvio della procedura guidata disabilitato (premi 'C' per abilitare)</IDS_STARTUP_WIZARD>
+	<IDS_STARTUP_WIZARD_NO>Avvio della procedura guidata abilitato (premi 'C' per disabilitare)</IDS_STARTUP_WIZARD_NO>
+	<IDS_FINISHBUTTON>Esci
+Premi 'Maiusc' + 'Num *'</IDS_FINISHBUTTON>
+	<IDS_SHOWSAMPLE>Premi (S) per
+Mostrare un esempio</IDS_SHOWSAMPLE>
+	<IDS_HIDESAMPLE>Premi (S) per
+nascondere l'esempio</IDS_HIDESAMPLE>
+</LanguagePack>

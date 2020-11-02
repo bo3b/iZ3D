@@ -1,0 +1,6 @@
+EXPORTS
+    CreateOutputDX9
+    CreateOutputDX10
+	GetOutputCaps
+	GetOutputName
+	EnumOutputModes

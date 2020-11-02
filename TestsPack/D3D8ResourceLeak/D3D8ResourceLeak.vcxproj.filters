@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{494661e3-891a-4e8d-a376-d379d6251a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestLib">
+      <UniqueIdentifier>{453497ef-598f-4e3c-99d8-9c3499043b4d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D3D8TestSuite.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="teamcity_boost.cpp">
+      <Filter>TestLib</Filter>
+    </ClCompile>
+    <ClCompile Include="teamcity_messages.cpp">
+      <Filter>TestLib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="teamcity_messages.h">
+      <Filter>TestLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

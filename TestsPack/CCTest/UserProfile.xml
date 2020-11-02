@@ -1,0 +1,1833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Profiles Version="1" xmlns="http://schemas.iz3d.com/baseprofile/2007">
+  <Profile Name="Half-Life 2">
+    <File Name="hl2.exe" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.038300" />
+        <StereoBase Value="0.320000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+  </Profile>
+  <Profile Name="Battlefield 2">
+    <File Name="BF2.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.010511" />
+        <StereoBase Value="0.495110" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Crysis">
+    <File Name="Crysis.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.500000" />
+        <StereoBase Value="0.003192" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Guitar Hero 3">
+    <File Name="GH3.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.032572" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Unreal Tournament 3">
+    <File Name="UT3.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.041380" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="iZ3D Dynamic Test">
+    <File Name="dtest.exe" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.160664" />
+        <StereoBase Value="0.259173" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+  </Profile>
+  <Profile Name="World Of Warcraft">
+    <File Name="WoW.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.116200" />
+        <StereoBase Value="0.148400" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Painkiller">
+    <File Name="Painkiller.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="2.004625" />
+        <StereoBase Value="0.022940" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="ArmA">
+    <File Name="ArmA.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="-0.032086" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="ArmyOps">
+    <File Name="ArmyOps.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.023989" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Battlefield 2142">
+    <File Name="BF2142.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.356402" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Bioshock">
+    <File Name="Bioshock.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.091775" />
+        <StereoBase Value="1.138030" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Call of Duty 2">
+    <File Name="cod2sp_s.exe" />
+    <File Name="CoD2MP_s.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.060511" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Counter-Srike: Source">
+    <File Name="hl2.exe" CmdLine="-game cstrike" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.044783" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Command &amp; Conquer 3 Tiberium Wars">
+    <File Name="DemoGame.dat" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.009874" />
+        <StereoBase Value="9.915780" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Guild Wars">
+    <File Name="Gw.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.166575" />
+        <StereoBase Value="0.202536" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="LOTR Online: Shadows of Angmar">
+    <File Name="lotroclient.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="-0.001401" />
+        <StereoBase Value="0.161000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Colin McRay DiRT">
+    <File Name="DiRT.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.062738" />
+        <StereoBase Value="0.215678" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="FarCry">
+    <File Name="FarCry.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="1.434963" />
+        <StereoBase Value="0.028177" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="SW Battlefront II">
+    <File Name="BattlefrontII.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.226713" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="FEAR">
+    <File Name="FEARSPDemo.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026905" />
+        <StereoBase Value="0.436500" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="UT2004">
+    <File Name="UT2004.exe" />
+    <DontLockMouse Value="1" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.012298" />
+        <StereoBase Value="2.885422" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Team Fortress 2">
+    <File Name="hl2.exe" CmdLine="-game tf" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.022100" />
+        <StereoBase Value="0.496000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="S.T.A.L.K.E.R.">
+    <File Name="XR_3DA.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="1.888815" />
+        <StereoBase Value="0.023068" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="GTA San Andreas">
+    <File Name="gta_sa.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.273759" />
+        <StereoBase Value="0.161000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Call of Duty 4">
+    <File Name="iw3sp.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.032245" />
+        <StereoBase Value="1.459173" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Medal of Honor">
+    <File Name="MOHADemo.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.069631" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Oblivion">
+    <File Name="Oblivion.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.036482" />
+        <StereoBase Value="0.241343" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="World in Conflict">
+    <File Name="wic.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.024368" />
+        <StereoBase Value="3.533098" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Dungeons and Dragons">
+    <File Name="dndclient.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.106753" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Warcraft 3">
+    <File Name="war3.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.012340" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Half-Life 2: Episode 2">
+    <File Name="hl2.exe" CmdLine="-game ep2" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.094343" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Supreme Commander">
+    <File Name="SupremeCommander.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.500000" />
+        <StereoBase Value="0.038243" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Fury">
+    <File Name="Fury.exe" />
+    <Presets>
+      <SwapEyes Value="0" />
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026952" />
+        <StereoBase Value="0.160000" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Wolfenstein (2009)">
+    <File Name="Wolf2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.027600" />
+        <StereoBase Value="0.640000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Zeno Clash">
+    <File Name="zenoclash.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.051900" />
+        <StereoBase Value="0.352000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Starcraft II">
+    <File Name="SC2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.021900" />
+        <StereoBase Value="0.403910" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="1" />
+  </Profile>
+  <Profile Name="Serious Sam HD">
+    <File Name="SamHD.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.624000" />
+        <StereoBase Value="0.056000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="NecroVisioN">
+    <File Name="NecroVisioN.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.844100" />
+        <StereoBase Value="0.120000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Left 4 Dead 2">
+    <File Name="left4dead2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.039300" />
+        <StereoBase Value="0.111902" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Left 4 Dead">
+    <File Name="left4dead.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.057700" />
+        <StereoBase Value="0.080000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Borderlands">
+    <File Name="Borderlands.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.037600" />
+        <StereoBase Value="0.320000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Assassins Creed II">
+    <File Name="AssassinsCreedIIGame.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.180000" />
+        <StereoBase Value="0.635840" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="FarCry 2">
+    <File Name="FarCry2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.044500" />
+        <StereoBase Value="0.148800" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Resident Evil 5">
+    <File Name="RE5DX9.EXE" />
+    <File Name="RE5DX10.EXE" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.009300" />
+        <StereoBase Value="0.330480" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Street Fighter IV">
+    <File Name="StreetFighterIV.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.035300" />
+        <StereoBase Value="0.549440" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Metro 2033">
+    <File Name="Metro2033.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.050000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Torchlight">
+    <File Name="Torchlight.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.098200" />
+        <StereoBase Value="0.200000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Battlefield Bad Company 2">
+    <File Name="BFBC2Game.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026139" />
+        <StereoBase Value="0.615813" />
+        <AutoFocusEnable Value="1" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Portal">
+    <File Name="hl2.exe" CmdLine="-game portal" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.041700" />
+        <StereoBase Value="0.480000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Warhammer 40000 Dawn of War II">
+    <File Name="dow2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026400" />
+        <StereoBase Value="0.640000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Aliens vs Predator">
+    <File Name="AvP.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.052700" />
+        <StereoBase Value="0.080000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Batman Arkham Asylum">
+    <File Name="ShippingPC-BmGame.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.016200" />
+        <StereoBase Value="0.610080" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Overlord 2">
+    <File Name="Overlord2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.519000" />
+        <StereoBase Value="0.337920" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Trine">
+    <File Name="trine.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.039000" />
+        <StereoBase Value="12.500000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Need for Speed Shift">
+    <File Name="shift.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.018000" />
+        <StereoBase Value="0.227520" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Half-Life 2 Episode One">
+    <File Name="hl2.exe" CmdLine="-game episodic" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.088600" />
+        <StereoBase Value="0.106400" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Call of Duty - Modern Warfare 2">
+    <File Name="iw4sp.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026800" />
+        <StereoBase Value="0.401440" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Call of Duty - Modern Warfare 2">
+    <File Name="iw4mp.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.026800" />
+        <StereoBase Value="0.401440" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Operation Flashpoint Dragon Rising">
+    <File Name="OFDR.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.020000" />
+        <StereoBase Value="0.200000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="BioShock 2">
+    <File Name="BioShock2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.011400" />
+        <StereoBase Value="0.399032" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <ShowWizardAtStartup Value="0" />
+  </Profile>
+  <Profile Name="Killing Floor">
+    <File Name="KillingFloor.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.034300" />
+        <StereoBase Value="0.336000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Red Alert 3">
+    <File Name="RA3_1.12.game" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.010700" />
+        <StereoBase Value="0.708640" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Dead Space">
+    <File Name="Dead Space.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.029900" />
+        <StereoBase Value="1.067920" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Battlestation Pacific">
+    <File Name="bsp.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.020600" />
+        <StereoBase Value="0.447840" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Call of Juarez - Bound in Blood">
+    <File Name="CoJBiBGame_x86.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.022100" />
+        <StereoBase Value="0.497280" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Damnation">
+    <File Name="DamnGame.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.025600" />
+        <StereoBase Value="0.280000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="FEAR 2">
+    <File Name="FEAR2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.039700" />
+        <StereoBase Value="0.280000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Frontlines Fuel of War">
+    <File Name="ffow.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.029500" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Mirror's Edge">
+    <File Name="MirrorsEdge.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.014800" />
+        <StereoBase Value="0.220000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Red Faction Guerrilla">
+    <File Name="rfg.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.032700" />
+        <StereoBase Value="0.240000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Dragon Age Origins">
+    <File Name="DAOrigins.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.070500" />
+        <StereoBase Value="0.331760" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Tom Clancy's H.A.W.X">
+    <File Name="HAWX.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.035400" />
+        <StereoBase Value="0.200000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Sins of a Solar Empire">
+    <File Name="Sins of a Solar Empire.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.025500" />
+        <StereoBase Value="0.220000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Wings of Prey">
+    <File Name="acess.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.059200" />
+        <StereoBase Value="0.220000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Assassin's Creed">
+    <File Name="AssassinsCreed_Dx9.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.014000" />
+        <StereoBase Value="0.200000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Alone In The Dark">
+    <File Name="Alone.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.240000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Dark Messiah Might and Magic">
+    <File Name="mm.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.027600" />
+        <StereoBase Value="0.452080" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Lego Star Wars">
+    <File Name="LegoStarwars.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.521500" />
+        <StereoBase Value="0.120000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Majesty 2">
+    <File Name="Majesty2.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.147300" />
+        <StereoBase Value="0.220000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Ninja Blade">
+    <File Name="NinjaBlade.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.112000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Risen">
+    <File Name="Risen.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.101500" />
+        <StereoBase Value="0.072000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Prince of Persia Forgotten Sands">
+    <File Name="Prince of Persia.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.147000" />
+        <StereoBase Value="1.048000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Gears of War">
+    <File Name="wargame-g4wlive.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.103600" />
+        <StereoBase Value="0.136000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Titan Quest">
+    <File Name="Titan Quest.exe" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.085900" />
+        <StereoBase Value="0.440000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="MotionBlur10">
+    <File Name="MotionBlur10.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="BasicHLSL10">
+    <File Name="BasicHLSL10.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.120000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Just Cause 2">
+    <File Name="JustCause2.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.020000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="javaw">
+    <File Name="javaw.exe" />
+    <ShowWizardAtStartup Value="1" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="chrome">
+    <File Name="chrome.exe" />
+    <ShowWizardAtStartup Value="1" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="BasicHLSL11">
+    <File Name="BasicHLSL11.exe" />
+    <ShowWizardAtStartup Value="1" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="java">
+    <File Name="java.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="BasicHLSL">
+    <File Name="BasicHLSL.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="dx8_1pass_emboss_bump_mapping">
+    <File Name="dx8_1pass_emboss_bump_mapping.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="DTest">
+    <File Name="DTest.exe " />
+    <ShowWizardAtStartup Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.749446" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+    <Keys>
+      <ToggleFPS Key="123" />
+    </Keys>
+  </Profile>
+  <Profile Name="Firefox">
+    <File Name="plugin-container.exe" />
+    <ShowWizardAtStartup Value="1" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="Magicka">
+    <File Name="Magicka.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="AquaNox 2">
+    <File Name="AN2.dat" />
+    <Presets>
+      <Preset Index="0" />
+      <Preset Index="1" />
+      <Preset Index="2" />
+    </Presets>
+    <Keys>
+      <ToggleStereo Key="65" />
+      <ZPSIncrease Key="81" />
+      <ZPSDecrease Key="87" />
+      <StereoBaseIncrease Key="69" />
+      <StereoBaseDecrease Key="82" />
+      <SetPreset1 Key="1139" />
+      <SetPreset2 Key="68" />
+      <SetPreset3 Key="70" />
+      <ToggleAutoFocus Key="89" />
+      <ToggleLaserSight Key="72" />
+    </Keys>
+  </Profile>
+  <Profile Name="AoS2">
+    <File Name="AoS2.exe" />
+    <ShowWizardAtStartup Value="0" />
+    <SwapEyes Value="0" />
+    <LaserSightEnable Value="0" />
+    <Presets>
+      <Preset Index="0">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="1">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+      <Preset Index="2">
+        <One_div_ZPS Value="0.100000" />
+        <StereoBase Value="0.160000" />
+        <AutoFocusEnable Value="0" />
+      </Preset>
+    </Presets>
+  </Profile>
+  <Profile Name="QuestViewer - Audiosurf">
+    <File Name="QuestViewer.exe" />
+    <Presets>
+      <Preset Index="0" />
+      <Preset Index="1" />
+      <Preset Index="2" />
+    </Presets>
+    <Keys>
+      <ToggleFPS Key="123" />
+    </Keys>
+  </Profile>
+</Profiles>

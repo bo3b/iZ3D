@@ -1,0 +1,115 @@
+;================================ 
+;iZ3D.INF 10/15/07 Ver. 1.0 
+;; INF File for Windows Vista/ XP/2000
+; Copyright (c) 2007, iZ3D LLC
+;================================
+
+[Version]
+Signature="$CHICAGO$"
+Class=Monitor
+ClassGUID={4d36e96e-e325-11ce-bfc1-08002be10318}
+Provider=%iZ3D%
+catalogfile=iZ3D.cat
+DriverVer=02/15/2008,1.1
+
+[ControlFlags]
+ExcludeFromSelect.NT=Monitor\CMO3239
+ExcludeFromSelect.NT=Monitor\CMO3238
+ExcludeFromSelect.NT=Monitor\CMO3237
+ExcludeFromSelect.NT=Monitor\CMO3228
+ExcludeFromSelect.NT=Monitor\CMO3229
+
+[DestinationDirs]
+DefaultDestDir  = 11
+
+[SourceDisksNames]
+1=%diskname%,,
+
+[Manufacturer]
+%iZ3D%=iZ3D,NTx86,NTAMD64
+
+; Manufacturer sections
+;-------------------------------------------------
+[iZ3D] 
+%iZ3D_Front%=iZ3D_Front.Install, Monitor\CMO3239
+%iZ3D_Back%=iZ3D_Back.Install, Monitor\CMO3238
+%iZ3D_Back_Analog%=iZ3D_Back_Analog.Install, Monitor\CMO3237
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3228
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3229
+
+;-------------------------------------------------
+[iZ3D.NTx86] 
+%iZ3D_Front%=iZ3D_Front.Install, Monitor\CMO3239
+%iZ3D_Back%=iZ3D_Back.Install, Monitor\CMO3238
+%iZ3D_Back_Analog%=iZ3D_Back_Analog.Install, Monitor\CMO3237
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3228
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3229
+
+;-------------------------------------------------
+[iZ3D.NTAMD64] 
+%iZ3D_Front%=iZ3D_Front.Install, Monitor\CMO3239
+%iZ3D_Back%=iZ3D_Back.Install, Monitor\CMO3238
+%iZ3D_Back_Analog%=iZ3D_Back_Analog.Install, Monitor\CMO3237
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3228
+%iZ3D_Panel%=iZ3D_Panel.Install, Monitor\CMO3229
+
+; Install Sections
+;-------------------------------------------------
+
+[iZ3D_Front.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=iZ3D_Front.AddReg,RES,DPMS
+
+[iZ3D_Back.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=iZ3D_Back.AddReg,RES,DPMS
+
+[iZ3D_Back_Analog.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=iZ3D_Back_Analog.AddReg,RES,DPMS
+
+[iZ3D_Panel.Install]
+DelReg=DEL_CURRENT_REG
+AddReg=iZ3D_Panel.AddReg,RES,DPMS
+
+; AddReg & DelReg sections
+;-------------------------------------------------
+
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+[RES]
+HKR,,MaxResolution,,%MAXRES%
+
+[DPMS]
+HKR,,DPMS,,0
+
+; AddReg sections
+;----------------------------------------------------------------------------------
+
+[iZ3D_Front.AddReg]
+HKR,%MODE%,Mode1,,%RANGE%
+
+[iZ3D_Back.AddReg]
+HKR,%MODE%,Mode1,,%RANGE%
+
+[iZ3D_Back_Analog.AddReg]
+HKR,%MODE%,Mode1,,%RANGE%
+
+[iZ3D_Panel.AddReg]
+HKR,%MODE%,Mode1,,%RANGE%
+
+[Strings]
+MonitorClassName="Monitor"
+iZ3D="iZ3D LLC."
+iZ3D_Front="iZ3D Monitor (Front Panel)"
+iZ3D_Back="iZ3D Monitor (Back Panel)"
+iZ3D_Back_Analog="iZ3D Monitor (Back VGA Panel)"
+iZ3D_Panel="iZ3D Monitor Panel"
+MAXRES="1680,1050"
+MODE="MODES\1680,1050"
+RANGE="30.0-82.0,50.0-76.0,+,+"
+diskname="iZ3D LCD Stereo Monitor installation CDROM"
