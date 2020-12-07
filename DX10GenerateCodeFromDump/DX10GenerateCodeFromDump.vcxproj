@@ -98,7 +98,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;ticppd.lib;zlibd.lib;xerces-c_static_3D.lib;MadCHook32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;ticppd.lib;zlibd.lib;xerces-c_static_3D.lib;MadCHook32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,7 +124,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;ticppd.lib;zlibd.lib;xerces-c_static_3D.lib;MadCHook64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;ticppd.lib;zlibd.lib;xerces-c_static_3D.lib;MadCHook64md.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -178,7 +178,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;ticpp.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;xerces-c_static_3.lib;MadCHook64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dx9.lib;d3dcompiler.lib;ticpp.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;xerces-c_static_3.lib;MadCHook64mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -165,7 +165,7 @@ exit /B 0
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticpp.lib;Winmm.lib;WtsApi32.lib;strsafe.lib;madCHook64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticpp.lib;Winmm.lib;WtsApi32.lib;strsafe.lib;madCHook64mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\lib\madCHook;..\lib\tinyxml\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -202,7 +202,7 @@ exit /B 0
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticppd.lib;Winmm.lib;WtsApi32.lib;madcHook32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticppd.lib;Winmm.lib;WtsApi32.lib;madcHook32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\lib\madCHook;..\lib\tinyxml\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -238,7 +238,7 @@ exit /B 0
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticppd.lib;Winmm.lib;WtsApi32.lib;madCHook64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticppd.lib;Winmm.lib;WtsApi32.lib;madCHook64md.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\lib\madCHook;..\lib\tinyxml\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>
@@ -310,7 +310,7 @@ exit /B 0
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticpp.lib;Winmm.lib;WtsApi32.lib;strsafe.lib;madCHook64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;shlwapi.lib;ticpp.lib;Winmm.lib;WtsApi32.lib;strsafe.lib;madCHook64mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\lib\madCHook;..\lib\tinyxml\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
     </Link>

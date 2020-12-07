@@ -118,7 +118,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticppd.lib;MadCHook32d.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;d3dx9.lib;xerces-c_static_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticppd.lib;MadCHook32.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;d3dx9.lib;xerces-c_static_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x86\;..\lib\ticpp\lib\x86\;..\lib\madCHook;..\lib\zlib\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
@@ -149,7 +149,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticppd.lib;MadCHook64d.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;xerces-c_static_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticppd.lib;MadCHook64md.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;xerces-c_static_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -209,7 +209,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticpp.lib;MadCHook64.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;xerces-c_static_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticpp.lib;MadCHook64mt.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;xerces-c_static_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
@@ -268,7 +268,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticpp.lib;MadCHook64.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;xerces-c_static_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3dx10.lib;dxgi.lib;dxguid.lib;d3dcompiler.lib;ticpp.lib;MadCHook64mt.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;xerces-c_static_3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>

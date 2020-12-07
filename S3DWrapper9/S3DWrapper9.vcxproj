@@ -120,7 +120,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>LlamaXMLd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook32d.lib;ticppd.lib;comctl32.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;NVPerfSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LlamaXMLd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook32.lib;ticppd.lib;comctl32.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;NVPerfSDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x86\;..\lib\tinyxml\lib\x86\;..\lib\LlamaXML\lib\x86\;..\lib\madCHook;..\lib\boost\lib\Win32;..\lib\xerces\lib\Win32\lib;..\lib\PerfSDK\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -164,7 +164,7 @@
       </Message>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>LlamaXMLd.lib;libcmtd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64d.lib;ticppd.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LlamaXMLd.lib;libcmtd.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64md.lib;ticppd.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3D.lib;S3DDevIL.lib;S3Dilu.lib;ddraw.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\LlamaXML\lib\x64\;..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\madCHook;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -249,7 +249,7 @@
       </Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>LlamaXML.lib;libcmt.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64.lib;ticpp.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3.lib;ddraw.lib;S3DDevIL.lib;S3Dilu.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>LlamaXML.lib;libcmt.lib;Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;MadCHook64mt.lib;ticpp.lib;strsafe.lib;d3d10.lib;d3dx10.lib;xerces-c_static_3.lib;ddraw.lib;S3DDevIL.lib;S3Dilu.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\LlamaXML\lib\x64\;..\lib\madCHook;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
@@ -332,7 +332,7 @@
       </Command>
     </PreLinkEvent>
     <Link>
-      <AdditionalDependencies>Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;ticpp.lib;comctl32.lib;xerces-c_static_3.lib;version.lib;S3DDevIL.lib;S3Dilu.lib;MadCHook64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;Setupapi.lib;dxerr.lib;d3dx9.lib;dxguid.lib;Winmm.lib;ticpp.lib;comctl32.lib;xerces-c_static_3.lib;version.lib;S3DDevIL.lib;S3Dilu.lib;MadCHook64mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\tinyxml\lib\x64\;..\lib\madCHook..;..\lib\xerces\lib\Win64\lib;..\lib\boost\lib\Win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>$(ProjectName).def</ModuleDefinitionFile>
