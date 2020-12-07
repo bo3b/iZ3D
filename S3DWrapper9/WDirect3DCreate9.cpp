@@ -259,7 +259,7 @@ void HookUM()
 			{
 				GetSystemDirectoryA(DriverDllDX9Path, MAX_PATH);
 				PathAppendA(DriverDllDX9Path, DriverDllDX9Name);
-				HookAPI(DriverDllDX9Path, "OpenAdapter", OpenAdapterCallback, (PVOID*) &OpenAdapterNext, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
+				HookAPI(DriverDllDX9Path, "OpenAdapter", OpenAdapterCallback, (PVOID*) &OpenAdapterNext, NO_SAFE_UNHOOKING);
 				//HookAPI("GDI32.dll", "D3DKMTCreateDevice", D3DKMTCreateDeviceCallback, (PVOID*) &D3DKMTCreateDeviceNext, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
 				//HookAPI("GDI32.dll", "D3DKMTPresent", D3DKMTPresentCallback, (PVOID*) &D3DKMTPresentNext, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
 			}

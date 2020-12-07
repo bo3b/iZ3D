@@ -15,7 +15,8 @@
 
 namespace {
 
-	const DWORD HookingFlags  = NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK | RESTORE_CODE_BEFORE_HOOK;
+	// ToDo: RESTORE_CODE_BEFORE_HOOK is no longer used, needs to be call to RestoreCode
+	const DWORD HookingFlags  = NO_SAFE_UNHOOKING;
 
 	// Hooked functions
 	int  (WINAPI *Original_GetSystemMetrics)(int nIdex);

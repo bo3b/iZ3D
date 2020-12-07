@@ -31,7 +31,8 @@
 	#define	TRACE(s) 
 #endif
 
-DWORD g_HookingFlags = NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK | RESTORE_CODE_BEFORE_HOOK;
+// ToDo:  RESTORE_CODE_BEFORE_HOOK is removed, needs to be replaced by RestoreCode
+DWORD g_HookingFlags = NO_SAFE_UNHOOKING;
 
 HMODULE GetCallingModule( LPCVOID pCaller )
 {
@@ -533,9 +534,9 @@ STDMETHODIMP CreateDXGIFactoryX( REFIID riid, void ** &ppFactory, PFNCREATEDXGIF
 			else
 			{
 				if (DriverDllDX10Path[0] != '\0' && OpenAdapter10Next == NULL)
-					HookAPI(DriverDllDX10Path, "OpenAdapter10", OpenAdapter10Callback, (PVOID*) &OpenAdapter10Next, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
+					HookAPI(DriverDllDX10Path, "OpenAdapter10", OpenAdapter10Callback, (PVOID*) &OpenAdapter10Next, NO_SAFE_UNHOOKING);
 				if (DriverDllDX11Path[0] != '\0' && OpenAdapter10_2Next == NULL)
-					HookAPI(DriverDllDX11Path, "OpenAdapter10_2", OpenAdapter10_2Callback, (PVOID*) &OpenAdapter10_2Next, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
+					HookAPI(DriverDllDX11Path, "OpenAdapter10_2", OpenAdapter10_2Callback, (PVOID*) &OpenAdapter10_2Next, NO_SAFE_UNHOOKING);
 
 				return p(riid, ppFactory, hCallingModule);
 			}
@@ -670,7 +671,9 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
 			{
 				if(g_iSettings.m_RenewHookMode == 2)
 					g_hHookUpdate = SetWindowsHookEx(WH_CBT, HookUpdateProc, 0, GetCurrentThreadId());
-				g_HookingFlags &= ~DONT_RENEW_OVERWRITTEN_HOOK;
+// Default is now Don't Renew.				
+//				g_HookingFlags &= ~DONT_RENEW_OVERWRITTEN_HOOK;
+				g_HookingFlags &= RENEW_OVERWRITTEN_HOOKS;
 			}
 			
 			DisableThreadLibraryCalls(hModule);
@@ -739,9 +742,9 @@ BOOL WINAPI DllMain(HMODULE hModule, DWORD fdwReason, LPVOID lpReserved)
 
 					// for reason, if application call D3D10CreateDevice without calling before CreateDXGIFactory
 					if (DriverDllDX10Path[0] != '\0')
-						HookAPI(DriverDllDX10Path, "OpenAdapter10", OpenAdapter10Callback, (PVOID*) &OpenAdapter10Next, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
+						HookAPI(DriverDllDX10Path, "OpenAdapter10", OpenAdapter10Callback, (PVOID*) &OpenAdapter10Next, NO_SAFE_UNHOOKING);
 					if (DriverDllDX11Path[0] != '\0')
-						HookAPI(DriverDllDX11Path, "OpenAdapter10_2", OpenAdapter10_2Callback, (PVOID*) &OpenAdapter10_2Next, NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK);
+						HookAPI(DriverDllDX11Path, "OpenAdapter10_2", OpenAdapter10_2Callback, (PVOID*) &OpenAdapter10_2Next, NO_SAFE_UNHOOKING);
 				}
 			}
 			FlushHooks();

@@ -139,7 +139,8 @@ hook_guard_ptr g_HookGuard;
 
 #pragma region dinput_hook
 
-const DWORD HookingFlags = NO_SAFE_UNHOOKING | DONT_RENEW_OVERWRITTEN_HOOK | RESTORE_CODE_BEFORE_HOOK;
+// ToDo: RESTORE_CODE_BEFORE_HOOK is removed, should be call to RestoreCode
+const DWORD HookingFlags = NO_SAFE_UNHOOKING;
 
 hook_storage	g_DInputHooks;
 
