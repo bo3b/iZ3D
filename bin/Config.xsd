@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://schemas.iz3d.com/config/2007" attributeFormDefault="unqualified" elementFormDefault="qualified"
+  targetNamespace="http://schemas.iz3d.com/config/2007" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+  <xs:include schemaLocation="Profile.xsd" />
+  <xs:element name="Config">
+    <xs:complexType>
+      <xs:all minOccurs="0">
+        <xs:element name="Vendors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Vendor">
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required" />
+                  <xs:attribute name="Value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GlobalSettings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RunAtStartup" type="BoolValue"/>
+              <xs:element name="OGLRunAtStartup" type="BoolValue"/>
+              <xs:element name="Debug" type="BoolValue"/>
+              <xs:element name="Trace" type="IntValue"/>
+              <xs:element name="ShowDebugInfo" type="BoolValue"/>
+              <xs:element name="DumpOn" type="BoolValue"/>
+              <xs:element name="DumpInitialData" type="BoolValue"/>
+              <xs:element name="DumpVS" type="BoolValue"/>
+              <xs:element name="DumpPS" type="BoolValue"/>
+              <xs:element name="DumpMeshes" type="BoolValue"/>
+              <xs:element name="BreakOnD3D9Error" type="BoolValue"/>
+              <xs:element name="UseR32FDepthTextures" type="BoolValue"/>
+              <xs:element name="UseMonoDeviceWrapper" type="BoolValue"/>
+              <xs:element name="LockableDepthStencil" type="BoolValue"/>
+              <xs:element name="ClearBeforeEveryDrawWhenDoDump" type="BoolValue"/>
+              <xs:element name="ReplaceDSSurfacesByTextures" type="BoolValue"/>
+              <xs:element name="TwoPassRendering" type="BoolValue"/>
+              <xs:element name="OutputMethodDll" type="StringValue"/>
+              <xs:element name="OutputMode" type="IntValue"/>
+              <xs:element name="OutputSpanMode" type="BoolValue"/>
+              <xs:element name="DrawMonoImageOnSecondMonitor" type="BoolValue"/>
+              <xs:element name="CollectDebugInformation" type="BoolValue"/>
+              <xs:element name="ScreenshotType" type="IntValue"/>
+              <xs:element name="EmulateQB" type="BoolValue"/>
+              <xs:element name="LockCursor" type="BoolValue"/>
+              <xs:element name="FixVistaSP1ResetBug" type="BoolValue"/>
+              <xs:element name="DisableGammaApplying" type="BoolValue"/>
+              <xs:element name="LaserSightIconIndex" type="IntValue"/>
+              <xs:element name="CustomLaserSightIconPath" type="StringValue"/>
+              <xs:element name="Language" type="StringValue"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Outputs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnaglyphOutput">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="CustomLeftMatrix">
+                      <xs:complexType>
+                        <xs:attribute name="m00" type="xs:decimal" use="required" />
+                        <xs:attribute name="m01" type="xs:decimal" use="required" />
+                        <xs:attribute name="m02" type="xs:decimal" use="required" />
+                        <xs:attribute name="m10" type="xs:decimal" use="required" />
+                        <xs:attribute name="m11" type="xs:decimal" use="required" />
+                        <xs:attribute name="m12" type="xs:decimal" use="required" />
+                        <xs:attribute name="m20" type="xs:decimal" use="required" />
+                        <xs:attribute name="m21" type="xs:decimal" use="required" />
+                        <xs:attribute name="m22" type="xs:decimal" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CustomRightMatrix">
+                      <xs:complexType>
+                        <xs:attribute name="m00" type="xs:decimal" use="required" />
+                        <xs:attribute name="m01" type="xs:decimal" use="required" />
+                        <xs:attribute name="m02" type="xs:decimal" use="required" />
+                        <xs:attribute name="m10" type="xs:decimal" use="required" />
+                        <xs:attribute name="m11" type="xs:decimal" use="required" />
+                        <xs:attribute name="m12" type="xs:decimal" use="required" />
+                        <xs:attribute name="m20" type="xs:decimal" use="required" />
+                        <xs:attribute name="m21" type="xs:decimal" use="required" />
+                        <xs:attribute name="m22" type="xs:decimal" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SideBySideOutput">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Gap">
+                      <xs:complexType>
+                        <xs:attribute name="Value" type="xs:unsignedShort" use="required" />
+                        <xs:attribute name="Width" type="xs:unsignedShort" use="optional" />
+                        <xs:attribute name="Height" type="xs:unsignedShort" use="optional" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControlCenter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AutoStart" type="BoolValue"/>
+              <xs:element name="ShowUpdates" type="BoolValue"/>
+              <xs:element name="StartMinimized" type="BoolValue"/>
+              <xs:element name="SendStatistics" type="BoolValue"/>
+              <xs:element name="ParticipateInStatistics" type="BoolValue"/>
+              <xs:element name="LastStatistics" type="StringValue"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DefaultProfile" type="Profile"/>
+      </xs:all>
+      <xs:attribute name="Version" type="xs:unsignedByte" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

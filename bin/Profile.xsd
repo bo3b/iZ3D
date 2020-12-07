@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BoolValue">
+    <xs:attribute name="Value" type="xs:boolean" use="required" />
+    <xs:attribute name="Vendor" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="IntValue">
+    <xs:attribute name="Value" type="xs:unsignedInt" use="required" />
+    <xs:attribute name="Vendor" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="StringValue">
+    <xs:attribute name="Value" type="xs:string" use="required" />
+    <xs:attribute name="Vendor" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="FloatValue">
+    <xs:attribute name="Value" type="xs:decimal" use="required" />
+    <xs:attribute name="Vendor" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="File">
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <xs:attribute name="CmdLine" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="MultiplierBlock">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" name="PixelShader" type="ShaderBlock" />
+        <xs:element maxOccurs="unbounded" name="VertexShader" type="ShaderBlock" />
+        <xs:element maxOccurs="unbounded" name="Texture" type="ResourceBlock" />
+        <xs:element maxOccurs="unbounded" name="Mesh" type="ResourceBlock" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="ConvergenceShift" type="xs:decimal" use="optional" default="0.0" />
+  </xs:complexType>
+  <xs:complexType name="ResourceBlock">
+    <xs:attribute name="CRC" type="xs:string" use="required" />
+    <xs:attribute name="Size" type="xs:unsignedInt" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="ShaderBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Matrices">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Matrix">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Register" type="IntValue" />
+                  <xs:element name="IsTransposed" type="BoolValue" />
+                  <xs:element minOccurs="0" name="IncorrectProjection" type="BoolValue" />
+                  <xs:element minOccurs="0" name="Inverse" type="BoolValue" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute name="Count" type="xs:unsignedByte" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="CRC" type="xs:string" use="required" />
+    <xs:attribute name="ZNear" type="xs:decimal" use="optional" />
+  </xs:complexType>
+
+  <xs:complexType name="Preset">
+    <xs:all>
+      <xs:element name="One_div_ZPS" type="FloatValue"/>
+      <xs:element name="StereoBase" type="FloatValue"/>
+      <xs:element name="AutoFocusEnable" type="BoolValue"/>
+    </xs:all>
+    <xs:attribute name="Index" type="xs:unsignedByte" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="Key">
+    <xs:attribute name="Key" type="xs:unsignedShort" use="required" />
+  </xs:complexType>
+  <xs:complexType name="Keys">
+    <xs:all minOccurs="0">
+      <xs:element name="Screenshot" type="Key"/>
+      <xs:element name="ToggleStereo" type="Key"/>
+      <xs:element name="ZPSIncrease" type="Key"/>
+      <xs:element name="ZPSDecrease" type="Key"/>
+      <xs:element name="StereoBaseIncrease" type="Key"/>
+      <xs:element name="StereoBaseDecrease" type="Key"/>
+      <xs:element name="SetPreset1" type="Key"/>
+      <xs:element name="SetPreset2" type="Key"/>
+      <xs:element name="SetPreset3" type="Key"/>
+      <xs:element name="SwapEyes" type="Key"/>
+      <xs:element name="ToggleAutoFocus" type="Key"/>
+      <xs:element name="ToggleLaserSight" type="Key"/>
+      <xs:element name="ShowDebugInfo" type="Key"/>
+      <xs:element name="ZNearIncrease" type="Key"/>
+      <xs:element name="ZNearDecrease" type="Key"/>
+      <xs:element name="MultiplierIncrease" type="Key"/>
+      <xs:element name="MultiplierDecrease" type="Key"/>
+      <xs:element name="ConvergenceShiftIncrease" type="Key"/>
+      <xs:element name="ConvergenceShiftDecrease" type="Key"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="Profile">
+    <xs:sequence>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="File" minOccurs="0" maxOccurs="unbounded" type="File">
+          <xs:annotation>
+            <xs:documentation>Главные исполняемые файлы программы</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="DontLockMouse" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation>Не лочить мышь на основном мониторе</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateSquareRTInMono" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation>Создавать квадартные RenderTarget'ы Mono</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateRTThatLessThanBBInMono" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation>Создавать RenderTarget'ы меньше BackBuffer'а Mono</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateSquareDSInMono" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation>Создавать квадартные DepthStencil поверхности Mono</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateDSThatLessThanBBInMono" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation>Создавать DepthStencil поверхности меньше BackBuffer'а Mono</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoRHWPipeline" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="DeviceMode" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="RenderIncorrectProjectionShadersInMono" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="UseSimpleStereoProjectionMethod" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SkipCheckOrthoMatrix" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CheckOnlyProjectionMatrix" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CheckExistenceInverseMatrix" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CheckShadowMatrix">
+          <xs:complexType>
+            <xs:attribute name="Value" type="xs:unsignedByte" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CheckInverseLR" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="FixNone16x9TextPosition" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SeparationScale" type="FloatValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SearchFrameSizeX" type="IntValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SearchFrameSizeY" type="IntValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ShiftSpeed" type="IntValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Max_ABS_rZPS" type="FloatValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="FrameYCoordinate" type="FloatValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="LaserSightXCoordinate" type="FloatValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="LaserSightYCoordinate" type="FloatValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ShowWizardAtStartup" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SwapEyes" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="LaserSightEnable" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="RenderNonMatrixShadersInMono" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoFixedPipelineCheckingMethodIndex" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateOneComponentRTInMono" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="GameSpecific" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="EnableStereo" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="EnableAA" maxOccurs="unbounded"  type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="RouterType" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation>0 - драйвер работает в нормальном режиме, 2 - драйвер отключен</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoFixedPipeline" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="HideAdditionalAdapters" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateBigSquareRTInStereo" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="CreateBigSquareDSInStereo" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="RenderToRightInMono" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="AlwaysUseDefaultProjectionMatrixForVS" type="BoolValue">
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ScaleSeparationForSmallViewPorts" type="FloatValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="AdditionalMatrixName" type="StringValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="AlwaysModifyShaders" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoDrawFromMemory" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="DisableVBWriteOnlyUsage" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ShowFPS" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ShowOSD" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SeparationMode" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="FrustumAdjustMode" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="BlackAreaWidth" type="FloatValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="DisableFullscreenModeEmulation" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="WideRenderTarget" maxOccurs="unbounded" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoRenderTargetTextures" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoRenderTargetSurfaces" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoDepthStencilTextures" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoDepthStencilSurfaces" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="VertexShaderModificationMethod" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ModifyIncorrectProjectionShaders" type="BoolValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="MonoRHWCheckingMethodIndex" type="IntValue" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="Mono" type="MultiplierBlock" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Stereo" type="MultiplierBlock" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Multiplier" >
+          <xs:annotation>
+            <xs:documentation></xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:complexContent>
+              <xs:extension base="MultiplierBlock">
+                <xs:attribute name="Value" type="xs:decimal" use="optional" default="1.0" />
+              </xs:extension>
+            </xs:complexContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Presets">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Preset" type="Preset"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Keys" type="Keys"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" use="optional" />
+  </xs:complexType>
+</xs:schema>

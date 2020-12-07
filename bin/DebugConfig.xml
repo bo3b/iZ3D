@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Don't change that file -->
+<Config Version="1" xmlns="http://schemas.iz3d.com/config/2007">
+	<Vendors>
+		<Vendor Name="ATI"          Value="1002" />
+		<Vendor Name="AMD"          Value="1022" />
+		<Vendor Name="Matrox"       Value="102B" />
+		<Vendor Name="SiS"          Value="1039" />
+		<Vendor Name="HP"           Value="103C" />
+		<Vendor Name="Micron"       Value="1042" />
+		<Vendor Name="Apple"        Value="106B" />
+		<Vendor Name="ALi"          Value="10B9" />
+		<Vendor Name="NVidia"       Value="10DE" />
+		<Vendor Name="VIA"          Value="1106" />
+		<Vendor Name="ServerWorks"  Value="1166" />
+		<Vendor Name="Transmeta"    Value="1279" />
+		<Vendor Name="3dfx"         Value="121A" />
+		<Vendor Name="Micron"       Value="1344" />
+		<Vendor Name="S3"           Value="5333" />
+		<Vendor Name="Intel"        Value="8086" />
+	</Vendors>
+	<ZLOg>
+		<!-- FATAL_ERROR, ERROR, WARNING, MESSAGE, NOTICE, FLOOD -->
+        <Severity>NOTICE</Severity>
+        <WriteThrough>0</WriteThrough>
+    </ZLOg>
+	<!-- Default value = 0 -->
+	<GlobalSettings>
+		<!-- ifdef ${runAtStartupValue} -->
+		<!-- <RunAtStartup Value="${runAtStartupValue}"/> -->
+		<!-- else -->
+		<RunAtStartup Value="0"/>
+		<!-- endif -->
+		<OGLRunAtStartup Value="0"/>
+
+		<ShowDebugInfo Value="1"/>
+		<DumpOn Value="1"/>
+		<DumpInitialData Value="0"/>
+		<DumpVS Value="1"/>
+		<DumpPS Value="1"/>
+		<DumpMeshes Value="0"/>
+		<DumpStereoImages Value="1"/>
+		<UseR32FDepthTextures Value="0"/>
+		<LockableDepthStencil Value="0"/>
+		<ClearBeforeEveryDrawWhenDoDump Value="0"/>
+		<ReplaceDSSurfacesByTextures Value="0"/>
+		<TwoPassRendering Value="0"/>
+
+		<!-- ifdef ${outputMethodDll} -->
+		<!-- <OutputMethodDll Value="${outputMethodDll}"/> -->
+		<!-- else -->
+		<OutputMethodDll Value="AnaglyphOutput"/>
+		<!-- endif -->
+		<OutputMode Value="0"/>
+		<OutputSpanMode Value="0"/>
+		<!-- DisplayScalingMode Values: -->
+		<!-- 0 == No Scaling (or Scaling Unknown) -->
+		<!-- 1 == Image started from top left corner. (black padding right bottom) -->
+		<!-- 2 == Scaling (N.B. Aspect Ratio may change) -->
+		<!-- 3 == Centering (black padding around) -->
+		<!-- 4 == Scaling (Fixed Aspect Ratio Touch-from-inside, black bars may appear) -->
+		<!-- 5 == Scaling (Fixed Aspect Ratio Touch-from-outside, some data loss is possible) -->
+		<DisplayScalingMode Value="0"/>
+		<DisplayNativeWidth Value="0"/>
+		<DisplayNativeHeight Value="0"/>
+		<!-- ShutterMode Values: -->
+		<!-- -1 == Auto -->
+		<!-- 0 == MultiThreaded -->
+		<!-- 1 == MultiDevice -->
+		<!-- 2 == ATI QB -->
+		<!-- 3 == UMHook -->
+		<!-- 4 == Simple -->
+		<!-- 5 == UMHook D3D9EX -->
+		<!-- 6 == Kernel Mode driver -->
+		<ShutterMode Value="-1"/>
+		<ShutterRefreshRate Value="0"/>
+		<ExtractDepthBuffer Value="0"/>
+		<DrawMonoImageOnSecondMonitor Value="0"/>
+		<UseMonoDeviceWrapper Value="0"/>
+		<CollectDebugInformation Value="0"/>
+		<!-- 0 == JPS -->
+		<!-- 1 == PNG -->
+		<!-- 2 == BMP -->
+		<!-- 3 == DDS -->
+		<ScreenshotType Value="0"/>
+		<EmulateQB Value="0"/>
+		<!-- ifdef ${lockCursorValue} -->
+		<!-- <LockCursor Value="${lockCursorValue}"/> -->
+		<!-- else -->
+		<LockCursor Value="0"/>
+		<!-- endif -->
+		<FixVistaSP1ResetBug Value="1"/>
+		<DisableGammaApplying Value="0"/>
+		<!-- ifdef ${languageName} -->
+		<!-- <Language Value="${languageName}"/> -->
+		<!-- else -->
+		<Language Value="English"/>
+		<!-- endif -->
+	</GlobalSettings>
+	<Outputs>
+		<AnaglyphOutput>
+			<CustomLeftMatrix
+					  m00="1" m01="0" m02="0"
+					  m10="0" m11="0" m12="0"
+					  m20="0" m21="0" m22="0"/>
+			<CustomRightMatrix
+					  m00="0" m01="0" m02="0"
+					  m10="0" m11="1" m12="0"
+					  m20="0" m21="0" m22="1"/>
+		</AnaglyphOutput>
+		<SideBySideOutput>
+			<Gap Value="0"/>
+			<!-- default -->
+			<Gap Width="1024" Height="768" Value="0"/>
+		</SideBySideOutput>
+	</Outputs>
+	<ControlCenter>
+		<AutoStart Value="0"/>
+		<ShowUpdates Value="0"/>
+		<TestUpdaterURL Value="0"/>
+		<StartMinimized Value="0"/>
+		<SendStatistics Value="1"/>
+
+		<ParticipateInStatistics Value="1"/>
+
+		<LastStatistics Value="01.01.2008"/>
+	</ControlCenter>
+	<DefaultProfile>
+		<!-- 0 = normal, 1 = special for nGuard, 2 = driver disabled -->
+		<RouterType Value="0"/>
+	    <RenewHookMode Value="0" />
+		<!-- ifdef ${enableStereoValue} -->
+		<!-- <EnableStereo Value="${enableStereoValue}"/> -->
+		<!-- else -->
+		<EnableStereo Value="1"/>
+		<!-- endif -->
+		<DisableD3D10Driver Value="0"/>
+		<AlternativeSetFullscreenStateOrder Value="0"/>
+
+		<ShowFPS Value="1"/>
+		<ShowOSD Value="1"/>
+		<!-- 0 = symmetric, 1 = right shift, 2 = left shift -->
+		<SeparationMode Value="0"/>
+		<FrustumAdjustMode Value="0"/>
+		<BlackAreaWidth Value="0.03"/>
+		<!-- 0..(1000/refreshRate)ms -->
+		<PresenterSleepTime Value="-2"/>
+		<PresenterFlushTime Value="-1"/>
+		<!-- 0..100 -->
+		<PresenterMaxLagPercent Value="1"/>
+		<!-- 0 = fullscreen, 1 = windowed, 3 = auto -->
+		<DeviceMode Value="3"/>
+		<!-- 0 = auto, 1 = fullscreen, 2 = windowed, 3 = one window, 4 = side-by-side windows -->
+		<MultiWindowsMode Value="0"/>
+		<ModeObtainingDepthBuffer Value="0"/>
+		<DisableFullscreenModeEmulation Value="1"/>
+		<ForceVSyncOff Value="1"/>
+		<EnableAA Value="1"/>
+		<WideRenderTarget Value="0" Vendor="ATI"/>
+		<WideRenderTarget Value="1" Vendor="NVidia"/>
+		<WideRenderTarget Value="1" Vendor="Intel"/>
+		<CommandBuffering Value="1" Vendor="ATI"/>
+		<CommandBuffering Value="1" Vendor="NVidia"/>
+		<MonoRenderTargetTextures Value="0" />
+		<MonoRenderTargetSurfaces Value="0" />
+		<MonoDepthStencilTextures Value="0" />
+		<MonoDepthStencilSurfaces Value="0" />
+		<AlwaysModifyShaders Value="0"/>
+		<!-- VSSeparationUpdateMode Values: -->
+		<!-- Significant only if AlwaysModifyShaders == 1 -->
+		<!-- 0 == Setup separation constants always -->
+		<!-- 1 == Setup separation constants only if shader have perspective matrix -->
+		<VSSeparationUpdateMode Value="0"/>
+		<VertexShaderModificationMethod Value="0"/>
+		<ModifyIncorrectProjectionShaders Value="0"/>
+		<AlwaysUseDefaultProjectionMatrixForVS Value="0"/>
+		<CreateOneComponentRTInMono Value="0"/>
+		<CreateSquareRTInMono Value="0"/>
+		<CreateRTThatLessThanBBInMono Value="0"/>
+		<CreateSquareDSInMono Value="0"/>
+		<CreateDSThatLessThanBBInMono Value="0"/>
+		<CreateBigSquareRTInStereo Value="0"/>
+		<CreateBigSquareDSInStereo Value="0"/>
+		<DisableNVCSTextureInWRTMode Value="0"/>
+		<RenderToRightInMono Value="0"/>
+		<GameSpecific Value="0"/>
+		<HideAdditionalAdapters Value="0"/>
+		<MonoFixedPipeline Value="0"/>
+		<MonoFixedPipelineCheckingMethodIndex Value="0"/>
+		<MonoDrawFromMemory Value="0"/>
+		<MonoRHWPipeline Value="0"/>
+		<MonoRHWCheckingMethodIndex Value="0"/>
+		<RenderNonMatrixShadersInMono Value="0"/>
+		<RenderIncorrectProjectionShadersInMono Value="0"/>
+		<DX10MonoNonIndexedDraw Value="0"/>
+		<RHWModificationMethod Value="0"/>
+		<UseSimpleStereoProjectionMethod Value="0"/>
+		<SkipCheckOrthoMatrix Value="0"/>
+		<CheckOnlyProjectionMatrix Value="0"/>
+		<CheckExistenceInverseMatrix Value="0"/>
+		<CheckShadowMatrix Value="0"/>
+		<CheckInverseLR Value="0"/>
+		<FixNone16x9TextPosition Value="0"/>
+		<SeparationScale Value="1.0"/>
+		<ScaleSeparationForSmallViewPorts Value="1.0"/>
+		<SearchFrameSizeX Value="512"/>
+		<SearchFrameSizeY Value="64"/>
+		<ShiftSpeed Value="1"/>
+		<Max_ABS_rZPS Value="0.2"/>
+		<FrameYCoordinate Value="0.495"/>
+		<LaserSightIconIndex Value="0"/>
+		<CustomLaserSightIconPath Value=""/>
+		<LaserSightXCoordinate Value="0.5"/>
+		<LaserSightYCoordinate Value="0.5"/>
+
+		<ShowWizardAtStartup Value="0"/>
+		<SwapEyes Value="0" />
+		<LaserSightEnable Value="0" />
+		<DontLockMouse Value="0"/>
+
+		<Presets>
+			<Preset Index="0">
+				<One_div_ZPS Value="0.1" />
+				<StereoBase Value="0.16" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="1">
+				<One_div_ZPS Value="0.1" />
+				<StereoBase Value="0.16" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+			<Preset Index="2">
+				<One_div_ZPS Value="0.1" />
+				<StereoBase Value="0.16" />
+				<AutoFocusEnable Value="0" />
+			</Preset>
+		</Presets>
+
+		<Keys>
+			<!-- Default: 106 Num * -->
+			<ToggleStereo Key="106" />
+			<!-- Default: 363 Shift + Num + -->
+			<ZPSIncrease Key="363" />
+			<!-- Default: 365 Shift + Num - -->
+			<ZPSDecrease Key="365" />
+			<!-- Default: 107 Num + -->
+			<StereoBaseIncrease Key="107" />
+			<!-- Default: 109 Num - -->
+			<StereoBaseDecrease Key="109" />
+			<!-- Default: 103 Num 7 -->
+			<SetPreset1 Key="103" />
+			<!-- Default: 104 Num 8 -->
+			<SetPreset2 Key="104" />
+			<!-- Default: 105 Num 9 -->
+			<SetPreset3 Key="105" />
+			<!-- Default: 631 Ctrl + F8 -->
+			<SwapEyes Key="631" />
+			<!-- Default: 111 Num / -->
+			<ToggleAutoFocus Key="111" />
+			<!-- Default: 623 Ctrl + Num / -->
+			<ToggleLaserSight Key="623" />
+			<!-- Default: 44 PrntScr / -->
+			<Screenshot Key="44" />
+			<!-- Default: 362 Shift * -->
+			<ToggleWizard Key="362" />
+			<!-- Default: 122 F11-->
+			<ToggleFPS Key="122" />
+			<!-- Default: 368 Shift+F1-->
+			<ToggleHotkeysOSD Key="368" />
+			<!-- Default: 221 ] -->
+			<PresenterSleepTimeIncrease Key="221" />
+			<!-- Default: 219 [ -->
+			<PresenterSleepTimeDecrease Key="219" />
+			<!-- Default: 186 ; -->
+			<PresenterFlushTimeIncrease Key="186" />
+			<!-- Default: 76 l -->
+			<PresenterFlushTimeDecrease Key="76" />
+
+			<!-- Default: 618 Ctrl + * / -->
+			<ShowDebugInfo Key="618" />
+			<!-- Default: 875 Shift + Ctrl + Num + -->
+			<ZNearIncrease Key="875" />
+			<!-- Default: 877 Shift + Ctrl + Num - -->
+			<ZNearDecrease Key="877" />
+			<!-- Default: 619 Ctrl + Num + -->
+			<MultiplierIncrease Key="619" />
+			<!-- Default: 621 Ctrl + Num - -->
+			<MultiplierDecrease Key="621" />
+			<!-- Default: 1131 Alt + Num + -->
+			<ConvergenceShiftIncrease Key="1131" />
+			<!-- Default: 1133 Alt + Num - -->
+			<ConvergenceShiftDecrease Key="1133" />
+		</Keys>
+	</DefaultProfile>
+</Config>
