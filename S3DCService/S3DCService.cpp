@@ -322,7 +322,9 @@ BOOL S3DCService::Install()
 				*s = 0;
 			}
 			wcscat_s(fileName, MAX_PATH, L"S3DInjectionDriver.sys");
-			if (!InstallInjectionDriver(L"iZ3DInjectionDriver", fileName, L"Driver inject our D3D and OGL wrappers"))
+// Let's not make it active after reboot, so switching to LoadInjectionDriver
+//			if (!InstallInjectionDriver(L"iZ3DInjectionDriver", fileName, L"Driver inject our D3D and OGL wrappers"))
+			if (!LoadInjectionDriver(L"iZ3DInjectionDriver", fileName, L"Driver inject our D3D and OGL wrappers"))
 			{
 				DWORD err = GetLastError();
 			}
