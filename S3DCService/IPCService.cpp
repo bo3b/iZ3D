@@ -180,8 +180,11 @@ bool IPCControlService::InternalInject(const WCHAR* path, const WCHAR* DllName, 
 		BOOL b;
 		wcscpy_s(pathToSaveDllName, MAX_PATH, newPath);
 		m_Log->Report(EVENTLOG_INFORMATION_TYPE, CNTS_MSG_SERVICE_CUSTOM_COMMAND_INJECT, pathToSaveDllName);
-		b = StartDllInjection(L"iZ3DInjectionDriver", pathToSaveDllName, (DWORD)-1, FALSE, NULL, NULL);
-		b = StartDllInjection(L"iZ3DInjectionDriver", pathToSaveDllName, (DWORD)-1, TRUE , SYS_PROCESS_LIST, NULL);
+		//b = StartDllInjection(L"iZ3DInjectionDriver", pathToSaveDllName, (DWORD)-1, FALSE, NULL, NULL);
+		//b = StartDllInjection(L"iZ3DInjectionDriver", pathToSaveDllName, (DWORD)-1, TRUE , SYS_PROCESS_LIST, NULL);
+		// New variant from 3.0 Seems like it ought to be only Current_Session though
+		b = InjectLibrary(L"iZ3DInjectionDriver", pathToSaveDllName, ALL_SESSIONS, FALSE, NULL, NULL);
+		b = InjectLibrary(L"iZ3DInjectionDriver", pathToSaveDllName, ALL_SESSIONS, TRUE , SYS_PROCESS_LIST, NULL);
 		if (!b)
 		{
 			DWORD err = GetLastError();
@@ -201,13 +204,19 @@ bool IPCControlService::InternalUnInject(WCHAR* savedDllPath, HANDLE Target)
 	{
 		BOOL b;
 		m_Log->Report(EVENTLOG_INFORMATION_TYPE, CNTS_MSG_SERVICE_CUSTOM_COMMAND_UNINJECT, savedDllPath);
-		b = StopDllInjection(L"iZ3DInjectionDriver", savedDllPath, (DWORD)-1, FALSE, NULL, NULL);
-		b = StopDllInjection(L"iZ3DInjectionDriver", savedDllPath, (DWORD)-1, TRUE , SYS_PROCESS_LIST, NULL);
+		//b = StopDllInjection(L"iZ3DInjectionDriver", savedDllPath, (DWORD)-1, FALSE, NULL, NULL);
+		//b = StopDllInjection(L"iZ3DInjectionDriver", savedDllPath, (DWORD)-1, TRUE , SYS_PROCESS_LIST, NULL);
+		b = UninjectLibrary(L"iZ3DInjectionDriver", savedDllPath, ALL_SESSIONS, FALSE, NULL, NULL);
+		b = UninjectLibrary(L"iZ3DInjectionDriver", savedDllPath, ALL_SESSIONS, TRUE , SYS_PROCESS_LIST, NULL);
 		if (!b)
 		{
 			DWORD err = GetLastError();
 		}
-		result = UninjectLibrary(Target, savedDllPath) != 0;
+		// ToDo: Not sure about this call. Probably needs to be new form of UninjectLibrary with 
+		//  System_Processes=true. All_Sessions.  The InjectLibrary above was already commented
+		//  out, so for now, we'll skip this too.
+		//result = UninjectLibrary(Target, savedDllPath) != 0;
+		result=true;
 		if(result)
 			savedDllPath[0] = 0;
 	}

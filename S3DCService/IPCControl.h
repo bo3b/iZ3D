@@ -3,7 +3,9 @@
 
 #define INTERSERVICE_IPC_CHANNEL	TEXT("\\\\.\\pipe\\S3D InterServiceChannel")
 
-#define DEFAULT_TARGET  ((HANDLE)(ALL_SESSIONS | SYSTEM_PROCESSES))
+// ToDo: System_Processes is no longer passed this way.
+//#define DEFAULT_TARGET  ((HANDLE)(ALL_SESSIONS | SYSTEM_PROCESSES))
+#define DEFAULT_TARGET  ((HANDLE)(ALL_SESSIONS))
 
 class IPCControl
 {
