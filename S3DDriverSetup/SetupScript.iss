@@ -68,6 +68,8 @@ OutputBaseFilename={#SETUP_FILE_NAME}{#EDITION}.{#DISPLAYED_VERSION}{#POSTFIX}
 UninstallDisplayIcon={app}\ControlCenter.exe
 UninstallDisplayName={#PRODUCT_NAME} Remove
 MinVersion=0,5.01.2600
+// ToDo: Doesn't really match to use 4 byte Git commit numbers here.
+//  but otherwise this fails
 VersionInfoVersion={#VERSION}
 VersionInfoCompany={#COMPANY_NAME}
 VersionInfoDescription={#PRODUCT_NAME}
