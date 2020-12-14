@@ -137,7 +137,7 @@
     </ClCompile>
     <Lib>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\LlamaXML\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;..\lib\squish\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticppd.lib;LlamaXMLd.lib;squishd.lib;MadCHook64.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticppd.lib;LlamaXMLd.lib;squishd.lib;MadCHook64md.lib;zlibd.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -175,7 +175,7 @@
     </ClCompile>
     <Lib>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\LlamaXML\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;..\lib\squish\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticpp.lib;LlamaXML.lib;squish.lib;MadCHook64.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticpp.lib;LlamaXML.lib;squish.lib;MadCHook64mt.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Final Release|Win32'">
@@ -206,7 +206,7 @@
     </ClCompile>
     <Lib>
       <AdditionalLibraryDirectories>..\lib\d3d9\lib\x64\;..\lib\ticpp\lib\x64\;..\lib\LlamaXML\lib\x64\;..\lib\madCHook;..\lib\zlib\Lib\x64\;..\lib\squish\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticpp.lib;LlamaXML.lib;squish.lib;MadCHook64.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;d3d10.lib;d3dx10.lib;dxgi.lib;dxguid.lib;ticpp.lib;LlamaXML.lib;squish.lib;MadCHook64mt.lib;zlib.lib;psapi.lib;S3DDevIL.lib;S3Dilu.lib;DxErr.lib;</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
