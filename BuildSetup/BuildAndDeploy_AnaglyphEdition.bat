@@ -51,15 +51,17 @@ call BuildSetup\AnaglyphEdition\_BuildSetup.bat
 IF %ERRORLEVEL% NEQ 0 GOTO EndBad
 CD BuildSetup
 
-IF "%2"=="" call DeploySetup.bat AnaglyphEdition Anaglyph
+REM No more Deploy, servers no longer exist
+REM IF "%2"=="" call DeploySetup.bat AnaglyphEdition Anaglyph
 
 ECHO 
 
-IF "%COMPUTERNAME%"=="BUILD-SERVER" (
-	AddToSymbolServer.bat "final release"
-	AddToSymbolServer.bat "final release - anaglyph"
-	ECHO 
-)
+REM ToDo: Not currently setup to handle SymStore.
+REM IF "%COMPUTERNAME%"=="BUILD-SERVER" (
+	REM AddToSymbolServer.bat "final release"
+	REM AddToSymbolServer.bat "final release - anaglyph"
+	REM ECHO 
+REM )
 
 :: Retrieve Stop time
 FOR /f "tokens=1-4 delims=:.," %%T IN ("%TIME%") DO (
