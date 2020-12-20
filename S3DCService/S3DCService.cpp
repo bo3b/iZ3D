@@ -340,10 +340,11 @@ BOOL S3DCService::Uninstall()
 	if(!IsWin64())
 #endif
 	{
-		if (!UninstallInjectionDriver(L"iZ3DInjectionDriver"))
-		{
-			DWORD err = GetLastError();
-		}
+// Since it's not installed on a permanent basis, no need to uninstall now.  Will be removed at reboot.
+//		if (!UninstallInjectionDriver(L"iZ3DInjectionDriver"))
+		//{
+		//	DWORD err = GetLastError();
+		//}
 	}
 	return res;
 }
