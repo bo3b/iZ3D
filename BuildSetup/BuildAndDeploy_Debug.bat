@@ -47,14 +47,16 @@ call BuildSetup\Debug\_BuildSetup.bat
 IF %ERRORLEVEL% NEQ 0 GOTO EndBad
 CD BuildSetup
 
-IF "%2"=="" call DeploySetup.bat Debug Debug
+rem No more deploy, servers are long gone.
+rem IF "%2"=="" call DeploySetup.bat Debug Debug
 
 ECHO 
 
-IF "%COMPUTERNAME%"=="BUILD-SERVER" (
-	AddToSymbolServer.bat release
-	ECHO 
-)
+rem not currently setup to do symstore.
+REM IF "%COMPUTERNAME%"=="BUILD-SERVER" (
+	REM AddToSymbolServer.bat release
+	REM ECHO 
+REM )
 
 :: Retrieve Stop time
 FOR /f "tokens=1-4 delims=:.," %%T IN ("%TIME%") DO (
