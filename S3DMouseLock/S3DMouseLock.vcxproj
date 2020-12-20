@@ -131,7 +131,7 @@
       <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;S3DMOUSELOCK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Psapi.lib;ticppd.lib;shlwapi.lib;MadCHook64md.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Psapi.lib;ticppd.lib;shlwapi.lib;MadCHook64mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\lib\madCHook;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>S3DMouseLock.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>

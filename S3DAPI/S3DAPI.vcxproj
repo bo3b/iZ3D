@@ -127,7 +127,7 @@
       <WarningLevel>Level3</WarningLevel>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>squishd.lib;d3dx9.lib;dxerr.lib;Winmm.lib;dinput8.lib;MadCHook64md.lib;ticppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>squishd.lib;d3dx9.lib;dxerr.lib;Winmm.lib;dinput8.lib;MadCHook64mt.lib;ticppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>S3DAPI.def</ModuleDefinitionFile>
       <SubSystem>Windows</SubSystem>
     </Link>
