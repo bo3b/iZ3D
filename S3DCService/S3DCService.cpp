@@ -49,8 +49,16 @@ S3DCService::S3DCService() : CNTService(SERVICE_NAME, DISPLAY_NAME, SERVICE_ACCE
 {	
 }
 
+// This will be called in response to a StartService call, found in the handler for the command line
+// -start parameter.  But also called in response to sc start.
+// 
+// When starting the service, we want to Load the injection driver, but not inject or hook any calls,
+// until an -inject command. 
+
 void S3DCService::ServiceMain(DWORD /*dwArgc*/, LPTSTR* /*lpszArgv*/)
-{
+{	
+	TRACE(_T("S3DCService::ServiceMain\n"));
+
 	_CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 	//_CrtSetBreakAlloc(9860);
 	//register our control handler
@@ -305,6 +313,8 @@ bool S3DCService::ShowUninstallWindow()
 
 BOOL S3DCService::Install()
 {
+	TRACE(_T("S3DCService::Install\n"));
+
 	BOOL res = CNTService::Install();
 	if (res)
 	{
@@ -335,6 +345,8 @@ BOOL S3DCService::Install()
 
 BOOL S3DCService::Uninstall()
 {
+	TRACE(_T("S3DCService::Uninstall\n"));
+
 	BOOL res = CNTService::Uninstall();
 #ifndef WIN64
 	if(!IsWin64())

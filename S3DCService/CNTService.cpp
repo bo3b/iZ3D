@@ -254,6 +254,8 @@ DWORD CNTService::_ServiceCtrlHandlerEx(DWORD dwControl, DWORD dwEventType, LPVO
 
 void CNTService::_ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 {
+	TRACE(_T("CNTService::_ServiceMain\n"));
+
 	//Convert from the SDK world to the C++ world. In this
 	//implementation we just use a single static, In the 
 	//future we could use a map just like MFC does for HWND
@@ -264,6 +266,8 @@ void CNTService::_ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv)
 
 BOOL CNTService::Run()
 {
+	TRACE(_T("CNTService::Run\n"));
+
 	//Uncomment the DebugBreak function below when you want to debug your service
 	//DebugBreak();
 
@@ -284,6 +288,8 @@ BOOL CNTService::Run()
 
 ResponseStatus CNTService::StartService()
 {
+	TRACE(_T("CNTService::StartService\n"));
+
 	//Open up the SCM requesting connect rights
 	CNTServiceControlManager manager;
 	if (!manager.Open(NULL, SC_MANAGER_CONNECT))
@@ -349,6 +355,8 @@ BOOL CNTService::StartServiceEx()
 
 ResponseStatus CNTService::StopService()
 {
+	TRACE(_T("CNTService::StopService\n"));
+
 	//Open up the SCM requesting connect rights
 	CNTServiceControlManager manager;
 	if (!manager.Open(NULL, SC_MANAGER_CONNECT))
@@ -416,6 +424,8 @@ BOOL CNTService::StopServiceEx()
 
 BOOL CNTService::Install()
 {
+	TRACE(_T("CNTService::Install\n"));
+	
 	// Get this exes full pathname
 	TCHAR szAppPath[_MAX_PATH];
 	GetModuleFileName(NULL, szAppPath, _MAX_PATH);
@@ -512,6 +522,8 @@ BOOL CNTService::InstallEx()
 
 BOOL CNTService::Uninstall()
 {
+	TRACE(_T("CNTService::Uninstall\n"));
+
 	//Open up the SCM requesting connect rights
 	CNTServiceControlManager manager;
 	if (!manager.Open(NULL, SC_MANAGER_CONNECT))
